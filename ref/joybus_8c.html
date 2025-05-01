@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -87,9 +86,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structjoybus__msg__t.html">joybus_msg_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A message to be sent to JoyBus, with its completion callback.  <a href="structjoybus__msg__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structjoybus__msg__t" id="r_structjoybus__msg__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joybus_8c.html#structjoybus__msg__t">joybus_msg_t</a></td></tr>
+<tr class="memdesc:structjoybus__msg__t"><td class="mdescLeft">&#160;</td><td class="mdescRight">A message to be sent to JoyBus, with its completion callback.  <a href="joybus_8c.html#structjoybus__msg__t">More...</a><br /></td></tr>
+<tr class="separator:structjoybus__msg__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -128,69 +127,59 @@ Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>__joybus_init</b> (void)</td></tr>
 <tr class="memdesc:aa482f587d5604a7f878f78b1bf092654"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the joybus subsystem. <br /></td></tr>
 <tr class="separator:aa482f587d5604a7f878f78b1bf092654"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67a0b9a8881c8ca94d35be1db9e6030f" id="r_a67a0b9a8881c8ca94d35be1db9e6030f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joybus_8c.html#a67a0b9a8881c8ca94d35be1db9e6030f">joybus_exec_async</a> (const void *input, void(*callback)(uint64_t *output, void *ctx), void *ctx)</td></tr>
-<tr class="memdesc:a67a0b9a8881c8ca94d35be1db9e6030f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute an asynchronous joybus message.  <br /></td></tr>
-<tr class="separator:a67a0b9a8881c8ca94d35be1db9e6030f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga244b4723690e3c15da23bdbfda2cb7d1" id="r_ga244b4723690e3c15da23bdbfda2cb7d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#ga244b4723690e3c15da23bdbfda2cb7d1">joybus_exec_async</a> (const void *input, <a class="el" href="group__joybus.html#gaaf2e487c05f4f27e3b36af3c54ff66c1">joybus_callback_t</a> callback, void *ctx)</td></tr>
+<tr class="memdesc:ga244b4723690e3c15da23bdbfda2cb7d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute an asynchronous joybus message.  <br /></td></tr>
+<tr class="separator:ga244b4723690e3c15da23bdbfda2cb7d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6d62432ce8ecd83cd1588716fd28fdb7" id="r_ga6d62432ce8ecd83cd1588716fd28fdb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#ga6d62432ce8ecd83cd1588716fd28fdb7">joybus_exec</a> (const void *input, void *output)</td></tr>
 <tr class="memdesc:ga6d62432ce8ecd83cd1588716fd28fdb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a 64-byte block of data to the PIF and read the 64-byte result.  <br /></td></tr>
 <tr class="separator:ga6d62432ce8ecd83cd1588716fd28fdb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab9ed6f44c13006456f30709a48e122d0" id="r_gab9ed6f44c13006456f30709a48e122d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#gab9ed6f44c13006456f30709a48e122d0">joybus_exec_cmd</a> (int port, size_t send_len, size_t recv_len, const void *send_data, void *recv_data)</td></tr>
+<tr class="memdesc:gab9ed6f44c13006456f30709a48e122d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a Joybus command synchronously on the given port.  <br /></td></tr>
+<tr class="separator:gab9ed6f44c13006456f30709a48e122d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Joybus Subsystem. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a67a0b9a8881c8ca94d35be1db9e6030f" name="a67a0b9a8881c8ca94d35be1db9e6030f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67a0b9a8881c8ca94d35be1db9e6030f">&#9670;&#160;</a></span>joybus_exec_async()</h2>
+</div><hr/><h2 class="groupheader">Data Structure Documentation</h2>
+<a name="structjoybus__msg__t" id="structjoybus__msg__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structjoybus__msg__t">&#9670;&#160;</a></span>joybus_msg_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void joybus_exec_async </td>
-          <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>input</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void(*)(uint64_t *output, void *ctx)&#160;</td>
-          <td class="paramname"><em>callback</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ctx</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">struct joybus_msg_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Execute an asynchronous joybus message. </p>
-<p>This function executes an asynchronous joybus protocol exchange, sending a message block (input), and receiving a reply (output). The message is sent in background and a completion function "callback" is called when the output is ready to be processed.</p>
-<p>It is possible to schedule multiple joybus messages by calling this function multiple times. They will be automatically executed in order. The maximum number of pending messages at any given time is <a class="el" href="joybus_8c.html#a42220dfa963618e170f0c794440a02c7" title="Maximum number of pending joybus messages.">MAX_JOYBUS_MSGS</a>.</p>
-<dl class="section note"><dt>Note</dt><dd>The callback function will be called under interrupt.</dd>
-<dd>
-This function is not part of the public API yet because we want to evaluate the use of threading rather than asynchronous programming. It should only be used internally without exposing a asynchronous API externally.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>The input block (must be of JOYBUS_BLOCK_SIZE bytes). No specific alignment is required for this data block. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>A callback completion function that will be called when the joybus command is finished. The function will receive a pointer to the output buffer and the opaque pointer to the callback's context. Can be NULL if no callback is required. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>Context opaque pointer to pass to the callback. Can be NULL if no context is required. </td></tr>
-  </table>
-  </dd>
-</dl>
+<div class="textblock"><p>A message to be sent to JoyBus, with its completion callback. </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="a9b65428327f29247ccbc957d9cad1d77" name="a9b65428327f29247ccbc957d9cad1d77"></a>uint64_t</td>
+<td class="fieldname">
+input[<a class="el" href="group__joybus.html#gabd5f84cf2323e720ab0b79fff05e8383">JOYBUS_BLOCK_DWORDS</a>]</td>
+<td class="fielddoc">
+input message </td></tr>
+<tr><td class="fieldtype">
+<a id="a747a6a0e3593ca72589e671ed5bd561b" name="a747a6a0e3593ca72589e671ed5bd561b"></a><a class="el" href="group__joybus.html#gaaf2e487c05f4f27e3b36af3c54ff66c1">joybus_callback_t</a></td>
+<td class="fieldname">
+callback</td>
+<td class="fielddoc">
+callback for completion </td></tr>
+<tr><td class="fieldtype">
+<a id="a53edb09d6fd76f13e3e1b097b31a3a41" name="a53edb09d6fd76f13e3e1b097b31a3a41"></a>void *</td>
+<td class="fieldname">
+context</td>
+<td class="fielddoc">
+callback context </td></tr>
+</table>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:47 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

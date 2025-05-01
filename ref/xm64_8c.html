@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -75,6 +74,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">xm64.c File Reference<div class="ingroups"><a class="el" href="group__libdragon.html">libdragon</a> &raquo; <a class="el" href="group__audio.html">Audio Subsystem</a> &raquo; <a class="el" href="group__mixer.html">Audio mixer</a></div></div></div>
 </div><!--header-->
@@ -83,6 +83,12 @@ $(function() {
 <p>Efficient XM module player.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:structxm64__header__t" id="r_structxm64__header__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xm64_8c.html#structxm64__header__t">xm64_header_t</a></td></tr>
+<tr class="memdesc:structxm64__header__t"><td class="mdescLeft">&#160;</td><td class="mdescRight">Header of the XM64 file.  <a href="xm64_8c.html#structxm64__header__t">More...</a><br /></td></tr>
+<tr class="separator:structxm64__header__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a383af585a7658e0efbca88bbe424aef6" id="r_a383af585a7658e0efbca88bbe424aef6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xm64_8c.html#a383af585a7658e0efbca88bbe424aef6">xm64player_open</a> (<a class="el" href="xm64_8h.html#structxm64player__t">xm64player_t</a> *player, const char *fn)</td></tr>
@@ -116,10 +122,56 @@ Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>xm64player_close</b> (<a class="el" href="xm64_8h.html#structxm64player__t">xm64player_t</a> *player)</td></tr>
 <tr class="memdesc:ab5874d5af4f0731d06ea04b3046885bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close and deallocate the XM64 player. <br /></td></tr>
 <tr class="separator:ab5874d5af4f0731d06ea04b3046885bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e6d01abe8465cde9f65aad35685253f" id="r_a0e6d01abe8465cde9f65aad35685253f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xm64_8c.html#a0e6d01abe8465cde9f65aad35685253f">xm64_set_extsampledir</a> (const char *dir)</td></tr>
+<tr class="memdesc:a0e6d01abe8465cde9f65aad35685253f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the directory where external samples are stored.  <br /></td></tr>
+<tr class="separator:a0e6d01abe8465cde9f65aad35685253f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Efficient XM module player. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><hr/><h2 class="groupheader">Data Structure Documentation</h2>
+<a name="structxm64__header__t" id="structxm64__header__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structxm64__header__t">&#9670;&#160;</a></span>xm64_header_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct xm64_header_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Header of the XM64 file. </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="ac41698a5b8ceac296d4ff13c3940e98d" name="ac41698a5b8ceac296d4ff13c3940e98d"></a>char</td>
+<td class="fieldname">
+magic[4]</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a2f6e25718499fe853a5750fe83c22a0f" name="a2f6e25718499fe853a5750fe83c22a0f"></a>uint8_t</td>
+<td class="fieldname">
+version</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a428197bcda5dfcb77f38145fdabcb4e3" name="a428197bcda5dfcb77f38145fdabcb4e3"></a>uint32_t</td>
+<td class="fieldname">
+metadata_offset</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a266f534d2bce74a4f7ba38841cbe6fae" name="a266f534d2bce74a4f7ba38841cbe6fae"></a>uint32_t</td>
+<td class="fieldname">
+metadata_size</td>
+<td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a383af585a7658e0efbca88bbe424aef6" name="a383af585a7658e0efbca88bbe424aef6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a383af585a7658e0efbca88bbe424aef6">&#9670;&#160;</a></span>xm64player_open()</h2>
 
@@ -148,10 +200,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>xm64player_close</b> 
 
 <p>Open a XM64 module file and prepare for playback. </p>
 <p>This function requires the mixer to have been already initialized (via mixer_init).</p>
+<p>XM64 files can carry their own embedded samples, or can use an external sample library. In the latter case, make sure to call <a class="el" href="xm64_8h.html#a0e6d01abe8465cde9f65aad35685253f" title="Configure the directory where external samples are stored.">xm64_set_extsampledir</a> to set the directory where the external samples are stored.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>Pointer to the <a class="el" href="xm64_8h.html#structxm64player__t" title="Player of a .XM64 file.">xm64player_t</a> player structure to use </td></tr>
-    <tr><td class="paramname">fn</td><td>Filename of the XM64 (with filesystem prefix). Currently, only files on DFS ("rom:/") are supported. </td></tr>
+    <tr><td class="paramname">fn</td><td>Filename of the XM64 (with filesystem prefix). </td></tr>
   </table>
   </dd>
 </dl>
@@ -450,10 +503,37 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>xm64player_close</b> 
 
 </div>
 </div>
+<a id="a0e6d01abe8465cde9f65aad35685253f" name="a0e6d01abe8465cde9f65aad35685253f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e6d01abe8465cde9f65aad35685253f">&#9670;&#160;</a></span>xm64_set_extsampledir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void xm64_set_extsampledir </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure the directory where external samples are stored. </p>
+<p>This function is used to set the directory where the external samples are stored. It is only used for XM64 files that use external samples.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir</td><td>Directory where the external samples are stored. This can be on any filesystem, even different from XM64's one. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:47 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

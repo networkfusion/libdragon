@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -150,79 +149,81 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a458e651af6690959efa2afb96be7d609" id="r_a458e651af6690959efa2afb96be7d609"><td class="memItemLeft" align="right" valign="top"><a id="a458e651af6690959efa2afb96be7d609" name="a458e651af6690959efa2afb96be7d609"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+<tr class="memitem:a79e9f285d34216706a748fd7ba8941b7" id="r_a79e9f285d34216706a748fd7ba8941b7"><td class="memItemLeft" align="right" valign="top"><a id="a79e9f285d34216706a748fd7ba8941b7" name="a79e9f285d34216706a748fd7ba8941b7"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
 &#160;&#160;<b>RDPQ_CMD_NOOP</b> = 0x00
 , <b>RDPQ_CMD_SET_LOOKUP_ADDRESS</b> = 0x01
 , <b>RDPQ_CMD_FILL_RECTANGLE_EX</b> = 0x02
-, <b>RDPQ_CMD_RESET_RENDER_MODE</b> = 0x04
+, <b>RDPQ_CMD_CLEAR_ZBUFFER</b> = 0x03
 , <br />
-&#160;&#160;<b>RDPQ_CMD_SET_COMBINE_MODE_2PASS</b> = 0x05
+&#160;&#160;<b>RDPQ_CMD_RESET_RENDER_MODE</b> = 0x04
+, <b>RDPQ_CMD_SET_COMBINE_MODE_2PASS</b> = 0x05
 , <b>RDPQ_CMD_PUSH_RENDER_MODE</b> = 0x06
 , <b>RDPQ_CMD_POP_RENDER_MODE</b> = 0x07
-, <b>RDPQ_CMD_TRI</b> = 0x08
 , <br />
-&#160;&#160;<b>RDPQ_CMD_TRI_ZBUF</b> = 0x09
+&#160;&#160;<b>RDPQ_CMD_TRI</b> = 0x08
+, <b>RDPQ_CMD_TRI_ZBUF</b> = 0x09
 , <b>RDPQ_CMD_TRI_TEX</b> = 0x0A
 , <b>RDPQ_CMD_TRI_TEX_ZBUF</b> = 0x0B
-, <b>RDPQ_CMD_TRI_SHADE</b> = 0x0C
 , <br />
-&#160;&#160;<b>RDPQ_CMD_TRI_SHADE_ZBUF</b> = 0x0D
+&#160;&#160;<b>RDPQ_CMD_TRI_SHADE</b> = 0x0C
+, <b>RDPQ_CMD_TRI_SHADE_ZBUF</b> = 0x0D
 , <b>RDPQ_CMD_TRI_SHADE_TEX</b> = 0x0E
 , <b>RDPQ_CMD_TRI_SHADE_TEX_ZBUF</b> = 0x0F
-, <b>RDPQ_CMD_TEXTURE_RECTANGLE_EX</b> = 0x10
 , <br />
-&#160;&#160;<b>RDPQ_CMD_SET_DEBUG_MODE</b> = 0x11
+&#160;&#160;<b>RDPQ_CMD_TEXTURE_RECTANGLE_EX</b> = 0x10
+, <b>RDPQ_CMD_SET_DEBUG_MODE</b> = 0x11
 , <b>RDPQ_CMD_SET_SCISSOR_EX</b> = 0x12
 , <b>RDPQ_CMD_SET_PRIM_COLOR_COMPONENT</b> = 0x13
-, <b>RDPQ_CMD_MODIFY_OTHER_MODES</b> = 0x14
 , <br />
-&#160;&#160;<b>RDPQ_CMD_SET_FILL_COLOR_32</b> = 0x16
+&#160;&#160;<b>RDPQ_CMD_MODIFY_OTHER_MODES</b> = 0x14
+, <b>RDPQ_CMD_SET_FILL_COLOR_32</b> = 0x16
 , <b>RDPQ_CMD_SET_BLENDING_MODE</b> = 0x18
 , <b>RDPQ_CMD_SET_FOG_MODE</b> = 0x19
-, <b>RDPQ_CMD_SET_COMBINE_MODE_1PASS</b> = 0x1B
 , <br />
-&#160;&#160;<b>RDPQ_CMD_AUTOTMEM_SET_ADDR</b> = 0x1C
+&#160;&#160;<b>RDPQ_CMD_SET_COMBINE_MODE_1PASS</b> = 0x1B
+, <b>RDPQ_CMD_AUTOTMEM_SET_ADDR</b> = 0x1C
 , <b>RDPQ_CMD_AUTOTMEM_SET_TILE</b> = 0x1D
 , <b>RDPQ_CMD_TRIANGLE</b> = 0x1E
-, <b>RDPQ_CMD_TRIANGLE_DATA</b> = 0x1F
 , <br />
-&#160;&#160;<b>RDPQ_CMD_TEXTURE_RECTANGLE</b> = 0x24
+&#160;&#160;<b>RDPQ_CMD_TRIANGLE_DATA</b> = 0x1F
+, <b>RDPQ_CMD_TEXTURE_RECTANGLE</b> = 0x24
 , <b>RDPQ_CMD_TEXTURE_RECTANGLE_FLIP</b> = 0x25
 , <b>RDPQ_CMD_SYNC_LOAD</b> = 0x26
-, <b>RDPQ_CMD_SYNC_PIPE</b> = 0x27
 , <br />
-&#160;&#160;<b>RDPQ_CMD_SYNC_TILE</b> = 0x28
+&#160;&#160;<b>RDPQ_CMD_SYNC_PIPE</b> = 0x27
+, <b>RDPQ_CMD_SYNC_TILE</b> = 0x28
 , <b>RDPQ_CMD_SYNC_FULL</b> = 0x29
 , <b>RDPQ_CMD_SET_KEY_GB</b> = 0x2A
-, <b>RDPQ_CMD_SET_KEY_R</b> = 0x2B
 , <br />
-&#160;&#160;<b>RDPQ_CMD_SET_CONVERT</b> = 0x2C
+&#160;&#160;<b>RDPQ_CMD_SET_KEY_R</b> = 0x2B
+, <b>RDPQ_CMD_SET_CONVERT</b> = 0x2C
 , <b>RDPQ_CMD_SET_SCISSOR</b> = 0x2D
 , <b>RDPQ_CMD_SET_PRIM_DEPTH</b> = 0x2E
-, <b>RDPQ_CMD_SET_OTHER_MODES</b> = 0x2F
 , <br />
-&#160;&#160;<b>RDPQ_CMD_LOAD_TLUT</b> = 0x30
+&#160;&#160;<b>RDPQ_CMD_SET_OTHER_MODES</b> = 0x2F
+, <b>RDPQ_CMD_LOAD_TLUT</b> = 0x30
 , <b>RDPQ_CMD_DEBUG</b> = 0x31
 , <b>RDPQ_CMD_SET_TILE_SIZE</b> = 0x32
-, <b>RDPQ_CMD_LOAD_BLOCK</b> = 0x33
 , <br />
-&#160;&#160;<b>RDPQ_CMD_LOAD_TILE</b> = 0x34
+&#160;&#160;<b>RDPQ_CMD_LOAD_BLOCK</b> = 0x33
+, <b>RDPQ_CMD_LOAD_TILE</b> = 0x34
 , <b>RDPQ_CMD_SET_TILE</b> = 0x35
 , <b>RDPQ_CMD_FILL_RECTANGLE</b> = 0x36
-, <b>RDPQ_CMD_SET_FILL_COLOR</b> = 0x37
 , <br />
-&#160;&#160;<b>RDPQ_CMD_SET_FOG_COLOR</b> = 0x38
+&#160;&#160;<b>RDPQ_CMD_SET_FILL_COLOR</b> = 0x37
+, <b>RDPQ_CMD_SET_FOG_COLOR</b> = 0x38
 , <b>RDPQ_CMD_SET_BLEND_COLOR</b> = 0x39
 , <b>RDPQ_CMD_SET_PRIM_COLOR</b> = 0x3A
-, <b>RDPQ_CMD_SET_ENV_COLOR</b> = 0x3B
 , <br />
-&#160;&#160;<b>RDPQ_CMD_SET_COMBINE_MODE_RAW</b> = 0x3C
+&#160;&#160;<b>RDPQ_CMD_SET_ENV_COLOR</b> = 0x3B
+, <b>RDPQ_CMD_SET_COMBINE_MODE_RAW</b> = 0x3C
 , <b>RDPQ_CMD_SET_TEXTURE_IMAGE</b> = 0x3D
 , <b>RDPQ_CMD_SET_Z_IMAGE</b> = 0x3E
-, <b>RDPQ_CMD_SET_COLOR_IMAGE</b> = 0x3F
+, <br />
+&#160;&#160;<b>RDPQ_CMD_SET_COLOR_IMAGE</b> = 0x3F
 <br />
  }</td></tr>
-<tr class="separator:a458e651af6690959efa2afb96be7d609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a79e9f285d34216706a748fd7ba8941b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d34f311d2e71435652a57adb1d6931e" id="r_a8d34f311d2e71435652a57adb1d6931e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq_8h.html#a8d34f311d2e71435652a57adb1d6931e">rdpq_tile_t</a> { <br />
 &#160;&#160;<a class="el" href="rdpq_8h.html#a8d34f311d2e71435652a57adb1d6931ea65f7d9bde93f125384f419cc6e9b27a7">TILE0</a> = 0
 , <a class="el" href="rdpq_8h.html#a8d34f311d2e71435652a57adb1d6931ea97e11b4a557d4bf23f6b0d5f29f7689f">TILE1</a> = 1
@@ -255,6 +256,10 @@ Functions</h2></td></tr>
 <tr class="memitem:aebf00c8f210cea9013d9690ea4594efd" id="r_aebf00c8f210cea9013d9690ea4594efd"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq_8h.html#aebf00c8f210cea9013d9690ea4594efd">rdpq_config_disable</a> (uint32_t cfg_disable_bits)</td></tr>
 <tr class="memdesc:aebf00c8f210cea9013d9690ea4594efd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable a specific set of configuration flags.  <br /></td></tr>
 <tr class="separator:aebf00c8f210cea9013d9690ea4594efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e7ee668734810c8e2121edda97ed65" id="r_ab5e7ee668734810c8e2121edda97ed65"><td class="memItemLeft" align="right" valign="top"><a id="ab5e7ee668734810c8e2121edda97ed65" name="ab5e7ee668734810c8e2121edda97ed65"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rdpq_set_chromakey_parms</b> (<a class="el" href="group__graphics.html#structcolor__t">color_t</a> color, int edge_r, int edge_g, int edge_b, int width_r, int width_g, int width_b)</td></tr>
+<tr class="memdesc:ab5e7ee668734810c8e2121edda97ed65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Low level function to set the green and blue components of the chroma key. <br /></td></tr>
+<tr class="separator:ab5e7ee668734810c8e2121edda97ed65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c01abdb675fd847a8f35164857db4a2" id="r_a4c01abdb675fd847a8f35164857db4a2"><td class="memItemLeft" align="right" valign="top"><a id="a4c01abdb675fd847a8f35164857db4a2" name="a4c01abdb675fd847a8f35164857db4a2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>rdpq_set_yuv_parms</b> (uint16_t k0, uint16_t k1, uint16_t k2, uint16_t k3, uint16_t k4, uint16_t k5)</td></tr>
 <tr class="memdesc:a4c01abdb675fd847a8f35164857db4a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Low level functions to set the matrix coefficients for texture format conversion. <br /></td></tr>
@@ -329,6 +334,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>rdpq_load_block_fx</b
 <tr class="memitem:aaf80d096c730fa3aa29fc8a48154249c" id="r_aaf80d096c730fa3aa29fc8a48154249c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq_8h.html#aaf80d096c730fa3aa29fc8a48154249c">rdpq_set_texture_image_raw</a> (uint8_t index, uint32_t offset, <a class="el" href="surface_8h.html#a01f43f3d6c80a7658bf729bfaf3136e1">tex_format_t</a> format, uint16_t width, uint16_t height)</td></tr>
 <tr class="memdesc:aaf80d096c730fa3aa29fc8a48154249c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Low-level version of <a class="el" href="rdpq_8h.html#a243f6adec109fcf042273b5e6402f83c" title="Configure the texture to use (RDP command: SET_TEX_IMAGE)">rdpq_set_texture_image</a>, with address lookup capability.  <br /></td></tr>
 <tr class="separator:aaf80d096c730fa3aa29fc8a48154249c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8840ec6558c7dfe2f5a4f88d97a83276" id="r_a8840ec6558c7dfe2f5a4f88d97a83276"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq_8h.html#a8840ec6558c7dfe2f5a4f88d97a83276">rdpq_load_block_linear</a> (int32_t offset, void *buffer, uint16_t size)</td></tr>
+<tr class="memdesc:a8840ec6558c7dfe2f5a4f88d97a83276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a block of memory to TMEM with a single contiguous memory transfer.  <br /></td></tr>
+<tr class="separator:a8840ec6558c7dfe2f5a4f88d97a83276"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3a157dcfb511e567251d69ba2272287" id="r_ac3a157dcfb511e567251d69ba2272287"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq_8h.html#ac3a157dcfb511e567251d69ba2272287">rdpq_set_lookup_address</a> (uint8_t index, void *rdram_addr)</td></tr>
 <tr class="memdesc:ac3a157dcfb511e567251d69ba2272287"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store an address into the rdpq lookup table.  <br /></td></tr>
 <tr class="separator:ac3a157dcfb511e567251d69ba2272287"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -356,12 +364,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>rdpq_load_block_fx</b
 <tr class="memitem:a47aa5fe237da5c43e2bfbf2527af606f" id="r_a47aa5fe237da5c43e2bfbf2527af606f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq_8h.html#a47aa5fe237da5c43e2bfbf2527af606f">rdpq_set_combiner_raw</a> (uint64_t comb)</td></tr>
 <tr class="memdesc:a47aa5fe237da5c43e2bfbf2527af606f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Low-level function to change the RDP combiner.  <br /></td></tr>
 <tr class="separator:a47aa5fe237da5c43e2bfbf2527af606f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab153f2f85057ba28a1928986b3dcc3e6" id="r_ab153f2f85057ba28a1928986b3dcc3e6"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq_8h.html#ab153f2f85057ba28a1928986b3dcc3e6">rdpq_get_combiner_raw</a> (void)</td></tr>
+<tr class="memdesc:ab153f2f85057ba28a1928986b3dcc3e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the current combiner register.  <br /></td></tr>
+<tr class="separator:ab153f2f85057ba28a1928986b3dcc3e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb872b5dba9db3ba975bf2b3b8282e71" id="r_aeb872b5dba9db3ba975bf2b3b8282e71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq_8h.html#aeb872b5dba9db3ba975bf2b3b8282e71">rdpq_fence</a> (void)</td></tr>
 <tr class="memdesc:aeb872b5dba9db3ba975bf2b3b8282e71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a fence to synchronize RSP with RDP commands.  <br /></td></tr>
 <tr class="separator:aeb872b5dba9db3ba975bf2b3b8282e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e49b28516eb6855e1f4c5bd35fe12ad" id="r_a4e49b28516eb6855e1f4c5bd35fe12ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq_8h.html#a4e49b28516eb6855e1f4c5bd35fe12ad">rdpq_exec</a> (void *buffer, int size)</td></tr>
 <tr class="memdesc:a4e49b28516eb6855e1f4c5bd35fe12ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send to the RDP a buffer of RDP commands from RDRAM.  <br /></td></tr>
 <tr class="separator:a4e49b28516eb6855e1f4c5bd35fe12ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a662e5d1f8e05dff7bb673aafed1a643c" id="r_a662e5d1f8e05dff7bb673aafed1a643c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq_8h.html#a662e5d1f8e05dff7bb673aafed1a643c">rdpq_call_deferred</a> (void(*func)(void *), void *arg)</td></tr>
+<tr class="memdesc:a662e5d1f8e05dff7bb673aafed1a643c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enqueue a callback that will be called after the RSP and the RDP have finished processing all commands enqueued until now.  <br /></td></tr>
+<tr class="separator:a662e5d1f8e05dff7bb673aafed1a643c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>RDP Command queue. </p>
@@ -388,13 +402,13 @@ palette</td>
 <td class="fielddoc">
 Optional palette associated to the texture. For textures in <a class="el" href="surface_8h.html#a01f43f3d6c80a7658bf729bfaf3136e1ae7c884ef15b16d8bb1fe78d46aa209c4" title="Format CI4: color index 4-bit (paletted, 2 indices per byte)">FMT_CI4</a> format, specify the palette index (0-15), otherwise use 0. </td></tr>
 <tr><td class="fieldtype">
-<a id="a97088451560bed9b6c5a7f14b760139b" name="a97088451560bed9b6c5a7f14b760139b"></a>struct <a class="el" href="rdpq_8h.html#structrdpq__tileparms__t_8s">rdpq_tileparms_t.s</a></td>
+<a id="a1241b699832e576ea25f801ebd6344ba" name="a1241b699832e576ea25f801ebd6344ba"></a>struct <a class="el" href="rdpq_8h.html#structrdpq__tileparms__t_8s">rdpq_tileparms_t.s</a></td>
 <td class="fieldname">
 s</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a6e209e504e453270e41ecb63e6f17b59" name="a6e209e504e453270e41ecb63e6f17b59"></a>struct <a class="el" href="rdpq_8h.html#structrdpq__tileparms__t_8t">rdpq_tileparms_t.t</a></td>
+<a id="a680ccf42547b2abdb32ac52dcf2a6f47" name="a680ccf42547b2abdb32ac52dcf2a6f47"></a>struct <a class="el" href="rdpq_8h.html#structrdpq__tileparms__t_8t">rdpq_tileparms_t.t</a></td>
 <td class="fieldname">
 t</td>
 <td class="fielddoc">
@@ -767,8 +781,8 @@ Power of 2 scale of the texture to wrap on. Range is [-5..10];. </td></tr>
 <div class="line">    } \</div>
 <div class="line">    rspq_write(ovl_id, cmd_id, ##__VA_ARGS__); \</div>
 <div class="line">})</div>
-<div class="ttc" id="ardpq_8c_html_aa6f78d017798b8072f8006423f506e5f"><div class="ttname"><a href="rdpq_8c.html#aa6f78d017798b8072f8006423f506e5f">__rdpq_block_reserve</a></div><div class="ttdeci">void __rdpq_block_reserve(int num_rdp_commands)</div><div class="ttdoc">Reserve space in the RDP static buffer for a number of RDP commands.</div><div class="ttdef"><b>Definition</b> rdpq.c:813</div></div>
-<div class="ttc" id="arspq_8c_html_a39b062e3a4bdd3e3873623ae630fc9f4"><div class="ttname"><a href="rspq_8c.html#a39b062e3a4bdd3e3873623ae630fc9f4">rspq_block</a></div><div class="ttdeci">rspq_block_t * rspq_block</div><div class="ttdoc">Pointer to the current block being built, or NULL.</div><div class="ttdef"><b>Definition</b> rspq.c:327</div></div>
+<div class="ttc" id="ardpq_8c_html_aa6f78d017798b8072f8006423f506e5f"><div class="ttname"><a href="rdpq_8c.html#aa6f78d017798b8072f8006423f506e5f">__rdpq_block_reserve</a></div><div class="ttdeci">void __rdpq_block_reserve(int num_rdp_commands)</div><div class="ttdoc">Reserve space in the RDP static buffer for a number of RDP commands.</div><div class="ttdef"><b>Definition</b> rdpq.c:824</div></div>
+<div class="ttc" id="arspq_8c_html_a39b062e3a4bdd3e3873623ae630fc9f4"><div class="ttname"><a href="rspq_8c.html#a39b062e3a4bdd3e3873623ae630fc9f4">rspq_block</a></div><div class="ttdeci">rspq_block_t * rspq_block</div><div class="ttdoc">Pointer to the current block being built, or NULL.</div><div class="ttdef"><b>Definition</b> rspq.c:337</div></div>
 <div class="ttc" id="arspq__internal_8h_html_structrspq__block__t"><div class="ttname"><a href="rspq__internal_8h.html#structrspq__block__t">rspq_block_t</a></div><div class="ttdoc">A rspq block: pre-recorded array of commands.</div><div class="ttdef"><b>Definition</b> rspq_internal.h:160</div></div>
 </div><!-- fragment -->
 <p>Enqueue a RSP command that also generates RDP commands. </p>
@@ -963,10 +977,10 @@ Power of 2 scale of the texture to wrap on. Range is [-5..10];. </td></tr>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Restore the previous configuration</span></div>
 <div class="line"><a class="code hl_function" href="rdpq_8c.html#af3951964fc692a7b56f1e250c45d6713">rdpq_config_set</a>(old_cfg);</div>
-<div class="ttc" id="ardpq_8c_html_a2f9da183a4a282f68fb27dffa709dcfd"><div class="ttname"><a href="rdpq_8c.html#a2f9da183a4a282f68fb27dffa709dcfd">rdpq_config_disable</a></div><div class="ttdeci">uint32_t rdpq_config_disable(uint32_t cfg)</div><div class="ttdoc">Disable a specific set of configuration flags.</div><div class="ttdef"><b>Definition</b> rdpq.c:512</div></div>
-<div class="ttc" id="ardpq_8c_html_a9020360dcb7a05b4270d8a66e8dad6b7"><div class="ttname"><a href="rdpq_8c.html#a9020360dcb7a05b4270d8a66e8dad6b7">rdpq_set_color_image</a></div><div class="ttdeci">void rdpq_set_color_image(const surface_t *surface)</div><div class="ttdoc">Configure the framebuffer to render to (RDP command: SET_COLOR_IMAGE)</div><div class="ttdef"><b>Definition</b> rdpq.c:1001</div></div>
-<div class="ttc" id="ardpq_8c_html_af3951964fc692a7b56f1e250c45d6713"><div class="ttname"><a href="rdpq_8c.html#af3951964fc692a7b56f1e250c45d6713">rdpq_config_set</a></div><div class="ttdeci">uint32_t rdpq_config_set(uint32_t cfg)</div><div class="ttdoc">Set the configuration of the RDPQ module.</div><div class="ttdef"><b>Definition</b> rdpq.c:500</div></div>
-<div class="ttc" id="ardpq_8h_html_a87db603433fa7334d885bbf80205ab3e"><div class="ttname"><a href="rdpq_8h.html#a87db603433fa7334d885bbf80205ab3e">RDPQ_CFG_AUTOSCISSOR</a></div><div class="ttdeci">#define RDPQ_CFG_AUTOSCISSOR</div><div class="ttdoc">Configuration flag: enable automatic generation of SET_SCISSOR commands on render target change.</div><div class="ttdef"><b>Definition</b> rdpq.h:227</div></div>
+<div class="ttc" id="ardpq_8c_html_a2f9da183a4a282f68fb27dffa709dcfd"><div class="ttname"><a href="rdpq_8c.html#a2f9da183a4a282f68fb27dffa709dcfd">rdpq_config_disable</a></div><div class="ttdeci">uint32_t rdpq_config_disable(uint32_t cfg)</div><div class="ttdoc">Disable a specific set of configuration flags.</div><div class="ttdef"><b>Definition</b> rdpq.c:519</div></div>
+<div class="ttc" id="ardpq_8c_html_a9020360dcb7a05b4270d8a66e8dad6b7"><div class="ttname"><a href="rdpq_8c.html#a9020360dcb7a05b4270d8a66e8dad6b7">rdpq_set_color_image</a></div><div class="ttdeci">void rdpq_set_color_image(const surface_t *surface)</div><div class="ttdoc">Configure the framebuffer to render to (RDP command: SET_COLOR_IMAGE)</div><div class="ttdef"><b>Definition</b> rdpq.c:1012</div></div>
+<div class="ttc" id="ardpq_8c_html_af3951964fc692a7b56f1e250c45d6713"><div class="ttname"><a href="rdpq_8c.html#af3951964fc692a7b56f1e250c45d6713">rdpq_config_set</a></div><div class="ttdeci">uint32_t rdpq_config_set(uint32_t cfg)</div><div class="ttdoc">Set the configuration of the RDPQ module.</div><div class="ttdef"><b>Definition</b> rdpq.c:507</div></div>
+<div class="ttc" id="ardpq_8h_html_a87db603433fa7334d885bbf80205ab3e"><div class="ttname"><a href="rdpq_8h.html#a87db603433fa7334d885bbf80205ab3e">RDPQ_CFG_AUTOSCISSOR</a></div><div class="ttdeci">#define RDPQ_CFG_AUTOSCISSOR</div><div class="ttdoc">Configuration flag: enable automatic generation of SET_SCISSOR commands on render target change.</div><div class="ttdef"><b>Definition</b> rdpq.h:228</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cfg_disable_bits</td><td>Configuration flags to disable </td></tr>
@@ -1451,8 +1465,8 @@ Power of 2 scale of the texture to wrap on. Range is [-5..10];. </td></tr>
 <div class="line"><a class="code hl_function" href="rdpq_8c.html#a70a6556d7d088ca2b745fa145e3aeee3">rdpq_set_fill_color</a>(<a class="code hl_define" href="group__graphics.html#gae16bab5741f411ec4ef51b0295f6e705">RGBA32</a>(0, 0, 255, 0));</div>
 <div class="line"><a class="code hl_define" href="rdpq__rect_8h.html#a9c6405f89d2fe70046330964c21ba124">rdpq_fill_rectangle</a>(0, 120, 320, 240);</div>
 <div class="ttc" id="agroup__graphics_html_gae16bab5741f411ec4ef51b0295f6e705"><div class="ttname"><a href="group__graphics.html#gae16bab5741f411ec4ef51b0295f6e705">RGBA32</a></div><div class="ttdeci">#define RGBA32(rx, gx, bx, ax)</div><div class="ttdoc">Create a color_t from the R,G,B,A components in the RGBA32 range (0-255).</div><div class="ttdef"><b>Definition</b> graphics.h:74</div></div>
-<div class="ttc" id="ardpq_8c_html_a70a6556d7d088ca2b745fa145e3aeee3"><div class="ttname"><a href="rdpq_8c.html#a70a6556d7d088ca2b745fa145e3aeee3">rdpq_set_fill_color</a></div><div class="ttdeci">void rdpq_set_fill_color(color_t color)</div><div class="ttdoc">Enqueue a SET_FILL_COLOR RDP command.</div><div class="ttdef"><b>Definition</b> rdpq.h:837</div></div>
-<div class="ttc" id="ardpq__mode_8c_html_a99c5c398b388f6d1683e7405a6058fb9"><div class="ttname"><a href="rdpq__mode_8c.html#a99c5c398b388f6d1683e7405a6058fb9">rdpq_set_mode_fill</a></div><div class="ttdeci">void rdpq_set_mode_fill(color_t color)</div><div class="ttdoc">Reset render mode to FILL type.</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:301</div></div>
+<div class="ttc" id="ardpq_8c_html_a70a6556d7d088ca2b745fa145e3aeee3"><div class="ttname"><a href="rdpq_8c.html#a70a6556d7d088ca2b745fa145e3aeee3">rdpq_set_fill_color</a></div><div class="ttdeci">void rdpq_set_fill_color(color_t color)</div><div class="ttdoc">Enqueue a SET_FILL_COLOR RDP command.</div><div class="ttdef"><b>Definition</b> rdpq.h:870</div></div>
+<div class="ttc" id="ardpq__mode_8c_html_a99c5c398b388f6d1683e7405a6058fb9"><div class="ttname"><a href="rdpq__mode_8c.html#a99c5c398b388f6d1683e7405a6058fb9">rdpq_set_mode_fill</a></div><div class="ttdeci">void rdpq_set_mode_fill(color_t color)</div><div class="ttdoc">Reset render mode to FILL type.</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:302</div></div>
 <div class="ttc" id="ardpq__rect_8h_html_a9c6405f89d2fe70046330964c21ba124"><div class="ttname"><a href="rdpq__rect_8h.html#a9c6405f89d2fe70046330964c21ba124">rdpq_fill_rectangle</a></div><div class="ttdeci">#define rdpq_fill_rectangle(x0, y0, x1, y1)</div><div class="ttdoc">Draw a filled rectangle (RDP command: FILL_RECTANGLE)</div><div class="ttdef"><b>Definition</b> rdpq_rect.h:249</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2003,7 +2017,7 @@ Power of 2 scale of the texture to wrap on. Range is [-5..10];. </td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">index</td><td>Index in the rdpq lookup table of the buffer to set as render target. </td></tr>
-    <tr><td class="paramname">offset</td><td>Byte offset to add to the buffer stored in the lookup table. Notice that if index is 0, this can be a physical address to a buffer (use <a class="el" href="group__n64sys.html#ga54fca3c0f8e1be138f320b3dcce4366f" title="Return the physical memory address for a given address.">PhysicalAddr</a> to convert a C pointer to a physical address). </td></tr>
+    <tr><td class="paramname">offset</td><td>Byte offset to add to the buffer stored in the lookup table. Notice that if index is 0, this can be a physical address to a buffer (use <a class="el" href="group__n64sys.html#ga54fca3c0f8e1be138f320b3dcce4366f" title="Return the physical memory address for a given virtual address (pointer)">PhysicalAddr</a> to convert a C pointer to a physical address). </td></tr>
     <tr><td class="paramname">format</td><td>Format of the buffer. Only <a class="el" href="surface_8h.html#a01f43f3d6c80a7658bf729bfaf3136e1a0ae35df0b9a28b002380dc866dad303a" title="Format RGBA 8888 (32-bit)">FMT_RGBA32</a>, <a class="el" href="surface_8h.html#a01f43f3d6c80a7658bf729bfaf3136e1ae781a51949044f96a872ca8e2715bed5" title="Format RGBA 5551 (16-bit)">FMT_RGBA16</a> or <a class="el" href="surface_8h.html#a01f43f3d6c80a7658bf729bfaf3136e1a7845dc9354faccf8262e271b1026b0f2" title="Format I8: 8-bit intensity (8-bit per pixel)">FMT_I8</a> are possible to use as a render target. </td></tr>
     <tr><td class="paramname">width</td><td>Width of the buffer in pixel </td></tr>
     <tr><td class="paramname">height</td><td>Height of the buffer in pixel </td></tr>
@@ -2057,7 +2071,7 @@ Power of 2 scale of the texture to wrap on. Range is [-5..10];. </td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">index</td><td>Index in the rdpq lookup table of the buffer to set as render target. </td></tr>
-    <tr><td class="paramname">offset</td><td>Byte offset to add to the buffer stored in the lookup table. Notice that if index is 0, this can be a physical address to a buffer (use <a class="el" href="group__n64sys.html#ga54fca3c0f8e1be138f320b3dcce4366f" title="Return the physical memory address for a given address.">PhysicalAddr</a> to convert a C pointer to a physical address).</td></tr>
+    <tr><td class="paramname">offset</td><td>Byte offset to add to the buffer stored in the lookup table. Notice that if index is 0, this can be a physical address to a buffer (use <a class="el" href="group__n64sys.html#ga54fca3c0f8e1be138f320b3dcce4366f" title="Return the physical memory address for a given virtual address (pointer)">PhysicalAddr</a> to convert a C pointer to a physical address).</td></tr>
   </table>
   </dd>
 </dl>
@@ -2125,7 +2139,7 @@ Power of 2 scale of the texture to wrap on. Range is [-5..10];. </td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">index</td><td>Index in the rdpq lookup table of the buffer to set as texture image. </td></tr>
-    <tr><td class="paramname">offset</td><td>Byte offset to add to the buffer stored in the lookup table. Notice that if index is 0, this can be a physical address to a buffer (use <a class="el" href="group__n64sys.html#ga54fca3c0f8e1be138f320b3dcce4366f" title="Return the physical memory address for a given address.">PhysicalAddr</a> to convert a C pointer to a physical address). </td></tr>
+    <tr><td class="paramname">offset</td><td>Byte offset to add to the buffer stored in the lookup table. Notice that if index is 0, this can be a physical address to a buffer (use <a class="el" href="group__n64sys.html#ga54fca3c0f8e1be138f320b3dcce4366f" title="Return the physical memory address for a given virtual address (pointer)">PhysicalAddr</a> to convert a C pointer to a physical address). </td></tr>
     <tr><td class="paramname">format</td><td>Format of the texture (<a class="el" href="surface_8h.html#a01f43f3d6c80a7658bf729bfaf3136e1" title="Pixel format enum.">tex_format_t</a>) </td></tr>
     <tr><td class="paramname">width</td><td>Width of the texture in pixel (max 1024) </td></tr>
     <tr><td class="paramname">height</td><td>Height of the texture in pixel (max 1024)</td></tr>
@@ -2135,6 +2149,62 @@ Power of 2 scale of the texture to wrap on. Range is [-5..10];. </td></tr>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="rdpq_8h.html#a243f6adec109fcf042273b5e6402f83c" title="Configure the texture to use (RDP command: SET_TEX_IMAGE)">rdpq_set_texture_image</a> </dd>
 <dd>
 <a class="el" href="rdpq_8h.html#ac3a157dcfb511e567251d69ba2272287" title="Store an address into the rdpq lookup table.">rdpq_set_lookup_address</a> </dd></dl>
+
+</div>
+</div>
+<a id="a8840ec6558c7dfe2f5a4f88d97a83276" name="a8840ec6558c7dfe2f5a4f88d97a83276"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8840ec6558c7dfe2f5a4f88d97a83276">&#9670;&#160;</a></span>rdpq_load_block_linear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rdpq_load_block_linear </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Load a block of memory to TMEM with a single contiguous memory transfer. </p>
+<p>Loads data from RDRAM to TMEM but takes in byte offsets and sizes unlike <a class="el" href="rdpq_8h.html#a9b37267136cf8b04374eb3ac668046f2" title="Load a texture image into TMEM with a single contiguous memory transfer (RDP command: LOAD_BLOCK)">rdpq_load_block</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Destination TMEM offset </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>Pointer to data in RDRAM to load </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Number of bytes to load (max: 4096)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="rdpq_8h.html#a9b37267136cf8b04374eb3ac668046f2" title="Load a texture image into TMEM with a single contiguous memory transfer (RDP command: LOAD_BLOCK)">rdpq_load_block</a> </dd>
+<dd>
+<a class="el" href="rdpq_8h.html#a027eb77bf55b7b56501147815f8fd13e" title="Low level function to load a texture image into TMEM in a single memory transfer.">rdpq_load_block_fx</a> </dd></dl>
 
 </div>
 </div>
@@ -2203,14 +2273,14 @@ Power of 2 scale of the texture to wrap on. Range is [-5..10];. </td></tr>
 <div class="line"><a class="code hl_function" href="rdpq_8c.html#ac3a157dcfb511e567251d69ba2272287">rdpq_set_lookup_address</a>(3, robot-&gt;buffer);</div>
 <div class="line"><a class="code hl_function" href="rdpq_8c.html#ac3a157dcfb511e567251d69ba2272287">rdpq_set_lookup_address</a>(4, dragon-&gt;buffer);</div>
 <div class="line"><a class="code hl_function" href="rspq_8c.html#ad078c001303a1b2153ba99f3184194f3">rspq_block_run</a>(bl);</div>
-<div class="ttc" id="ardpq_8c_html_a243f6adec109fcf042273b5e6402f83c"><div class="ttname"><a href="rdpq_8c.html#a243f6adec109fcf042273b5e6402f83c">rdpq_set_texture_image</a></div><div class="ttdeci">void rdpq_set_texture_image(const surface_t *surface)</div><div class="ttdoc">Configure the texture to use (RDP command: SET_TEX_IMAGE)</div><div class="ttdef"><b>Definition</b> rdpq.c:1040</div></div>
-<div class="ttc" id="ardpq_8c_html_ac3a157dcfb511e567251d69ba2272287"><div class="ttname"><a href="rdpq_8c.html#ac3a157dcfb511e567251d69ba2272287">rdpq_set_lookup_address</a></div><div class="ttdeci">void rdpq_set_lookup_address(uint8_t index, void *rdram_addr)</div><div class="ttdoc">Store an address into the rdpq lookup table.</div><div class="ttdef"><b>Definition</b> rdpq.h:1296</div></div>
-<div class="ttc" id="ardpq_8h_html_a7e7757331841702b18f3e3c90a91edc6"><div class="ttname"><a href="rdpq_8h.html#a7e7757331841702b18f3e3c90a91edc6">rdpq_load_tile</a></div><div class="ttdeci">#define rdpq_load_tile(tile, s0, t0, s1, t1)</div><div class="ttdoc">Load a portion of a texture into TMEM (RDP command: LOAD_TILE)</div><div class="ttdef"><b>Definition</b> rdpq.h:519</div></div>
+<div class="ttc" id="ardpq_8c_html_a243f6adec109fcf042273b5e6402f83c"><div class="ttname"><a href="rdpq_8c.html#a243f6adec109fcf042273b5e6402f83c">rdpq_set_texture_image</a></div><div class="ttdeci">void rdpq_set_texture_image(const surface_t *surface)</div><div class="ttdoc">Configure the texture to use (RDP command: SET_TEX_IMAGE)</div><div class="ttdef"><b>Definition</b> rdpq.c:1051</div></div>
+<div class="ttc" id="ardpq_8c_html_ac3a157dcfb511e567251d69ba2272287"><div class="ttname"><a href="rdpq_8c.html#ac3a157dcfb511e567251d69ba2272287">rdpq_set_lookup_address</a></div><div class="ttdeci">void rdpq_set_lookup_address(uint8_t index, void *rdram_addr)</div><div class="ttdoc">Store an address into the rdpq lookup table.</div><div class="ttdef"><b>Definition</b> rdpq.h:1353</div></div>
+<div class="ttc" id="ardpq_8h_html_a7e7757331841702b18f3e3c90a91edc6"><div class="ttname"><a href="rdpq_8h.html#a7e7757331841702b18f3e3c90a91edc6">rdpq_load_tile</a></div><div class="ttdeci">#define rdpq_load_tile(tile, s0, t0, s1, t1)</div><div class="ttdoc">Load a portion of a texture into TMEM (RDP command: LOAD_TILE)</div><div class="ttdef"><b>Definition</b> rdpq.h:551</div></div>
 <div class="ttc" id="ardpq__mode_8c_html_ac3c29578703de424bea9548ad86bb4af"><div class="ttname"><a href="rdpq__mode_8c.html#ac3c29578703de424bea9548ad86bb4af">rdpq_set_mode_standard</a></div><div class="ttdeci">void rdpq_set_mode_standard(void)</div><div class="ttdoc">Reset render mode to standard.</div><div class="ttdef"><b>Definition</b> rdpq_mode.c:93</div></div>
 <div class="ttc" id="ardpq__rect_8h_html_a7196362c567172a2012f414c8a412743"><div class="ttname"><a href="rdpq__rect_8h.html#a7196362c567172a2012f414c8a412743">rdpq_texture_rectangle</a></div><div class="ttdeci">#define rdpq_texture_rectangle(tile, x0, y0, x1, y1, s, t)</div><div class="ttdoc">Draw a textured rectangle (RDP command: TEXTURE_RECTANGLE)</div><div class="ttdef"><b>Definition</b> rdpq_rect.h:308</div></div>
-<div class="ttc" id="arspq_8c_html_a41f292fc1f7b261f84c55fc356f86acf"><div class="ttname"><a href="rspq_8c.html#a41f292fc1f7b261f84c55fc356f86acf">rspq_block_begin</a></div><div class="ttdeci">void rspq_block_begin(void)</div><div class="ttdoc">Begin creating a new block.</div><div class="ttdef"><b>Definition</b> rspq.c:1112</div></div>
-<div class="ttc" id="arspq_8c_html_a81339d69802148a09829d1c6d9a9f9f6"><div class="ttname"><a href="rspq_8c.html#a81339d69802148a09829d1c6d9a9f9f6">rspq_block_end</a></div><div class="ttdeci">rspq_block_t * rspq_block_end(void)</div><div class="ttdoc">Finish creating a block.</div><div class="ttdef"><b>Definition</b> rspq.c:1131</div></div>
-<div class="ttc" id="arspq_8c_html_ad078c001303a1b2153ba99f3184194f3"><div class="ttname"><a href="rspq_8c.html#ad078c001303a1b2153ba99f3184194f3">rspq_block_run</a></div><div class="ttdeci">void rspq_block_run(rspq_block_t *block)</div><div class="ttdoc">Add to the RSP queue a command that runs a block.</div><div class="ttdef"><b>Definition</b> rspq.c:1187</div></div>
+<div class="ttc" id="arspq_8c_html_a41f292fc1f7b261f84c55fc356f86acf"><div class="ttname"><a href="rspq_8c.html#a41f292fc1f7b261f84c55fc356f86acf">rspq_block_begin</a></div><div class="ttdeci">void rspq_block_begin(void)</div><div class="ttdoc">Begin creating a new block.</div><div class="ttdef"><b>Definition</b> rspq.c:1108</div></div>
+<div class="ttc" id="arspq_8c_html_a81339d69802148a09829d1c6d9a9f9f6"><div class="ttname"><a href="rspq_8c.html#a81339d69802148a09829d1c6d9a9f9f6">rspq_block_end</a></div><div class="ttdeci">rspq_block_t * rspq_block_end(void)</div><div class="ttdoc">Finish creating a block.</div><div class="ttdef"><b>Definition</b> rspq.c:1127</div></div>
+<div class="ttc" id="arspq_8c_html_ad078c001303a1b2153ba99f3184194f3"><div class="ttname"><a href="rspq_8c.html#ad078c001303a1b2153ba99f3184194f3">rspq_block_run</a></div><div class="ttdeci">void rspq_block_run(rspq_block_t *block)</div><div class="ttdoc">Add to the RSP queue a command that runs a block.</div><div class="ttdef"><b>Definition</b> rspq.c:1183</div></div>
 <div class="ttc" id="asurface_8h_html_a01f43f3d6c80a7658bf729bfaf3136e1ae781a51949044f96a872ca8e2715bed5"><div class="ttname"><a href="surface_8h.html#a01f43f3d6c80a7658bf729bfaf3136e1ae781a51949044f96a872ca8e2715bed5">FMT_RGBA16</a></div><div class="ttdeci">@ FMT_RGBA16</div><div class="ttdoc">Format RGBA 5551 (16-bit)</div><div class="ttdef"><b>Definition</b> surface.h:106</div></div>
 <div class="ttc" id="asurface_8h_html_a72c6f76ee9f39cc668e6628cc1fb46ef"><div class="ttname"><a href="surface_8h.html#a72c6f76ee9f39cc668e6628cc1fb46ef">surface_make_placeholder_linear</a></div><div class="ttdeci">surface_t surface_make_placeholder_linear(int index, tex_format_t format, uint16_t width, uint16_t height)</div><div class="ttdoc">Create a linear placeholder surface, that can be used during rdpq block recording.</div><div class="ttdef"><b>Definition</b> surface.h:318</div></div>
 <div class="ttc" id="asurface_8h_html_structsurface__t"><div class="ttname"><a href="surface_8h.html#structsurface__t">surface_t</a></div><div class="ttdoc">A surface buffer for graphics.</div><div class="ttdef"><b>Definition</b> surface.h:138</div></div>
@@ -2485,6 +2555,28 @@ Power of 2 scale of the texture to wrap on. Range is [-5..10];. </td></tr>
 
 </div>
 </div>
+<a id="ab153f2f85057ba28a1928986b3dcc3e6" name="ab153f2f85057ba28a1928986b3dcc3e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab153f2f85057ba28a1928986b3dcc3e6">&#9670;&#160;</a></span>rdpq_get_combiner_raw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t rdpq_get_combiner_raw </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read the current combiner register. </p>
+<p>This function executes a full sync (<a class="el" href="rspq_8c.html#af3055d289f73a125e15b72429cfc91ed" title="Wait until all commands in the queue have been executed by RSP.">rspq_wait</a>) and then extracts the current raw combiner from the RSP state. This should be used only for debugging purposes.</p>
+<dl class="section return"><dt>Returns</dt><dd>THe current value of the combiner register. </dd></dl>
+
+</div>
+</div>
 <a id="aeb872b5dba9db3ba975bf2b3b8282e71" name="aeb872b5dba9db3ba975bf2b3b8282e71"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeb872b5dba9db3ba975bf2b3b8282e71">&#9670;&#160;</a></span>rdpq_fence()</h2>
 
@@ -2552,10 +2644,73 @@ Power of 2 scale of the texture to wrap on. Range is [-5..10];. </td></tr>
 
 </div>
 </div>
+<a id="a662e5d1f8e05dff7bb673aafed1a643c" name="a662e5d1f8e05dff7bb673aafed1a643c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a662e5d1f8e05dff7bb673aafed1a643c">&#9670;&#160;</a></span>rdpq_call_deferred()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rdpq_call_deferred </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void *)&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enqueue a callback that will be called after the RSP and the RDP have finished processing all commands enqueued until now. </p>
+<p>This function is similar to <a class="el" href="rspq_8c.html#a3a6c09abcb40109a0b0df12d40bf78f4" title="Enqueue a callback to be called by the CPU.">rspq_call_deferred</a>, but it also guarantees that the callback is called after the RDP has finished processing all commands enqueued until now.</p>
+<p>For example:</p>
+<div class="fragment"><div class="line"><span class="comment">// Draw a green rectangle</span></div>
+<div class="line">rdpq_mode_set_fill(RGBA(0,255,0,0));</div>
+<div class="line"><a class="code hl_define" href="rdpq__rect_8h.html#a9c6405f89d2fe70046330964c21ba124">rdpq_fill_rectangle</a>(10, 10, 100, 100);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Enqueue a callback. The callback is guaranteed to be called</span></div>
+<div class="line"><span class="comment">// after the RSP has finished prepared the RDP command list for the</span></div>
+<div class="line"><span class="comment">// filled rectangle. It is possible that the RDP would still</span></div>
+<div class="line"><span class="comment">// be processing the rectangle when the callback is called.</span></div>
+<div class="line"><a class="code hl_function" href="rspq_8c.html#a3a6c09abcb40109a0b0df12d40bf78f4">rspq_call_deferred</a>(my_callback1, NULL);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Enqueue a callback. The callback is guaranteed to be called</span></div>
+<div class="line"><span class="comment">// after the rectangle has been fully drawn to the target buffer, so</span></div>
+<div class="line"><span class="comment">// that for instance the callback could readback the green pixels.</span></div>
+<div class="line"><a class="code hl_function" href="rdpq_8c.html#a662e5d1f8e05dff7bb673aafed1a643c">rdpq_call_deferred</a>(my_callback2, NULL);</div>
+<div class="ttc" id="ardpq_8c_html_a662e5d1f8e05dff7bb673aafed1a643c"><div class="ttname"><a href="rdpq_8c.html#a662e5d1f8e05dff7bb673aafed1a643c">rdpq_call_deferred</a></div><div class="ttdeci">void rdpq_call_deferred(void(*func)(void *), void *arg)</div><div class="ttdoc">Enqueue a callback that will be called after the RSP and the RDP have finished processing all command...</div><div class="ttdef"><b>Definition</b> rdpq.c:1148</div></div>
+<div class="ttc" id="arspq_8c_html_a3a6c09abcb40109a0b0df12d40bf78f4"><div class="ttname"><a href="rspq_8c.html#a3a6c09abcb40109a0b0df12d40bf78f4">rspq_call_deferred</a></div><div class="ttdeci">void rspq_call_deferred(void(*func)(void *), void *arg)</div><div class="ttdoc">Enqueue a callback to be called by the CPU.</div><div class="ttdef"><b>Definition</b> rspq.h:715</div></div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>Callback function to call </td></tr>
+    <tr><td class="paramname">arg</td><td>Argument to pass to the callback function </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:47 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

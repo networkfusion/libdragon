@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['n64_20system_20interface_0',['N64 System Interface',['../group__n64sys.html',1,'']]],
-  ['newlib_20interface_20hooks_1',['newlib Interface Hooks',['../group__system.html',1,'']]]
+  ['math_20routines_0',['Fast math routines',['../group__fastmath.html',1,'']]],
+  ['mixer_1',['Audio mixer',['../group__mixer.html',1,'']]],
+  ['multi_20threading_20kernel_2',['Multi-threading kernel',['../group__kernel.html',1,'']]]
 ];

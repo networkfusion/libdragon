@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -115,10 +114,14 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>len</b></td></tr>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>loop_len</b></td></tr>
 <tr class="memdesc:aecccfc32d77d4176b469233f306dff70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of the loop since file end (or 0 if no loop) <br /></td></tr>
 <tr class="separator:aecccfc32d77d4176b469233f306dff70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9aa5ebc3583435bfd293640f50bfb16b" id="r_a9aa5ebc3583435bfd293640f50bfb16b"><td class="memItemLeft" align="right" valign="top"><a id="a9aa5ebc3583435bfd293640f50bfb16b" name="a9aa5ebc3583435bfd293640f50bfb16b"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>start_offset</b></td></tr>
-<tr class="memdesc:a9aa5ebc3583435bfd293640f50bfb16b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset of the first sample in the file. <br /></td></tr>
-<tr class="separator:a9aa5ebc3583435bfd293640f50bfb16b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06e3a7fee32a34844954718ce495e943" id="r_a06e3a7fee32a34844954718ce495e943"><td class="memItemLeft" align="right" valign="top"><a id="a06e3a7fee32a34844954718ce495e943" name="a06e3a7fee32a34844954718ce495e943"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>start_offset</b></td></tr>
+<tr class="memdesc:a06e3a7fee32a34844954718ce495e943"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset of the first sample in the file. <br /></td></tr>
+<tr class="separator:a06e3a7fee32a34844954718ce495e943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc82d21dd918d4d39bdf4b755f2e4387" id="r_acc82d21dd918d4d39bdf4b755f2e4387"><td class="memItemLeft" align="right" valign="top"><a id="acc82d21dd918d4d39bdf4b755f2e4387" name="acc82d21dd918d4d39bdf4b755f2e4387"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>state_size</b></td></tr>
+<tr class="memdesc:acc82d21dd918d4d39bdf4b755f2e4387"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of per-mixer-channel state to allocate at runtime. <br /></td></tr>
+<tr class="separator:acc82d21dd918d4d39bdf4b755f2e4387"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header of a WAV64 file. </p>
@@ -251,19 +254,35 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>start_offset</b></
 
 </div>
 </div>
-<a id="a9aa5ebc3583435bfd293640f50bfb16b" name="a9aa5ebc3583435bfd293640f50bfb16b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9aa5ebc3583435bfd293640f50bfb16b">&#9670;&#160;</a></span>start_offset</h2>
+<a id="a06e3a7fee32a34844954718ce495e943" name="a06e3a7fee32a34844954718ce495e943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06e3a7fee32a34844954718ce495e943">&#9670;&#160;</a></span>start_offset</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int32_t wav64_header_t::start_offset</td>
+          <td class="memname">uint32_t wav64_header_t::start_offset</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Offset of the first sample in the file. </p>
+
+</div>
+</div>
+<a id="acc82d21dd918d4d39bdf4b755f2e4387" name="acc82d21dd918d4d39bdf4b755f2e4387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc82d21dd918d4d39bdf4b755f2e4387">&#9670;&#160;</a></span>state_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t wav64_header_t::state_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size of per-mixer-channel state to allocate at runtime. </p>
 
 </div>
 </div>
@@ -273,7 +292,7 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>start_offset</b></
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:47 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -95,6 +94,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstdio__t.html">stdio_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard I/O hook structure.  <a href="structstdio__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrtc__hooks__t.html">rtc_hooks_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Real-time clock hook structure.  <a href="structrtc__hooks__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -121,19 +123,19 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6ba22042b3c62d9213ac9121ce32b96f" id="r_ga6ba22042b3c62d9213ac9121ce32b96f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga6ba22042b3c62d9213ac9121ce32b96f">unhook_stdio_calls</a> (<a class="el" href="structstdio__t.html">stdio_t</a> *stdio_calls)</td></tr>
 <tr class="memdesc:ga6ba22042b3c62d9213ac9121ce32b96f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unhook from stdio.  <br /></td></tr>
 <tr class="separator:ga6ba22042b3c62d9213ac9121ce32b96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga52ba40f92821927553a30e3c6e8c5214" id="r_ga52ba40f92821927553a30e3c6e8c5214"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga52ba40f92821927553a30e3c6e8c5214">hook_time_call</a> (time_t(*time_fn)(void))</td></tr>
-<tr class="memdesc:ga52ba40f92821927553a30e3c6e8c5214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook into gettimeofday with a current time callback.  <br /></td></tr>
-<tr class="separator:ga52ba40f92821927553a30e3c6e8c5214"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7c3a0415a3cd3586014fdc4d1a793bf1" id="r_ga7c3a0415a3cd3586014fdc4d1a793bf1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga7c3a0415a3cd3586014fdc4d1a793bf1">unhook_time_call</a> (time_t(*time_fn)(void))</td></tr>
-<tr class="memdesc:ga7c3a0415a3cd3586014fdc4d1a793bf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unhook from gettimeofday current time callback.  <br /></td></tr>
-<tr class="separator:ga7c3a0415a3cd3586014fdc4d1a793bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga813fb069dfcfa2662146a48d22078134" id="r_ga813fb069dfcfa2662146a48d22078134"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga813fb069dfcfa2662146a48d22078134">hook_rtc_calls</a> (<a class="el" href="structrtc__hooks__t.html">rtc_hooks_t</a> *hooks)</td></tr>
+<tr class="memdesc:ga813fb069dfcfa2662146a48d22078134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook into POSIX time callbacks.  <br /></td></tr>
+<tr class="separator:ga813fb069dfcfa2662146a48d22078134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafbf7f0d5ec54ba1b5e150673a5aa829e" id="r_gafbf7f0d5ec54ba1b5e150673a5aa829e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gafbf7f0d5ec54ba1b5e150673a5aa829e">unhook_rtc_calls</a> (<a class="el" href="structrtc__hooks__t.html">rtc_hooks_t</a> *hooks)</td></tr>
+<tr class="memdesc:gafbf7f0d5ec54ba1b5e150673a5aa829e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unhook from POSIX time callbacks.  <br /></td></tr>
+<tr class="separator:gafbf7f0d5ec54ba1b5e150673a5aa829e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>newlib Interface Hooks </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:47 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -77,6 +76,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">wav64.h File Reference<div class="ingroups"><a class="el" href="group__libdragon.html">libdragon</a> &raquo; <a class="el" href="group__audio.html">Audio Subsystem</a> &raquo; <a class="el" href="group__mixer.html">Audio mixer</a></div></div></div>
 </div><!--header-->
@@ -92,6 +92,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:structwav64__t" id="r_structwav64__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wav64_8h.html#structwav64__t">wav64_t</a></td></tr>
 <tr class="memdesc:structwav64__t"><td class="mdescLeft">&#160;</td><td class="mdescRight">WAV64 structure.  <a href="wav64_8h.html#structwav64__t">More...</a><br /></td></tr>
 <tr class="separator:structwav64__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structwav64__loadparms__t" id="r_structwav64__loadparms__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wav64_8h.html#structwav64__loadparms__t">wav64_loadparms_t</a></td></tr>
+<tr class="memdesc:structwav64__loadparms__t"><td class="mdescLeft">&#160;</td><td class="mdescRight">WAV64 loading parameters (to be passed to <a class="el" href="wav64_8c.html#ab1e9eb3c970e39dbb7a5b891e02adf8f" title="Load a WAV64 file for playback.">wav64_load</a>)  <a href="wav64_8h.html#structwav64__loadparms__t">More...</a><br /></td></tr>
+<tr class="separator:structwav64__loadparms__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -99,11 +102,27 @@ Macros</h2></td></tr>
 <tr class="memdesc:a41067fd01f39b23852945f418e0f3d90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable a non-default compression level.  <br /></td></tr>
 <tr class="separator:a41067fd01f39b23852945f418e0f3d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a6a04294dca8d092c80e5d14c7653ccf6" id="r_a6a04294dca8d092c80e5d14c7653ccf6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wav64_8h.html#a6a04294dca8d092c80e5d14c7653ccf6">wav64_streaming_mode_t</a> { <a class="el" href="wav64_8h.html#a6a04294dca8d092c80e5d14c7653ccf6a96e58dd2f283ef794ffbfc4bb35e3cf4">WAV64_STREAMING_FULL</a>
+, <a class="el" href="wav64_8h.html#a6a04294dca8d092c80e5d14c7653ccf6ac43fdb1e3de6a0cb076e60754ecf38c6">WAV64_STREAMING_NONE</a>
+ }</td></tr>
+<tr class="memdesc:a6a04294dca8d092c80e5d14c7653ccf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">WAV64 streaming mode.  <a href="wav64_8h.html#a6a04294dca8d092c80e5d14c7653ccf6">More...</a><br /></td></tr>
+<tr class="separator:a6a04294dca8d092c80e5d14c7653ccf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec6c2068a89af4a95c039ab3bb380af4" id="r_aec6c2068a89af4a95c039ab3bb380af4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wav64_8h.html#aec6c2068a89af4a95c039ab3bb380af4">wav64_replacement_policy_t</a> { <a class="el" href="wav64_8h.html#aec6c2068a89af4a95c039ab3bb380af4a2205bf0deaefaa17821650bd78f51001">WAV64_REPLACEMENT_RANDOM</a> = 0
+, <a class="el" href="wav64_8h.html#aec6c2068a89af4a95c039ab3bb380af4a3a1f8f64e9c0c74e0437b6b7773b8c15">WAV64_REPLACEMENT_ASSERT</a> = 1
+ }</td></tr>
+<tr class="memdesc:aec6c2068a89af4a95c039ab3bb380af4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replacement policy to use when a wav64 is played back.  <a href="wav64_8h.html#aec6c2068a89af4a95c039ab3bb380af4">More...</a><br /></td></tr>
+<tr class="separator:aec6c2068a89af4a95c039ab3bb380af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad66af3ff9f0c1d51211cc72c1b92a6e9" id="r_ad66af3ff9f0c1d51211cc72c1b92a6e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wav64_8h.html#ad66af3ff9f0c1d51211cc72c1b92a6e9">wav64_open</a> (<a class="el" href="wav64_8h.html#structwav64__t">wav64_t</a> *wav, const char *fn)</td></tr>
 <tr class="memdesc:ad66af3ff9f0c1d51211cc72c1b92a6e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a WAV64 file for playback.  <br /></td></tr>
 <tr class="separator:ad66af3ff9f0c1d51211cc72c1b92a6e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80e2e02b9a1fafa2dae1e41b456ab955" id="r_a80e2e02b9a1fafa2dae1e41b456ab955"><td class="memItemLeft" align="right" valign="top"><a class="el" href="wav64_8h.html#structwav64__t">wav64_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wav64_8h.html#a80e2e02b9a1fafa2dae1e41b456ab955">wav64_load</a> (const char *fn, <a class="el" href="wav64_8h.html#structwav64__loadparms__t">wav64_loadparms_t</a> *parms)</td></tr>
+<tr class="memdesc:a80e2e02b9a1fafa2dae1e41b456ab955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a WAV64 file for playback.  <br /></td></tr>
+<tr class="separator:a80e2e02b9a1fafa2dae1e41b456ab955"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8b7880f777dec27e73713a6e78cd9e3" id="r_ac8b7880f777dec27e73713a6e78cd9e3"><td class="memItemLeft" align="right" valign="top"><a id="ac8b7880f777dec27e73713a6e78cd9e3" name="ac8b7880f777dec27e73713a6e78cd9e3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>wav64_set_loop</b> (<a class="el" href="wav64_8h.html#structwav64__t">wav64_t</a> *wav, bool loop)</td></tr>
 <tr class="memdesc:ac8b7880f777dec27e73713a6e78cd9e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure a WAV64 file for looping playback. <br /></td></tr>
@@ -144,31 +163,55 @@ wave</td>
 <td class="fielddoc">
 <a class="el" href="mixer_8h.html#structwaveform__t" title="A waveform that can be played back through the mixer.">waveform_t</a> for this WAV64. <p>Access and use this field directly with the mixer, if needed. </p>
 </td></tr>
+</table>
+
+</div>
+</div>
+<a name="structwav64__loadparms__t" id="structwav64__loadparms__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structwav64__loadparms__t">&#9670;&#160;</a></span>wav64_loadparms_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct wav64_loadparms_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>WAV64 loading parameters (to be passed to <a class="el" href="wav64_8c.html#ab1e9eb3c970e39dbb7a5b891e02adf8f" title="Load a WAV64 file for playback.">wav64_load</a>) </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
-<a id="acab8a14c9cba7fe3bf72d2dad0f7951c" name="acab8a14c9cba7fe3bf72d2dad0f7951c"></a>int</td>
+<a id="adeb86289755ae42fa8c469361399e214" name="adeb86289755ae42fa8c469361399e214"></a>int</td>
 <td class="fieldname">
-current_fd</td>
+max_simultaneous_playbacks</td>
 <td class="fielddoc">
-File descriptor to read WAV64. <p>File descriptor for the wav64 file </p>
+Maximum number of simultaneous playbacks. <p>This setting specifies the maximum number of channels that will play this wav64 file at the same time.</p>
+<p>The default for this setting depends on the compression level of the file:</p>
+<ul>
+<li>Level 0 (uncompressed): default to 32</li>
+<li>Level 1 (VADPCM): default to 4</li>
+<li>Level 3 (Opus): default to 1</li>
+</ul>
+<p>This is done to obtain a balance between memory usage and flexibility.</p>
+<p>If you try to playback the same wav64 on more channels than the maximum, the playback will stop a random playing channel to make room for the new one. </p>
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a3a5ed3ffc2dfa8a42885851aac7e7619" name="a3a5ed3ffc2dfa8a42885851aac7e7619"></a>int</td>
+<a id="a14d67f9cbafd760110009e155196eb0f" name="a14d67f9cbafd760110009e155196eb0f"></a><a class="el" href="wav64_8h.html#a6a04294dca8d092c80e5d14c7653ccf6">wav64_streaming_mode_t</a></td>
 <td class="fieldname">
-base_offset</td>
+streaming_mode</td>
 <td class="fielddoc">
-Start of Wav64 data. </td></tr>
+Streaming mode for the wav64. <p>See <a class="el" href="wav64_8h.html#a6a04294dca8d092c80e5d14c7653ccf6" title="WAV64 streaming mode.">wav64_streaming_mode_t</a> for details. </p>
+</td></tr>
 <tr><td class="fieldtype">
-<a id="a67a17a0ef9204d7f9e0c94e242380923" name="a67a17a0ef9204d7f9e0c94e242380923"></a>int</td>
+<a id="ad7736146a97892aaf40bb7da987331c2" name="ad7736146a97892aaf40bb7da987331c2"></a><a class="el" href="wav64_8h.html#aec6c2068a89af4a95c039ab3bb380af4">wav64_replacement_policy_t</a></td>
 <td class="fieldname">
-format</td>
+replacement_policy</td>
 <td class="fielddoc">
-Internal format of the file. </td></tr>
-<tr><td class="fieldtype">
-<a id="aee15df2ac01f6586caaf33d1cae6511e" name="aee15df2ac01f6586caaf33d1cae6511e"></a>void *</td>
-<td class="fieldname">
-ext</td>
-<td class="fielddoc">
-Pointer to extended data (internal use) </td></tr>
+Configure the replacement policy to use when a wav64 is played back. <p>If the user requests playback of this wav64 more times than those allowed by the <a class="el" href="wav64_8h.html#adeb86289755ae42fa8c469361399e214" title="Maximum number of simultaneous playbacks.">max_simultaneous_playbacks</a> parameter, this policy will be used to select which channel to stop.</p>
+<p>Right now, the only supported policy is <a class="el" href="wav64_8h.html#aec6c2068a89af4a95c039ab3bb380af4a2205bf0deaefaa17821650bd78f51001" title="Randomly select a channel to stop.">WAV64_REPLACEMENT_RANDOM</a>, which is also the default.</p>
+<p>See <a class="el" href="wav64_8h.html#aec6c2068a89af4a95c039ab3bb380af4" title="Replacement policy to use when a wav64 is played back.">wav64_replacement_policy_t</a> for details. </p>
+</td></tr>
 </table>
 
 </div>
@@ -196,8 +239,8 @@ Pointer to extended data (internal use) </td></tr>
 <div class="fragment"><div class="line"><a class="code hl_define" href="wav64_8h.html#a41067fd01f39b23852945f418e0f3d90">wav64_init_compression</a>(3); </div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="wav64_8c.html#a62b743c8c56bd67b3f2231f770c99e78">wav64_open</a>(&amp;jingle, <span class="stringliteral">&quot;rom:/jingle.wav64&quot;</span>);</div>
-<div class="ttc" id="awav64_8c_html_a62b743c8c56bd67b3f2231f770c99e78"><div class="ttname"><a href="wav64_8c.html#a62b743c8c56bd67b3f2231f770c99e78">wav64_open</a></div><div class="ttdeci">void wav64_open(wav64_t *wav, const char *file_name)</div><div class="ttdoc">Open a WAV64 file for playback.</div><div class="ttdef"><b>Definition</b> wav64.c:102</div></div>
-<div class="ttc" id="awav64_8h_html_a41067fd01f39b23852945f418e0f3d90"><div class="ttname"><a href="wav64_8h.html#a41067fd01f39b23852945f418e0f3d90">wav64_init_compression</a></div><div class="ttdeci">#define wav64_init_compression(level)</div><div class="ttdoc">Enable a non-default compression level.</div><div class="ttdef"><b>Definition</b> wav64.h:69</div></div>
+<div class="ttc" id="awav64_8c_html_a62b743c8c56bd67b3f2231f770c99e78"><div class="ttname"><a href="wav64_8c.html#a62b743c8c56bd67b3f2231f770c99e78">wav64_open</a></div><div class="ttdeci">void wav64_open(wav64_t *wav, const char *file_name)</div><div class="ttdoc">Open a WAV64 file for playback.</div><div class="ttdef"><b>Definition</b> wav64.c:246</div></div>
+<div class="ttc" id="awav64_8h_html_a41067fd01f39b23852945f418e0f3d90"><div class="ttname"><a href="wav64_8h.html#a41067fd01f39b23852945f418e0f3d90">wav64_init_compression</a></div><div class="ttdeci">#define wav64_init_compression(level)</div><div class="ttdoc">Enable a non-default compression level.</div><div class="ttdef"><b>Definition</b> wav64.h:68</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">level</td><td>Compression level to initialize</td></tr>
@@ -205,6 +248,55 @@ Pointer to extended data (internal use) </td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="wav64_8h.html#ad66af3ff9f0c1d51211cc72c1b92a6e9" title="Open a WAV64 file for playback.">wav64_open</a> </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a6a04294dca8d092c80e5d14c7653ccf6" name="a6a04294dca8d092c80e5d14c7653ccf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a04294dca8d092c80e5d14c7653ccf6">&#9670;&#160;</a></span>wav64_streaming_mode_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="wav64_8h.html#a6a04294dca8d092c80e5d14c7653ccf6">wav64_streaming_mode_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>WAV64 streaming mode. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6a04294dca8d092c80e5d14c7653ccf6a96e58dd2f283ef794ffbfc4bb35e3cf4" name="a6a04294dca8d092c80e5d14c7653ccf6a96e58dd2f283ef794ffbfc4bb35e3cf4"></a>WAV64_STREAMING_FULL&#160;</td><td class="fielddoc"><p>Full streaming. </p>
+<p>This is the default mode for streaming. All samples of the files are streamed from the file (typically, from ROM but could also be SD) on-demand.</p>
+<p>This uses the least amount of memory but requires data transfers from the storage device during playback. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6a04294dca8d092c80e5d14c7653ccf6ac43fdb1e3de6a0cb076e60754ecf38c6" name="a6a04294dca8d092c80e5d14c7653ccf6ac43fdb1e3de6a0cb076e60754ecf38c6"></a>WAV64_STREAMING_NONE&#160;</td><td class="fielddoc"><p>Preload and decompress the whole file. </p>
+<p>This mode preloads the whole file into memory and decompresses it in full at the beginning. This is useful for small files that can fit in memory, and for which you do not want to pay for the streaming overhead. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="aec6c2068a89af4a95c039ab3bb380af4" name="aec6c2068a89af4a95c039ab3bb380af4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec6c2068a89af4a95c039ab3bb380af4">&#9670;&#160;</a></span>wav64_replacement_policy_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="wav64_8h.html#aec6c2068a89af4a95c039ab3bb380af4">wav64_replacement_policy_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replacement policy to use when a wav64 is played back. </p>
+<p>If the user requests playback of this wav64 more times than those allowed by the <a class="el" href="wav64_8h.html#structwav64__loadparms__t" title="WAV64 loading parameters (to be passed to wav64_load)">wav64_loadparms_t</a>'s max_simultaneous_playbacks parameter, this policy will be used to select which channel to stop. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aec6c2068a89af4a95c039ab3bb380af4a2205bf0deaefaa17821650bd78f51001" name="aec6c2068a89af4a95c039ab3bb380af4a2205bf0deaefaa17821650bd78f51001"></a>WAV64_REPLACEMENT_RANDOM&#160;</td><td class="fielddoc"><p>Randomly select a channel to stop. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aec6c2068a89af4a95c039ab3bb380af4a3a1f8f64e9c0c74e0437b6b7773b8c15" name="aec6c2068a89af4a95c039ab3bb380af4a3a1f8f64e9c0c74e0437b6b7773b8c15"></a>WAV64_REPLACEMENT_ASSERT&#160;</td><td class="fielddoc"><p>Assert if the maximum number of playbacks is reached. </p>
+</td></tr>
+</table>
 
 </div>
 </div>
@@ -241,6 +333,45 @@ Pointer to extended data (internal use) </td></tr>
   <table class="params">
     <tr><td class="paramname">wav</td><td>Pointer to <a class="el" href="wav64_8h.html#structwav64__t" title="WAV64 structure.">wav64_t</a> structure </td></tr>
     <tr><td class="paramname">fn</td><td>Filename of the wav64 (with filesystem prefix). Currently, only files on DFS ("rom:/") are supported. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a80e2e02b9a1fafa2dae1e41b456ab955" name="a80e2e02b9a1fafa2dae1e41b456ab955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80e2e02b9a1fafa2dae1e41b456ab955">&#9670;&#160;</a></span>wav64_load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="wav64_8h.html#structwav64__t">wav64_t</a> * wav64_load </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="wav64_8h.html#structwav64__loadparms__t">wav64_loadparms_t</a> *&#160;</td>
+          <td class="paramname"><em>parms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load a WAV64 file for playback. </p>
+<p>This function opens the file, parses the header, and initializes for playing back through the audio mixer.</p>
+<p>You can use the <a class="el" href="wav64_8h.html#structwav64__loadparms__t" title="WAV64 loading parameters (to be passed to wav64_load)">wav64_loadparms_t</a> structure to specify additional parameters for the loading process, like the maximum number of simultaneous playbacks or the streaming mode.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fn</td><td>Filename of the wav64 (with filesystem prefix). </td></tr>
+    <tr><td class="paramname">parms</td><td>Optional loading parameters (or NULL for defaults). </td></tr>
   </table>
   </dd>
 </dl>
@@ -343,7 +474,7 @@ Pointer to extended data (internal use) </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:47 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -1,15 +1,15 @@
 var indexSectionsWithContent =
 {
-  0: ".123_abcdefghijklmnopqrstuvwxyz",
-  1: "._abcdefghjlmnoprstvwxy",
-  2: "abcdefgijlmnrstvwxy",
-  3: "_abcdefghijklmnorstuvwxy",
-  4: "_abcdefghilmnoprstuvwxyz",
-  5: "adefmrstuw",
-  6: "befgimrst",
-  7: "adefgimrstw",
+  0: ".123_abcdefghijklmnopqrstuvwxyz ",
+  1: "._abcdefghjklmnoprstvwxy",
+  2: "abcdefgijklmnprstvwxy",
+  3: "_abcdefghijklmnoprstuvwxy",
+  4: "_abcdefghijklmnopqrstuvwxyz",
+  5: "adefjkmnprstuw",
+  6: "befgijmnrstvwy",
+  7: "abdefgijmnrstvwy",
   8: "_abcdefhijmnoprstvwz",
-  9: "2abcdefghijlmnoprstv",
+  9: "2abcdefghijklmnoprstv",
   10: "l"
 };
 

@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -119,6 +118,7 @@ $(function() {
 <li>RESET_TIME_LENGTH&#160;:&#160;<a class="el" href="interrupt_8h.html#a32eeb0dea6b0c382ea7bb73cdd56b521">interrupt.h</a></li>
 <li>RGBA16&#160;:&#160;<a class="el" href="group__graphics.html#ga9a2133dc22dbfbf01faaf9dd19ee7b67">graphics.h</a></li>
 <li>RGBA32&#160;:&#160;<a class="el" href="group__graphics.html#gae16bab5741f411ec4ef51b0295f6e705">graphics.h</a></li>
+<li>RING_BUFFER_SIZE&#160;:&#160;<a class="el" href="eia608_8c.html#a779b513296068d2a6186659183ff3c2c">eia608.c</a></li>
 <li>ROOT_FLAGS&#160;:&#160;<a class="el" href="group__dfs.html#ga8fa12767c574a2f58b937bf32ca0f180">dfsinternal.h</a></li>
 <li>ROOT_NEXT_ENTRY&#160;:&#160;<a class="el" href="group__dfs.html#ga5edd0bfe529d35c9c2b9405f170a861f">dfsinternal.h</a></li>
 <li>ROOT_PATH&#160;:&#160;<a class="el" href="group__dfs.html#gad001da02ced4ad61e2f7e152fd33a5b8">dfsinternal.h</a></li>
@@ -130,11 +130,19 @@ $(function() {
 <li>rspq_append2&#160;:&#160;<a class="el" href="rspq_8c.html#a6ca48a73c1e4b41a7d3bfb6778c1e499">rspq.c</a></li>
 <li>rspq_append3&#160;:&#160;<a class="el" href="rspq_8c.html#a35774d218ae64fd92d7360b8b32af13c">rspq.c</a></li>
 <li>RSPQ_DATA_ADDRESS&#160;:&#160;<a class="el" href="rspq__internal_8h.html#a79d61a437f2eb7ee15a54b30485d580f">rspq_internal.h</a></li>
+<li>RSPQ_DCF_WAITRDP&#160;:&#160;<a class="el" href="rspq__internal_8h.html#a8eb730a07070614daa2e05db0aa7e249">rspq_internal.h</a></li>
 <li>rspq_int_write&#160;:&#160;<a class="el" href="rspq__internal_8h.html#a2c22673267db559e3da95fff1f428427">rspq_internal.h</a></li>
 <li>RSPQ_MAX_COMMAND_SIZE&#160;:&#160;<a class="el" href="rspq_8h.html#a5c35e691b9651ffc302d590a47d47418">rspq.h</a></li>
 <li>RSPQ_MAX_SHORT_COMMAND_SIZE&#160;:&#160;<a class="el" href="rspq_8h.html#ad3e8eab2e022715528f41c540436c721">rspq.h</a></li>
 <li>rspq_write&#160;:&#160;<a class="el" href="rspq_8h.html#aefec193be7de05f725738beeb3775634">rspq.h</a></li>
-<li>RTC_GET_CACHE_INVALIDATE_TICKS&#160;:&#160;<a class="el" href="rtc_8c.html#a52141232434243f8a5442db59d3f4d17">rtc.c</a></li>
+<li>RTC_CACHE_TIME_INIT&#160;:&#160;<a class="el" href="group__rtc.html#ga546bb630858ca563824b2d030d1bf2ef">rtc.c</a></li>
+<li>RTC_EBADCLOCK&#160;:&#160;<a class="el" href="group__rtc.html#gad2f250b33b8a9e064805998dfb44f24e">rtc.h</a></li>
+<li>RTC_EBADTIME&#160;:&#160;<a class="el" href="group__rtc.html#ga0b0913e9150c5130ae629930f49e9928">rtc.h</a></li>
+<li>RTC_ENOCLOCK&#160;:&#160;<a class="el" href="group__rtc.html#gadbdcf2785ee89a0139ccf7e3d999a888">rtc.h</a></li>
+<li>RTC_ESUCCESS&#160;:&#160;<a class="el" href="group__rtc.html#ga59fd38c502474dae8ac3ed7729f2e77f">rtc.h</a></li>
+<li>RTC_SLAVE_ADDR&#160;:&#160;<a class="el" href="bb__rtc_8c.html#a8f39eac3d31f517cc5fb018f2f2c2a9e">bb_rtc.c</a></li>
+<li>RTC_SOFT_TIMESTAMP_MAX&#160;:&#160;<a class="el" href="group__rtc.html#ga8c4e7de99925696480bb4e69d4c1d707">rtc.h</a></li>
+<li>RTC_SOFT_TIMESTAMP_MIN&#160;:&#160;<a class="el" href="group__rtc.html#ga6f116349f842741597622c4fef2264a2">rtc.h</a></li>
 <li>RTLD_DEFAULT&#160;:&#160;<a class="el" href="dlfcn_8h.html#a58d13c5dcabbb85848fa97b446086247">dlfcn.h</a></li>
 <li>RTLD_GLOBAL&#160;:&#160;<a class="el" href="dlfcn_8h.html#ace65454279c135fe5e6168d456c31263">dlfcn.h</a></li>
 <li>RTLD_LAZY&#160;:&#160;<a class="el" href="dlfcn_8h.html#a5c83709ee3bd7d316f8f47e122f3be20">dlfcn.h</a></li>
@@ -147,7 +155,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:48 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:51 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

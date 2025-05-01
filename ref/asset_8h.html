@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -88,6 +87,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a34d5d636492bebbe03bae6ab8ee28e2a" id="r_a34d5d636492bebbe03bae6ab8ee28e2a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asset_8h.html#a34d5d636492bebbe03bae6ab8ee28e2a">ASSET_ALIGNMENT_MIN</a>&#160;&#160;&#160;16</td></tr>
+<tr class="memdesc:a34d5d636492bebbe03bae6ab8ee28e2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum required alignment for assets.  <br /></td></tr>
+<tr class="separator:a34d5d636492bebbe03bae6ab8ee28e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bdfd4d8e3a7e807dd7e1b8cb00332a4" id="r_a6bdfd4d8e3a7e807dd7e1b8cb00332a4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asset_8h.html#a6bdfd4d8e3a7e807dd7e1b8cb00332a4">asset_init_compression</a>(level)</td></tr>
 <tr class="memdesc:a6bdfd4d8e3a7e807dd7e1b8cb00332a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable a non-default compression level.  <br /></td></tr>
 <tr class="separator:a6bdfd4d8e3a7e807dd7e1b8cb00332a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -97,6 +99,12 @@ Functions</h2></td></tr>
 <tr class="memitem:abfc5939446d9920b884df034e89428a9" id="r_abfc5939446d9920b884df034e89428a9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asset_8h.html#abfc5939446d9920b884df034e89428a9">asset_load</a> (const char *fn, int *sz)</td></tr>
 <tr class="memdesc:abfc5939446d9920b884df034e89428a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an asset file (possibly uncompressing it)  <br /></td></tr>
 <tr class="separator:abfc5939446d9920b884df034e89428a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30b5d1de803ff52b99c484b073ba76b7" id="r_a30b5d1de803ff52b99c484b073ba76b7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asset_8h.html#a30b5d1de803ff52b99c484b073ba76b7">asset_loadf</a> (FILE *f, int *sz)</td></tr>
+<tr class="memdesc:a30b5d1de803ff52b99c484b073ba76b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an asset file (possibly uncompressing it)  <br /></td></tr>
+<tr class="separator:a30b5d1de803ff52b99c484b073ba76b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cb89fccd164718c2551190edf1f6507" id="r_a6cb89fccd164718c2551190edf1f6507"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asset_8h.html#a6cb89fccd164718c2551190edf1f6507">asset_loadf_into</a> (FILE *f, int *sz, void *buf, int *buf_size)</td></tr>
+<tr class="memdesc:a6cb89fccd164718c2551190edf1f6507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an asset file (possibly uncompressing it)  <br /></td></tr>
+<tr class="separator:a6cb89fccd164718c2551190edf1f6507"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac731b2beb346c99f36fa8f355fb84509" id="r_ac731b2beb346c99f36fa8f355fb84509"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asset_8h.html#ac731b2beb346c99f36fa8f355fb84509">asset_fopen</a> (const char *fn, int *sz)</td></tr>
 <tr class="memdesc:ac731b2beb346c99f36fa8f355fb84509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open an asset file for reading (with transparent decompression)  <br /></td></tr>
 <tr class="separator:ac731b2beb346c99f36fa8f355fb84509"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -104,6 +112,23 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Asset Subsystem. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a34d5d636492bebbe03bae6ab8ee28e2a" name="a34d5d636492bebbe03bae6ab8ee28e2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34d5d636492bebbe03bae6ab8ee28e2a">&#9670;&#160;</a></span>ASSET_ALIGNMENT_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASSET_ALIGNMENT_MIN&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minimum required alignment for assets. </p>
+<p>Aligned to data cacheline </p>
+
+</div>
+</div>
 <a id="a6bdfd4d8e3a7e807dd7e1b8cb00332a4" name="a6bdfd4d8e3a7e807dd7e1b8cb00332a4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6bdfd4d8e3a7e807dd7e1b8cb00332a4">&#9670;&#160;</a></span>asset_init_compression</h2>
 
@@ -127,7 +152,7 @@ Functions</h2></td></tr>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Load an asset that might use level 2 compression</span></div>
 <div class="line"><a class="code hl_struct" href="sprite_8h.html#structsprite__t">sprite_t</a> *hero = sprite_load(<span class="stringliteral">&quot;rom:/hero.sprite&quot;</span>);</div>
-<div class="ttc" id="aasset_8h_html_a6bdfd4d8e3a7e807dd7e1b8cb00332a4"><div class="ttname"><a href="asset_8h.html#a6bdfd4d8e3a7e807dd7e1b8cb00332a4">asset_init_compression</a></div><div class="ttdeci">#define asset_init_compression(level)</div><div class="ttdoc">Enable a non-default compression level.</div><div class="ttdef"><b>Definition</b> asset.h:105</div></div>
+<div class="ttc" id="aasset_8h_html_a6bdfd4d8e3a7e807dd7e1b8cb00332a4"><div class="ttname"><a href="asset_8h.html#a6bdfd4d8e3a7e807dd7e1b8cb00332a4">asset_init_compression</a></div><div class="ttdeci">#define asset_init_compression(level)</div><div class="ttdoc">Enable a non-default compression level.</div><div class="ttdef"><b>Definition</b> asset.h:113</div></div>
 <div class="ttc" id="asprite_8h_html_structsprite__t"><div class="ttname"><a href="sprite_8h.html#structsprite__t">sprite_t</a></div><div class="ttdoc">Sprite structure.</div><div class="ttdef"><b>Definition</b> sprite.h:40</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -179,6 +204,105 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a30b5d1de803ff52b99c484b073ba76b7" name="a30b5d1de803ff52b99c484b073ba76b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30b5d1de803ff52b99c484b073ba76b7">&#9670;&#160;</a></span>asset_loadf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * asset_loadf </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>sz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load an asset file (possibly uncompressing it) </p>
+<p>This function loads an asset embedded within a larger file. It requires in input an open file pointer, seeked to the beginning of the asset, and the size of the asset itself. If the asset is compressed, it is transparently decompressed.</p>
+<p>After this function returns, for technical reasons, the position of the provided file pointer becomes undefined. If you need to use it again, make sure to seek it.</p>
+<p>A memory buffer to hold the uncompressed asset is automatically allocated and returned. It must be freed using free() when the buffer is not required anymore. The memory is guaranteed to be aligned by at least <a class="el" href="asset_8h.html#a34d5d636492bebbe03bae6ab8ee28e2a" title="Minimum required alignment for assets.">ASSET_ALIGNMENT_MIN</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>pre-seeked file pointer, pointing to a valid asset header (or actual data if uncompressed) </td></tr>
+    <tr><td class="paramname">sz</td><td>size of input data (compressed or not). It will be filled the uncompressed asset size, which is equal to the input value if the asset is not compressed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void* Allocated buffer filled with the uncompressed asset content </dd></dl>
+
+</div>
+</div>
+<a id="a6cb89fccd164718c2551190edf1f6507" name="a6cb89fccd164718c2551190edf1f6507"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cb89fccd164718c2551190edf1f6507">&#9670;&#160;</a></span>asset_loadf_into()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool asset_loadf_into </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>sz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>buf_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load an asset file (possibly uncompressing it) </p>
+<p>This is the lowest-level asset loading function, that is needed only for advanced use cases. In general, prefer using any of other variants if possible, as the other APIs are harder to misuse.</p>
+<p>This function loads an asset potentially embedded within a larger, opened file. It requires an open file pointer, seeked to the beginning of the asset, and the size of the asset itself. If the asset is compressed, it is transparently decompressed.</p>
+<p>After this function returns, for technical reasons, the position of the provided file pointer becomes undefined. If you need to use it again, make sure to seek it.</p>
+<p>The memory buffer to hold the uncompressed asset must be provided as input, together with its size. If the provided buffer is too small (or it is NULL), the function does not load the asset and returns false, change buf_size to contain the minimum required size for the buffer. Notice that the minimum buffer size might be slightly larger than the uncompressed asset size, because some extra space might be required to perform in-place decompression. The minimum buffer size can either be calculated a build time (the assetcomp library exposes a function to do so), or queried at runtime by simply calling this function with a NULL input buffer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>pre-seeked file pointer, pointing to a valid asset header (or actual data if uncompressed) </td></tr>
+    <tr><td class="paramname">sz</td><td>[in/out]: size of input data (compressed or not). It will be filled the uncompressed asset size, which is equal to the input value if the asset is not compressed. </td></tr>
+    <tr><td class="paramname">buf</td><td>Pointer to the buffer where data must be loaded into. If the buffer pointer is NULL, or it is too small, asset_loadf_into will fail. </td></tr>
+    <tr><td class="paramname">buf_size</td><td>[in/out]: Size of the provided input buffer. Changed to minimum required size, if it was too small.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true The function has succeeded and the asset was loaded </dd>
+<dd>
+false The function has failed because the provided buffer was too small. In this case, *buf_size is changed to contain the minimum size that is required to load this asset. </dd></dl>
+
+</div>
+</div>
 <a id="ac731b2beb346c99f36fa8f355fb84509" name="ac731b2beb346c99f36fa8f355fb84509"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac731b2beb346c99f36fa8f355fb84509">&#9670;&#160;</a></span>asset_fopen()</h2>
 
@@ -223,7 +347,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:47 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:49 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

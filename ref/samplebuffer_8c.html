@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -92,7 +91,7 @@ Macros</h2></td></tr>
 <tr class="separator:a51055c8e74be85f62c35632ff82e869f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fb613ddfceb7573a840c84b146f273c" id="r_a1fb613ddfceb7573a840c84b146f273c"><td class="memItemLeft" align="right" valign="top"><a id="a1fb613ddfceb7573a840c84b146f273c" name="a1fb613ddfceb7573a840c84b146f273c"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>tracef</b>(fmt, ...)&#160;&#160;&#160;({ })</td></tr>
-<tr class="memdesc:a1fb613ddfceb7573a840c84b146f273c"><td class="mdescLeft">&#160;</td><td class="mdescRight">like <a class="el" href="debug_8h.html#aa3e8be416ef1525cfd3230204b56d184" title="Write a message to the debugging channel.">debugf()</a>, but writes only if <a class="el" href="samplebuffer_8c.html#a51055c8e74be85f62c35632ff82e869f" title="Set to 1 to activate debug logs.">MIXER_TRACE</a> is not 0 <br /></td></tr>
+<tr class="memdesc:a1fb613ddfceb7573a840c84b146f273c"><td class="mdescLeft">&#160;</td><td class="mdescRight">like debugf(), but writes only if <a class="el" href="samplebuffer_8c.html#a51055c8e74be85f62c35632ff82e869f" title="Set to 1 to activate debug logs.">MIXER_TRACE</a> is not 0 <br /></td></tr>
 <tr class="separator:a1fb613ddfceb7573a840c84b146f273c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -102,8 +101,8 @@ Functions</h2></td></tr>
 <tr class="memitem:aa16bbcb1683deb8206e06bd9128f9b09" id="r_aa16bbcb1683deb8206e06bd9128f9b09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="samplebuffer_8c.html#aa16bbcb1683deb8206e06bd9128f9b09">samplebuffer_set_bps</a> (<a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a> *buf, int bits_per_sample)</td></tr>
 <tr class="memdesc:aa16bbcb1683deb8206e06bd9128f9b09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the bit width of the samples stored in the buffer.  <br /></td></tr>
 <tr class="separator:aa16bbcb1683deb8206e06bd9128f9b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1ed7b8b55c07c6c6a4c6471e94e6145" id="r_ae1ed7b8b55c07c6c6a4c6471e94e6145"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="samplebuffer_8c.html#ae1ed7b8b55c07c6c6a4c6471e94e6145">samplebuffer_set_waveform</a> (<a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a> *buf, <a class="el" href="mixer_8h.html#ab0e995bf04880a3e14f689f48fdb2475">WaveformRead</a> <a class="el" href="system_8c.html#a0b746547993d7baf3b092ae620bfa666">read</a>, void *ctx)</td></tr>
-<tr class="separator:ae1ed7b8b55c07c6c6a4c6471e94e6145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac06c8ab86a03f3a65bf6daa30091ef27" id="r_ac06c8ab86a03f3a65bf6daa30091ef27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="samplebuffer_8c.html#ac06c8ab86a03f3a65bf6daa30091ef27">samplebuffer_set_waveform</a> (<a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a> *buf, <a class="el" href="mixer_8h.html#structwaveform__t">waveform_t</a> *wave, <a class="el" href="mixer_8h.html#ab0e995bf04880a3e14f689f48fdb2475">WaveformRead</a> <a class="el" href="system_8c.html#a0b746547993d7baf3b092ae620bfa666">read</a>, void *ctx)</td></tr>
+<tr class="separator:ac06c8ab86a03f3a65bf6daa30091ef27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7252a6b63af132338f6e1b8a10cb1c03" id="r_a7252a6b63af132338f6e1b8a10cb1c03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="samplebuffer_8c.html#a7252a6b63af132338f6e1b8a10cb1c03">samplebuffer_is_inited</a> (<a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a> *buf)</td></tr>
 <tr class="memdesc:a7252a6b63af132338f6e1b8a10cb1c03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the samplebuffer is initialized.  <br /></td></tr>
 <tr class="separator:a7252a6b63af132338f6e1b8a10cb1c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,8 +207,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae1ed7b8b55c07c6c6a4c6471e94e6145" name="ae1ed7b8b55c07c6c6a4c6471e94e6145"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1ed7b8b55c07c6c6a4c6471e94e6145">&#9670;&#160;</a></span>samplebuffer_set_waveform()</h2>
+<a id="ac06c8ab86a03f3a65bf6daa30091ef27" name="ac06c8ab86a03f3a65bf6daa30091ef27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac06c8ab86a03f3a65bf6daa30091ef27">&#9670;&#160;</a></span>samplebuffer_set_waveform()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,6 +218,12 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a> *&#160;</td>
           <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mixer_8h.html#structwaveform__t">waveform_t</a> *&#160;</td>
+          <td class="paramname"><em>wave</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -244,8 +249,9 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>Sample buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">read</td><td>Waveform reading function, that produces samples. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>Opaque context that will be passed to the read function. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wave</td><td>Waveform to connect to the sample buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">read</td><td>Waveform read function </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>Opaque context that will be passed to the read/stop function. </td></tr>
   </table>
   </dd>
 </dl>
@@ -503,7 +509,7 @@ false If the sample buffer is not initialized. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:47 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

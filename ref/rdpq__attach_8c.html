@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -116,6 +115,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>__rdpq_clear_z</b> (c
 <tr class="memitem:a88ddcc861cd4cd2027f3501a04b418d7" id="r_a88ddcc861cd4cd2027f3501a04b418d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq__attach_8c.html#a88ddcc861cd4cd2027f3501a04b418d7">rdpq_detach_show</a> (void)</td></tr>
 <tr class="memdesc:a88ddcc861cd4cd2027f3501a04b418d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detach the RDP from the current framebuffer, and show it on screen.  <br /></td></tr>
 <tr class="separator:a88ddcc861cd4cd2027f3501a04b418d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ddbf242890728423dd7e51358040eeb" id="r_a1ddbf242890728423dd7e51358040eeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq__attach_8c.html#a1ddbf242890728423dd7e51358040eeb">__rdpq_attach_close</a> (void)</td></tr>
+<tr class="separator:a1ddbf242890728423dd7e51358040eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5004df3392b66afd326dda7ae2b39a44" id="r_a5004df3392b66afd326dda7ae2b39a44"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="surface_8h.html#structsurface__t">surface_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq__attach_8c.html#a5004df3392b66afd326dda7ae2b39a44">rdpq_get_attached</a> (void)</td></tr>
+<tr class="memdesc:a5004df3392b66afd326dda7ae2b39a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the surface that is currently attached to the RDP.  <br /></td></tr>
+<tr class="separator:a5004df3392b66afd326dda7ae2b39a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57062dc5e71cc6531b82785cf56be865" id="r_a57062dc5e71cc6531b82785cf56be865"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq__attach_8c.html#a57062dc5e71cc6531b82785cf56be865">rdpq_clear</a> (<a class="el" href="group__graphics.html#structcolor__t">color_t</a> color)</td></tr>
 <tr class="memdesc:a57062dc5e71cc6531b82785cf56be865"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the current render target with the specified color.  <br /></td></tr>
 <tr class="separator:a57062dc5e71cc6531b82785cf56be865"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -307,6 +311,47 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>__rdpq_clear_z</b> (c
 
 </div>
 </div>
+<a id="a1ddbf242890728423dd7e51358040eeb" name="a1ddbf242890728423dd7e51358040eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ddbf242890728423dd7e51358040eeb">&#9670;&#160;</a></span>__rdpq_attach_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __rdpq_attach_close </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Close rdpq_attach subsystem </p>
+
+</div>
+</div>
+<a id="a5004df3392b66afd326dda7ae2b39a44" name="a5004df3392b66afd326dda7ae2b39a44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5004df3392b66afd326dda7ae2b39a44">&#9670;&#160;</a></span>rdpq_get_attached()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="surface_8h.html#structsurface__t">surface_t</a> * rdpq_get_attached </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the surface that is currently attached to the RDP. </p>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the surface that is currently attached to the RDP, or NULL if none is attached.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="rdpq__attach_8h.html#a67bd7bcd3d71538f5a10d50ba73b6b10" title="Attach the RDP to a color surface (and optionally a Z buffer)">rdpq_attach</a> </dd></dl>
+
+</div>
+</div>
 <a id="a57062dc5e71cc6531b82785cf56be865" name="a57062dc5e71cc6531b82785cf56be865"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a57062dc5e71cc6531b82785cf56be865">&#9670;&#160;</a></span>rdpq_clear()</h2>
 
@@ -452,7 +497,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>__rdpq_clear_z</b> (c
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:47 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

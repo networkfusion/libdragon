@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -127,6 +126,9 @@ Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>xm64player_close</b> (<a class="el" href="xm64_8h.html#structxm64player__t">xm64player_t</a> *player)</td></tr>
 <tr class="memdesc:ab5874d5af4f0731d06ea04b3046885bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close and deallocate the XM64 player. <br /></td></tr>
 <tr class="separator:ab5874d5af4f0731d06ea04b3046885bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e6d01abe8465cde9f65aad35685253f" id="r_a0e6d01abe8465cde9f65aad35685253f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="xm64_8h.html#a0e6d01abe8465cde9f65aad35685253f">xm64_set_extsampledir</a> (const char *dir)</td></tr>
+<tr class="memdesc:a0e6d01abe8465cde9f65aad35685253f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the directory where external samples are stored.  <br /></td></tr>
+<tr class="separator:a0e6d01abe8465cde9f65aad35685253f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Efficient XM module player. </p>
@@ -164,21 +166,9 @@ ctx</td>
 <td class="fielddoc">
 libxm context </td></tr>
 <tr><td class="fieldtype">
-<a id="afcc767f3e79098a163b8fe95bee4690e" name="afcc767f3e79098a163b8fe95bee4690e"></a><a class="el" href="mixer_8h.html#structwaveform__t">waveform_t</a> *</td>
+<a id="a3b441a6db56a3327b39d8fed017cc19d" name="a3b441a6db56a3327b39d8fed017cc19d"></a>int</td>
 <td class="fieldname">
-waves</td>
-<td class="fielddoc">
-array of all waveforms (one per XM "sample") </td></tr>
-<tr><td class="fieldtype">
-<a id="ad603cd4f10c0b5d28c2785c7405dfb7f" name="ad603cd4f10c0b5d28c2785c7405dfb7f"></a>int</td>
-<td class="fieldname">
-nwaves</td>
-<td class="fielddoc">
-number of waves (XM "samples") </td></tr>
-<tr><td class="fieldtype">
-<a id="a00426b1b53cdbcd9d9488989500381ef" name="a00426b1b53cdbcd9d9488989500381ef"></a>FILE *</td>
-<td class="fieldname">
-fh</td>
+fd</td>
 <td class="fielddoc">
 open handle of XM64 file </td></tr>
 <tr><td class="fieldtype">
@@ -206,7 +196,7 @@ looping</td>
 <td class="fielddoc">
 true if the XM is configured to loop </td></tr>
 <tr><td class="fieldtype">
-<a id="a877ecd2b187a14ab12b893effc0efce1" name="a877ecd2b187a14ab12b893effc0efce1"></a>struct <a class="el" href="xm64_8h.html#structxm64player__t_8seek">xm64player_t.seek</a></td>
+<a id="a13a6247650c945bff815b0dc253c885f" name="a13a6247650c945bff815b0dc253c885f"></a>struct <a class="el" href="xm64_8h.html#structxm64player__t_8seek">xm64player_t.seek</a></td>
 <td class="fieldname">
 seek</td>
 <td class="fielddoc">
@@ -279,10 +269,11 @@ tick</td>
 
 <p>Open a XM64 module file and prepare for playback. </p>
 <p>This function requires the mixer to have been already initialized (via mixer_init).</p>
+<p>XM64 files can carry their own embedded samples, or can use an external sample library. In the latter case, make sure to call <a class="el" href="xm64_8h.html#a0e6d01abe8465cde9f65aad35685253f" title="Configure the directory where external samples are stored.">xm64_set_extsampledir</a> to set the directory where the external samples are stored.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">player</td><td>Pointer to the <a class="el" href="xm64_8h.html#structxm64player__t" title="Player of a .XM64 file.">xm64player_t</a> player structure to use </td></tr>
-    <tr><td class="paramname">fn</td><td>Filename of the XM64 (with filesystem prefix). Currently, only files on DFS ("rom:/") are supported. </td></tr>
+    <tr><td class="paramname">fn</td><td>Filename of the XM64 (with filesystem prefix). </td></tr>
   </table>
   </dd>
 </dl>
@@ -581,10 +572,37 @@ tick</td>
 
 </div>
 </div>
+<a id="a0e6d01abe8465cde9f65aad35685253f" name="a0e6d01abe8465cde9f65aad35685253f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e6d01abe8465cde9f65aad35685253f">&#9670;&#160;</a></span>xm64_set_extsampledir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void xm64_set_extsampledir </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure the directory where external samples are stored. </p>
+<p>This function is used to set the directory where the external samples are stored. It is only used for XM64 files that use external samples.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir</td><td>Directory where the external samples are stored. This can be on any filesystem, even different from XM64's one. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:47 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

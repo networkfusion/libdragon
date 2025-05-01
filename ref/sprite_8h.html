@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -95,8 +94,8 @@ Data Structures</h2></td></tr>
 <tr class="memitem:structsprite__detail__t" id="r_structsprite__detail__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8h.html#structsprite__detail__t">sprite_detail_t</a></td></tr>
 <tr class="memdesc:structsprite__detail__t"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprite detail texture information structure.  <a href="sprite_8h.html#structsprite__detail__t">More...</a><br /></td></tr>
 <tr class="separator:structsprite__detail__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:unionsprite__t_8____unnamed40____" id="r_unionsprite__t_8____unnamed40____"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8h.html#unionsprite__t_8____unnamed40____">sprite_t.__unnamed40__</a></td></tr>
-<tr class="separator:unionsprite__t_8____unnamed40____"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:unionsprite__t_8____unnamed85____" id="r_unionsprite__t_8____unnamed85____"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8h.html#unionsprite__t_8____unnamed85____">sprite_t.__unnamed85__</a></td></tr>
+<tr class="separator:unionsprite__t_8____unnamed85____"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -152,6 +151,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>sprite_free</b> (<a c
 <tr class="memitem:a540e860f84fff6a665b296d6956e80d3" id="r_a540e860f84fff6a665b296d6956e80d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8h.html#a540e860f84fff6a665b296d6956e80d3">sprite_fits_tmem</a> (<a class="el" href="sprite_8h.html#structsprite__t">sprite_t</a> *sprite)</td></tr>
 <tr class="memdesc:a540e860f84fff6a665b296d6956e80d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the sprite fits in TMEM without splitting.  <br /></td></tr>
 <tr class="separator:a540e860f84fff6a665b296d6956e80d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fda71d315959659fd44226bc8448026" id="r_a2fda71d315959659fd44226bc8448026"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8h.html#a2fda71d315959659fd44226bc8448026">sprite_is_shq</a> (<a class="el" href="sprite_8h.html#structsprite__t">sprite_t</a> *sprite)</td></tr>
+<tr class="memdesc:a2fda71d315959659fd44226bc8448026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the sprite is in SHQ format.  <br /></td></tr>
+<tr class="separator:a2fda71d315959659fd44226bc8448026"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>2D Graphics </p>
@@ -194,7 +196,7 @@ bitdepth</td>
 DEPRECATED: do not use this field. Use TEX_FORMAT_BITDEPTH(sprite-&gt;format) instead. <br  />
  </td></tr>
 <tr><td class="fieldtype">
-<a id="a76735a6b9f1d4851817ad2262de075ba" name="a76735a6b9f1d4851817ad2262de075ba"></a>union <a class="el" href="sprite_8h.html#unionsprite__t_8____unnamed40____">sprite_t.__unnamed40__</a></td>
+<a id="a7cc0666a3c08d9707082b2a5d985c7e0" name="a7cc0666a3c08d9707082b2a5d985c7e0"></a>union <a class="el" href="sprite_8h.html#unionsprite__t_8____unnamed85____">sprite_t.__unnamed85__</a></td>
 <td class="fieldname">
 __unnamed__</td>
 <td class="fielddoc">
@@ -256,14 +258,14 @@ Blend factor of the detail texture in range of 0 to 1. </td></tr>
 
 </div>
 </div>
-<a name="unionsprite__t_8____unnamed40____" id="unionsprite__t_8____unnamed40____"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#unionsprite__t_8____unnamed40____">&#9670;&#160;</a></span>sprite_t.__unnamed40__</h2>
+<a name="unionsprite__t_8____unnamed85____" id="unionsprite__t_8____unnamed85____"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#unionsprite__t_8____unnamed85____">&#9670;&#160;</a></span>sprite_t.__unnamed85__</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">union sprite_t.__unnamed40__</td>
+          <td class="memname">union sprite_t.__unnamed85__</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -683,10 +685,38 @@ Various flags, including texture format. </td></tr>
 
 </div>
 </div>
+<a id="a2fda71d315959659fd44226bc8448026" name="a2fda71d315959659fd44226bc8448026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fda71d315959659fd44226bc8448026">&#9670;&#160;</a></span>sprite_is_shq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sprite_is_shq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sprite_8h.html#structsprite__t">sprite_t</a> *&#160;</td>
+          <td class="paramname"><em>sprite</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return true if the sprite is in SHQ format. </p>
+<p>This is a special sprite made of two mipmaps (one I4 and one RGBA16) that must be displayed using subtractive blending.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sprite</td><td>The sprite to access </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the sprite is in SHQ format, false otherwise </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:47 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

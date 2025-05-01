@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -89,16 +88,13 @@ Data Structures</h2></td></tr>
 <tr class="memitem:structwav64__opus__header__ext" id="r_structwav64__opus__header__ext"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wav64__opus_8c.html#structwav64__opus__header__ext">wav64_opus_header_ext</a></td></tr>
 <tr class="memdesc:structwav64__opus__header__ext"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wav64 Opus header extension.  <a href="wav64__opus_8c.html#structwav64__opus__header__ext">More...</a><br /></td></tr>
 <tr class="separator:structwav64__opus__header__ext"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:structwav64__opus__state" id="r_structwav64__opus__state"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wav64__opus_8c.html#structwav64__opus__state">wav64_opus_state</a></td></tr>
-<tr class="memdesc:structwav64__opus__state"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wav64 Opus state.  <a href="wav64__opus_8c.html#structwav64__opus__state">More...</a><br /></td></tr>
-<tr class="separator:structwav64__opus__state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4e09e450b0eb6c8db6476cec970f69a6" id="r_a4e09e450b0eb6c8db6476cec970f69a6"><td class="memItemLeft" align="right" valign="top"><a id="a4e09e450b0eb6c8db6476cec970f69a6" name="a4e09e450b0eb6c8db6476cec970f69a6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>wav64_opus_init</b> (<a class="el" href="wav64_8h.html#structwav64__t">wav64_t</a> *wav)</td></tr>
-<tr class="memdesc:a4e09e450b0eb6c8db6476cec970f69a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize opus decompression on a wav64 file. <br /></td></tr>
-<tr class="separator:a4e09e450b0eb6c8db6476cec970f69a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a155b86e02e0001141c6035ccf3cea4e2" id="r_a155b86e02e0001141c6035ccf3cea4e2"><td class="memItemLeft" align="right" valign="top"><a id="a155b86e02e0001141c6035ccf3cea4e2" name="a155b86e02e0001141c6035ccf3cea4e2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>wav64_opus_init</b> (<a class="el" href="wav64_8h.html#structwav64__t">wav64_t</a> *wav, int state_size)</td></tr>
+<tr class="memdesc:a155b86e02e0001141c6035ccf3cea4e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize opus decompression on a wav64 file. <br /></td></tr>
+<tr class="separator:a155b86e02e0001141c6035ccf3cea4e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27c860b6445e13ba1acfc2c2da3eda0b" id="r_a27c860b6445e13ba1acfc2c2da3eda0b"><td class="memItemLeft" align="right" valign="top"><a id="a27c860b6445e13ba1acfc2c2da3eda0b" name="a27c860b6445e13ba1acfc2c2da3eda0b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>wav64_opus_close</b> (<a class="el" href="wav64_8h.html#structwav64__t">wav64_t</a> *wav)</td></tr>
 <tr class="memdesc:a27c860b6445e13ba1acfc2c2da3eda0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shut down opus decompression on a wav64 file. <br /></td></tr>
@@ -149,42 +145,12 @@ Maximum compressed frame size in bytes. </td></tr>
 bitrate_bps</td>
 <td class="fielddoc">
 Bitrate in bits per second. </td></tr>
-</table>
-
-</div>
-</div>
-<a name="structwav64__opus__state" id="structwav64__opus__state"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#structwav64__opus__state">&#9670;&#160;</a></span>wav64_opus_state</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct wav64_opus_state</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="textblock"><p>Wav64 Opus state. </p>
-</div><table class="fieldtable">
-<tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
-<a id="af478873a4568a3e13ec6c119822d610c" name="af478873a4568a3e13ec6c119822d610c"></a><a class="el" href="wav64__opus_8c.html#structwav64__opus__header__ext">wav64_opus_header_ext</a></td>
-<td class="fieldname">
-xhead</td>
-<td class="fielddoc">
-Opus header extension. </td></tr>
-<tr><td class="fieldtype">
-<a id="a9d37cc5d5d22399087ddcb72aece3a5d" name="a9d37cc5d5d22399087ddcb72aece3a5d"></a>OpusCustomMode *</td>
+<a id="ae117b6fde72d25a4c5833eccdcd91e18" name="ae117b6fde72d25a4c5833eccdcd91e18"></a>OpusCustomMode *</td>
 <td class="fieldname">
 mode</td>
 <td class="fielddoc">
 Opus custom mode for this file. </td></tr>
-<tr><td class="fieldtype">
-<a id="a9da7ba3af81696a0d6fd00074e07b00b" name="a9da7ba3af81696a0d6fd00074e07b00b"></a>OpusCustomDecoder *</td>
-<td class="fieldname">
-dec</td>
-<td class="fielddoc">
-Opus decoder for this file. </td></tr>
 </table>
 
 </div>
@@ -192,7 +158,7 @@ Opus decoder for this file. </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:47 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

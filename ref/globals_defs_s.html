@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -82,6 +81,14 @@ $(function() {
 <li>SI_CLEAR_INTERRUPT&#160;:&#160;<a class="el" href="interrupt_8c.html#a8cd374a8b3a1a6860b954fe5873de4f9">interrupt.c</a></li>
 <li>SI_STATUS_DMA_BUSY&#160;:&#160;<a class="el" href="joybus_8c.html#aa522bd708d3dd1df64a630a520db3b4c">joybus.c</a></li>
 <li>SI_STATUS_IO_BUSY&#160;:&#160;<a class="el" href="joybus_8c.html#a986a6408fb27f36259cfdc11ddbf6096">joybus.c</a></li>
+<li>SIG_OFF&#160;:&#160;<a class="el" href="eia608_8c.html#a8d87dc895927a324886d4e4b47d44f36">eia608.c</a></li>
+<li>SIG_ON&#160;:&#160;<a class="el" href="eia608_8c.html#a62a1f9499069546e7c1c01bb86b42235">eia608.c</a></li>
+<li>SIGW_BIT&#160;:&#160;<a class="el" href="eia608_8c.html#ad4548d4065e390c8e57b699ad9b9d075">eia608.c</a></li>
+<li>SIGW_BLANK&#160;:&#160;<a class="el" href="eia608_8c.html#a65437bdb11ab0103a8ee5a9cf29b89af">eia608.c</a></li>
+<li>SIGW_DATA&#160;:&#160;<a class="el" href="eia608_8c.html#ae1a1f157acb876b4802bae42a042dddb">eia608.c</a></li>
+<li>SIGW_LEADIN&#160;:&#160;<a class="el" href="eia608_8c.html#a309caa4216cc0ca8ea4d2626d77f5784">eia608.c</a></li>
+<li>SIGW_LEN&#160;:&#160;<a class="el" href="eia608_8c.html#a7c6be650ee06b0be93bfda6a4c55ce07">eia608.c</a></li>
+<li>SIGW_SCALE&#160;:&#160;<a class="el" href="eia608_8c.html#a81bd011dfefd8303ea9fb81fce4df415">eia608.c</a></li>
 <li>SOM_AA_ENABLE&#160;:&#160;<a class="el" href="rdpq__macros_8h.html#a645092c34f687514269f0391b9563ed1">rdpq_macros.h</a></li>
 <li>SOM_ALPHACOMPARE_MASK&#160;:&#160;<a class="el" href="rdpq__macros_8h.html#abd3ae80c819a9e203d072a8b8ec66a9e">rdpq_macros.h</a></li>
 <li>SOM_ALPHACOMPARE_NOISE&#160;:&#160;<a class="el" href="rdpq__macros_8h.html#a912e2ae945d9f0ca47999d22f966d60f">rdpq_macros.h</a></li>
@@ -163,7 +170,10 @@ $(function() {
 <li>SOMX_AA_REDUCED&#160;:&#160;<a class="el" href="rdpq__macros_8h.html#a7e5c8d6c3bbd325040548d242a86c793">rdpq_macros.h</a></li>
 <li>SOMX_BLEND_2PASS&#160;:&#160;<a class="el" href="rdpq__macros_8h.html#a58a93ee6d2b3e1ca55ce38c058e4a7e8">rdpq_macros.h</a></li>
 <li>SOMX_FOG&#160;:&#160;<a class="el" href="rdpq__macros_8h.html#a9d560b3f2c28f1506427c0ffa03dbebe">rdpq_macros.h</a></li>
+<li>SOMX_LOD_INTERP_MASK&#160;:&#160;<a class="el" href="rdpq__macros_8h.html#acc74783ec8271de1842de45f52bb1dbe">rdpq_macros.h</a></li>
+<li>SOMX_LOD_INTERP_SHIFT&#160;:&#160;<a class="el" href="rdpq__macros_8h.html#a8b5a7dd6e52890a91bbca6957204c594">rdpq_macros.h</a></li>
 <li>SOMX_LOD_INTERPOLATE&#160;:&#160;<a class="el" href="rdpq__macros_8h.html#a1824cbe2f8aa7ca8e781f68d5e80e68e">rdpq_macros.h</a></li>
+<li>SOMX_LOD_INTERPOLATE_SHQ&#160;:&#160;<a class="el" href="rdpq__macros_8h.html#aa497d6e6ae92adbfe15f3e3a358525e5">rdpq_macros.h</a></li>
 <li>SOMX_NUMLODS_MASK&#160;:&#160;<a class="el" href="rdpq__macros_8h.html#ad72fae44db0da0cf140007182535b2a1">rdpq_macros.h</a></li>
 <li>SOMX_NUMLODS_SHIFT&#160;:&#160;<a class="el" href="rdpq__macros_8h.html#af751f5b3cbb0e70030d7cfaec95ee3ba">rdpq_macros.h</a></li>
 <li>SOMX_UPDATE_FREEZE&#160;:&#160;<a class="el" href="rdpq__macros_8h.html#a0ecec6d361cb9bffe1b62a5fcdcc6d08">rdpq_macros.h</a></li>
@@ -233,7 +243,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:48 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:51 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['vi_5fconfig_5ft_0',['vi_config_t',['../group__display.html#structvi__config__t',1,'']]],
-  ['vi_5fregs_5ft_1',['VI_regs_t',['../group__lowlevel.html#structVI__regs__t',1,'']]]
+  ['texparms_5fs_0',['texparms_s',['../structsprite__ext__t.html#structsprite__ext__t_1_1texparms__s',1,'sprite_ext_t']]],
+  ['texparms_5fs_2es_1',['texparms_s.s',['../structsprite__ext__t.html#structsprite__ext__t_1_1texparms__s_8s',1,'sprite_ext_t']]],
+  ['texparms_5fs_2et_2',['texparms_s.t',['../structsprite__ext__t.html#structsprite__ext__t_1_1texparms__s_8t',1,'sprite_ext_t']]],
+  ['texture_5fentry_5ft_3',['texture_entry_t',['../structtexture__entry__t.html',1,'']]],
+  ['texture_5ftable_5ft_4',['texture_table_t',['../structtexture__table__t.html',1,'']]],
+  ['timer_5flink_5ft_5',['timer_link_t',['../group__timer.html#structtimer__link__t',1,'']]],
+  ['timer_5flink_5ft_2e_5f_5funnamed87_5f_5f_6',['timer_link_t.__unnamed87__',['../group__timer.html#uniontimer__link__t_8____unnamed87____',1,'']]]
 ];

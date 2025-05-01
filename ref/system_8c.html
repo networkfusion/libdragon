@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -175,6 +174,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a77a876edb0b19bdb02035a8bab4919ed" id="r_a77a876edb0b19bdb02035a8bab4919ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a77a876edb0b19bdb02035a8bab4919ed">gettimeofday</a> (struct timeval *ptimeval, void *ptimezone)</td></tr>
 <tr class="memdesc:a77a876edb0b19bdb02035a8bab4919ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current time.  <br /></td></tr>
 <tr class="separator:a77a876edb0b19bdb02035a8bab4919ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a378b0ace5f0557ccd0f2c7790ab7d27d" id="r_a378b0ace5f0557ccd0f2c7790ab7d27d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a378b0ace5f0557ccd0f2c7790ab7d27d">settimeofday</a> (const struct timeval *ptimeval, const void *ptimezone)</td></tr>
+<tr class="memdesc:a378b0ace5f0557ccd0f2c7790ab7d27d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current time.  <br /></td></tr>
+<tr class="separator:a378b0ace5f0557ccd0f2c7790ab7d27d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cf4c4b087df7b15fb2aa7401ddfc010" id="r_a2cf4c4b087df7b15fb2aa7401ddfc010"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a2cf4c4b087df7b15fb2aa7401ddfc010">isatty</a> (int file)</td></tr>
 <tr class="memdesc:a2cf4c4b087df7b15fb2aa7401ddfc010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether a file is a TTY or a regular file.  <br /></td></tr>
 <tr class="separator:a2cf4c4b087df7b15fb2aa7401ddfc010"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -199,6 +201,9 @@ Functions</h2></td></tr>
 <tr class="memitem:acc7c04d6d0cc62dd9f542e89c9d358fa" id="r_acc7c04d6d0cc62dd9f542e89c9d358fa"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#acc7c04d6d0cc62dd9f542e89c9d358fa">sbrk</a> (int incr)</td></tr>
 <tr class="memdesc:acc7c04d6d0cc62dd9f542e89c9d358fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a new chunk of memory to be used as heap.  <br /></td></tr>
 <tr class="separator:acc7c04d6d0cc62dd9f542e89c9d358fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2021cbd21807b12fb39e9d78e8a0c9cc" id="r_a2021cbd21807b12fb39e9d78e8a0c9cc"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a2021cbd21807b12fb39e9d78e8a0c9cc">sbrk_top</a> (int incr)</td></tr>
+<tr class="memdesc:a2021cbd21807b12fb39e9d78e8a0c9cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate static memory from the top of the heap.  <br /></td></tr>
+<tr class="separator:a2021cbd21807b12fb39e9d78e8a0c9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6267ee98ea4ca67296665534d549132a" id="r_a6267ee98ea4ca67296665534d549132a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a6267ee98ea4ca67296665534d549132a">stat</a> (const char *file, struct stat *st)</td></tr>
 <tr class="memdesc:a6267ee98ea4ca67296665534d549132a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return file stats based on a file name.  <br /></td></tr>
 <tr class="separator:a6267ee98ea4ca67296665534d549132a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,27 +219,53 @@ Functions</h2></td></tr>
 <tr class="memitem:a6655447bab00753d59759423bf28e22e" id="r_a6655447bab00753d59759423bf28e22e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a6655447bab00753d59759423bf28e22e">wait</a> (int *status)</td></tr>
 <tr class="memdesc:a6655447bab00753d59759423bf28e22e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for a child process.  <br /></td></tr>
 <tr class="separator:a6655447bab00753d59759423bf28e22e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a342c2eae35d44df768ec0634c76bf68b" id="r_a342c2eae35d44df768ec0634c76bf68b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a342c2eae35d44df768ec0634c76bf68b">ioctl</a> (int fd, unsigned long cmd, void *argp)</td></tr>
+<tr class="memdesc:a342c2eae35d44df768ec0634c76bf68b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform IO Control Request.  <br /></td></tr>
+<tr class="separator:a342c2eae35d44df768ec0634c76bf68b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb8090da2a212e27317ea48ead1a19d6" id="r_aeb8090da2a212e27317ea48ead1a19d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#aeb8090da2a212e27317ea48ead1a19d6">write</a> (int file, char *ptr, int len)</td></tr>
 <tr class="memdesc:aeb8090da2a212e27317ea48ead1a19d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to a file.  <br /></td></tr>
 <tr class="separator:aeb8090da2a212e27317ea48ead1a19d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1cc997e92371733ee54ac57dcc73c75" id="r_aa1cc997e92371733ee54ac57dcc73c75"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#aa1cc997e92371733ee54ac57dcc73c75">ftruncate</a> (int file, off_t length)</td></tr>
+<tr class="memdesc:aa1cc997e92371733ee54ac57dcc73c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Truncate a file to the specified length.  <br /></td></tr>
+<tr class="separator:aa1cc997e92371733ee54ac57dcc73c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87674838dd2bcf61e1a1fb5c9892ab6c" id="r_a87674838dd2bcf61e1a1fb5c9892ab6c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a87674838dd2bcf61e1a1fb5c9892ab6c">truncate</a> (const char *path, off_t length)</td></tr>
+<tr class="memdesc:a87674838dd2bcf61e1a1fb5c9892ab6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Truncate a file to the specified length.  <br /></td></tr>
+<tr class="separator:a87674838dd2bcf61e1a1fb5c9892ab6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe12698c77015416da5ec4e59ef3c822" id="r_afe12698c77015416da5ec4e59ef3c822"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#afe12698c77015416da5ec4e59ef3c822">__entropy_add</a> (uint64_t k)</td></tr>
+<tr class="memdesc:afe12698c77015416da5ec4e59ef3c822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add some non-deterministic data to the entropy pool.  <br /></td></tr>
+<tr class="separator:afe12698c77015416da5ec4e59ef3c822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4d88adc1ca537d4281029a2745fbbc0" id="r_aa4d88adc1ca537d4281029a2745fbbc0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#aa4d88adc1ca537d4281029a2745fbbc0">getentropy</a> (uint8_t *buf, size_t buflen)</td></tr>
+<tr class="memdesc:aa4d88adc1ca537d4281029a2745fbbc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate an array of unpredictable random numbers.  <br /></td></tr>
+<tr class="separator:aa4d88adc1ca537d4281029a2745fbbc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af069d9aae45f54cadde63548780ca64a" id="r_af069d9aae45f54cadde63548780ca64a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#af069d9aae45f54cadde63548780ca64a">dir_findfirst</a> (const char *const path, <a class="el" href="group__system.html#structdir__t">dir_t</a> *dir)</td></tr>
 <tr class="memdesc:af069d9aae45f54cadde63548780ca64a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the first file in a directory.  <br /></td></tr>
 <tr class="separator:af069d9aae45f54cadde63548780ca64a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f45aada2a3237bc3c59c8ceb3d88d20" id="r_a9f45aada2a3237bc3c59c8ceb3d88d20"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a9f45aada2a3237bc3c59c8ceb3d88d20">dir_findnext</a> (const char *const path, <a class="el" href="group__system.html#structdir__t">dir_t</a> *dir)</td></tr>
 <tr class="memdesc:a9f45aada2a3237bc3c59c8ceb3d88d20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the next file in a directory.  <br /></td></tr>
 <tr class="separator:a9f45aada2a3237bc3c59c8ceb3d88d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a548e5b744ca2e97beb61ad7aa41114e2" id="r_a548e5b744ca2e97beb61ad7aa41114e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a548e5b744ca2e97beb61ad7aa41114e2">mkdir</a> (const char *path, mode_t mode)</td></tr>
+<tr class="memdesc:a548e5b744ca2e97beb61ad7aa41114e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a directory.  <br /></td></tr>
+<tr class="separator:a548e5b744ca2e97beb61ad7aa41114e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5a2591289aeb5ec5d9f73419533edc39" id="r_ga5a2591289aeb5ec5d9f73419533edc39"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga5a2591289aeb5ec5d9f73419533edc39">hook_stdio_calls</a> (<a class="el" href="structstdio__t.html">stdio_t</a> *stdio_calls)</td></tr>
 <tr class="memdesc:ga5a2591289aeb5ec5d9f73419533edc39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook into stdio for STDIN, STDOUT and STDERR callbacks.  <br /></td></tr>
 <tr class="separator:ga5a2591289aeb5ec5d9f73419533edc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6ba22042b3c62d9213ac9121ce32b96f" id="r_ga6ba22042b3c62d9213ac9121ce32b96f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga6ba22042b3c62d9213ac9121ce32b96f">unhook_stdio_calls</a> (<a class="el" href="structstdio__t.html">stdio_t</a> *stdio_calls)</td></tr>
 <tr class="memdesc:ga6ba22042b3c62d9213ac9121ce32b96f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unhook from stdio.  <br /></td></tr>
 <tr class="separator:ga6ba22042b3c62d9213ac9121ce32b96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga52ba40f92821927553a30e3c6e8c5214" id="r_ga52ba40f92821927553a30e3c6e8c5214"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga52ba40f92821927553a30e3c6e8c5214">hook_time_call</a> (time_t(*time_fn)(void))</td></tr>
-<tr class="memdesc:ga52ba40f92821927553a30e3c6e8c5214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook into gettimeofday with a current time callback.  <br /></td></tr>
-<tr class="separator:ga52ba40f92821927553a30e3c6e8c5214"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7c3a0415a3cd3586014fdc4d1a793bf1" id="r_ga7c3a0415a3cd3586014fdc4d1a793bf1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga7c3a0415a3cd3586014fdc4d1a793bf1">unhook_time_call</a> (time_t(*time_fn)(void))</td></tr>
-<tr class="memdesc:ga7c3a0415a3cd3586014fdc4d1a793bf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unhook from gettimeofday current time callback.  <br /></td></tr>
-<tr class="separator:ga7c3a0415a3cd3586014fdc4d1a793bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga813fb069dfcfa2662146a48d22078134" id="r_ga813fb069dfcfa2662146a48d22078134"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga813fb069dfcfa2662146a48d22078134">hook_rtc_calls</a> (<a class="el" href="structrtc__hooks__t.html">rtc_hooks_t</a> *hooks)</td></tr>
+<tr class="memdesc:ga813fb069dfcfa2662146a48d22078134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook into POSIX time callbacks.  <br /></td></tr>
+<tr class="separator:ga813fb069dfcfa2662146a48d22078134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafbf7f0d5ec54ba1b5e150673a5aa829e" id="r_gafbf7f0d5ec54ba1b5e150673a5aa829e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gafbf7f0d5ec54ba1b5e150673a5aa829e">unhook_rtc_calls</a> (<a class="el" href="structrtc__hooks__t.html">rtc_hooks_t</a> *hooks)</td></tr>
+<tr class="memdesc:gafbf7f0d5ec54ba1b5e150673a5aa829e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unhook from POSIX time callbacks.  <br /></td></tr>
+<tr class="separator:gafbf7f0d5ec54ba1b5e150673a5aa829e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aabcb4cf45ef74452438c78c1446a9c" id="r_a8aabcb4cf45ef74452438c78c1446a9c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a8aabcb4cf45ef74452438c78c1446a9c">hook_time_calls</a> (time_hooks_t *hooks)</td></tr>
+<tr class="separator:a8aabcb4cf45ef74452438c78c1446a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab93657c46088c0c4fd60286744c73f" id="r_a4ab93657c46088c0c4fd60286744c73f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a4ab93657c46088c0c4fd60286744c73f">unhook_time_calls</a> (time_hooks_t *hooks)</td></tr>
+<tr class="separator:a4ab93657c46088c0c4fd60286744c73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52ba40f92821927553a30e3c6e8c5214" id="r_a52ba40f92821927553a30e3c6e8c5214"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a52ba40f92821927553a30e3c6e8c5214">hook_time_call</a> (time_t(*time_fn)(void))</td></tr>
+<tr class="separator:a52ba40f92821927553a30e3c6e8c5214"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c3a0415a3cd3586014fdc4d1a793bf1" id="r_a7c3a0415a3cd3586014fdc4d1a793bf1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a7c3a0415a3cd3586014fdc4d1a793bf1">unhook_time_call</a> (time_t(*time_fn)(void))</td></tr>
+<tr class="separator:a7c3a0415a3cd3586014fdc4d1a793bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4f9b5b6613b1151a03915ee7b0ad21c" id="r_ad4f9b5b6613b1151a03915ee7b0ad21c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#ad4f9b5b6613b1151a03915ee7b0ad21c">_flush_cache</a> (uint8_t *addr, unsigned long bytes)</td></tr>
 <tr class="memdesc:ad4f9b5b6613b1151a03915ee7b0ad21c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement _flush_cache as required by GCC for nested functions.  <br /></td></tr>
 <tr class="separator:ad4f9b5b6613b1151a03915ee7b0ad21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -244,6 +275,12 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a9baf607a8b1d35caa01cba78a59cfa05" id="r_a9baf607a8b1d35caa01cba78a59cfa05"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a9baf607a8b1d35caa01cba78a59cfa05">__heap_total_size</a> = 0</td></tr>
+<tr class="separator:a9baf607a8b1d35caa01cba78a59cfa05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb6cd5e9d5c0eaaf05ab4dd31ae3185a" id="r_acb6cd5e9d5c0eaaf05ab4dd31ae3185a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#acb6cd5e9d5c0eaaf05ab4dd31ae3185a">__heap_end</a> = 0</td></tr>
+<tr class="separator:acb6cd5e9d5c0eaaf05ab4dd31ae3185a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad11809ad0d3a9c1fc6798cfafb1ba120" id="r_ad11809ad0d3a9c1fc6798cfafb1ba120"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#ad11809ad0d3a9c1fc6798cfafb1ba120">__heap_top</a> = 0</td></tr>
+<tr class="separator:ad11809ad0d3a9c1fc6798cfafb1ba120"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5428d66981cb84e60b899495874618b2" id="r_a5428d66981cb84e60b899495874618b2"><td class="memItemLeft" align="right" valign="top"><a id="a5428d66981cb84e60b899495874618b2" name="a5428d66981cb84e60b899495874618b2"></a>
 char *&#160;</td><td class="memItemRight" valign="bottom"><b>__env</b> [1] = { 0 }</td></tr>
 <tr class="memdesc:a5428d66981cb84e60b899495874618b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Environment variables. <br /></td></tr>
@@ -252,10 +289,13 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><b>__env</b> [1] = { 0
 void(*&#160;</td><td class="memItemRight" valign="bottom"><b>__assert_func_ptr</b> )(const char *file, int line, const char *func, const char *failedexpr)=0</td></tr>
 <tr class="memdesc:a6e83120dfc32290b3dfff131819edf38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert function pointer (initialized at startup) <br /></td></tr>
 <tr class="separator:a6e83120dfc32290b3dfff131819edf38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1773a6ccf3d1931f4d0c34b0c4ef5d5d" id="r_a1773a6ccf3d1931f4d0c34b0c4ef5d5d"><td class="memItemLeft" align="right" valign="top"><a id="a1773a6ccf3d1931f4d0c34b0c4ef5d5d" name="a1773a6ccf3d1931f4d0c34b0c4ef5d5d"></a>
-time_t(*&#160;</td><td class="memItemRight" valign="bottom"><b>time_hook</b> )(void) = NULL</td></tr>
-<tr class="memdesc:a1773a6ccf3d1931f4d0c34b0c4ef5d5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to provide the current time. <br /></td></tr>
-<tr class="separator:a1773a6ccf3d1931f4d0c34b0c4ef5d5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7a863e96089b53900a5f1709ba080a7" id="r_ad7a863e96089b53900a5f1709ba080a7"><td class="memItemLeft" align="right" valign="top"><a id="ad7a863e96089b53900a5f1709ba080a7" name="ad7a863e96089b53900a5f1709ba080a7"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>__entropy_state</b> = 0</td></tr>
+<tr class="memdesc:ad7a863e96089b53900a5f1709ba080a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current entropy state. <br /></td></tr>
+<tr class="separator:ad7a863e96089b53900a5f1709ba080a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96dcc4ea2273011899bbaed15b45a258" id="r_a96dcc4ea2273011899bbaed15b45a258"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a96dcc4ea2273011899bbaed15b45a258">__entropy_K</a> [4]</td></tr>
+<tr class="memdesc:a96dcc4ea2273011899bbaed15b45a258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entropy calculation constants (MurMurHash3-128) These are not marked as static const to coerce GCC to load them for code efficiency.  <br /></td></tr>
+<tr class="separator:a96dcc4ea2273011899bbaed15b45a258"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>newlib Interface Hooks </p>
@@ -643,6 +683,51 @@ Filesystem callback pointers. </td></tr>
 
 </div>
 </div>
+<a id="a378b0ace5f0557ccd0f2c7790ab7d27d" name="a378b0ace5f0557ccd0f2c7790ab7d27d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a378b0ace5f0557ccd0f2c7790ab7d27d">&#9670;&#160;</a></span>settimeofday()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int settimeofday </td>
+          <td>(</td>
+          <td class="paramtype">const struct timeval *&#160;</td>
+          <td class="paramname"><em>ptimeval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>ptimezone</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the current time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">ptimeval</td><td>Time structure containing the new current time. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">ptimezone</td><td>Timezone information. (Not supported)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success </td></tr>
+    <tr><td class="paramname">-1</td><td>Operation not available (errno is set) </td></tr>
+    <tr><td class="paramname">-2</td><td>Operation failed (errno is set) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a2cf4c4b087df7b15fb2aa7401ddfc010" name="a2cf4c4b087df7b15fb2aa7401ddfc010"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2cf4c4b087df7b15fb2aa7401ddfc010">&#9670;&#160;</a></span>isatty()</h2>
 
@@ -956,6 +1041,34 @@ Filesystem callback pointers. </td></tr>
 
 </div>
 </div>
+<a id="a2021cbd21807b12fb39e9d78e8a0c9cc" name="a2021cbd21807b12fb39e9d78e8a0c9cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2021cbd21807b12fb39e9d78e8a0c9cc">&#9670;&#160;</a></span>sbrk_top()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * sbrk_top </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>incr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocate static memory from the top of the heap. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">incr</td><td>The amount of memory needed in bytes</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the memory or ((void*)-1) on error allocating.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function is internal, and can only used by the display module, to allocate memory from the top memory bank for the Z buffer. </dd></dl>
+
+</div>
+</div>
 <a id="a6267ee98ea4ca67296665534d549132a" name="a6267ee98ea4ca67296665534d549132a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6267ee98ea4ca67296665534d549132a">&#9670;&#160;</a></span>stat()</h2>
 
@@ -1116,6 +1229,51 @@ Filesystem callback pointers. </td></tr>
 
 </div>
 </div>
+<a id="a342c2eae35d44df768ec0634c76bf68b" name="a342c2eae35d44df768ec0634c76bf68b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a342c2eae35d44df768ec0634c76bf68b">&#9670;&#160;</a></span>ioctl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ioctl </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>argp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform IO Control Request. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>File handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td>Request ioctl command code </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argp</td><td>Pointer to a request-specific data structure</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Zero on success, or a negative value on error. </dd></dl>
+
+</div>
+</div>
 <a id="aeb8090da2a212e27317ea48ead1a19d6" name="aeb8090da2a212e27317ea48ead1a19d6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeb8090da2a212e27317ea48ead1a19d6">&#9670;&#160;</a></span>write()</h2>
 
@@ -1161,6 +1319,152 @@ Filesystem callback pointers. </td></tr>
 
 </div>
 </div>
+<a id="aa1cc997e92371733ee54ac57dcc73c75" name="aa1cc997e92371733ee54ac57dcc73c75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1cc997e92371733ee54ac57dcc73c75">&#9670;&#160;</a></span>ftruncate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ftruncate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">off_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Truncate a file to the specified length. </p>
+<p>If the specified length is larger than the current file size, the file is extended with zeros. If the specified length is smaller than the current file size, the file is truncated to the specified length.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>File handle </td></tr>
+    <tr><td class="paramname">length</td><td>New length of the file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int 0 on success, -1 on failure (errno will be set) </dd></dl>
+
+</div>
+</div>
+<a id="a87674838dd2bcf61e1a1fb5c9892ab6c" name="a87674838dd2bcf61e1a1fb5c9892ab6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87674838dd2bcf61e1a1fb5c9892ab6c">&#9670;&#160;</a></span>truncate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int truncate </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">off_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Truncate a file to the specified length. </p>
+<p>If the specified length is larger than the current file size, the file is extended with zeros. If the specified length is smaller than the current file size, the file is truncated to the specified length.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Path to the file </td></tr>
+    <tr><td class="paramname">length</td><td>New length of the file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int 0 on success, -1 on failure (errno will be set) </dd></dl>
+
+</div>
+</div>
+<a id="afe12698c77015416da5ec4e59ef3c822" name="afe12698c77015416da5ec4e59ef3c822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe12698c77015416da5ec4e59ef3c822">&#9670;&#160;</a></span>__entropy_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void __entropy_add </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>k</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add some non-deterministic data to the entropy pool. </p>
+<p>This is an internal function that can be used by libdragon libraries to add some non-deterministic data to the entropy pool. One example of such data would be the joypad inputs at any given point.</p>
+<p>The entropy pool is then used t</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">k</td><td>Non-deterministic data (up to 64 bits) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa4d88adc1ca537d4281029a2745fbbc0" name="aa4d88adc1ca537d4281029a2745fbbc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4d88adc1ca537d4281029a2745fbbc0">&#9670;&#160;</a></span>getentropy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getentropy </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>buflen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate an array of unpredictable random numbers. </p>
+<p>This function can be used to generate an array of random data. The function is guaranteed to return good quality random numbers of basically unlimited length. The function is automatically seeded by entropy collected during the boot process (during IPL3) so it always returns different numbers after each boot on hardware. On each emulator, though, the generate numbers will be consistent.</p>
+<p>The code is not cryptographically safe especially by modern standards, but it should be good enough for expected usages on Nintendo 64.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>Output buffer </td></tr>
+    <tr><td class="paramname">buflen</td><td>Length of the output buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int 0 on success, -1 on failure. Currently, the function never returns -1. </dd></dl>
+
+</div>
+</div>
 <a id="af069d9aae45f54cadde63548780ca64a" name="af069d9aae45f54cadde63548780ca64a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af069d9aae45f54cadde63548780ca64a">&#9670;&#160;</a></span>dir_findfirst()</h2>
 
@@ -1196,7 +1500,7 @@ Filesystem callback pointers. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on successful lookup or a negative value on error. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on successful lookup, -1 if the directory existed and is empty, or a different negative value on error (in which case, errno will be set). </dd></dl>
 
 </div>
 </div>
@@ -1235,7 +1539,118 @@ Filesystem callback pointers. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on successful lookup or a negative value on error. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on successful lookup, -1 if there are no more files in the directory, or a different negative value on error (in which case, errno will be set). </dd></dl>
+
+</div>
+</div>
+<a id="a548e5b744ca2e97beb61ad7aa41114e2" name="a548e5b744ca2e97beb61ad7aa41114e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a548e5b744ca2e97beb61ad7aa41114e2">&#9670;&#160;</a></span>mkdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mkdir </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mode_t&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a directory. </p>
+<p>Creates a new directory at the specified location.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Path of the directory to create, relative to the root of the filesystem </td></tr>
+    <tr><td class="paramname">mode</td><td>Directory access mode </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int 0 on success, -1 on failure (errno will be set) </dd></dl>
+
+</div>
+</div>
+<a id="a8aabcb4cf45ef74452438c78c1446a9c" name="a8aabcb4cf45ef74452438c78c1446a9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aabcb4cf45ef74452438c78c1446a9c">&#9670;&#160;</a></span>hook_time_calls()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int hook_time_calls </td>
+          <td>(</td>
+          <td class="paramtype">time_hooks_t *&#160;</td>
+          <td class="paramname"><em>hooks</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ab93657c46088c0c4fd60286744c73f" name="a4ab93657c46088c0c4fd60286744c73f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab93657c46088c0c4fd60286744c73f">&#9670;&#160;</a></span>unhook_time_calls()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int unhook_time_calls </td>
+          <td>(</td>
+          <td class="paramtype">time_hooks_t *&#160;</td>
+          <td class="paramname"><em>hooks</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52ba40f92821927553a30e3c6e8c5214" name="a52ba40f92821927553a30e3c6e8c5214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52ba40f92821927553a30e3c6e8c5214">&#9670;&#160;</a></span>hook_time_call()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int hook_time_call </td>
+          <td>(</td>
+          <td class="paramtype">time_t(*)(void)&#160;</td>
+          <td class="paramname"><em>time_fn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c3a0415a3cd3586014fdc4d1a793bf1" name="a7c3a0415a3cd3586014fdc4d1a793bf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c3a0415a3cd3586014fdc4d1a793bf1">&#9670;&#160;</a></span>unhook_time_call()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int unhook_time_call </td>
+          <td>(</td>
+          <td class="paramtype">time_t(*)(void)&#160;</td>
+          <td class="paramname"><em>time_fn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1313,10 +1728,76 @@ Filesystem callback pointers. </td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a9baf607a8b1d35caa01cba78a59cfa05" name="a9baf607a8b1d35caa01cba78a59cfa05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9baf607a8b1d35caa01cba78a59cfa05">&#9670;&#160;</a></span>__heap_total_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int __heap_total_size = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Total Size of the heap </p>
+
+</div>
+</div>
+<a id="acb6cd5e9d5c0eaaf05ab4dd31ae3185a" name="acb6cd5e9d5c0eaaf05ab4dd31ae3185a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb6cd5e9d5c0eaaf05ab4dd31ae3185a">&#9670;&#160;</a></span>__heap_end</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* __heap_end = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>End of the heap </p>
+
+</div>
+</div>
+<a id="ad11809ad0d3a9c1fc6798cfafb1ba120" name="ad11809ad0d3a9c1fc6798cfafb1ba120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad11809ad0d3a9c1fc6798cfafb1ba120">&#9670;&#160;</a></span>__heap_top</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* __heap_top = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Top of the heap </p>
+
+</div>
+</div>
+<a id="a96dcc4ea2273011899bbaed15b45a258" name="a96dcc4ea2273011899bbaed15b45a258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96dcc4ea2273011899bbaed15b45a258">&#9670;&#160;</a></span>__entropy_K</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t __entropy_K[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x87c37b91114253d5ull, 0x4cf5ad432745937full,</div>
+<div class="line">    0xff51afd7ed558ccdull, 0xc4ceb9fe1a85ec53ull,</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p>Entropy calculation constants (MurMurHash3-128) These are not marked as static const to coerce GCC to load them for code efficiency. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:47 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -76,6 +75,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
@@ -95,6 +95,11 @@ Data Structures</h2></td></tr>
 <tr class="memdesc:structresolution__t"><td class="mdescLeft">&#160;</td><td class="mdescRight">Video resolution structure.  <a href="group__display.html#structresolution__t">More...</a><br /></td></tr>
 <tr class="separator:structresolution__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga3f5793cb368fca2e0f6f9526747d540a" id="r_ga3f5793cb368fca2e0f6f9526747d540a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display.html#ga3f5793cb368fca2e0f6f9526747d540a">VI_CRT_MARGIN</a>&#160;&#160;&#160;0.05f</td></tr>
+<tr class="separator:ga3f5793cb368fca2e0f6f9526747d540a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:gadb422deee7b387b8c1c8025c8ac36628" id="r_gadb422deee7b387b8c1c8025c8ac36628"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="surface_8h.html#structsurface__t">surface_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display.html#gadb422deee7b387b8c1c8025c8ac36628">display_context_t</a></td></tr>
@@ -103,14 +108,20 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:gad298e25a8f8ecc4dc2d7b402aee243ed" id="r_gad298e25a8f8ecc4dc2d7b402aee243ed"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display.html#gad298e25a8f8ecc4dc2d7b402aee243ed">interlace_mode_t</a> { <a class="el" href="group__display.html#ggad298e25a8f8ecc4dc2d7b402aee243edaab4a98924c7e8cbcb5f954e9a252175c">INTERLACE_OFF</a>
+, <a class="el" href="group__display.html#ggad298e25a8f8ecc4dc2d7b402aee243edaa60f8b24c561369b9d727a5cec9b4c34">INTERLACE_HALF</a>
+, <a class="el" href="group__display.html#ggad298e25a8f8ecc4dc2d7b402aee243eda3f3386fd28fb8bc1c9b83c2f0a5439a9">INTERLACE_FULL</a>
+ }</td></tr>
+<tr class="memdesc:gad298e25a8f8ecc4dc2d7b402aee243ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid interlace modes.  <a href="group__display.html#gad298e25a8f8ecc4dc2d7b402aee243ed">More...</a><br /></td></tr>
+<tr class="separator:gad298e25a8f8ecc4dc2d7b402aee243ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae2079fcb0e8b0f846f002f25d0c73ffb" id="r_gae2079fcb0e8b0f846f002f25d0c73ffb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display.html#gae2079fcb0e8b0f846f002f25d0c73ffb">bitdepth_t</a> { <a class="el" href="group__display.html#ggae2079fcb0e8b0f846f002f25d0c73ffbabf331dc6d78bf9d2fb2b893a365f01d5">DEPTH_16_BPP</a>
 , <a class="el" href="group__display.html#ggae2079fcb0e8b0f846f002f25d0c73ffba4a6b7a72647d1f86f2215daf4d177e29">DEPTH_32_BPP</a>
  }</td></tr>
 <tr class="memdesc:gae2079fcb0e8b0f846f002f25d0c73ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid bit depths.  <a href="group__display.html#gae2079fcb0e8b0f846f002f25d0c73ffb">More...</a><br /></td></tr>
 <tr class="separator:gae2079fcb0e8b0f846f002f25d0c73ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga35f19c13bdc2076bd91416021036e439" id="r_ga35f19c13bdc2076bd91416021036e439"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display.html#ga35f19c13bdc2076bd91416021036e439">gamma_t</a> { <a class="el" href="group__display.html#gga35f19c13bdc2076bd91416021036e439a93441449f3f926aa87eeddef2faec6a2">GAMMA_NONE</a>
-, <a class="el" href="group__display.html#gga35f19c13bdc2076bd91416021036e439a8185179fe454e1ca98bfe0cbd5227edf">GAMMA_CORRECT</a>
-, <a class="el" href="group__display.html#gga35f19c13bdc2076bd91416021036e439a1460e16edaee7518fa12b01341915ddc">GAMMA_CORRECT_DITHER</a>
+<tr class="memitem:ga35f19c13bdc2076bd91416021036e439" id="r_ga35f19c13bdc2076bd91416021036e439"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display.html#ga35f19c13bdc2076bd91416021036e439">gamma_t</a> { <a class="el" href="group__display.html#gga35f19c13bdc2076bd91416021036e439a93441449f3f926aa87eeddef2faec6a2">GAMMA_NONE</a> = 0
+, <a class="el" href="group__display.html#gga35f19c13bdc2076bd91416021036e439a8185179fe454e1ca98bfe0cbd5227edf">GAMMA_CORRECT</a> = VI_GAMMA_ENABLE
+, <a class="el" href="group__display.html#gga35f19c13bdc2076bd91416021036e439a1460e16edaee7518fa12b01341915ddc">GAMMA_CORRECT_DITHER</a> = VI_GAMMA_DITHER_ENABLE
  }</td></tr>
 <tr class="memdesc:ga35f19c13bdc2076bd91416021036e439"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valid gamma correction settings.  <a href="group__display.html#ga35f19c13bdc2076bd91416021036e439">More...</a><br /></td></tr>
 <tr class="separator:ga35f19c13bdc2076bd91416021036e439"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,6 +154,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga4f4a773501687663d0bf76f5cced752f" id="r_ga4f4a773501687663d0bf76f5cced752f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display.html#ga4f4a773501687663d0bf76f5cced752f">display_show</a> (<a class="el" href="surface_8h.html#structsurface__t">surface_t</a> *surf)</td></tr>
 <tr class="memdesc:ga4f4a773501687663d0bf76f5cced752f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a buffer on the screen.  <br /></td></tr>
 <tr class="separator:ga4f4a773501687663d0bf76f5cced752f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8ecb97c4e9676fd897391d5d9def9e54" id="r_ga8ecb97c4e9676fd897391d5d9def9e54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="surface_8h.html#structsurface__t">surface_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display.html#ga8ecb97c4e9676fd897391d5d9def9e54">display_get_zbuf</a> (void)</td></tr>
+<tr class="memdesc:ga8ecb97c4e9676fd897391d5d9def9e54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a memory surface that can be used as Z-buffer for the current resolution.  <br /></td></tr>
+<tr class="separator:ga8ecb97c4e9676fd897391d5d9def9e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga524ce5d0e4ffa9d78428934ca0dab1f2" id="r_ga524ce5d0e4ffa9d78428934ca0dab1f2"><td class="memItemLeft" align="right" valign="top">
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>display_get_width</b> (void)</td></tr>
 <tr class="memdesc:ga524ce5d0e4ffa9d78428934ca0dab1f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the currently configured width of the display in pixels. <br /></td></tr>
@@ -159,43 +173,66 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>display_get_bitde
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>display_get_num_buffers</b> (void)</td></tr>
 <tr class="memdesc:ga40b2efafdb24b9cc7894c64fb12c449a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the currently configured number of buffers. <br /></td></tr>
 <tr class="separator:ga40b2efafdb24b9cc7894c64fb12c449a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf8e5af68c192094d092ee12ae0f15ed9" id="r_gaf8e5af68c192094d092ee12ae0f15ed9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display.html#gaf8e5af68c192094d092ee12ae0f15ed9">display_get_refresh_rate</a> (void)</td></tr>
+<tr class="memdesc:gaf8e5af68c192094d092ee12ae0f15ed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current refresh rate of the video output in Hz.  <br /></td></tr>
+<tr class="separator:gaf8e5af68c192094d092ee12ae0f15ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7ae78db1ce043c1ea4289ccd474b68f4" id="r_ga7ae78db1ce043c1ea4289ccd474b68f4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display.html#ga7ae78db1ce043c1ea4289ccd474b68f4">display_get_fps</a> (void)</td></tr>
 <tr class="memdesc:ga7ae78db1ce043c1ea4289ccd474b68f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current number of frames per second being rendered.  <br /></td></tr>
 <tr class="separator:ga7ae78db1ce043c1ea4289ccd474b68f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c509bcb35ac25d4e89cb0c71ddbec86" id="r_ga6c509bcb35ac25d4e89cb0c71ddbec86"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display.html#ga6c509bcb35ac25d4e89cb0c71ddbec86">display_get_delta_time</a> (void)</td></tr>
+<tr class="memdesc:ga6c509bcb35ac25d4e89cb0c71ddbec86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the "delta time", that is the time it took to the last frame to be prepared and rendered.  <br /></td></tr>
+<tr class="separator:ga6c509bcb35ac25d4e89cb0c71ddbec86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c88aa7c1d0c5c3cdba1e8ef026bb168" id="r_ga5c88aa7c1d0c5c3cdba1e8ef026bb168"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display.html#ga5c88aa7c1d0c5c3cdba1e8ef026bb168">display_set_fps_limit</a> (float fps)</td></tr>
+<tr class="memdesc:ga5c88aa7c1d0c5c3cdba1e8ef026bb168"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure a limit for the frames per second.  <br /></td></tr>
+<tr class="separator:ga5c88aa7c1d0c5c3cdba1e8ef026bb168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gada1cd7cf274588908f37efca6829d91d" id="r_gada1cd7cf274588908f37efca6829d91d"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="surface_8h.html#structsurface__t">surface_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>display_get_current_framebuffer</b> (void)</td></tr>
+<tr class="memdesc:gada1cd7cf274588908f37efca6829d91d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a surface that points to the framebuffer currently being shown on screen. <br /></td></tr>
+<tr class="separator:gada1cd7cf274588908f37efca6829d91d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:ga07db7f2d93fc50650dbd0825d8ca1d9c" id="r_ga07db7f2d93fc50650dbd0825d8ca1d9c"><td class="memItemLeft" align="right" valign="top">
-const <a class="el" href="group__display.html#structresolution__t">resolution_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RESOLUTION_256x240</b> = {256, 240, false}</td></tr>
-<tr class="memdesc:ga07db7f2d93fc50650dbd0825d8ca1d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">256x240 mode <br /></td></tr>
+const <a class="el" href="group__display.html#structresolution__t">resolution_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RESOLUTION_256x240</b> = {.width = 256, .height = 240, .interlaced = <a class="el" href="group__display.html#ggad298e25a8f8ecc4dc2d7b402aee243edaab4a98924c7e8cbcb5f954e9a252175c">INTERLACE_OFF</a>}</td></tr>
+<tr class="memdesc:ga07db7f2d93fc50650dbd0825d8ca1d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">256x240 mode, stretched to 4:3, no borders <br /></td></tr>
 <tr class="separator:ga07db7f2d93fc50650dbd0825d8ca1d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa5d59348bf36dd5362d2842523260cd5" id="r_gaa5d59348bf36dd5362d2842523260cd5"><td class="memItemLeft" align="right" valign="top">
-const <a class="el" href="group__display.html#structresolution__t">resolution_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RESOLUTION_320x240</b> = {320, 240, false}</td></tr>
-<tr class="memdesc:gaa5d59348bf36dd5362d2842523260cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">320x240 mode <br /></td></tr>
+const <a class="el" href="group__display.html#structresolution__t">resolution_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RESOLUTION_320x240</b> = {.width = 320, .height = 240, .interlaced = <a class="el" href="group__display.html#ggad298e25a8f8ecc4dc2d7b402aee243edaab4a98924c7e8cbcb5f954e9a252175c">INTERLACE_OFF</a>}</td></tr>
+<tr class="memdesc:gaa5d59348bf36dd5362d2842523260cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">320x240 mode, no borders <br /></td></tr>
 <tr class="separator:gaa5d59348bf36dd5362d2842523260cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga857734e6f5ff0b0e01682e5a1392f92e" id="r_ga857734e6f5ff0b0e01682e5a1392f92e"><td class="memItemLeft" align="right" valign="top">
-const <a class="el" href="group__display.html#structresolution__t">resolution_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RESOLUTION_512x240</b> = {512, 240, false}</td></tr>
-<tr class="memdesc:ga857734e6f5ff0b0e01682e5a1392f92e"><td class="mdescLeft">&#160;</td><td class="mdescRight">512x240 mode, high-res progressive <br /></td></tr>
+const <a class="el" href="group__display.html#structresolution__t">resolution_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RESOLUTION_512x240</b> = {.width = 512, .height = 240, .interlaced = <a class="el" href="group__display.html#ggad298e25a8f8ecc4dc2d7b402aee243edaab4a98924c7e8cbcb5f954e9a252175c">INTERLACE_OFF</a>}</td></tr>
+<tr class="memdesc:ga857734e6f5ff0b0e01682e5a1392f92e"><td class="mdescLeft">&#160;</td><td class="mdescRight">512x240 mode, stretched to 4:3, no borders <br /></td></tr>
 <tr class="separator:ga857734e6f5ff0b0e01682e5a1392f92e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga31a634515e48da51ba0f31b39b97b967" id="r_ga31a634515e48da51ba0f31b39b97b967"><td class="memItemLeft" align="right" valign="top">
-const <a class="el" href="group__display.html#structresolution__t">resolution_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RESOLUTION_640x240</b> = {640, 240, false}</td></tr>
-<tr class="memdesc:ga31a634515e48da51ba0f31b39b97b967"><td class="mdescLeft">&#160;</td><td class="mdescRight">640x240 mode, high-res progressive <br /></td></tr>
+const <a class="el" href="group__display.html#structresolution__t">resolution_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RESOLUTION_640x240</b> = {.width = 640, .height = 240, .interlaced = <a class="el" href="group__display.html#ggad298e25a8f8ecc4dc2d7b402aee243edaab4a98924c7e8cbcb5f954e9a252175c">INTERLACE_OFF</a>}</td></tr>
+<tr class="memdesc:ga31a634515e48da51ba0f31b39b97b967"><td class="mdescLeft">&#160;</td><td class="mdescRight">640x240 mode, stretched to 4:3, no borders <br /></td></tr>
 <tr class="separator:ga31a634515e48da51ba0f31b39b97b967"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae36478fb66eb52d1af313f0865919a3b" id="r_gae36478fb66eb52d1af313f0865919a3b"><td class="memItemLeft" align="right" valign="top">
-const <a class="el" href="group__display.html#structresolution__t">resolution_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RESOLUTION_512x480</b> = {512, 480, true}</td></tr>
-<tr class="memdesc:gae36478fb66eb52d1af313f0865919a3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">512x480 mode, interlaced <br /></td></tr>
+const <a class="el" href="group__display.html#structresolution__t">resolution_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RESOLUTION_512x480</b> = {.width = 512, .height = 480, .interlaced = <a class="el" href="group__display.html#ggad298e25a8f8ecc4dc2d7b402aee243edaa60f8b24c561369b9d727a5cec9b4c34">INTERLACE_HALF</a>}</td></tr>
+<tr class="memdesc:gae36478fb66eb52d1af313f0865919a3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">512x480 mode, interlaced, stretched to 4:3, no borders <br /></td></tr>
 <tr class="separator:gae36478fb66eb52d1af313f0865919a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3075e476b763f6b33fa88d2759f7276b" id="r_ga3075e476b763f6b33fa88d2759f7276b"><td class="memItemLeft" align="right" valign="top">
-const <a class="el" href="group__display.html#structresolution__t">resolution_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RESOLUTION_640x480</b> = {640, 480, true}</td></tr>
-<tr class="memdesc:ga3075e476b763f6b33fa88d2759f7276b"><td class="mdescLeft">&#160;</td><td class="mdescRight">640x480 mode, interlaced <br /></td></tr>
+const <a class="el" href="group__display.html#structresolution__t">resolution_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RESOLUTION_640x480</b> = {.width = 640, .height = 480, .interlaced = <a class="el" href="group__display.html#ggad298e25a8f8ecc4dc2d7b402aee243edaa60f8b24c561369b9d727a5cec9b4c34">INTERLACE_HALF</a>}</td></tr>
+<tr class="memdesc:ga3075e476b763f6b33fa88d2759f7276b"><td class="mdescLeft">&#160;</td><td class="mdescRight">640x480 mode, interlaced, no borders <br /></td></tr>
 <tr class="separator:ga3075e476b763f6b33fa88d2759f7276b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Display Subsystem. </p>
+<p>The display subsystem module is responsible for initializing the proper video mode for displaying 2D, 3D and software graphics. It is the higher level module that most applications should use to configure the video output.</p>
+<p>To set up video on the N64, code should call <a class="el" href="group__display.html#ga1763c553f071d40c4bd18cee77ae98a1" title="Initialize the display to a particular resolution and bit depth.">display_init</a> with the appropriate options. It is a powerful API with many options (see <a class="el" href="group__display.html#structresolution__t" title="Video resolution structure.">resolution_t</a>) but it can still be a simple one-liner for basic cases. It allows to configure any resolution including custom ones, any aspect ratio, any kind of letterboxing, overscan, interlacing, and so on. It also allocates a framebuffer chain.</p>
+<p>Once the display has been set, a surface can be requested from the display subsystem using <a class="el" href="group__display.html#gaf8ad0501f0408430e3b40f0f626a33bd" title="Get a display buffer for rendering.">display_get</a>. To draw to the acquired surface, code should use functions present in the <a class="el" href="group__rdpq.html">RDPQ: Hardware-accelerated drawing API</a> or <a class="el" href="group__graphics.html">2D Graphics</a> modules (the latter being just a simpler, CPU-only small graphic library).</p>
+<p>Once drawing to a surface is complete, the rendered graphic can be displayed to the screen using <a class="el" href="group__display.html#ga4f4a773501687663d0bf76f5cced752f" title="Display a buffer on the screen.">display_show</a>. Once code has finished rendering all graphics, <a class="el" href="group__display.html#ga21c0b315e346cb1d1e4566688aa03e36" title="Close the display.">display_close</a> can be used to shut down the display subsystem.</p>
+<p>To obtain a Z-buffer, simply call <a class="el" href="group__display.html#ga8ecb97c4e9676fd897391d5d9def9e54" title="Return a memory surface that can be used as Z-buffer for the current resolution.">display_get_zbuf()</a>. This is preferrable to manually allocating it, as <a class="el" href="display_8h.html" title="Display Subsystem.">display.h</a> will manage the memory allocations spreading them across RDRAM banks to maximize rendering performance.</p>
+<h2><a class="anchor" id="autotoc_md38"></a>
+Frame counter, delta time and frame limiter</h2>
+<p>You can acquire at any time a very accurate frame rate estimation using <a class="el" href="group__display.html#ga7ae78db1ce043c1ea4289ccd474b68f4" title="Get the current number of frames per second being rendered.">display_get_fps</a>. This is measure the actual time that it takes for a frame to reach the display, rather than the time it takes to be calculated, so it is more accurate especially when there's a high variance or long framebuffer chains.</p>
+<p>Use <a class="el" href="group__display.html#ga6c509bcb35ac25d4e89cb0c71ddbec86" title="Returns the &quot;delta time&quot;, that is the time it took to the last frame to be prepared and rendered.">display_get_delta_time</a> to get an estimation of the best delta time that can be used to calculate the next frame. This builds up on the FPS calculator, so again it is more accurate and smoother than just taking the time yourself in your main loop.acos</p>
+<p>If you want to limit frame rate, call <a class="el" href="group__display.html#ga5c88aa7c1d0c5c3cdba1e8ef026bb168" title="Configure a limit for the frames per second.">display_set_fps_limit</a>. This allows to limit the frame rate to a specific value, and not only submultiples of the TV refresh rate. For instance, you can call "display_set_fps_limit(45)" and it will work as expected, as smooth as possible. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:47 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:49 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

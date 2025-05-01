@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -70,7 +69,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ae9a93452e2a84339148a16bcf2eb561.html">math</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -100,6 +99,16 @@ Functions</h2></td></tr>
 <tr class="memitem:ab5306110233e1820d066c74740277ad1" id="r_ab5306110233e1820d066c74740277ad1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmath_8c.html#ab5306110233e1820d066c74740277ad1">fm_atan2f</a> (float y, float x)</td></tr>
 <tr class="memdesc:ab5306110233e1820d066c74740277ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Faster version of atan2f.  <br /></td></tr>
 <tr class="separator:ab5306110233e1820d066c74740277ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5854e3b23e035ed44092d1e17936b55b" id="r_a5854e3b23e035ed44092d1e17936b55b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmath_8c.html#a5854e3b23e035ed44092d1e17936b55b">fm_lerp_angle</a> (float a, float b, float t)</td></tr>
+<tr class="memdesc:a5854e3b23e035ed44092d1e17936b55b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linearly interpolate between two angles, using the shortest path.  <br /></td></tr>
+<tr class="separator:a5854e3b23e035ed44092d1e17936b55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba679558d9d0988d00f7bc3ea7237f65" id="r_aba679558d9d0988d00f7bc3ea7237f65"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmath_8c.html#aba679558d9d0988d00f7bc3ea7237f65">fm_wrap_angle</a> (float angle)</td></tr>
+<tr class="memdesc:aba679558d9d0988d00f7bc3ea7237f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrap an angle into [0..pi*2] range.  <br /></td></tr>
+<tr class="separator:aba679558d9d0988d00f7bc3ea7237f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1428ed86c1871641cb5906fbb5589dbb" id="r_a1428ed86c1871641cb5906fbb5589dbb"><td class="memItemLeft" align="right" valign="top"><a id="a1428ed86c1871641cb5906fbb5589dbb" name="a1428ed86c1871641cb5906fbb5589dbb"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>fm_lerp</b> (float a, float b, float t)</td></tr>
+<tr class="memdesc:a1428ed86c1871641cb5906fbb5589dbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linearly interpolate between two scalar values. <br /></td></tr>
+<tr class="separator:a1428ed86c1871641cb5906fbb5589dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Fast math routines, optimized for 3D graphics calculations. </p>
@@ -264,10 +273,82 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5854e3b23e035ed44092d1e17936b55b" name="a5854e3b23e035ed44092d1e17936b55b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5854e3b23e035ed44092d1e17936b55b">&#9670;&#160;</a></span>fm_lerp_angle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float fm_lerp_angle </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Linearly interpolate between two angles, using the shortest path. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>The start angle in radians </td></tr>
+    <tr><td class="paramname">b</td><td>The end angle in radians </td></tr>
+    <tr><td class="paramname">t</td><td>The interpolation factor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The interpolated angle. </dd></dl>
+
+</div>
+</div>
+<a id="aba679558d9d0988d00f7bc3ea7237f65" name="aba679558d9d0988d00f7bc3ea7237f65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba679558d9d0988d00f7bc3ea7237f65">&#9670;&#160;</a></span>fm_wrap_angle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float fm_wrap_angle </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>angle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wrap an angle into [0..pi*2] range. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">angle</td><td>An angle in radians. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The wrapped angle. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:47 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

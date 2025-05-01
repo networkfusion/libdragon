@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sgb_5fsupport_5ftype_0',['sgb_support_type',['../tpak_8h.html#a65a36b9bf504ca51cd9b616a61fe75af',1,'tpak.h']]]
+  ['nand_5fmmap_5fflags_5ft_0',['nand_mmap_flags_t',['../nand_8h.html#aa7594ca952e4f4bfcfab6b76982099d3',1,'nand.h']]]
 ];

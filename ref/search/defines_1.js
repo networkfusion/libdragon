@@ -10,6 +10,7 @@ var searchData=
   ['ai_5fstatus_5fbusy_7',['ai_status_busy',['../audio_8c.html#a7811a8498f902f7ba4ab71ace71996ad',1,'AI_STATUS_BUSY:&#160;audio.c'],['../mixer_8c.html#a7811a8498f902f7ba4ab71ace71996ad',1,'AI_STATUS_BUSY:&#160;mixer.c']]],
   ['ai_5fstatus_5ffull_8',['ai_status_full',['../audio_8c.html#ae6fa307322df53a3592ddf7379864b55',1,'AI_STATUS_FULL:&#160;audio.c'],['../mixer_8c.html#ae6fa307322df53a3592ddf7379864b55',1,'AI_STATUS_FULL:&#160;mixer.c']]],
   ['assertf_9',['assertf',['../debug_8h.html#a66673aad3e392c6b58054aebe66fe28e',1,'debug.h']]],
-  ['asset_5finit_5fcompression_10',['asset_init_compression',['../asset_8h.html#a6bdfd4d8e3a7e807dd7e1b8cb00332a4',1,'asset.h']]],
-  ['attach_5fstack_5fsize_11',['ATTACH_STACK_SIZE',['../rdpq__attach_8c.html#a0d2202d1eee440a5285578ba75f432be',1,'rdpq_attach.c']]]
+  ['asset_5falignment_5fmin_10',['ASSET_ALIGNMENT_MIN',['../asset_8h.html#a34d5d636492bebbe03bae6ab8ee28e2a',1,'asset.h']]],
+  ['asset_5finit_5fcompression_11',['asset_init_compression',['../asset_8h.html#a6bdfd4d8e3a7e807dd7e1b8cb00332a4',1,'asset.h']]],
+  ['attach_5fstack_5fsize_12',['ATTACH_STACK_SIZE',['../rdpq__attach_8c.html#a0d2202d1eee440a5285578ba75f432be',1,'rdpq_attach.c']]]
 ];

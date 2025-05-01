@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -79,7 +78,7 @@ $(function() {
 <p>Extended header for a WAV64 file with VADPCM compression.  
  <a href="structwav64__header__vadpcm__t.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="wav64__internal_8h_source.html">wav64_internal.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="wav64__vadpcm__internal_8h_source.html">wav64_vadpcm_internal.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -91,22 +90,30 @@ int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>npredictors</b></td
 int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>order</b></td></tr>
 <tr class="memdesc:ad3fe1f6ae171c3fff9f67076d09335eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Order of the predictors. <br /></td></tr>
 <tr class="separator:ad3fe1f6ae171c3fff9f67076d09335eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a992aa8b31d4b0d9a55dbef8fe107b191" id="r_a992aa8b31d4b0d9a55dbef8fe107b191"><td class="memItemLeft" align="right" valign="top"><a id="a992aa8b31d4b0d9a55dbef8fe107b191" name="a992aa8b31d4b0d9a55dbef8fe107b191"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>padding</b></td></tr>
-<tr class="memdesc:a992aa8b31d4b0d9a55dbef8fe107b191"><td class="mdescLeft">&#160;</td><td class="mdescRight">padding <br /></td></tr>
-<tr class="separator:a992aa8b31d4b0d9a55dbef8fe107b191"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e46276c8b8681e1101059d1ed79234e" id="r_a2e46276c8b8681e1101059d1ed79234e"><td class="memItemLeft" align="right" valign="top"><a id="a2e46276c8b8681e1101059d1ed79234e" name="a2e46276c8b8681e1101059d1ed79234e"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>padding1</b></td></tr>
-<tr class="memdesc:a2e46276c8b8681e1101059d1ed79234e"><td class="mdescLeft">&#160;</td><td class="mdescRight">padding1 <br /></td></tr>
-<tr class="separator:a2e46276c8b8681e1101059d1ed79234e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aada5ae6c444e6f117dc42598a7aac442" id="r_aada5ae6c444e6f117dc42598a7aac442"><td class="memItemLeft" align="right" valign="top"><a id="aada5ae6c444e6f117dc42598a7aac442" name="aada5ae6c444e6f117dc42598a7aac442"></a>
-<a class="el" href="structwav64__vadpcm__vector__t.html">wav64_vadpcm_vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>loop_state</b> [2]</td></tr>
-<tr class="memdesc:aada5ae6c444e6f117dc42598a7aac442"><td class="mdescLeft">&#160;</td><td class="mdescRight">State at the loop point. <br /></td></tr>
-<tr class="separator:aada5ae6c444e6f117dc42598a7aac442"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6979f0ba8dcc33cdc31fb1250e6593f" id="r_ae6979f0ba8dcc33cdc31fb1250e6593f"><td class="memItemLeft" align="right" valign="top"><a id="ae6979f0ba8dcc33cdc31fb1250e6593f" name="ae6979f0ba8dcc33cdc31fb1250e6593f"></a>
-<a class="el" href="structwav64__vadpcm__vector__t.html">wav64_vadpcm_vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>state</b> [2]</td></tr>
-<tr class="memdesc:ae6979f0ba8dcc33cdc31fb1250e6593f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current decompression state. <br /></td></tr>
-<tr class="separator:ae6979f0ba8dcc33cdc31fb1250e6593f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b075a0df61c95e9d798bc01165a42a0" id="r_a5b075a0df61c95e9d798bc01165a42a0"><td class="memItemLeft" align="right" valign="top"><a id="a5b075a0df61c95e9d798bc01165a42a0" name="a5b075a0df61c95e9d798bc01165a42a0"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b></td></tr>
+<tr class="memdesc:a5b075a0df61c95e9d798bc01165a42a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">VADPCM flags. <br /></td></tr>
+<tr class="separator:a5b075a0df61c95e9d798bc01165a42a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3621c02d9f75b23bb4b68a8bc90a2b7a" id="r_a3621c02d9f75b23bb4b68a8bc90a2b7a"><td class="memItemLeft" align="right" valign="top"><a id="a3621c02d9f75b23bb4b68a8bc90a2b7a" name="a3621c02d9f75b23bb4b68a8bc90a2b7a"></a>
+int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>num_skippoints</b></td></tr>
+<tr class="memdesc:a3621c02d9f75b23bb4b68a8bc90a2b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of allowed skip points. <br /></td></tr>
+<tr class="separator:a3621c02d9f75b23bb4b68a8bc90a2b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea0fbf6c05ff8d03cef2265b7fa47860" id="r_aea0fbf6c05ff8d03cef2265b7fa47860"><td class="memItemLeft" align="right" valign="top"><a id="aea0fbf6c05ff8d03cef2265b7fa47860" name="aea0fbf6c05ff8d03cef2265b7fa47860"></a>
+<a class="el" href="structwav64__vadpcm__hufftable__t.html">wav64_vadpcm_hufftable_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>huff_tbl</b></td></tr>
+<tr class="memdesc:aea0fbf6c05ff8d03cef2265b7fa47860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Huffman tables (computed at load time) <br /></td></tr>
+<tr class="separator:aea0fbf6c05ff8d03cef2265b7fa47860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1dabaca6f8913e64db1e8178341e06f" id="r_ac1dabaca6f8913e64db1e8178341e06f"><td class="memItemLeft" align="right" valign="top"><a id="ac1dabaca6f8913e64db1e8178341e06f" name="ac1dabaca6f8913e64db1e8178341e06f"></a>
+<a class="el" href="structwav64__vadpcm__skippoint__t.html">wav64_vadpcm_skippoint_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>skip_points</b></td></tr>
+<tr class="memdesc:ac1dabaca6f8913e64db1e8178341e06f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Information on the skip points (located after the codebook) <br /></td></tr>
+<tr class="separator:ac1dabaca6f8913e64db1e8178341e06f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e170f7ae3b80698fbf863d6b5e2ea07" id="r_a7e170f7ae3b80698fbf863d6b5e2ea07"><td class="memItemLeft" align="right" valign="top"><a id="a7e170f7ae3b80698fbf863d6b5e2ea07" name="a7e170f7ae3b80698fbf863d6b5e2ea07"></a>
+<a class="el" href="structwav64__vadpcm__huffctx__t.html">wav64_vadpcm_huffctx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>huff_ctx</b> [3]</td></tr>
+<tr class="memdesc:a7e170f7ae3b80698fbf863d6b5e2ea07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Huffman contexts. <br /></td></tr>
+<tr class="separator:a7e170f7ae3b80698fbf863d6b5e2ea07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7414886f10f1d330544e7482a7a2e866" id="r_a7414886f10f1d330544e7482a7a2e866"><td class="memItemLeft" align="right" valign="top"><a id="a7414886f10f1d330544e7482a7a2e866" name="a7414886f10f1d330544e7482a7a2e866"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>padding</b></td></tr>
+<tr class="memdesc:a7414886f10f1d330544e7482a7a2e866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Padding. <br /></td></tr>
+<tr class="separator:a7414886f10f1d330544e7482a7a2e866"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0545f1bb8ca885e184fb2b85d8c8d49" id="r_ae0545f1bb8ca885e184fb2b85d8c8d49"><td class="memItemLeft" align="right" valign="top"><a id="ae0545f1bb8ca885e184fb2b85d8c8d49" name="ae0545f1bb8ca885e184fb2b85d8c8d49"></a>
 <a class="el" href="structwav64__vadpcm__vector__t.html">wav64_vadpcm_vector_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>codebook</b> []</td></tr>
 <tr class="memdesc:ae0545f1bb8ca885e184fb2b85d8c8d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Codebook of the predictors. <br /></td></tr>
@@ -147,67 +154,99 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>padding1</b></td>
 
 </div>
 </div>
-<a id="a992aa8b31d4b0d9a55dbef8fe107b191" name="a992aa8b31d4b0d9a55dbef8fe107b191"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a992aa8b31d4b0d9a55dbef8fe107b191">&#9670;&#160;</a></span>padding</h2>
+<a id="a5b075a0df61c95e9d798bc01165a42a0" name="a5b075a0df61c95e9d798bc01165a42a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b075a0df61c95e9d798bc01165a42a0">&#9670;&#160;</a></span>flags</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t wav64_header_vadpcm_t::padding</td>
+          <td class="memname">uint8_t wav64_header_vadpcm_t::flags</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>padding </p>
+<p>VADPCM flags. </p>
 
 </div>
 </div>
-<a id="a2e46276c8b8681e1101059d1ed79234e" name="a2e46276c8b8681e1101059d1ed79234e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e46276c8b8681e1101059d1ed79234e">&#9670;&#160;</a></span>padding1</h2>
+<a id="a3621c02d9f75b23bb4b68a8bc90a2b7a" name="a3621c02d9f75b23bb4b68a8bc90a2b7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3621c02d9f75b23bb4b68a8bc90a2b7a">&#9670;&#160;</a></span>num_skippoints</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t wav64_header_vadpcm_t::padding1</td>
+          <td class="memname">int8_t wav64_header_vadpcm_t::num_skippoints</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>padding1 </p>
+<p>Number of allowed skip points. </p>
 
 </div>
 </div>
-<a id="aada5ae6c444e6f117dc42598a7aac442" name="aada5ae6c444e6f117dc42598a7aac442"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aada5ae6c444e6f117dc42598a7aac442">&#9670;&#160;</a></span>loop_state</h2>
+<a id="aea0fbf6c05ff8d03cef2265b7fa47860" name="aea0fbf6c05ff8d03cef2265b7fa47860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea0fbf6c05ff8d03cef2265b7fa47860">&#9670;&#160;</a></span>huff_tbl</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structwav64__vadpcm__vector__t.html">wav64_vadpcm_vector_t</a> wav64_header_vadpcm_t::loop_state[2]</td>
+          <td class="memname"><a class="el" href="structwav64__vadpcm__hufftable__t.html">wav64_vadpcm_hufftable_t</a>* wav64_header_vadpcm_t::huff_tbl</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>State at the loop point. </p>
+<p>Huffman tables (computed at load time) </p>
 
 </div>
 </div>
-<a id="ae6979f0ba8dcc33cdc31fb1250e6593f" name="ae6979f0ba8dcc33cdc31fb1250e6593f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6979f0ba8dcc33cdc31fb1250e6593f">&#9670;&#160;</a></span>state</h2>
+<a id="ac1dabaca6f8913e64db1e8178341e06f" name="ac1dabaca6f8913e64db1e8178341e06f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1dabaca6f8913e64db1e8178341e06f">&#9670;&#160;</a></span>skip_points</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structwav64__vadpcm__vector__t.html">wav64_vadpcm_vector_t</a> wav64_header_vadpcm_t::state[2]</td>
+          <td class="memname"><a class="el" href="structwav64__vadpcm__skippoint__t.html">wav64_vadpcm_skippoint_t</a>* wav64_header_vadpcm_t::skip_points</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Current decompression state. </p>
+<p>Information on the skip points (located after the codebook) </p>
+
+</div>
+</div>
+<a id="a7e170f7ae3b80698fbf863d6b5e2ea07" name="a7e170f7ae3b80698fbf863d6b5e2ea07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e170f7ae3b80698fbf863d6b5e2ea07">&#9670;&#160;</a></span>huff_ctx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structwav64__vadpcm__huffctx__t.html">wav64_vadpcm_huffctx_t</a> wav64_header_vadpcm_t::huff_ctx[3]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Huffman contexts. </p>
+
+</div>
+</div>
+<a id="a7414886f10f1d330544e7482a7a2e866" name="a7414886f10f1d330544e7482a7a2e866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7414886f10f1d330544e7482a7a2e866">&#9670;&#160;</a></span>padding</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t wav64_header_vadpcm_t::padding</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Padding. </p>
 
 </div>
 </div>
@@ -228,12 +267,12 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>padding1</b></td>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="wav64__internal_8h_source.html">wav64_internal.h</a></li>
+<li><a class="el" href="wav64__vadpcm__internal_8h_source.html">wav64_vadpcm_internal.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:47 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

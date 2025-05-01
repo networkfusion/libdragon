@@ -1,6 +1,27 @@
 var searchData=
 [
-  ['y_0',['y',['../group__controller.html#a415290769594460e2e485922904f345d',1,'_SI_condat.__unnamed20__.__unnamed24__']]],
-  ['y1_1',['y1',['../rdpq__debug_8c.html#a29361885c98c7f19165aa53829149ae4',1,'.clip']]],
-  ['year_2',['year',['../group__rtc.html#a812da29fb4a23cf0e138f530283c7bb8',1,'rtc_time_t']]]
+  ['v_0',['v',['../fgeom_8h.html#a03499c82a76a49149018875e80b0ebc6',1,'fm_vec3_t::v'],['../fgeom_8h.html#a11855cde83d30e9b06cb8e28ee7a48eb',1,'fm_vec4_t::v'],['../fgeom_8h.html#a726c1f86ca655e55d689c737b71ad4c1',1,'fm_quat_t::v'],['../yuv_8h.html#a985f7795ed33eb3d31150b9f8f6e465b',1,'yuv_frame_t::v'],['../structwav64__vadpcm__vector__t.html#acd915e801499ad26dddf97829edc52c0',1,'wav64_vadpcm_vector_t::v']]],
+  ['v_5fint_1',['v_int',['../group__lowlevel.html#a78d31d9148d84ffe2e31b4c8314eb59e',1,'VI_regs_t']]],
+  ['v_5flimits_2',['v_limits',['../group__lowlevel.html#a0a7255f9219ef588808846d57882b5fa',1,'VI_regs_t']]],
+  ['v_5fscale_3',['v_scale',['../group__lowlevel.html#a7154f52a793a1229191cb8171c520d9e',1,'VI_regs_t']]],
+  ['v_5fsync_4',['v_sync',['../group__lowlevel.html#a41a71cafa3141b8eda5f011c971f817e',1,'VI_regs_t']]],
+  ['vaccum_5',['vaccum',['../rsp_8h.html#a0a922c0b0bd1e4a58a389d53125d5bd3',1,'rsp_snapshot_t']]],
+  ['valid_6',['valid',['../group__controllerpak.html#ac6f84c97a7f4614d2a89463baa8874be',1,'entry_structure_t::valid'],['../structbbfs__entry__t.html#adcc71d6aa2c2279bfc3e0e227a684328',1,'bbfs_entry_t::valid']]],
+  ['valign_7',['valign',['../rdpq__text_8h.html#a6de659bfe38e8cdf4aee8833b0c2b4be',1,'rdpq_textparms_t::valign'],['../yuv_8h.html#a38953c7a3b66fc9c857b3a6a2be4e1b1',1,'yuv_fmv_parms_t::valign']]],
+  ['value_8',['value',['../structdso__sym__t.html#aa4a499cc0ab9f6c086d0cd4b1918ac75',1,'dso_sym_t']]],
+  ['values_9',['values',['../structwav64__vadpcm__huffctx__t.html#a6f0108aff2008d0810e4ecd4711f949c',1,'wav64_vadpcm_huffctx_t::values'],['../structsparse__range__t.html#a68feec5d894aeb3d88179980390e49ac',1,'sparse_range_t::values']]],
+  ['vctx_10',['vctx',['../rdpq__debug_8c.html#a7ec1afa1e271136d26545a2b032fdf4c',1,'rdpq_debug.c']]],
+  ['vendor_11',['vendor',['../group__controllerpak.html#a4e65c83bc81eb966642da54ae8c885f5',1,'entry_structure_t']]],
+  ['version_12',['version',['../structasset__header__t.html#a27a6d9b3639eee4a44c290b23e90ae95',1,'asset_header_t::version'],['../structsprite__ext__t.html#a3bfa3f371fd2e730dcdb71c923be078d',1,'sprite_ext_t::version'],['../structrdpq__font__t.html#a46d86c17e698bb8b21946d360c3e63f0',1,'rdpq_font_t::version'],['../structmodel64__data__t.html#a5406afa867cc89625ee2a54f50238813',1,'model64_data_t::version'],['../backtrace_8c.html#a49df133ec55445f03fd42411feafd66c',1,'symtable_header_t::version'],['../structwav64__header__t.html#a41f089df9c3a1121a13adeecca288596',1,'wav64_header_t::version']]],
+  ['version_5fnumber_13',['version_number',['../tpak_8h.html#ab742ef846978b3ffe4a313374479c0b8',1,'gameboy_cartridge_header']]],
+  ['vertex_5fprecision_14',['vertex_precision',['../structprimitive__t.html#a75cd85dc5793688c950a079a1085a231',1,'primitive_t']]],
+  ['vi_5fburst_15',['vi_burst',['../structvi__preset__t.html#a40a5dc07c192f379c6acb4a6d58b4308',1,'vi_preset_t']]],
+  ['vi_5fcallback_16',['VI_callback',['../interrupt_8c.html#ae53298ee0d7e09b763c88bce13f41d58',1,'interrupt.c']]],
+  ['vi_5fh_5ftotal_17',['vi_h_total',['../structvi__preset__t.html#a1a1d50f8fc0fe4ae04a47d092ee70b14',1,'vi_preset_t']]],
+  ['vi_5fh_5ftotal_5fleap_18',['vi_h_total_leap',['../structvi__preset__t.html#a5cf19bb619c62e734954c1c608eac442',1,'vi_preset_t']]],
+  ['vi_5fv_5fburst_19',['vi_v_burst',['../structvi__preset__t.html#a3a10dad9dc4e26c5c579d8fa56591df7',1,'vi_preset_t']]],
+  ['vi_5fv_5ftotal_20',['vi_v_total',['../structvi__preset__t.html#aaf93b93eb434e00b573a59dbe1d170c6',1,'vi_preset_t']]],
+  ['vol_21',['vol',['../structAYEnvelope.html#abc79941d9d5d3d5c9f22f0b4d97cdffa',1,'AYEnvelope']]],
+  ['vpr_22',['vpr',['../rsp_8h.html#a007496e4e8d0e57e66462151c8156051',1,'rsp_snapshot_t']]],
+  ['vslices_23',['vslices',['../sprite_8h.html#a3b1f4d3f9dd51d45993bda45a6d474d3',1,'sprite_t']]]
 ];

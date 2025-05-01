@@ -20,7 +20,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="logo2.png"/></td>
   <td id="projectalign">
    <div id="projectname">libdragon
    </div>
@@ -86,14 +85,23 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
 Files</h2></td></tr>
+<tr class="memitem:dir_8c" id="r_dir_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dir_8c.html">dir.c</a></td></tr>
+<tr class="memdesc:dir_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directory handling. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:do__ctors_8c" id="r_do__ctors_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="do__ctors_8c.html">do_ctors.c</a></td></tr>
 <tr class="memdesc:do__ctors_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">C++ constructor handling. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:system_8c" id="r_system_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html">system.c</a></td></tr>
 <tr class="memdesc:system_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">newlib Interface Hooks <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:system__newlib__locks_8c" id="r_system__newlib__locks_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system__newlib__locks_8c.html">system_newlib_locks.c</a></td></tr>
+<tr class="memdesc:system__newlib__locks_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">newlib lock implementation <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:dir_8h" id="r_dir_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dir_8h.html">dir.h</a></td></tr>
 <tr class="memdesc:dir_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directory handling. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ioctl_8h" id="r_ioctl_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ioctl_8h.html">ioctl.h</a></td></tr>
+<tr class="memdesc:ioctl_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">ioctl Implementation <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:system_8h" id="r_system_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8h.html">system.h</a></td></tr>
 <tr class="memdesc:system_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">newlib Interface Hooks <br /></td></tr>
@@ -109,6 +117,9 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstdio__t.html">stdio_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard I/O hook structure.  <a href="structstdio__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrtc__hooks__t.html">rtc_hooks_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Real-time clock hook structure.  <a href="structrtc__hooks__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -154,12 +165,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>__wrap___do_global_ct
 <tr class="memitem:ga6ba22042b3c62d9213ac9121ce32b96f" id="r_ga6ba22042b3c62d9213ac9121ce32b96f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga6ba22042b3c62d9213ac9121ce32b96f">unhook_stdio_calls</a> (<a class="el" href="structstdio__t.html">stdio_t</a> *stdio_calls)</td></tr>
 <tr class="memdesc:ga6ba22042b3c62d9213ac9121ce32b96f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unhook from stdio.  <br /></td></tr>
 <tr class="separator:ga6ba22042b3c62d9213ac9121ce32b96f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga52ba40f92821927553a30e3c6e8c5214" id="r_ga52ba40f92821927553a30e3c6e8c5214"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga52ba40f92821927553a30e3c6e8c5214">hook_time_call</a> (time_t(*time_fn)(void))</td></tr>
-<tr class="memdesc:ga52ba40f92821927553a30e3c6e8c5214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook into gettimeofday with a current time callback.  <br /></td></tr>
-<tr class="separator:ga52ba40f92821927553a30e3c6e8c5214"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7c3a0415a3cd3586014fdc4d1a793bf1" id="r_ga7c3a0415a3cd3586014fdc4d1a793bf1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga7c3a0415a3cd3586014fdc4d1a793bf1">unhook_time_call</a> (time_t(*time_fn)(void))</td></tr>
-<tr class="memdesc:ga7c3a0415a3cd3586014fdc4d1a793bf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unhook from gettimeofday current time callback.  <br /></td></tr>
-<tr class="separator:ga7c3a0415a3cd3586014fdc4d1a793bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga813fb069dfcfa2662146a48d22078134" id="r_ga813fb069dfcfa2662146a48d22078134"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga813fb069dfcfa2662146a48d22078134">hook_rtc_calls</a> (<a class="el" href="structrtc__hooks__t.html">rtc_hooks_t</a> *hooks)</td></tr>
+<tr class="memdesc:ga813fb069dfcfa2662146a48d22078134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook into POSIX time callbacks.  <br /></td></tr>
+<tr class="separator:ga813fb069dfcfa2662146a48d22078134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafbf7f0d5ec54ba1b5e150673a5aa829e" id="r_gafbf7f0d5ec54ba1b5e150673a5aa829e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gafbf7f0d5ec54ba1b5e150673a5aa829e">unhook_rtc_calls</a> (<a class="el" href="structrtc__hooks__t.html">rtc_hooks_t</a> *hooks)</td></tr>
+<tr class="memdesc:gafbf7f0d5ec54ba1b5e150673a5aa829e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unhook from POSIX time callbacks.  <br /></td></tr>
+<tr class="separator:gafbf7f0d5ec54ba1b5e150673a5aa829e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -286,12 +297,10 @@ Opaque cookie used to continue walking. </td></tr>
 </div><div class="memdoc">
 
 <p>Register a filesystem with newlib. </p>
-<p>This function will take a prefix in the form of 'prefix:/' and a pointer to a filesystem structure of relevant callbacks and register it with newlib. Any standard open/fopen calls with the registered prefix will be passed to this filesystem. Userspace code does not need to know the underlying filesystem, only the prefix that it has been registered under.</p>
-<p>The filesystem pointer passed in to this function should not go out of scope for the lifetime of the filesystem.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">prefix</td><td>Prefix of the filesystem </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">filesystem</td><td>Structure of callbacks for various functions in the filesystem. If the registered filesystem doesn't support an operation, it should leave the callback null.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">prefix</td><td>The prefix that will be used to register the filesystem </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filesystem</td><td>Pointer to structure containing filesystem callbacks</td></tr>
   </table>
   </dd>
 </dl>
@@ -396,64 +405,64 @@ Opaque cookie used to continue walking. </td></tr>
 
 </div>
 </div>
-<a id="ga52ba40f92821927553a30e3c6e8c5214" name="ga52ba40f92821927553a30e3c6e8c5214"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga52ba40f92821927553a30e3c6e8c5214">&#9670;&#160;</a></span>hook_time_call()</h2>
+<a id="ga813fb069dfcfa2662146a48d22078134" name="ga813fb069dfcfa2662146a48d22078134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga813fb069dfcfa2662146a48d22078134">&#9670;&#160;</a></span>hook_rtc_calls()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int hook_time_call </td>
+          <td class="memname">int hook_rtc_calls </td>
           <td>(</td>
-          <td class="paramtype">time_t(*)(void)&#160;</td>
-          <td class="paramname"><em>time_fn</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structrtc__hooks__t.html">rtc_hooks_t</a> *&#160;</td>
+          <td class="paramname"><em>hooks</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Hook into gettimeofday with a current time callback. </p>
+<p>Hook into POSIX time callbacks. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">time_fn</td><td>Pointer to callback for the current time function</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hooks</td><td>Pointer to real-time clock callbacks structure</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if successful or a negative value on failure. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on a successful hook or a negative value on failure </dd></dl>
 
 </div>
 </div>
-<a id="ga7c3a0415a3cd3586014fdc4d1a793bf1" name="ga7c3a0415a3cd3586014fdc4d1a793bf1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7c3a0415a3cd3586014fdc4d1a793bf1">&#9670;&#160;</a></span>unhook_time_call()</h2>
+<a id="gafbf7f0d5ec54ba1b5e150673a5aa829e" name="gafbf7f0d5ec54ba1b5e150673a5aa829e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafbf7f0d5ec54ba1b5e150673a5aa829e">&#9670;&#160;</a></span>unhook_rtc_calls()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int unhook_time_call </td>
+          <td class="memname">int unhook_rtc_calls </td>
           <td>(</td>
-          <td class="paramtype">time_t(*)(void)&#160;</td>
-          <td class="paramname"><em>time_fn</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structrtc__hooks__t.html">rtc_hooks_t</a> *&#160;</td>
+          <td class="paramname"><em>hooks</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Unhook from gettimeofday current time callback. </p>
+<p>Unhook from POSIX time callbacks. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">time_fn</td><td>Pointer to callback for the current time function</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hooks</td><td>Pointer to real-time clock callbacks structure</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if successful or a negative value on failure. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on a successful unhook or a negative value on failure </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Apr 6 2025 07:25:47 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
