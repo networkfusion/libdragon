@@ -90,10 +90,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>format</b></td></tr>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>ext</b></td></tr>
 <tr class="memdesc:a76959d0c50747ca1f665c657c1185ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to extended header data (format-dependent) <br /></td></tr>
 <tr class="separator:a76959d0c50747ca1f665c657c1185ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a86f675a8c4b5d153b1d1d05cbb8a06" id="r_a8a86f675a8c4b5d153b1d1d05cbb8a06"><td class="memItemLeft" align="right" valign="top"><a id="a8a86f675a8c4b5d153b1d1d05cbb8a06" name="a8a86f675a8c4b5d153b1d1d05cbb8a06"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>states</b></td></tr>
-<tr class="memdesc:a8a86f675a8c4b5d153b1d1d05cbb8a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to per-mixer-channel state data (format-dependent) <br /></td></tr>
-<tr class="separator:a8a86f675a8c4b5d153b1d1d05cbb8a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af82b54404b179406942decd8f227b9cf" id="r_af82b54404b179406942decd8f227b9cf"><td class="memItemLeft" align="right" valign="top"><a id="af82b54404b179406942decd8f227b9cf" name="af82b54404b179406942decd8f227b9cf"></a>
 void *&#160;</td><td class="memItemRight" valign="bottom"><b>samples</b></td></tr>
 <tr class="memdesc:af82b54404b179406942decd8f227b9cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the preloaded samples (if streaming is disabled) <br /></td></tr>
@@ -114,10 +110,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>nsimul</b></td></tr>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b></td></tr>
 <tr class="memdesc:a3763c53bca195ae3e1950803436c3f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Misc flags. <br /></td></tr>
 <tr class="separator:a3763c53bca195ae3e1950803436c3f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabf7d0322c19b2429a749df903af9b2b" id="r_aabf7d0322c19b2429a749df903af9b2b"><td class="memItemLeft" align="right" valign="top"><a id="aabf7d0322c19b2429a749df903af9b2b" name="aabf7d0322c19b2429a749df903af9b2b"></a>
-int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>mixer_channels</b> []</td></tr>
-<tr class="memdesc:aabf7d0322c19b2429a749df903af9b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mixer channels in which the waveform is reproduced. <br /></td></tr>
-<tr class="separator:aabf7d0322c19b2429a749df903af9b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>WAV64 state. </p>
@@ -151,22 +143,6 @@ int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>mixer_channels</b> 
 </div><div class="memdoc">
 
 <p>Pointer to extended header data (format-dependent) </p>
-
-</div>
-</div>
-<a id="a8a86f675a8c4b5d153b1d1d05cbb8a06" name="a8a86f675a8c4b5d153b1d1d05cbb8a06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a86f675a8c4b5d153b1d1d05cbb8a06">&#9670;&#160;</a></span>states</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* wav64_state_t::states</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pointer to per-mixer-channel state data (format-dependent) </p>
 
 </div>
 </div>
@@ -250,29 +226,13 @@ int8_t&#160;</td><td class="memItemRight" valign="bottom"><b>mixer_channels</b> 
 
 </div>
 </div>
-<a id="aabf7d0322c19b2429a749df903af9b2b" name="aabf7d0322c19b2429a749df903af9b2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabf7d0322c19b2429a749df903af9b2b">&#9670;&#160;</a></span>mixer_channels</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int8_t wav64_state_t::mixer_channels[]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Mixer channels in which the waveform is reproduced. </p>
-
-</div>
-</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="wav64__internal_8h_source.html">wav64_internal.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 23:16:36 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

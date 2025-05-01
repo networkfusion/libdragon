@@ -96,13 +96,13 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a09536ab55339204e3392bdced7de21d1" id="r_a09536ab55339204e3392bdced7de21d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="samplebuffer_8c.html#a09536ab55339204e3392bdced7de21d1">samplebuffer_init</a> (<a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a> *buf, uint8_t *uncached_mem, int nbytes)</td></tr>
-<tr class="separator:a09536ab55339204e3392bdced7de21d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab78b15e5e26795c6ff25602b5eaa876d" id="r_ab78b15e5e26795c6ff25602b5eaa876d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="samplebuffer_8c.html#ab78b15e5e26795c6ff25602b5eaa876d">samplebuffer_init</a> (<a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a> *buf, uint8_t *uncached_mem, int nbytes, int state_size)</td></tr>
+<tr class="separator:ab78b15e5e26795c6ff25602b5eaa876d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa16bbcb1683deb8206e06bd9128f9b09" id="r_aa16bbcb1683deb8206e06bd9128f9b09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="samplebuffer_8c.html#aa16bbcb1683deb8206e06bd9128f9b09">samplebuffer_set_bps</a> (<a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a> *buf, int bits_per_sample)</td></tr>
 <tr class="memdesc:aa16bbcb1683deb8206e06bd9128f9b09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the bit width of the samples stored in the buffer.  <br /></td></tr>
 <tr class="separator:aa16bbcb1683deb8206e06bd9128f9b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac06c8ab86a03f3a65bf6daa30091ef27" id="r_ac06c8ab86a03f3a65bf6daa30091ef27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="samplebuffer_8c.html#ac06c8ab86a03f3a65bf6daa30091ef27">samplebuffer_set_waveform</a> (<a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a> *buf, <a class="el" href="mixer_8h.html#structwaveform__t">waveform_t</a> *wave, <a class="el" href="mixer_8h.html#ab0e995bf04880a3e14f689f48fdb2475">WaveformRead</a> <a class="el" href="system_8c.html#a0b746547993d7baf3b092ae620bfa666">read</a>, void *ctx)</td></tr>
-<tr class="separator:ac06c8ab86a03f3a65bf6daa30091ef27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af568e1f6ef1e00daeaa84e235a21c713" id="r_af568e1f6ef1e00daeaa84e235a21c713"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="samplebuffer_8c.html#af568e1f6ef1e00daeaa84e235a21c713">samplebuffer_set_waveform</a> (<a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a> *buf, <a class="el" href="mixer_8h.html#structwaveform__t">waveform_t</a> *wave, <a class="el" href="mixer_8h.html#ab0e995bf04880a3e14f689f48fdb2475">WaveformRead</a> <a class="el" href="system_8c.html#a0b746547993d7baf3b092ae620bfa666">read</a>)</td></tr>
+<tr class="separator:af568e1f6ef1e00daeaa84e235a21c713"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7252a6b63af132338f6e1b8a10cb1c03" id="r_a7252a6b63af132338f6e1b8a10cb1c03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="samplebuffer_8c.html#a7252a6b63af132338f6e1b8a10cb1c03">samplebuffer_is_inited</a> (<a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a> *buf)</td></tr>
 <tr class="memdesc:a7252a6b63af132338f6e1b8a10cb1c03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the samplebuffer is initialized.  <br /></td></tr>
 <tr class="separator:a7252a6b63af132338f6e1b8a10cb1c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,8 +125,8 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Sample buffer. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a09536ab55339204e3392bdced7de21d1" name="a09536ab55339204e3392bdced7de21d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09536ab55339204e3392bdced7de21d1">&#9670;&#160;</a></span>samplebuffer_init()</h2>
+<a id="ab78b15e5e26795c6ff25602b5eaa876d" name="ab78b15e5e26795c6ff25602b5eaa876d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab78b15e5e26795c6ff25602b5eaa876d">&#9670;&#160;</a></span>samplebuffer_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,7 +147,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>state_size</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -158,11 +164,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Initialize the sample buffer by binding it to the specified memory buffer.</p>
 <p>The sample buffer is guaranteed to be 8-bytes aligned, so the specified memory buffer must follow this constraint. Moreover, the buffer must be in the uncached segment and not loaded in any CPU cacheline. It is strongly advised to allocate the buffer via <a class="el" href="group__n64sys.html#gaf9f812fb3f12eaee7f5186b893266d3a" title="Allocate a buffer that will be accessed as uncached memory.">malloc_uncached</a>, that takes care of these constraints.</p>
+<p>The memory buffer will be used for storing samples and for the state.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>Sample buffer </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">uncached_mem</td><td>Memory buffer to use. Must be 8-byte aligned, and in the uncached segment. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size of the memory buffer, in bytes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size of the memory buffer portion to use for samples (in bytes) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">state_size</td><td>Size of the memory buffer portion to use for the state (in bytes) </td></tr>
   </table>
   </dd>
 </dl>
@@ -207,8 +215,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac06c8ab86a03f3a65bf6daa30091ef27" name="ac06c8ab86a03f3a65bf6daa30091ef27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac06c8ab86a03f3a65bf6daa30091ef27">&#9670;&#160;</a></span>samplebuffer_set_waveform()</h2>
+<a id="af568e1f6ef1e00daeaa84e235a21c713" name="af568e1f6ef1e00daeaa84e235a21c713"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af568e1f6ef1e00daeaa84e235a21c713">&#9670;&#160;</a></span>samplebuffer_set_waveform()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -229,13 +237,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="mixer_8h.html#ab0e995bf04880a3e14f689f48fdb2475">WaveformRead</a>&#160;</td>
-          <td class="paramname"><em>read</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ctx</em>&#160;</td>
+          <td class="paramname"><em>read</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -251,7 +253,6 @@ Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>Sample buffer </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">wave</td><td>Waveform to connect to the sample buffer </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">read</td><td>Waveform read function </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>Opaque context that will be passed to the read/stop function. </td></tr>
   </table>
   </dd>
 </dl>
@@ -509,7 +510,7 @@ false If the sample buffer is not initialized. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 23:16:35 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

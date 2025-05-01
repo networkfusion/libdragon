@@ -117,9 +117,6 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ab0e995bf04880a3e14f689f48fdb2475" id="r_ab0e995bf04880a3e14f689f48fdb2475"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mixer_8h.html#ab0e995bf04880a3e14f689f48fdb2475">WaveformRead</a>) (void *ctx, <a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a> *sbuf, int wpos, int wlen, bool seeking)</td></tr>
 <tr class="memdesc:ab0e995bf04880a3e14f689f48fdb2475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waveform callback function invoked by the mixer to read/generate samples.  <br /></td></tr>
 <tr class="separator:ab0e995bf04880a3e14f689f48fdb2475"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47097d995ba05e3a4c201f7ec4c53ee8" id="r_a47097d995ba05e3a4c201f7ec4c53ee8"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mixer_8h.html#a47097d995ba05e3a4c201f7ec4c53ee8">WaveformStop</a>) (void *ctx, <a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a> *sbuf)</td></tr>
-<tr class="memdesc:a47097d995ba05e3a4c201f7ec4c53ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waveform callback function invoked by the mixer whenever the playback is stopped.  <br /></td></tr>
-<tr class="separator:a47097d995ba05e3a4c201f7ec4c53ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -145,9 +142,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>mixer_close</b> (void
 <tr class="memitem:a1aa94701f22d086d624fb7d938ba0062" id="r_a1aa94701f22d086d624fb7d938ba0062"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mixer_8h.html#a1aa94701f22d086d624fb7d938ba0062">mixer_ch_play</a> (int ch, <a class="el" href="mixer_8h.html#structwaveform__t">waveform_t</a> *wave)</td></tr>
 <tr class="memdesc:a1aa94701f22d086d624fb7d938ba0062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start playing the specified waveform on the specified channel.  <br /></td></tr>
 <tr class="separator:a1aa94701f22d086d624fb7d938ba0062"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c5d9fcdb3683c05608a6a756c35c757" id="r_a4c5d9fcdb3683c05608a6a756c35c757"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mixer_8h.html#a4c5d9fcdb3683c05608a6a756c35c757">mixer_ch_play_ctx</a> (int ch, <a class="el" href="mixer_8h.html#structwaveform__t">waveform_t</a> *wave, void *ctx)</td></tr>
-<tr class="memdesc:a4c5d9fcdb3683c05608a6a756c35c757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start playing the specified waveform on the specified channel, with a custom context pointer.  <br /></td></tr>
-<tr class="separator:a4c5d9fcdb3683c05608a6a756c35c757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8c01ae2bc402901e8fbf7e61e5cd9d6" id="r_af8c01ae2bc402901e8fbf7e61e5cd9d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mixer_8h.html#af8c01ae2bc402901e8fbf7e61e5cd9d6">mixer_ch_set_freq</a> (int ch, float frequency)</td></tr>
 <tr class="memdesc:af8c01ae2bc402901e8fbf7e61e5cd9d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the frequency for the specified channel.  <br /></td></tr>
 <tr class="separator:af8c01ae2bc402901e8fbf7e61e5cd9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,18 +248,18 @@ read</td>
 Read function of the waveform. <p>This is the callback that will be invoked by the mixer to generate the samples. See <a class="el" href="mixer_8h.html#ab0e995bf04880a3e14f689f48fdb2475" title="Waveform callback function invoked by the mixer to read/generate samples.">WaveformRead</a> for more information. </p>
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a9dd655c2a66f1123d9413505b937c4b7" name="a9dd655c2a66f1123d9413505b937c4b7"></a><a class="el" href="mixer_8h.html#a47097d995ba05e3a4c201f7ec4c53ee8">WaveformStop</a></td>
-<td class="fieldname">
-stop</td>
-<td class="fielddoc">
-Waveform stop function. <p>This optional function is invoked by the mixer when the waveform playback is stopped. </p>
-</td></tr>
-<tr><td class="fieldtype">
 <a id="a1df77203f9cfc69e3772196faa5e1a9d" name="a1df77203f9cfc69e3772196faa5e1a9d"></a>void *</td>
 <td class="fieldname">
 ctx</td>
 <td class="fielddoc">
-Opaque pointer provided as context to the read and stop functions. <p>This is the default context that will be passed to the read and stop functions, when using <a class="el" href="mixer_8c.html#a1aa94701f22d086d624fb7d938ba0062" title="Start playing the specified waveform on the specified channel.">mixer_ch_play</a>. Notice that if you need to pass a different context per each channel, you should use <a class="el" href="mixer_8c.html#a4c5d9fcdb3683c05608a6a756c35c757" title="Start playing the specified waveform on the specified channel, with a custom context pointer.">mixer_ch_play_ctx</a> instead. </p>
+Opaque pointer provided as context to the read function. </td></tr>
+<tr><td class="fieldtype">
+<a id="a103f3c6266b8235bdfea389a50d395f2" name="a103f3c6266b8235bdfea389a50d395f2"></a>int</td>
+<td class="fieldname">
+state_size</td>
+<td class="fielddoc">
+State size required for this waveform to operate. <p>The waveform can request the mixer to allocate a specific amount of memory for its internal state. This is useful to store a per-channel state (eg: decompressor state).</p>
+<p>If this variable is not 0, the mixer will allocate the specified amount of memory for the waveform, and make it available to the read function via the "state" field of the <a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a>. </p>
 </td></tr>
 </table>
 
@@ -365,36 +359,6 @@ Opaque pointer provided as context to the read and stop functions. <p>This is th
     <tr><td class="paramdir">[in]</td><td class="paramname">wpos</td><td>Absolute position in the waveform to read from (in samples). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">wlen</td><td>Minimum number of samples to read (in samples). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">seeking</td><td>True if this call requires seeking in the waveform, false if this read is consecutive to the last one. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a47097d995ba05e3a4c201f7ec4c53ee8" name="a47097d995ba05e3a4c201f7ec4c53ee8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47097d995ba05e3a4c201f7ec4c53ee8">&#9670;&#160;</a></span>WaveformStop</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef void(* WaveformStop) (void *ctx, <a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a> *sbuf)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Waveform callback function invoked by the mixer whenever the playback is stopped. </p>
-<p>The callback function is invoked whenever a waveform playback stops, which is one of the following reasons:</p>
-<ul>
-<li>The waveform reaches its end, and it does not contain any loop.</li>
-<li>Another waveform was started in the same channel via <a class="el" href="mixer_8h.html#a1aa94701f22d086d624fb7d938ba0062" title="Start playing the specified waveform on the specified channel.">mixer_ch_play</a>, causing the current waveform to stop.</li>
-<li><a class="el" href="mixer_8h.html#ae21b093a1283e06ede42363498c490cb" title="Stop playing samples on the specified channel.">mixer_ch_stop</a> was explicitly called to stop playback of the waveform.</li>
-</ul>
-<p>The function is optional, and can be set to NULL if not needed. It is useful to perform cleanup operations when the waveform stops, like closing a file or freeing resources.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>Opaque pointer that is provided as context to the function, and is specified in the waveform (or via <a class="el" href="mixer_8h.html#a4c5d9fcdb3683c05608a6a756c35c757" title="Start playing the specified waveform on the specified channel, with a custom context pointer.">mixer_ch_play_ctx</a>). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">sbuf</td><td>Samplebuffer that was used to store the waveform samples. You can access the <a class="el" href="mixer_8h.html#structwaveform__t" title="A waveform that can be played back through the mixer.">waveform_t</a> instance via sbuf-&gt;wave. </td></tr>
   </table>
   </dd>
 </dl>
@@ -656,57 +620,7 @@ Opaque pointer provided as context to the read and stop functions. <p>This is th
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="mixer_8h.html#a4c5d9fcdb3683c05608a6a756c35c757" title="Start playing the specified waveform on the specified channel, with a custom context pointer.">mixer_ch_play_ctx</a> </dd>
-<dd>
-<a class="el" href="mixer_8h.html#ae21b093a1283e06ede42363498c490cb" title="Stop playing samples on the specified channel.">mixer_ch_stop</a> </dd></dl>
-
-</div>
-</div>
-<a id="a4c5d9fcdb3683c05608a6a756c35c757" name="a4c5d9fcdb3683c05608a6a756c35c757"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c5d9fcdb3683c05608a6a756c35c757">&#9670;&#160;</a></span>mixer_ch_play_ctx()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void mixer_ch_play_ctx </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ch</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="mixer_8h.html#structwaveform__t">waveform_t</a> *&#160;</td>
-          <td class="paramname"><em>wave</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ctx</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Start playing the specified waveform on the specified channel, with a custom context pointer. </p>
-<p>This function is similar to <a class="el" href="mixer_8h.html#a1aa94701f22d086d624fb7d938ba0062" title="Start playing the specified waveform on the specified channel.">mixer_ch_play</a>, but allows to specify a custom context pointer that will be passed to the waveform read function. This is useful to provide some per-channel state to the waveform read function.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ch</td><td>Channel index </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">wave</td><td>Waveform to playback </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>Custom context pointer</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="mixer_8h.html#a1aa94701f22d086d624fb7d938ba0062" title="Start playing the specified waveform on the specified channel.">mixer_ch_play</a> </dd>
-<dd>
-<a class="el" href="mixer_8h.html#ae21b093a1283e06ede42363498c490cb" title="Stop playing samples on the specified channel.">mixer_ch_stop</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="mixer_8h.html#ae21b093a1283e06ede42363498c490cb" title="Stop playing samples on the specified channel.">mixer_ch_stop</a> </dd></dl>
 
 </div>
 </div>
@@ -1073,7 +987,7 @@ Opaque pointer provided as context to the read and stop functions. <p>This is th
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 23:16:35 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

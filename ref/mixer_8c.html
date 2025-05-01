@@ -219,9 +219,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>mixer_close</b> (void
 <tr class="memitem:a1aa94701f22d086d624fb7d938ba0062" id="r_a1aa94701f22d086d624fb7d938ba0062"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mixer_8c.html#a1aa94701f22d086d624fb7d938ba0062">mixer_ch_play</a> (int ch, <a class="el" href="mixer_8h.html#structwaveform__t">waveform_t</a> *wave)</td></tr>
 <tr class="memdesc:a1aa94701f22d086d624fb7d938ba0062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start playing the specified waveform on the specified channel.  <br /></td></tr>
 <tr class="separator:a1aa94701f22d086d624fb7d938ba0062"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c5d9fcdb3683c05608a6a756c35c757" id="r_a4c5d9fcdb3683c05608a6a756c35c757"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mixer_8c.html#a4c5d9fcdb3683c05608a6a756c35c757">mixer_ch_play_ctx</a> (int ch, <a class="el" href="mixer_8h.html#structwaveform__t">waveform_t</a> *wave, void *ctx)</td></tr>
-<tr class="memdesc:a4c5d9fcdb3683c05608a6a756c35c757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start playing the specified waveform on the specified channel, with a custom context pointer.  <br /></td></tr>
-<tr class="separator:a4c5d9fcdb3683c05608a6a756c35c757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a827e0c459c6a250ccc74b977f9c64c5e" id="r_a827e0c459c6a250ccc74b977f9c64c5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mixer_8c.html#a827e0c459c6a250ccc74b977f9c64c5e">mixer_ch_set_pos</a> (int ch, float pos)</td></tr>
 <tr class="memdesc:a827e0c459c6a250ccc74b977f9c64c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the current playback position within a waveform.  <br /></td></tr>
 <tr class="separator:a827e0c459c6a250ccc74b977f9c64c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -327,12 +324,6 @@ Misc flags (see CH_FLAGS_*) </td></tr>
 wave</td>
 <td class="fielddoc">
 Waveform being played back on this channel. </td></tr>
-<tr><td class="fieldtype">
-<a id="aee4df3aeb788fef097a173750df40608" name="aee4df3aeb788fef097a173750df40608"></a>void *</td>
-<td class="fieldname">
-ctx</td>
-<td class="fielddoc">
-Custom context pointer for read/stop functions. </td></tr>
 <tr><td class="fieldtype">
 <a id="a5ec81622b65010d672af3fc704fff6fc" name="a5ec81622b65010d672af3fc704fff6fc"></a>uint32_t</td>
 <td class="fieldname">
@@ -839,57 +830,7 @@ Opaque context pointer to pass to the callback. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="mixer_8h.html#a4c5d9fcdb3683c05608a6a756c35c757" title="Start playing the specified waveform on the specified channel, with a custom context pointer.">mixer_ch_play_ctx</a> </dd>
-<dd>
-<a class="el" href="mixer_8h.html#ae21b093a1283e06ede42363498c490cb" title="Stop playing samples on the specified channel.">mixer_ch_stop</a> </dd></dl>
-
-</div>
-</div>
-<a id="a4c5d9fcdb3683c05608a6a756c35c757" name="a4c5d9fcdb3683c05608a6a756c35c757"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c5d9fcdb3683c05608a6a756c35c757">&#9670;&#160;</a></span>mixer_ch_play_ctx()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void mixer_ch_play_ctx </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ch</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="mixer_8h.html#structwaveform__t">waveform_t</a> *&#160;</td>
-          <td class="paramname"><em>wave</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ctx</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Start playing the specified waveform on the specified channel, with a custom context pointer. </p>
-<p>This function is similar to <a class="el" href="mixer_8h.html#a1aa94701f22d086d624fb7d938ba0062" title="Start playing the specified waveform on the specified channel.">mixer_ch_play</a>, but allows to specify a custom context pointer that will be passed to the waveform read function. This is useful to provide some per-channel state to the waveform read function.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ch</td><td>Channel index </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">wave</td><td>Waveform to playback </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>Custom context pointer</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="mixer_8h.html#a1aa94701f22d086d624fb7d938ba0062" title="Start playing the specified waveform on the specified channel.">mixer_ch_play</a> </dd>
-<dd>
-<a class="el" href="mixer_8h.html#ae21b093a1283e06ede42363498c490cb" title="Stop playing samples on the specified channel.">mixer_ch_stop</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="mixer_8h.html#ae21b093a1283e06ede42363498c490cb" title="Stop playing samples on the specified channel.">mixer_ch_stop</a> </dd></dl>
 
 </div>
 </div>
@@ -1217,7 +1158,7 @@ Opaque context pointer to pass to the callback. </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 1 2025 20:29:50 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu May 1 2025 23:16:35 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
