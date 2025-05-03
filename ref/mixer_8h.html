@@ -117,6 +117,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ab0e995bf04880a3e14f689f48fdb2475" id="r_ab0e995bf04880a3e14f689f48fdb2475"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mixer_8h.html#ab0e995bf04880a3e14f689f48fdb2475">WaveformRead</a>) (void *ctx, <a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a> *sbuf, int wpos, int wlen, bool seeking)</td></tr>
 <tr class="memdesc:ab0e995bf04880a3e14f689f48fdb2475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waveform callback function invoked by the mixer to read/generate samples.  <br /></td></tr>
 <tr class="separator:ab0e995bf04880a3e14f689f48fdb2475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b60f65c1fdb178ad9e80df348a46e7" id="r_ac0b60f65c1fdb178ad9e80df348a46e7"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mixer_8h.html#ac0b60f65c1fdb178ad9e80df348a46e7">WaveformStart</a>) (void *ctx, <a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a> *sbuf)</td></tr>
+<tr class="memdesc:ac0b60f65c1fdb178ad9e80df348a46e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify the start of playback of a waveform.  <br /></td></tr>
+<tr class="separator:ac0b60f65c1fdb178ad9e80df348a46e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -241,6 +244,13 @@ loop_len</td>
 Length of the loop of the waveform (from the end). <p>This value describes how many samples of the tail of the waveform needs to be played in a loop. For instance, if len==1200 and loop_len=500, the waveform will be played once, and then the last 700 samples will be repeated in loop. </p>
 </td></tr>
 <tr><td class="fieldtype">
+<a id="a8b38151dd6e5c5543565c8be10f7165e" name="a8b38151dd6e5c5543565c8be10f7165e"></a><a class="el" href="mixer_8h.html#ac0b60f65c1fdb178ad9e80df348a46e7">WaveformStart</a></td>
+<td class="fieldname">
+start</td>
+<td class="fielddoc">
+Callback to notify the start of playback of the waveform. <p>This might be useful to perform one-time initializations of the channel state. See <a class="el" href="mixer_8h.html#ac0b60f65c1fdb178ad9e80df348a46e7" title="Notify the start of playback of a waveform.">WaveformStart</a> for more information. </p>
+</td></tr>
+<tr><td class="fieldtype">
 <a id="a5bcbece8e4db3e873a29bb9a227ac4e4" name="a5bcbece8e4db3e873a29bb9a227ac4e4"></a><a class="el" href="mixer_8h.html#ab0e995bf04880a3e14f689f48fdb2475">WaveformRead</a></td>
 <td class="fieldname">
 read</td>
@@ -359,6 +369,30 @@ State size required for this waveform to operate. <p>The waveform can request th
     <tr><td class="paramdir">[in]</td><td class="paramname">wpos</td><td>Absolute position in the waveform to read from (in samples). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">wlen</td><td>Minimum number of samples to read (in samples). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">seeking</td><td>True if this call requires seeking in the waveform, false if this read is consecutive to the last one. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac0b60f65c1fdb178ad9e80df348a46e7" name="ac0b60f65c1fdb178ad9e80df348a46e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0b60f65c1fdb178ad9e80df348a46e7">&#9670;&#160;</a></span>WaveformStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* WaveformStart) (void *ctx, <a class="el" href="samplebuffer_8h.html#structsamplebuffer__t">samplebuffer_t</a> *sbuf)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Notify the start of playback of a waveform. </p>
+<p>This is the callback that will be invoked by the mixer when a waveform is first "assigned" to a channel. Notice that if the waveform is then played back multiple times (either by loops or even manual triggers, even with pauses inbetween), this function is still called only once.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ctx</td><td>Opaque pointer that is provided as context to the function, and is specified in the waveform. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sbuf</td><td>Samplebuffer into which read samples should be stored. </td></tr>
   </table>
   </dd>
 </dl>
@@ -987,7 +1021,7 @@ State size required for this waveform to operate. <p>The waveform can request th
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 1 2025 23:45:07 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sat May 3 2025 12:59:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
