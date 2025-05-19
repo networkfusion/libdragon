@@ -94,9 +94,6 @@ Files</h2></td></tr>
 <tr class="memitem:joybus__accessory__internal_8h" id="r_joybus__accessory__internal_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joybus__accessory__internal_8h.html">joybus_accessory_internal.h</a></td></tr>
 <tr class="memdesc:joybus__accessory__internal_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joybus accessory internal utilities. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:joybus__internal_8h" id="r_joybus__internal_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joybus__internal_8h.html">joybus_internal.h</a></td></tr>
-<tr class="memdesc:joybus__internal_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joybus internal API. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:joybus_8h" id="r_joybus_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joybus_8h.html">joybus.h</a></td></tr>
 <tr class="memdesc:joybus_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joybus Subsystem. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,13 +126,12 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:gaaf2e487c05f4f27e3b36af3c54ff66c1" id="r_gaaf2e487c05f4f27e3b36af3c54ff66c1"><td class="memItemLeft" align="right" valign="top"><a id="gaaf2e487c05f4f27e3b36af3c54ff66c1" name="gaaf2e487c05f4f27e3b36af3c54ff66c1"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>joybus_callback_t</b>) (uint64_t *out_dwords, void *ctx)</td></tr>
-<tr class="memdesc:gaaf2e487c05f4f27e3b36af3c54ff66c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function signature for <a class="el" href="group__joybus.html#ga244b4723690e3c15da23bdbfda2cb7d1" title="Execute an asynchronous joybus message.">joybus_exec_async</a>. <br /></td></tr>
-<tr class="separator:gaaf2e487c05f4f27e3b36af3c54ff66c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad91e902f4c8cb12fb4f5aa288d423b44" id="r_gad91e902f4c8cb12fb4f5aa288d423b44"><td class="memItemLeft" align="right" valign="top">typedef uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#gad91e902f4c8cb12fb4f5aa288d423b44">joybus_identifier_t</a></td></tr>
 <tr class="memdesc:gad91e902f4c8cb12fb4f5aa288d423b44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joypad Identifier type.  <br /></td></tr>
 <tr class="separator:gad91e902f4c8cb12fb4f5aa288d423b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf2e487c05f4f27e3b36af3c54ff66c1" id="r_gaaf2e487c05f4f27e3b36af3c54ff66c1"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#gaaf2e487c05f4f27e3b36af3c54ff66c1">joybus_callback_t</a>) (uint64_t *out_dwords, void *ctx)</td></tr>
+<tr class="memdesc:gaaf2e487c05f4f27e3b36af3c54ff66c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function signature for <a class="el" href="group__joybus.html#ga244b4723690e3c15da23bdbfda2cb7d1" title="Execute an asynchronous joybus message.">joybus_exec_async</a>.  <br /></td></tr>
+<tr class="separator:gaaf2e487c05f4f27e3b36af3c54ff66c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -738,7 +734,7 @@ Transfer Pak "Powered-On" status bit. </td></tr>
 <div class="line">        (<span class="keywordtype">void</span> *)&amp;cmd.send,                \</div>
 <div class="line">        (<span class="keywordtype">void</span> *)&amp;cmd.recv                 \</div>
 <div class="line">    )</div>
-<div class="ttc" id="agroup__joybus_html_gab9ed6f44c13006456f30709a48e122d0"><div class="ttname"><a href="group__joybus.html#gab9ed6f44c13006456f30709a48e122d0">joybus_exec_cmd</a></div><div class="ttdeci">void joybus_exec_cmd(int port, size_t send_len, size_t recv_len, const void *send_data, void *recv_data)</div><div class="ttdoc">Execute a Joybus command synchronously on the given port.</div><div class="ttdef"><b>Definition</b> joybus.h:304</div></div>
+<div class="ttc" id="agroup__joybus_html_gab9ed6f44c13006456f30709a48e122d0"><div class="ttname"><a href="group__joybus.html#gab9ed6f44c13006456f30709a48e122d0">joybus_exec_cmd</a></div><div class="ttdeci">void joybus_exec_cmd(int port, size_t send_len, size_t recv_len, const void *send_data, void *recv_data)</div><div class="ttdoc">Execute a Joybus command synchronously on the given port.</div><div class="ttdef"><b>Definition</b> joybus.h:344</div></div>
 </div><!-- fragment -->
 <p>Execute a Joybus command struct synchronously. </p>
 <p>This macro is a convenience wrapper around <a class="el" href="group__joybus.html#gab9ed6f44c13006456f30709a48e122d0" title="Execute a Joybus command synchronously on the given port.">joybus_exec_cmd</a> that uses the send and recv fields of the struct to set the proper arguments.</p>
@@ -771,6 +767,27 @@ Transfer Pak "Powered-On" status bit. </td></tr>
 <p>Joypad Identifier type. </p>
 <p>For known values, see <a class="el" href="group__joybus.html#JOYBUS_IDENTIFIER">JOYBUS_IDENTIFIER</a> and <a class="el" href="group__joybus.html#JOYBUS_IDENTIFIER_GCN_BITFIELD">JOYBUS_IDENTIFIER_GCN_BITFIELD</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>For GameCube peripherals, the Joybus identifier should be interpreted as a bitfield rather than a single value. </dd></dl>
+
+</div>
+</div>
+<a id="gaaf2e487c05f4f27e3b36af3c54ff66c1" name="gaaf2e487c05f4f27e3b36af3c54ff66c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaf2e487c05f4f27e3b36af3c54ff66c1">&#9670;&#160;</a></span>joybus_callback_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* joybus_callback_t) (uint64_t *out_dwords, void *ctx)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback function signature for <a class="el" href="group__joybus.html#ga244b4723690e3c15da23bdbfda2cb7d1" title="Execute an asynchronous joybus message.">joybus_exec_async</a>. </p>
+<p>Note that this function will be called under interrupt, so your callback:</p><ul>
+<li>should not block or perform any intensive calculations</li>
+<li>should not call non-reentrant functions such as malloc or free</li>
+<li>should be careful accessing memory due to possible race conditions </li>
+</ul>
 
 </div>
 </div>
@@ -1279,7 +1296,7 @@ This function is not part of the public API yet because we want to evaluate the 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 5 2025 12:28:55 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Mon May 19 2025 16:15:36 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

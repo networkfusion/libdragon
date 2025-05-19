@@ -220,9 +220,15 @@ Typedefs</h2></td></tr>
 <tr class="memitem:gad91e902f4c8cb12fb4f5aa288d423b44" id="r_gad91e902f4c8cb12fb4f5aa288d423b44"><td class="memItemLeft" align="right" valign="top">typedef uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#gad91e902f4c8cb12fb4f5aa288d423b44">joybus_identifier_t</a></td></tr>
 <tr class="memdesc:gad91e902f4c8cb12fb4f5aa288d423b44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joypad Identifier type.  <br /></td></tr>
 <tr class="separator:gad91e902f4c8cb12fb4f5aa288d423b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf2e487c05f4f27e3b36af3c54ff66c1" id="r_gaaf2e487c05f4f27e3b36af3c54ff66c1"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#gaaf2e487c05f4f27e3b36af3c54ff66c1">joybus_callback_t</a>) (uint64_t *out_dwords, void *ctx)</td></tr>
+<tr class="memdesc:gaaf2e487c05f4f27e3b36af3c54ff66c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function signature for <a class="el" href="group__joybus.html#ga244b4723690e3c15da23bdbfda2cb7d1" title="Execute an asynchronous joybus message.">joybus_exec_async</a>.  <br /></td></tr>
+<tr class="separator:gaaf2e487c05f4f27e3b36af3c54ff66c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ga244b4723690e3c15da23bdbfda2cb7d1" id="r_ga244b4723690e3c15da23bdbfda2cb7d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#ga244b4723690e3c15da23bdbfda2cb7d1">joybus_exec_async</a> (const void *input, <a class="el" href="group__joybus.html#gaaf2e487c05f4f27e3b36af3c54ff66c1">joybus_callback_t</a> callback, void *ctx)</td></tr>
+<tr class="memdesc:ga244b4723690e3c15da23bdbfda2cb7d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute an asynchronous joybus message.  <br /></td></tr>
+<tr class="separator:ga244b4723690e3c15da23bdbfda2cb7d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6d62432ce8ecd83cd1588716fd28fdb7" id="r_ga6d62432ce8ecd83cd1588716fd28fdb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#ga6d62432ce8ecd83cd1588716fd28fdb7">joybus_exec</a> (const void *input, void *output)</td></tr>
 <tr class="memdesc:ga6d62432ce8ecd83cd1588716fd28fdb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a 64-byte block of data to the PIF and read the 64-byte result.  <br /></td></tr>
 <tr class="separator:ga6d62432ce8ecd83cd1588716fd28fdb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -235,7 +241,7 @@ Functions</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 5 2025 12:28:54 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Mon May 19 2025 16:15:36 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

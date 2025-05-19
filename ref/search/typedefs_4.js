@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['joybus_5fcallback_5ft_0',['joybus_callback_t',['../group__joybus.html#gaaf2e487c05f4f27e3b36af3c54ff66c1',1,'joybus_internal.h']]],
+  ['joybus_5fcallback_5ft_0',['joybus_callback_t',['../group__joybus.html#gaaf2e487c05f4f27e3b36af3c54ff66c1',1,'joybus.h']]],
   ['joybus_5fcmd_5f64gb_5flink_5fcable_5fread_5fport_5ft_1',['joybus_cmd_64gb_link_cable_read_port_t',['../group__joybus__commands.html#gac4c8f2ac853652626cc488a3b33315e7',1,'joybus_commands.h']]],
   ['joybus_5fcmd_5f64gb_5flink_5fcable_5fwrite_5fport_5ft_2',['joybus_cmd_64gb_link_cable_write_port_t',['../group__joybus__commands.html#ga77a289429215a64550bf8a74f812ada4',1,'joybus_commands.h']]],
   ['joybus_5fcmd_5fgba_5flink_5fcable_5fread_5fport_5ft_3',['joybus_cmd_gba_link_cable_read_port_t',['../group__joybus__commands.html#gac53b25b46e5c5086279b222bfd62b937',1,'joybus_commands.h']]],

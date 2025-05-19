@@ -254,7 +254,7 @@ Macros</h2></td></tr>
 
 <p>Draw a textured rectangle (RDP command: TEXTURE_RECTANGLE) </p>
 <p>This function enqueues a RDP TEXTURE_RECTANGLE command, that allows to draw a textured rectangle onto the framebuffer (similar to a sprite).</p>
-<p>The texture must have been already loaded into TMEM via <a class="el" href="rdpq_8h.html#a7e7757331841702b18f3e3c90a91edc6" title="Load a portion of a texture into TMEM (RDP command: LOAD_TILE)">rdpq_load_tile</a> or <a class="el" href="rdpq_8c.html#a9b37267136cf8b04374eb3ac668046f2" title="Load a texture image into TMEM with a single contiguous memory transfer (RDP command: LOAD_BLOCK)">rdpq_load_block</a>, and a tile descriptor referring to it must be passed to this function.</p>
+<p>The texture must have been already loaded into TMEM via <a class="el" href="rdpq__sprite_8c.html#a4455ad310d3a18a04c2ffee53dd0f944" title="Upload a sprite to TMEM, making it ready for drawing.">rdpq_sprite_upload</a>, <a class="el" href="rdpq__tex_8c.html#aaa36de4024b0a12f37ddfc5544bcbfa4" title="Load a texture into TMEM.">rdpq_tex_upload</a> or the lower level <a class="el" href="rdpq_8h.html#a7e7757331841702b18f3e3c90a91edc6" title="Load a portion of a texture into TMEM (RDP command: LOAD_TILE)">rdpq_load_tile</a> and <a class="el" href="rdpq_8c.html#a9b37267136cf8b04374eb3ac668046f2" title="Load a texture image into TMEM with a single contiguous memory transfer (RDP command: LOAD_BLOCK)">rdpq_load_block</a>, and a tile descriptor referring to it must be passed to this function.</p>
 <p>Input X and Y coordinates are automatically clipped to the screen boundaries (and then scissoring also takes effect), so there is no specific range limit to them. On the contrary, S and T coordinates have a specific range (-1024..1024).</p>
 <p>When x0 &gt; x1 or y0 &gt; y1, the rectangle is drawn flipped (mirrored) on either axis (or both, which basically rotates it by 180° instead).</p>
 <p>Before calling this function, make sure to also configure an appropriate render mode. It is possible to use the fast copy mode (<a class="el" href="rdpq__mode_8c.html#a8a821b9f3d3e6da106695290bebe1392" title="Reset render mode to COPY type.">rdpq_set_mode_copy</a>) with this function, assuming that advanced blending or color combiner capabilities are not needed. The copy mode can in fact just blit the pixels from the texture unmodified, applying only a per-pixel rejection to mask out transparent pixels (via alpha compare). See <a class="el" href="rdpq__mode_8c.html#a8a821b9f3d3e6da106695290bebe1392" title="Reset render mode to COPY type.">rdpq_set_mode_copy</a> for more information.</p>
@@ -549,7 +549,7 @@ Macros</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 5 2025 12:28:55 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Mon May 19 2025 16:15:36 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
