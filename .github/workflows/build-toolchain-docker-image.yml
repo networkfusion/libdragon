@@ -64,7 +64,7 @@ jobs:
         id: test
         uses: docker/build-push-action@v6
         with:
-          platforms: ${{ matrix.platform }}
+          context: .
           load: true
           tags: ${{ env.TEST_TAG }}
           push: false
