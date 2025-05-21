@@ -75,7 +75,7 @@ jobs:
           docker run \
           --mount type=bind,source=$(pwd),target=/libdragon \
           --workdir=/libdragon \
-          ${{ env.TEST_TAG }}
+          ${{ env.TEST_TAG }} \
           ./build.sh
 
   build-toolchain-docker-image:
