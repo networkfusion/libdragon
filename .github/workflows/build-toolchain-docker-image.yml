@@ -34,10 +34,10 @@ concurrency:
 jobs:
 
   build-test-pr-toolchain-docker-image:
+  # This job builds the toolchain docker image for the host platforms using the DockerFile.
+  # It will also run a test to ensure that the image is able to build libdragon.
+  # It will not push the image to the registry because it is a Pull Request.
     # if: ${{ github.event_name == 'pull_request' }}
-    # This job builds the toolchain docker image for the host platforms using the DockerFile.
-    # It will also run a test to ensure that the image is able to build libdragon.
-    # It will not push the image to the registry.
     strategy:
       fail-fast: false
       matrix:
@@ -47,55 +47,40 @@ jobs:
           ]
     runs-on: ${{ matrix.host-os }}
 
-    steps:
+    env:
+      TEST_TAG: ${{ matrix.platform }}:test
 
+    steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 1 # Using a shallow checkout. Change to `0` if a full fetch is required.
 
-      # - name: Prepare environment variables
-      #   run: |
-      #     platform=${{ matrix.platform }}
-      #     echo "PLATFORM_PAIR=${platform//\//-}" >> $GITHUB_ENV
-      #     # Create a lower cased version of the repo name for images
-      #     # as docker supports only lowercase names in the registry.
-      #     echo "GITHUB_REPOSITORY_LC=${GITHUB_REPOSITORY,,}" >> $GITHUB_ENV
-
-      # - name: Docker metadata
-      #   id: meta
-      #   uses: docker/metadata-action@v5
-      #   with:
-      #     images: ${{ env.GITHUB_REPOSITORY_LC }}
-
-      # - name: Login to Docker Package Registry
-      #   uses: docker/login-action@v3
-      #   with:
-      #     registry: ${{ env.REGISTRY }}
-      #     username: ${{ github.actor }}
-      #     password: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build and test
+      # Build the image for the host platform testing the toolchain is able to build.
+      - name: Build toolchain docker image
         id: test
         uses: docker/build-push-action@v6
         with:
           platforms: ${{ matrix.platform }}
+          load: true
+          tags: ${{ env.TEST_TAG }}
           push: false
 
-      # Then verify everything is building properly
-      - name: Build libdragon
+      # Then verify that it is able to build libdragon.
+      - name: Build libdragon in the image
         run: |
           docker run \
           --mount type=bind,source=$(pwd),target=/libdragon \
           --workdir=/libdragon \
+          ${{ env.TEST_TAG }}
           ./build.sh
 
   build-toolchain-docker-image:
-    if: ${{ github.event_name != 'pull_request' }}
   # This job builds the toolchain docker image for the host platforms using the DockerFile.
+    if: ${{ github.event_name != 'pull_request' }}
     strategy:
       fail-fast: false
       matrix:
@@ -163,9 +148,9 @@ jobs:
           retention-days: 1
 
   generate-multiplatform-image:
-    if: ${{ github.event_name != 'pull_request' }}
   # This job will create a merged image for all platforms using the digests generated in the previous job.
   # It will also create a manifest list for the image and push it to the registry for use.
+    if: ${{ github.event_name != 'pull_request' }}
     runs-on: ubuntu-24.04
 
     permissions:
@@ -227,9 +212,9 @@ jobs:
           docker buildx imagetools inspect ${{ env.REGISTRY }}/${{ env.GITHUB_REPOSITORY_LC }}:${{ steps.meta.outputs.version }}
 
   smoketest-multiplatform-image:
+  # Ensure that the image built in the previous job is working properly and is able to build libdragon (lib, tests and examples).
+  # across all platforms.
     if: ${{ github.event_name != 'pull_request' }}
-    # Ensure that the image built in the previous job is working properly and is able to build libdragon (lib, tests and examples).
-    # across all platforms.
     strategy:
       fail-fast: false
       matrix:
@@ -266,7 +251,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Pull image
+      - name: Pull docker image
         run: |
           docker pull ${{ env.REGISTRY }}/${{ env.GITHUB_REPOSITORY_LC }}:${{ needs.generate-multiplatform-image.outputs.version }}
 
@@ -288,9 +273,9 @@ jobs:
             ${{ github.workspace }}/tests/*.z64
 
   push-latest-image:
+  # Finally push the verified image to the registry with the latest tag if
+  # we are on the default branch.
     if: ${{ github.event_name != 'pull_request' }}
-    # Finally push the verified image to the registry with the latest tag if
-    # we are on the default branch.
     runs-on: ubuntu-24.04
 
     permissions:
@@ -309,7 +294,7 @@ jobs:
           # as docker supports only lowercase names in the registry.
           echo "GITHUB_REPOSITORY_LC=${GITHUB_REPOSITORY,,}" >> $GITHUB_ENV
 
-      - name: Pull image
+      - name: Pull docker image
         if: github.ref_name == github.event.repository.default_branch
         run: |
           docker pull ${{ env.REGISTRY }}/${{ env.GITHUB_REPOSITORY_LC }}:${{ needs.generate-multiplatform-image.outputs.version }}
@@ -317,7 +302,7 @@ jobs:
       # Finally push the verified image to the registry with the latest tag if
       # we are on the default branch. At this point, we know that libdragon can
       # build with this freshly built image.
-      - name: Push latest image
+      - name: Push latest docker image
         if: github.ref_name == github.event.repository.default_branch
         uses: docker/build-push-action@v6
         with:
