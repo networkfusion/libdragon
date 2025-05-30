@@ -86,6 +86,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a3534ea6834b9a5d6bbd6e54253b0c481" id="r_a3534ea6834b9a5d6bbd6e54253b0c481"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n64sys_8c.html#a3534ea6834b9a5d6bbd6e54253b0c481">build_opcode</a>(op,  cache)&#160;&#160;&#160;(((op) &lt;&lt; 2) | (cache))</td></tr>
+<tr class="memdesc:a3534ea6834b9a5d6bbd6e54253b0c481"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro to create the opcode for a cache operation. Operation is encoded in 5 bits where bits 4..2 contain the operation type and bits 0..1 determine the cache that is to be operated on.  <br /></td></tr>
+<tr class="separator:a3534ea6834b9a5d6bbd6e54253b0c481"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac69e8a7b3752d227238ff76b56b3fa17" id="r_ac69e8a7b3752d227238ff76b56b3fa17"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n64sys_8c.html#ac69e8a7b3752d227238ff76b56b3fa17">cache_op</a>(op,  linesize)</td></tr>
 <tr class="memdesc:ac69e8a7b3752d227238ff76b56b3fa17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro to perform cache refresh operations.  <br /></td></tr>
 <tr class="separator:ac69e8a7b3752d227238ff76b56b3fa17"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -95,10 +98,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga9365c415a472036d7c8dbbf71239e707" id="r_ga9365c415a472036d7c8dbbf71239e707"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga9365c415a472036d7c8dbbf71239e707">data_cache_hit_writeback</a> (volatile const void *addr, unsigned long length)</td></tr>
 <tr class="memdesc:ga9365c415a472036d7c8dbbf71239e707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force a data cache writeback over a memory region.  <br /></td></tr>
 <tr class="separator:ga9365c415a472036d7c8dbbf71239e707"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga77626094fc3952fe3321098e24811e83" id="r_ga77626094fc3952fe3321098e24811e83"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>__data_cache_hit_invalidate</b> (volatile void *addr, unsigned long length)</td></tr>
-<tr class="memdesc:ga77626094fc3952fe3321098e24811e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Underlying implementation of data_cache_hit_invalidate. <br /></td></tr>
-<tr class="separator:ga77626094fc3952fe3321098e24811e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga63884f9a4a9677408053b476903e3993" id="r_ga63884f9a4a9677408053b476903e3993"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga63884f9a4a9677408053b476903e3993">data_cache_hit_invalidate</a> (volatile void *addr, unsigned long length)</td></tr>
+<tr class="memdesc:ga63884f9a4a9677408053b476903e3993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force a data cache invalidate over a memory region.  <br /></td></tr>
+<tr class="separator:ga63884f9a4a9677408053b476903e3993"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaba18b282af73a79b576df68fe40bbc6b" id="r_gaba18b282af73a79b576df68fe40bbc6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#gaba18b282af73a79b576df68fe40bbc6b">data_cache_hit_writeback_invalidate</a> (volatile void *addr, unsigned long length)</td></tr>
 <tr class="memdesc:gaba18b282af73a79b576df68fe40bbc6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force a data cache writeback invalidate over a memory region.  <br /></td></tr>
 <tr class="separator:gaba18b282af73a79b576df68fe40bbc6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,6 +210,43 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>__boot_consoletype</b>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>N64 System Interface. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a3534ea6834b9a5d6bbd6e54253b0c481" name="a3534ea6834b9a5d6bbd6e54253b0c481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3534ea6834b9a5d6bbd6e54253b0c481">&#9670;&#160;</a></span>build_opcode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define build_opcode</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">op, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cache&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(((op) &lt;&lt; 2) | (cache))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper macro to create the opcode for a cache operation. Operation is encoded in 5 bits where bits 4..2 contain the operation type and bits 0..1 determine the cache that is to be operated on. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">op</td><td>Operation type to perform. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cache</td><td>Specific cache to perform the operation on. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ac69e8a7b3752d227238ff76b56b3fa17" name="ac69e8a7b3752d227238ff76b56b3fa17"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac69e8a7b3752d227238ff76b56b3fa17">&#9670;&#160;</a></span>cache_op</h2>
 
@@ -278,7 +317,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>__boot_consoletype</b>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 19 2025 17:34:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Fri May 30 2025 22:10:30 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

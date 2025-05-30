@@ -84,8 +84,9 @@ var searchData=
   ['buffers_5fper_5fsecond_81',['BUFFERS_PER_SECOND',['../audio_8c.html#a517eab55c83f18dba8405316f23b02d2',1,'audio.c']]],
   ['bufsize_82',['bufsize',['../rdpq__internal_8h.html#af42878be81475526a351ffd16d9afa90',1,'rdpq_block_state_t']]],
   ['build_20a_20rom_83',['Getting started: how to build a ROM',['../index.html#autotoc_md2',1,'']]],
-  ['builtin_5fstyle_84',['builtin_style',['../structrdpq__font__t.html#a79f0bd1eed9c27f2610105023c472157',1,'rdpq_font_t']]],
-  ['bundle_20support_85',['ROM bundle support',['../group__rompak.html',1,'']]],
-  ['byte_86',['byte',['../group__joybus__rtc.html#ab3062c187b60932d4f420a2a41910945',1,'joybus_rtc_status_t']]],
-  ['bytes_87',['bytes',['../group__joybus__rtc.html#a0e2941f424e528471fcd42c1c14253ce',1,'joybus_rtc_data_t']]]
+  ['build_5fopcode_84',['build_opcode',['../n64sys_8c.html#a3534ea6834b9a5d6bbd6e54253b0c481',1,'n64sys.c']]],
+  ['builtin_5fstyle_85',['builtin_style',['../structrdpq__font__t.html#a79f0bd1eed9c27f2610105023c472157',1,'rdpq_font_t']]],
+  ['bundle_20support_86',['ROM bundle support',['../group__rompak.html',1,'']]],
+  ['byte_87',['byte',['../group__joybus__rtc.html#ab3062c187b60932d4f420a2a41910945',1,'joybus_rtc_status_t']]],
+  ['bytes_88',['bytes',['../group__joybus__rtc.html#a0e2941f424e528471fcd42c1c14253ce',1,'joybus_rtc_data_t']]]
 ];
