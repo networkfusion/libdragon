@@ -116,6 +116,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>iQue BBFS flash filesytem </p>
+<dl class="section author"><dt>Author</dt><dd>Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
 <p>This module contains higher-level functions to interact with BBFS, the flash filesystem used by the iQue Player.</p>
 <p>Access to the filesystem is provided through the standard C/POSIX file I/O functions, after calling <a class="el" href="bbfs_8h.html#aaddec0a5c886eed1dc1cde484b146be6" title="Initialize the iQue NAND filesystem library.">bbfs_init</a> to mount the filesystem. To name files on the filesystem, use the "bbfs:/" prefix.</p>
 <h2><a class="anchor" id="autotoc_md35"></a>
@@ -125,8 +126,8 @@ Filesystem operations</h2>
 <p>Truncating files via <a class="el" href="system_8c.html#a87674838dd2bcf61e1a1fb5c9892ab6c" title="Truncate a file to the specified length.">truncate</a> is also possible, and can be used to either reduce or increase the file size. When increasing the file size, the new data is zeroed out, unless otherwise written. Truncation happens lazily, so that it is possible to truncate a file to a larger size and then write data to it without causing a performance penalty.</p>
 <h2><a class="anchor" id="autotoc_md36"></a>
 ROMs and memory mapping</h2>
-<p>To be able to boot a ROM, the ROM must be written in the filesystem, and then memory mapped via nand_mmap. This requires providing the list of the blocks that contain the ROM data. To facilitate this, <a class="el" href="bbfs_8h.html#af6b5d98c56a99650951b42f1d1631383" title="Return the indices of NAND blocks that contain the file data.">bbfs_get_file_blocks</a> is provided to retrieve the list of blocks, that can then be passed to nand_mmap.</p>
-<p>Since nand_mmap only supports discontiguous blocks up to a certain limit, the filesystem tries to keep ROM data in contiguous blocks as much as possible. To achieve this, the filesystem is virtually split in two areas: a "large files" area which covers most of the flash and where blocks are allocated as contiguous as possible, and a "small files" area of the flash where blocks are allocated randomically (to minimize wear leveling). The small area is normally just 1 MiB, but will grow automatically when almost full.</p>
+<p>To be able to boot a ROM, the ROM must be written in the filesystem, and then memory mapped via <a class="el" href="nand_8c.html#a501ee9a86770b5273323b9cd0e771215" title="Memory-map flash blocks to PI address space via ATB.">nand_mmap</a>. This requires providing the list of the blocks that contain the ROM data. To facilitate this, <a class="el" href="bbfs_8h.html#af6b5d98c56a99650951b42f1d1631383" title="Return the indices of NAND blocks that contain the file data.">bbfs_get_file_blocks</a> is provided to retrieve the list of blocks, that can then be passed to <a class="el" href="nand_8c.html#a501ee9a86770b5273323b9cd0e771215" title="Memory-map flash blocks to PI address space via ATB.">nand_mmap</a>.</p>
+<p>Since <a class="el" href="nand_8c.html#a501ee9a86770b5273323b9cd0e771215" title="Memory-map flash blocks to PI address space via ATB.">nand_mmap</a> only supports discontiguous blocks up to a certain limit, the filesystem tries to keep ROM data in contiguous blocks as much as possible. To achieve this, the filesystem is virtually split in two areas: a "large files" area which covers most of the flash and where blocks are allocated as contiguous as possible, and a "small files" area of the flash where blocks are allocated randomically (to minimize wear leveling). The small area is normally just 1 MiB, but will grow automatically when almost full.</p>
 <p>A file is stored in the large area as soon as its size is larger than 512 KiB. This means that if you write a ROM file that is larger than 512 KiB, the first blocks up to 512 KiB will still be stored in the small area and will be fragmented, but the rest will be stored in the large area and will be contiguous.</p>
 <p>While this is a suboptimal allocation, it will not create any immediate issue. Anyway to perform an optimal allocation, there are two possible ways:</p>
 <ul>
@@ -146,7 +147,7 @@ ROMs and memory mapping</h2>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Close the file </span></div>
 <div class="line">fclose(f);</div>
-<div class="ttc" id="asystem_8c_html_aa1cc997e92371733ee54ac57dcc73c75"><div class="ttname"><a href="system_8c.html#aa1cc997e92371733ee54ac57dcc73c75">ftruncate</a></div><div class="ttdeci">int ftruncate(int file, off_t length)</div><div class="ttdoc">Truncate a file to the specified length.</div><div class="ttdef"><b>Definition</b> system.c:1373</div></div>
+<div class="ttc" id="asystem_8c_html_aa1cc997e92371733ee54ac57dcc73c75"><div class="ttname"><a href="system_8c.html#aa1cc997e92371733ee54ac57dcc73c75">ftruncate</a></div><div class="ttdeci">int ftruncate(int file, off_t length)</div><div class="ttdoc">Truncate a file to the specified length.</div><div class="ttdef"><b>Definition</b> system.c:1384</div></div>
 </div><!-- fragment --><p>To see an example of using the <a class="el" href="system_8c.html#a342c2eae35d44df768ec0634c76bf68b" title="Perform IO Control Request.">ioctl</a> instead, see <a class="el" href="bbfs_8h.html#a32fdcd418bdca772873f36ab465cb4ab" title="ioctl to notify the filesystem that a certain file must be stored as contiguous.">IOBBFS_SET_CONTIGUOUS</a>.</p>
 <h2><a class="anchor" id="autotoc_md37"></a>
 Filesytem consistency checks</h2>
@@ -167,7 +168,7 @@ Filesytem consistency checks</h2>
 </div><div class="memdoc">
 
 <p>ioctl to notify the filesystem that a certain file must be stored as contiguous. </p>
-<p>This is normally used for ROM files. Since ROM files must be memory mapped via nand_mmap, and nand_mmap only supports discontiguous blocks up to a certain limit, this <a class="el" href="system_8c.html#a342c2eae35d44df768ec0634c76bf68b" title="Perform IO Control Request.">ioctl</a> will inform the filesystem that the current file must be stored in contiguous blocks as much as possible.</p>
+<p>This is normally used for ROM files. Since ROM files must be memory mapped via <a class="el" href="nand_8c.html#a501ee9a86770b5273323b9cd0e771215" title="Memory-map flash blocks to PI address space via ATB.">nand_mmap</a>, and <a class="el" href="nand_8c.html#a501ee9a86770b5273323b9cd0e771215" title="Memory-map flash blocks to PI address space via ATB.">nand_mmap</a> only supports discontiguous blocks up to a certain limit, this <a class="el" href="system_8c.html#a342c2eae35d44df768ec0634c76bf68b" title="Perform IO Control Request.">ioctl</a> will inform the filesystem that the current file must be stored in contiguous blocks as much as possible.</p>
 <p>By default, the filesystem will use a heuristic: smaller files will be stored fragmented, will larger files (&gt; 512 KiB) will be stored contiguous. This means that if you write a ROM file that is larger than 512 KiB, the first blocks up to 512 KiB will still be fragmented, but the rest will be contiguous.</p>
 <p>If you want to avoid this, you can either call <a class="el" href="system_8c.html#aa1cc997e92371733ee54ac57dcc73c75" title="Truncate a file to the specified length.">ftruncate</a> immediately after opening the file to communicate the final size right away, or use this <a class="el" href="system_8c.html#a342c2eae35d44df768ec0634c76bf68b" title="Perform IO Control Request.">ioctl</a> to force to immediately use the contiguous block allocation algorithm.</p>
 <div class="fragment"><div class="line">FILE *f = fopen(<span class="stringliteral">&quot;bbfs:/my_rom.z64&quot;</span>, <span class="stringliteral">&quot;wb&quot;</span>);</div>
@@ -181,8 +182,8 @@ Filesytem consistency checks</h2>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Close the file</span></div>
 <div class="line">fclose(f);</div>
-<div class="ttc" id="abbfs_8h_html_a32fdcd418bdca772873f36ab465cb4ab"><div class="ttname"><a href="bbfs_8h.html#a32fdcd418bdca772873f36ab465cb4ab">IOBBFS_SET_CONTIGUOUS</a></div><div class="ttdeci">#define IOBBFS_SET_CONTIGUOUS</div><div class="ttdoc">ioctl to notify the filesystem that a certain file must be stored as contiguous.</div><div class="ttdef"><b>Definition</b> bbfs.h:164</div></div>
-<div class="ttc" id="asystem_8c_html_a342c2eae35d44df768ec0634c76bf68b"><div class="ttname"><a href="system_8c.html#a342c2eae35d44df768ec0634c76bf68b">ioctl</a></div><div class="ttdeci">int ioctl(int fd, unsigned long cmd, void *argp)</div><div class="ttdoc">Perform IO Control Request.</div><div class="ttdef"><b>Definition</b> system.c:1276</div></div>
+<div class="ttc" id="abbfs_8h_html_a32fdcd418bdca772873f36ab465cb4ab"><div class="ttname"><a href="bbfs_8h.html#a32fdcd418bdca772873f36ab465cb4ab">IOBBFS_SET_CONTIGUOUS</a></div><div class="ttdeci">#define IOBBFS_SET_CONTIGUOUS</div><div class="ttdoc">ioctl to notify the filesystem that a certain file must be stored as contiguous.</div><div class="ttdef"><b>Definition</b> bbfs.h:165</div></div>
+<div class="ttc" id="asystem_8c_html_a342c2eae35d44df768ec0634c76bf68b"><div class="ttname"><a href="system_8c.html#a342c2eae35d44df768ec0634c76bf68b">ioctl</a></div><div class="ttdeci">int ioctl(int fd, unsigned long cmd, void *argp)</div><div class="ttdoc">Perform IO Control Request.</div><div class="ttdef"><b>Definition</b> system.c:1287</div></div>
 </div><!-- fragment --><p>Calling this <a class="el" href="system_8c.html#a342c2eae35d44df768ec0634c76bf68b" title="Perform IO Control Request.">ioctl</a> only affects blocks allocated after the call; there is no way to change the allocation of blocks that have already been written (short of truncating the file to zero, and writing it again).</p>
 <p>Calling this <a class="el" href="system_8c.html#a342c2eae35d44df768ec0634c76bf68b" title="Perform IO Control Request.">ioctl</a> with the value set to false will revert the file to the default allocation algorithm based on the heuristics. There is no way to force a file to be always stored as fragmented.</p>
 <p>See also the top comment of this file for more information. </p>
@@ -210,7 +211,7 @@ Filesytem consistency checks</h2>
 <div class="line"><span class="comment">// WARNING: make sure to use int16_t for blocks.</span></div>
 <div class="line">int16_t block = 0;</div>
 <div class="line"><a class="code hl_function" href="system_8c.html#a342c2eae35d44df768ec0634c76bf68b">ioctl</a>(fileno(f), <a class="code hl_define" href="bbfs_8h.html#a431d9d92fddfd0164fa4c91b68c68dc4">IOBBFS_GET_BLOCK</a>, &amp;block);</div>
-<div class="ttc" id="abbfs_8h_html_a431d9d92fddfd0164fa4c91b68c68dc4"><div class="ttname"><a href="bbfs_8h.html#a431d9d92fddfd0164fa4c91b68c68dc4">IOBBFS_GET_BLOCK</a></div><div class="ttdeci">#define IOBBFS_GET_BLOCK</div><div class="ttdoc">Get the current block number of an open file.</div><div class="ttdef"><b>Definition</b> bbfs.h:186</div></div>
+<div class="ttc" id="abbfs_8h_html_a431d9d92fddfd0164fa4c91b68c68dc4"><div class="ttname"><a href="bbfs_8h.html#a431d9d92fddfd0164fa4c91b68c68dc4">IOBBFS_GET_BLOCK</a></div><div class="ttdeci">#define IOBBFS_GET_BLOCK</div><div class="ttdoc">Get the current block number of an open file.</div><div class="ttdef"><b>Definition</b> bbfs.h:187</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -318,7 +319,7 @@ Filesytem consistency checks</h2>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:29 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -82,49 +82,49 @@ $(document).ready(function() { init_codefold(0); });
 </div><!--header-->
 <div class="contents">
 <a href="bbfs_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">#ifndef LIBDRAGON_BBFS_H</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#define LIBDRAGON_BBFS_H</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#include &quot;<a class="code" href="ioctl_8h.html">ioctl.h</a>&quot;</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="foldopen" id="foldopen00119" data-start="{" data-end="};">
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="bbfs_8h.html#afa0347610a006c1f5dc718d8b2637bac">  119</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="bbfs_8h.html#afa0347610a006c1f5dc718d8b2637bac">bbfs_error_e</a> {</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="bbfs_8h.html#afa0347610a006c1f5dc718d8b2637bacaea4ec878313562fb45c38e04ee0fed8c">  120</a></span>    <a class="code hl_enumvalue" href="bbfs_8h.html#afa0347610a006c1f5dc718d8b2637bacaea4ec878313562fb45c38e04ee0fed8c">BBFS_ERR_SUPERBLOCK</a> = -1,     </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>};</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#ifndef LIBDRAGON_BBFS_H</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#define LIBDRAGON_BBFS_H</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#include &quot;<a class="code" href="ioctl_8h.html">ioctl.h</a>&quot;</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="foldopen" id="foldopen00120" data-start="{" data-end="};">
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="bbfs_8h.html#afa0347610a006c1f5dc718d8b2637bac">  120</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="bbfs_8h.html#afa0347610a006c1f5dc718d8b2637bac">bbfs_error_e</a> {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="bbfs_8h.html#afa0347610a006c1f5dc718d8b2637bacaea4ec878313562fb45c38e04ee0fed8c">  121</a></span>    <a class="code hl_enumvalue" href="bbfs_8h.html#afa0347610a006c1f5dc718d8b2637bacaea4ec878313562fb45c38e04ee0fed8c">BBFS_ERR_SUPERBLOCK</a> = -1,     </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>};</div>
 </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="bbfs_8h.html#a32fdcd418bdca772873f36ab465cb4ab">  164</a></span><span class="preprocessor">#define IOBBFS_SET_CONTIGUOUS   _IO(&#39;B&#39;, 0)</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="bbfs_8h.html#a431d9d92fddfd0164fa4c91b68c68dc4">  186</a></span><span class="preprocessor">#define IOBBFS_GET_BLOCK        _IO(&#39;B&#39;, 1)</span></div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="keywordtype">int</span> <a class="code hl_function" href="bbfs_8h.html#aaddec0a5c886eed1dc1cde484b146be6">bbfs_init</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>int16_t* <a class="code hl_function" href="bbfs_8h.html#af6b5d98c56a99650951b42f1d1631383">bbfs_get_file_blocks</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename);</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="keywordtype">int</span> <a class="code hl_function" href="bbfs_8h.html#ad4fc9018cc0132f2e5a90faafd504f4c">bbfs_fsck</a>(<span class="keywordtype">bool</span> fix_errors);</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="bbfs_8h.html#a32fdcd418bdca772873f36ab465cb4ab">  165</a></span><span class="preprocessor">#define IOBBFS_SET_CONTIGUOUS   _IO(&#39;B&#39;, 0)</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="bbfs_8h.html#a431d9d92fddfd0164fa4c91b68c68dc4">  187</a></span><span class="preprocessor">#define IOBBFS_GET_BLOCK        _IO(&#39;B&#39;, 1)</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="keywordtype">int</span> <a class="code hl_function" href="bbfs_8h.html#aaddec0a5c886eed1dc1cde484b146be6">bbfs_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>int16_t* <a class="code hl_function" href="bbfs_8h.html#af6b5d98c56a99650951b42f1d1631383">bbfs_get_file_blocks</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="keywordtype">int</span> <a class="code hl_function" href="bbfs_8h.html#ad4fc9018cc0132f2e5a90faafd504f4c">bbfs_fsck</a>(<span class="keywordtype">bool</span> fix_errors);</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>}</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="abbfs_8h_html_aaddec0a5c886eed1dc1cde484b146be6"><div class="ttname"><a href="bbfs_8h.html#aaddec0a5c886eed1dc1cde484b146be6">bbfs_init</a></div><div class="ttdeci">int bbfs_init(void)</div><div class="ttdoc">Initialize the iQue NAND filesystem library.</div><div class="ttdef"><b>Definition</b> bbfs.c:946</div></div>
-<div class="ttc" id="abbfs_8h_html_ad4fc9018cc0132f2e5a90faafd504f4c"><div class="ttname"><a href="bbfs_8h.html#ad4fc9018cc0132f2e5a90faafd504f4c">bbfs_fsck</a></div><div class="ttdeci">int bbfs_fsck(bool fix_errors)</div><div class="ttdoc">Verify the integrity of the filesystem, and optionally try to fix it.</div><div class="ttdef"><b>Definition</b> bbfs.c:1169</div></div>
-<div class="ttc" id="abbfs_8h_html_af6b5d98c56a99650951b42f1d1631383"><div class="ttname"><a href="bbfs_8h.html#af6b5d98c56a99650951b42f1d1631383">bbfs_get_file_blocks</a></div><div class="ttdeci">int16_t * bbfs_get_file_blocks(const char *filename)</div><div class="ttdoc">Return the indices of NAND blocks that contain the file data.</div><div class="ttdef"><b>Definition</b> bbfs.c:958</div></div>
-<div class="ttc" id="abbfs_8h_html_afa0347610a006c1f5dc718d8b2637bac"><div class="ttname"><a href="bbfs_8h.html#afa0347610a006c1f5dc718d8b2637bac">bbfs_error_e</a></div><div class="ttdeci">bbfs_error_e</div><div class="ttdoc">Filesystem errors.</div><div class="ttdef"><b>Definition</b> bbfs.h:119</div></div>
-<div class="ttc" id="abbfs_8h_html_afa0347610a006c1f5dc718d8b2637bacaea4ec878313562fb45c38e04ee0fed8c"><div class="ttname"><a href="bbfs_8h.html#afa0347610a006c1f5dc718d8b2637bacaea4ec878313562fb45c38e04ee0fed8c">BBFS_ERR_SUPERBLOCK</a></div><div class="ttdeci">@ BBFS_ERR_SUPERBLOCK</div><div class="ttdoc">Cannot mount the filesystem (superblock missing or corrupted)</div><div class="ttdef"><b>Definition</b> bbfs.h:120</div></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>}</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abbfs_8h_html_aaddec0a5c886eed1dc1cde484b146be6"><div class="ttname"><a href="bbfs_8h.html#aaddec0a5c886eed1dc1cde484b146be6">bbfs_init</a></div><div class="ttdeci">int bbfs_init(void)</div><div class="ttdoc">Initialize the iQue NAND filesystem library.</div><div class="ttdef"><b>Definition</b> bbfs.c:961</div></div>
+<div class="ttc" id="abbfs_8h_html_ad4fc9018cc0132f2e5a90faafd504f4c"><div class="ttname"><a href="bbfs_8h.html#ad4fc9018cc0132f2e5a90faafd504f4c">bbfs_fsck</a></div><div class="ttdeci">int bbfs_fsck(bool fix_errors)</div><div class="ttdoc">Verify the integrity of the filesystem, and optionally try to fix it.</div><div class="ttdef"><b>Definition</b> bbfs.c:1184</div></div>
+<div class="ttc" id="abbfs_8h_html_af6b5d98c56a99650951b42f1d1631383"><div class="ttname"><a href="bbfs_8h.html#af6b5d98c56a99650951b42f1d1631383">bbfs_get_file_blocks</a></div><div class="ttdeci">int16_t * bbfs_get_file_blocks(const char *filename)</div><div class="ttdoc">Return the indices of NAND blocks that contain the file data.</div><div class="ttdef"><b>Definition</b> bbfs.c:973</div></div>
+<div class="ttc" id="abbfs_8h_html_afa0347610a006c1f5dc718d8b2637bac"><div class="ttname"><a href="bbfs_8h.html#afa0347610a006c1f5dc718d8b2637bac">bbfs_error_e</a></div><div class="ttdeci">bbfs_error_e</div><div class="ttdoc">Filesystem errors.</div><div class="ttdef"><b>Definition</b> bbfs.h:120</div></div>
+<div class="ttc" id="abbfs_8h_html_afa0347610a006c1f5dc718d8b2637bacaea4ec878313562fb45c38e04ee0fed8c"><div class="ttname"><a href="bbfs_8h.html#afa0347610a006c1f5dc718d8b2637bacaea4ec878313562fb45c38e04ee0fed8c">BBFS_ERR_SUPERBLOCK</a></div><div class="ttdeci">@ BBFS_ERR_SUPERBLOCK</div><div class="ttdoc">Cannot mount the filesystem (superblock missing or corrupted)</div><div class="ttdef"><b>Definition</b> bbfs.h:121</div></div>
 <div class="ttc" id="aioctl_8h_html"><div class="ttname"><a href="ioctl_8h.html">ioctl.h</a></div><div class="ttdoc">ioctl Implementation</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:29 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

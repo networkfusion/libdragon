@@ -11,5 +11,6 @@ var searchData=
   ['eia608_2ec_8',['eia608.c',['../eia608_8c.html',1,'']]],
   ['eia608_2eh_9',['eia608.h',['../eia608_8h.html',1,'']]],
   ['exception_2ec_10',['exception.c',['../exception_8c.html',1,'']]],
-  ['exception_2eh_11',['exception.h',['../exception_8h.html',1,'']]]
+  ['exception_2eh_11',['exception.h',['../exception_8h.html',1,'']]],
+  ['exception_5finternal_2eh_12',['exception_internal.h',['../exception__internal_8h.html',1,'']]]
 ];

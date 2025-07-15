@@ -119,13 +119,13 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a535a21a578c8ff0cf69fd08adcd9d523" id="r_a535a21a578c8ff0cf69fd08adcd9d523"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq__text_8h.html#a535a21a578c8ff0cf69fd08adcd9d523">rdpq_text_register_font</a> (uint8_t font_id, const <a class="el" href="structrdpq__font__t.html">rdpq_font_t</a> *font)</td></tr>
+<tr class="memitem:a535a21a578c8ff0cf69fd08adcd9d523" id="r_a535a21a578c8ff0cf69fd08adcd9d523"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq__text_8h.html#a535a21a578c8ff0cf69fd08adcd9d523">rdpq_text_register_font</a> (uint8_t font_id, const <a class="el" href="rdpq__font__internal_8h.html#structrdpq__font__t">rdpq_font_t</a> *font)</td></tr>
 <tr class="memdesc:a535a21a578c8ff0cf69fd08adcd9d523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a new font into the text engine.  <br /></td></tr>
 <tr class="separator:a535a21a578c8ff0cf69fd08adcd9d523"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40058c4f51daa2c86e2bc1973760158a" id="r_a40058c4f51daa2c86e2bc1973760158a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq__text_8h.html#a40058c4f51daa2c86e2bc1973760158a">rdpq_text_unregister_font</a> (uint8_t font_id)</td></tr>
 <tr class="memdesc:a40058c4f51daa2c86e2bc1973760158a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister a font from the text engine.  <br /></td></tr>
 <tr class="separator:a40058c4f51daa2c86e2bc1973760158a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51544c04524a6e279821bd937ef47184" id="r_a51544c04524a6e279821bd937ef47184"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structrdpq__font__t.html">rdpq_font_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq__text_8h.html#a51544c04524a6e279821bd937ef47184">rdpq_text_get_font</a> (uint8_t font_id)</td></tr>
+<tr class="memitem:a51544c04524a6e279821bd937ef47184" id="r_a51544c04524a6e279821bd937ef47184"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="rdpq__font__internal_8h.html#structrdpq__font__t">rdpq_font_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq__text_8h.html#a51544c04524a6e279821bd937ef47184">rdpq_text_get_font</a> (uint8_t font_id)</td></tr>
 <tr class="memdesc:a51544c04524a6e279821bd937ef47184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a registered font by its ID.  <br /></td></tr>
 <tr class="separator:a51544c04524a6e279821bd937ef47184"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb6f6f94681e6c416f1721fd6c981d1c" id="r_aeb6f6f94681e6c416f1721fd6c981d1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rdpq__text_8h.html#structrdpq__textmetrics__t">rdpq_textmetrics_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq__text_8h.html#aeb6f6f94681e6c416f1721fd6c981d1c">rdpq_text_printn</a> (const <a class="el" href="rdpq__text_8h.html#structrdpq__textparms__t">rdpq_textparms_t</a> *parms, uint8_t font_id, float x0, float y0, const char *utf8_text, int nbytes)</td></tr>
@@ -143,6 +143,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Text layout engine. </p>
+<dl class="section author"><dt>Author</dt><dd>Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
 <p>This module contains the higher-level text printing engine. It allows to print text using multiple fonts, with different styles, and different layout rules.</p>
 <p>There are three different modules that work together:</p>
 <ul>
@@ -163,27 +164,30 @@ Functions</h2></td></tr>
 <div class="line">    <a class="code hl_function" href="rdpq_8c.html#a7d884af64503534642d525082ec827cd">rdpq_init</a>();</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Load the font and register it into the text layout engine with ID 1.</span></div>
-<div class="line">    rdpq_text_register_font(FONT_ARIAL, rdpq_font_load(<span class="stringliteral">&quot;rom:/Arial.font64&quot;</span>));</div>
+<div class="line">    <a class="code hl_function" href="rdpq__text_8c.html#a535a21a578c8ff0cf69fd08adcd9d523">rdpq_text_register_font</a>(FONT_ARIAL, <a class="code hl_function" href="rdpq__font_8c.html#a879175a7fa7608909d286aa41bacfc98">rdpq_font_load</a>(<span class="stringliteral">&quot;rom:/Arial.font64&quot;</span>));</div>
 <div class="line"> </div>
 <div class="line">    <span class="keywordflow">while</span> (1) {</div>
 <div class="line">        <a class="code hl_struct" href="surface_8h.html#structsurface__t">surface_t</a> *fb = <a class="code hl_function" href="group__display.html#gaf8ad0501f0408430e3b40f0f626a33bd">display_get</a>();</div>
 <div class="line">        <a class="code hl_function" href="rdpq__attach_8c.html#acd5b2e8619d8484b732a390316e5892e">rdpq_attach_clear</a>();</div>
-<div class="line">        rdpq_text_print(NULL, FONT_ARIAL, 20, 20, <span class="stringliteral">&quot;Hello, world&quot;</span>);</div>
+<div class="line">        <a class="code hl_function" href="rdpq__text_8c.html#a480e58a2b82c9c3c502c8604b9b6ee6d">rdpq_text_print</a>(NULL, FONT_ARIAL, 20, 20, <span class="stringliteral">&quot;Hello, world&quot;</span>);</div>
 <div class="line">        <a class="code hl_function" href="rdpq__attach_8c.html#a88ddcc861cd4cd2027f3501a04b418d7">rdpq_detach_show</a>();</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="adragonfs_8c_html_a7ca0762367965bd8a6dbbe07b7ad3022"><div class="ttname"><a href="dragonfs_8c.html#a7ca0762367965bd8a6dbbe07b7ad3022">dfs_init</a></div><div class="ttdeci">int dfs_init(uint32_t base_fs_loc)</div><div class="ttdoc">Initialize the filesystem.</div><div class="ttdef"><b>Definition</b> dragonfs.c:1346</div></div>
-<div class="ttc" id="agroup__dfs_html_ga1d81e04e879a844f4d733a3982bf85ee"><div class="ttname"><a href="group__dfs.html#ga1d81e04e879a844f4d733a3982bf85ee">DFS_DEFAULT_LOCATION</a></div><div class="ttdeci">#define DFS_DEFAULT_LOCATION</div><div class="ttdoc">Default filesystem location.</div><div class="ttdef"><b>Definition</b> dragonfs.h:60</div></div>
-<div class="ttc" id="agroup__display_html_ga1763c553f071d40c4bd18cee77ae98a1"><div class="ttname"><a href="group__display.html#ga1763c553f071d40c4bd18cee77ae98a1">display_init</a></div><div class="ttdeci">void display_init(resolution_t res, bitdepth_t bit, uint32_t num_buffers, gamma_t gamma, filter_options_t filters)</div><div class="ttdoc">Initialize the display to a particular resolution and bit depth.</div><div class="ttdef"><b>Definition</b> display.c:222</div></div>
-<div class="ttc" id="agroup__display_html_gaa5d59348bf36dd5362d2842523260cd5"><div class="ttname"><a href="group__display.html#gaa5d59348bf36dd5362d2842523260cd5">RESOLUTION_320x240</a></div><div class="ttdeci">const resolution_t RESOLUTION_320x240</div><div class="ttdoc">320x240 mode, no borders</div><div class="ttdef"><b>Definition</b> display.h:175</div></div>
-<div class="ttc" id="agroup__display_html_gaf8ad0501f0408430e3b40f0f626a33bd"><div class="ttname"><a href="group__display.html#gaf8ad0501f0408430e3b40f0f626a33bd">display_get</a></div><div class="ttdeci">surface_t * display_get(void)</div><div class="ttdoc">Get a display buffer for rendering.</div><div class="ttdef"><b>Definition</b> display.c:492</div></div>
-<div class="ttc" id="agroup__display_html_gga35f19c13bdc2076bd91416021036e439a93441449f3f926aa87eeddef2faec6a2"><div class="ttname"><a href="group__display.html#gga35f19c13bdc2076bd91416021036e439a93441449f3f926aa87eeddef2faec6a2">GAMMA_NONE</a></div><div class="ttdeci">@ GAMMA_NONE</div><div class="ttdoc">Uncorrected gamma.</div><div class="ttdef"><b>Definition</b> display.h:205</div></div>
-<div class="ttc" id="agroup__display_html_ggae2079fcb0e8b0f846f002f25d0c73ffbabf331dc6d78bf9d2fb2b893a365f01d5"><div class="ttname"><a href="group__display.html#ggae2079fcb0e8b0f846f002f25d0c73ffbabf331dc6d78bf9d2fb2b893a365f01d5">DEPTH_16_BPP</a></div><div class="ttdeci">@ DEPTH_16_BPP</div><div class="ttdoc">16 bits per pixel (5-5-5-1)</div><div class="ttdef"><b>Definition</b> display.h:191</div></div>
+<div class="ttc" id="adragonfs_8c_html_a7ca0762367965bd8a6dbbe07b7ad3022"><div class="ttname"><a href="dragonfs_8c.html#a7ca0762367965bd8a6dbbe07b7ad3022">dfs_init</a></div><div class="ttdeci">int dfs_init(uint32_t base_fs_loc)</div><div class="ttdoc">Initialize the filesystem.</div><div class="ttdef"><b>Definition</b> dragonfs.c:1347</div></div>
+<div class="ttc" id="agroup__dfs_html_ga1d81e04e879a844f4d733a3982bf85ee"><div class="ttname"><a href="group__dfs.html#ga1d81e04e879a844f4d733a3982bf85ee">DFS_DEFAULT_LOCATION</a></div><div class="ttdeci">#define DFS_DEFAULT_LOCATION</div><div class="ttdoc">Default filesystem location.</div><div class="ttdef"><b>Definition</b> dragonfs.h:62</div></div>
+<div class="ttc" id="agroup__display_html_ga1763c553f071d40c4bd18cee77ae98a1"><div class="ttname"><a href="group__display.html#ga1763c553f071d40c4bd18cee77ae98a1">display_init</a></div><div class="ttdeci">void display_init(resolution_t res, bitdepth_t bit, uint32_t num_buffers, gamma_t gamma, filter_options_t filters)</div><div class="ttdoc">Initialize the display to a particular resolution and bit depth.</div><div class="ttdef"><b>Definition</b> display.c:224</div></div>
+<div class="ttc" id="agroup__display_html_gaa5d59348bf36dd5362d2842523260cd5"><div class="ttname"><a href="group__display.html#gaa5d59348bf36dd5362d2842523260cd5">RESOLUTION_320x240</a></div><div class="ttdeci">const resolution_t RESOLUTION_320x240</div><div class="ttdoc">320x240 mode, no borders</div><div class="ttdef"><b>Definition</b> display.h:177</div></div>
+<div class="ttc" id="agroup__display_html_gaf8ad0501f0408430e3b40f0f626a33bd"><div class="ttname"><a href="group__display.html#gaf8ad0501f0408430e3b40f0f626a33bd">display_get</a></div><div class="ttdeci">surface_t * display_get(void)</div><div class="ttdoc">Get a display buffer for rendering.</div><div class="ttdef"><b>Definition</b> display.c:494</div></div>
+<div class="ttc" id="agroup__display_html_gga35f19c13bdc2076bd91416021036e439a93441449f3f926aa87eeddef2faec6a2"><div class="ttname"><a href="group__display.html#gga35f19c13bdc2076bd91416021036e439a93441449f3f926aa87eeddef2faec6a2">GAMMA_NONE</a></div><div class="ttdeci">@ GAMMA_NONE</div><div class="ttdoc">Uncorrected gamma.</div><div class="ttdef"><b>Definition</b> display.h:207</div></div>
+<div class="ttc" id="agroup__display_html_ggae2079fcb0e8b0f846f002f25d0c73ffbabf331dc6d78bf9d2fb2b893a365f01d5"><div class="ttname"><a href="group__display.html#ggae2079fcb0e8b0f846f002f25d0c73ffbabf331dc6d78bf9d2fb2b893a365f01d5">DEPTH_16_BPP</a></div><div class="ttdeci">@ DEPTH_16_BPP</div><div class="ttdoc">16 bits per pixel (5-5-5-1)</div><div class="ttdef"><b>Definition</b> display.h:193</div></div>
 <div class="ttc" id="alibdragon_8h_html"><div class="ttname"><a href="libdragon_8h.html">libdragon.h</a></div><div class="ttdoc">Main include file for programs seeking to link against libdragon.</div></div>
-<div class="ttc" id="ardpq_8c_html_a7d884af64503534642d525082ec827cd"><div class="ttname"><a href="rdpq_8c.html#a7d884af64503534642d525082ec827cd">rdpq_init</a></div><div class="ttdeci">void rdpq_init()</div><div class="ttdoc">Initialize the RDPQ library.</div><div class="ttdef"><b>Definition</b> rdpq.c:451</div></div>
-<div class="ttc" id="ardpq__attach_8c_html_a88ddcc861cd4cd2027f3501a04b418d7"><div class="ttname"><a href="rdpq__attach_8c.html#a88ddcc861cd4cd2027f3501a04b418d7">rdpq_detach_show</a></div><div class="ttdeci">void rdpq_detach_show(void)</div><div class="ttdoc">Detach the RDP from the current framebuffer, and show it on screen.</div><div class="ttdef"><b>Definition</b> rdpq_attach.c:165</div></div>
-<div class="ttc" id="ardpq__attach_8c_html_acd5b2e8619d8484b732a390316e5892e"><div class="ttname"><a href="rdpq__attach_8c.html#acd5b2e8619d8484b732a390316e5892e">rdpq_attach_clear</a></div><div class="ttdeci">void rdpq_attach_clear(const surface_t *surf_color, const surface_t *surf_z)</div><div class="ttdoc">Attach the RDP to a surface and clear it.</div><div class="ttdef"><b>Definition</b> rdpq_attach.c:111</div></div>
-<div class="ttc" id="asurface_8h_html_structsurface__t"><div class="ttname"><a href="surface_8h.html#structsurface__t">surface_t</a></div><div class="ttdoc">A surface buffer for graphics.</div><div class="ttdef"><b>Definition</b> surface.h:138</div></div>
+<div class="ttc" id="ardpq_8c_html_a7d884af64503534642d525082ec827cd"><div class="ttname"><a href="rdpq_8c.html#a7d884af64503534642d525082ec827cd">rdpq_init</a></div><div class="ttdeci">void rdpq_init()</div><div class="ttdoc">Initialize the RDPQ library.</div><div class="ttdef"><b>Definition</b> rdpq.c:453</div></div>
+<div class="ttc" id="ardpq__attach_8c_html_a88ddcc861cd4cd2027f3501a04b418d7"><div class="ttname"><a href="rdpq__attach_8c.html#a88ddcc861cd4cd2027f3501a04b418d7">rdpq_detach_show</a></div><div class="ttdeci">void rdpq_detach_show(void)</div><div class="ttdoc">Detach the RDP from the current framebuffer, and show it on screen.</div><div class="ttdef"><b>Definition</b> rdpq_attach.c:166</div></div>
+<div class="ttc" id="ardpq__attach_8c_html_acd5b2e8619d8484b732a390316e5892e"><div class="ttname"><a href="rdpq__attach_8c.html#acd5b2e8619d8484b732a390316e5892e">rdpq_attach_clear</a></div><div class="ttdeci">void rdpq_attach_clear(const surface_t *surf_color, const surface_t *surf_z)</div><div class="ttdoc">Attach the RDP to a surface and clear it.</div><div class="ttdef"><b>Definition</b> rdpq_attach.c:112</div></div>
+<div class="ttc" id="ardpq__font_8c_html_a879175a7fa7608909d286aa41bacfc98"><div class="ttname"><a href="rdpq__font_8c.html#a879175a7fa7608909d286aa41bacfc98">rdpq_font_load</a></div><div class="ttdeci">rdpq_font_t * rdpq_font_load(const char *fn)</div><div class="ttdoc">Load a font from a file (.font64 format).</div><div class="ttdef"><b>Definition</b> rdpq_font.c:267</div></div>
+<div class="ttc" id="ardpq__text_8c_html_a480e58a2b82c9c3c502c8604b9b6ee6d"><div class="ttname"><a href="rdpq__text_8c.html#a480e58a2b82c9c3c502c8604b9b6ee6d">rdpq_text_print</a></div><div class="ttdeci">rdpq_textmetrics_t rdpq_text_print(const rdpq_textparms_t *parms, uint8_t font_id, float x0, float y0, const char *utf8_text)</div><div class="ttdoc">Layout and render a text in a single call.</div><div class="ttdef"><b>Definition</b> rdpq_text.h:389</div></div>
+<div class="ttc" id="ardpq__text_8c_html_a535a21a578c8ff0cf69fd08adcd9d523"><div class="ttname"><a href="rdpq__text_8c.html#a535a21a578c8ff0cf69fd08adcd9d523">rdpq_text_register_font</a></div><div class="ttdeci">void rdpq_text_register_font(uint8_t font_id, const rdpq_font_t *font)</div><div class="ttdoc">Register a new font into the text engine.</div><div class="ttdef"><b>Definition</b> rdpq_text.c:16</div></div>
+<div class="ttc" id="asurface_8h_html_structsurface__t"><div class="ttname"><a href="surface_8h.html#structsurface__t">surface_t</a></div><div class="ttdoc">A surface buffer for graphics.</div><div class="ttdef"><b>Definition</b> surface.h:140</div></div>
 </div><!-- fragment --><p>In this case, no styling or formatting rules are provided, so the text is drawn using the default style of the font (which is full white). The text is drawn starting at position (20, 20) in the screen.</p>
 <p>The whole text engine has been designed around the UTF-8 encoding format, and only supports that encoding. If you have text in a different encoding make sure to convert it to UTF-8 before feeding it to <a class="el" href="rdpq__text_8h.html#a480e58a2b82c9c3c502c8604b9b6ee6d" title="Layout and render a text in a single call.">rdpq_text_print</a> functions.</p>
 <p>There are three main functions to print text:</p>
@@ -197,12 +201,12 @@ Wrapping lines</h2>
 <p>To draw longer texts that don't fit in a single line, you can use the advanced layout rules provided by <a class="el" href="rdpq__text_8h.html#structrdpq__textparms__t" title="Print formatting parameters.">rdpq_textparms_t</a>. For instance, this will draw a text with a maximum width of 200 pixels, and will perform word-wrapping:</p>
 <div class="fragment"><div class="line"><span class="keywordtype">char</span> *text = <span class="stringliteral">&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&quot;</span>;</div>
 <div class="line"> </div>
-<div class="line">rdpq_text_print(&amp;(<a class="code hl_struct" href="rdpq__text_8h.html#structrdpq__textparms__t">rdpq_textparms_t</a>) {</div>
+<div class="line"><a class="code hl_function" href="rdpq__text_8c.html#a480e58a2b82c9c3c502c8604b9b6ee6d">rdpq_text_print</a>(&amp;(<a class="code hl_struct" href="rdpq__text_8h.html#structrdpq__textparms__t">rdpq_textparms_t</a>) {</div>
 <div class="line">    .width = 200,       <span class="comment">// maximum width of the paragraph</span></div>
 <div class="line">    .wrap = <a class="code hl_enumvalue" href="rdpq__text_8h.html#a542bfca9ffeb221d87298435f2ab8fe3a6d3446f805d529764962d7b653188f24">WRAP_WORD</a>   <span class="comment">// wrap at word boundaries</span></div>
 <div class="line">}, FONT_ARIAL, 20, 20, text);</div>
-<div class="ttc" id="ardpq__text_8h_html_a542bfca9ffeb221d87298435f2ab8fe3a6d3446f805d529764962d7b653188f24"><div class="ttname"><a href="rdpq__text_8h.html#a542bfca9ffeb221d87298435f2ab8fe3a6d3446f805d529764962d7b653188f24">WRAP_WORD</a></div><div class="ttdeci">@ WRAP_WORD</div><div class="ttdoc">Wrap at word boundaries.</div><div class="ttdef"><b>Definition</b> rdpq_text.h:198</div></div>
-<div class="ttc" id="ardpq__text_8h_html_structrdpq__textparms__t"><div class="ttname"><a href="rdpq__text_8h.html#structrdpq__textparms__t">rdpq_textparms_t</a></div><div class="ttdoc">Print formatting parameters.</div><div class="ttdef"><b>Definition</b> rdpq_text.h:220</div></div>
+<div class="ttc" id="ardpq__text_8h_html_a542bfca9ffeb221d87298435f2ab8fe3a6d3446f805d529764962d7b653188f24"><div class="ttname"><a href="rdpq__text_8h.html#a542bfca9ffeb221d87298435f2ab8fe3a6d3446f805d529764962d7b653188f24">WRAP_WORD</a></div><div class="ttdeci">@ WRAP_WORD</div><div class="ttdoc">Wrap at word boundaries.</div><div class="ttdef"><b>Definition</b> rdpq_text.h:199</div></div>
+<div class="ttc" id="ardpq__text_8h_html_structrdpq__textparms__t"><div class="ttname"><a href="rdpq__text_8h.html#structrdpq__textparms__t">rdpq_textparms_t</a></div><div class="ttdoc">Print formatting parameters.</div><div class="ttdef"><b>Definition</b> rdpq_text.h:221</div></div>
 </div><!-- fragment --><p>There are four wrapping modes available:</p>
 <ul>
 <li><a class="el" href="rdpq__text_8h.html#a542bfca9ffeb221d87298435f2ab8fe3aca1a448e74f2566b9cf72dcbd454d537" title="Truncate the text (if any)">WRAP_NONE</a>: don't wrap lines, just truncate them (if necessary)</li>
@@ -216,28 +220,29 @@ Wrapping lines</h2>
 <h2><a class="anchor" id="autotoc_md46"></a>
 Multi-style text</h2>
 <p>It is possible to change font and/or style within a text using escape codes. Escape codes are sequences of the form:</p>
-<p>$xx Select font "xx", where "xx" is the hexadecimal ID of the font For instance, $04 will switch to font 4. The current style is reset to 0. ^xx Switch to style "xx" of the current font, where "xx" is the hexadecimal ID of the style. For instance, ^02 will switch to style 2. A "style" is an font-dependent rendering style, which can be anything (a color, a faux-italic variant, etc.). The styles available for each font can be configured via rdpq_font_style.</p>
+<p>$xx Select font "xx", where "xx" is the hexadecimal ID of the font For instance, $04 will switch to font 4. The current style is reset to 0. ^xx Switch to style "xx" of the current font, where "xx" is the hexadecimal ID of the style. For instance, ^02 will switch to style 2. A "style" is an font-dependent rendering style, which can be anything (a color, a faux-italic variant, etc.). The styles available for each font can be configured via <a class="el" href="rdpq__font_8c.html#a5044aa74074b81a9ce7beabe3f0c7320" title="Create a style for a font.">rdpq_font_style</a>.</p>
 <p>See also <a class="el" href="rdpq__text_8h.html#aeb6f6f94681e6c416f1721fd6c981d1c" title="Layout and render a text in a single call.">rdpq_text_printn</a> for more information.</p>
 <p>Example 4: multi-color text</p>
-<div class="fragment"><div class="line">rdpq_font_style(font, 0, (<a class="code hl_struct" href="structrdpq__fontstyle__t.html">rdpq_fontstyle_t</a>){ </div>
+<div class="fragment"><div class="line"><a class="code hl_function" href="rdpq__font_8c.html#a5044aa74074b81a9ce7beabe3f0c7320">rdpq_font_style</a>(font, 0, (<a class="code hl_struct" href="structrdpq__fontstyle__t.html">rdpq_fontstyle_t</a>){ </div>
 <div class="line">    .color = .RGBA32(255, 255, 255, 255),</div>
 <div class="line">});</div>
-<div class="line">rdpq_font_style(font, 1, (<a class="code hl_struct" href="structrdpq__fontstyle__t.html">rdpq_fontstyle_t</a>){ </div>
+<div class="line"><a class="code hl_function" href="rdpq__font_8c.html#a5044aa74074b81a9ce7beabe3f0c7320">rdpq_font_style</a>(font, 1, (<a class="code hl_struct" href="structrdpq__fontstyle__t.html">rdpq_fontstyle_t</a>){ </div>
 <div class="line">    .color = .RGBA32(255, 0, 0, 255),</div>
 <div class="line">});</div>
-<div class="line">rdpq_font_style(font, 2, (<a class="code hl_struct" href="structrdpq__fontstyle__t.html">rdpq_fontstyle_t</a>){ </div>
+<div class="line"><a class="code hl_function" href="rdpq__font_8c.html#a5044aa74074b81a9ce7beabe3f0c7320">rdpq_font_style</a>(font, 2, (<a class="code hl_struct" href="structrdpq__fontstyle__t.html">rdpq_fontstyle_t</a>){ </div>
 <div class="line">    .color = .RGBA32(0, 255, 0, 255),</div>
 <div class="line">});</div>
-<div class="line">rdpq_font_style(font, 3, (<a class="code hl_struct" href="structrdpq__fontstyle__t.html">rdpq_fontstyle_t</a>){ </div>
+<div class="line"><a class="code hl_function" href="rdpq__font_8c.html#a5044aa74074b81a9ce7beabe3f0c7320">rdpq_font_style</a>(font, 3, (<a class="code hl_struct" href="structrdpq__fontstyle__t.html">rdpq_fontstyle_t</a>){ </div>
 <div class="line">    .color = .RGBA32(0, 0, 255, 255),</div>
 <div class="line">});</div>
-<div class="line">rdpq_font_style(font, 4, (<a class="code hl_struct" href="structrdpq__fontstyle__t.html">rdpq_fontstyle_t</a>){ </div>
+<div class="line"><a class="code hl_function" href="rdpq__font_8c.html#a5044aa74074b81a9ce7beabe3f0c7320">rdpq_font_style</a>(font, 4, (<a class="code hl_struct" href="structrdpq__fontstyle__t.html">rdpq_fontstyle_t</a>){ </div>
 <div class="line">    .color = .RGBA32(255, 0, 255, 255),</div>
 <div class="line">});</div>
 <div class="line"> </div>
-<div class="line">rdpq_text_print(NULL, FONT_ARIAL, 20, 20, </div>
+<div class="line"><a class="code hl_function" href="rdpq__text_8c.html#a480e58a2b82c9c3c502c8604b9b6ee6d">rdpq_text_print</a>(NULL, FONT_ARIAL, 20, 20, </div>
 <div class="line">    <span class="stringliteral">&quot;Hello, ^01world^00! ^02This^00 is ^03a^00 ^04test^00.&quot;</span>);</div>
-<div class="ttc" id="astructrdpq__fontstyle__t_html"><div class="ttname"><a href="structrdpq__fontstyle__t.html">rdpq_fontstyle_t</a></div><div class="ttdoc">A style for a font.</div><div class="ttdef"><b>Definition</b> rdpq_font.h:120</div></div>
+<div class="ttc" id="ardpq__font_8c_html_a5044aa74074b81a9ce7beabe3f0c7320"><div class="ttname"><a href="rdpq__font_8c.html#a5044aa74074b81a9ce7beabe3f0c7320">rdpq_font_style</a></div><div class="ttdeci">void rdpq_font_style(rdpq_font_t *fnt, uint8_t style_id, const rdpq_fontstyle_t *style)</div><div class="ttdoc">Create a style for a font.</div><div class="ttdef"><b>Definition</b> rdpq_font.c:393</div></div>
+<div class="ttc" id="astructrdpq__fontstyle__t_html"><div class="ttname"><a href="structrdpq__fontstyle__t.html">rdpq_fontstyle_t</a></div><div class="ttdoc">A style for a font.</div><div class="ttdef"><b>Definition</b> rdpq_font.h:121</div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md47"></a>
 Other examples</h2>
 <p>Example 3: draw the text with a transparent box behind it</p>
@@ -269,15 +274,15 @@ Other examples</h2>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Free the layout</span></div>
 <div class="line">rdpq_text_layout_free(layout);</div>
-<div class="ttc" id="agroup__graphics_html_gae16bab5741f411ec4ef51b0295f6e705"><div class="ttname"><a href="group__graphics.html#gae16bab5741f411ec4ef51b0295f6e705">RGBA32</a></div><div class="ttdeci">#define RGBA32(rx, gx, bx, ax)</div><div class="ttdoc">Create a color_t from the R,G,B,A components in the RGBA32 range (0-255).</div><div class="ttdef"><b>Definition</b> graphics.h:94</div></div>
-<div class="ttc" id="ardpq_8c_html_a70a6556d7d088ca2b745fa145e3aeee3"><div class="ttname"><a href="rdpq_8c.html#a70a6556d7d088ca2b745fa145e3aeee3">rdpq_set_fill_color</a></div><div class="ttdeci">void rdpq_set_fill_color(color_t color)</div><div class="ttdoc">Enqueue a SET_FILL_COLOR RDP command.</div><div class="ttdef"><b>Definition</b> rdpq.h:870</div></div>
-<div class="ttc" id="ardpq_8c_html_a7ffd0e373836f8500094bdcbe85ce530"><div class="ttname"><a href="rdpq_8c.html#a7ffd0e373836f8500094bdcbe85ce530">rdpq_set_fog_color</a></div><div class="ttdeci">void rdpq_set_fog_color(color_t color)</div><div class="ttdoc">Set the RDP FOG blender register.</div><div class="ttdef"><b>Definition</b> rdpq.h:922</div></div>
-<div class="ttc" id="ardpq__mode_8c_html_a64a153623e5985ce5c434bf52ba6efa6"><div class="ttname"><a href="rdpq__mode_8c.html#a64a153623e5985ce5c434bf52ba6efa6">rdpq_mode_blender</a></div><div class="ttdeci">void rdpq_mode_blender(rdpq_blender_t blend)</div><div class="ttdoc">Configure the formula to use for blending.</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:602</div></div>
-<div class="ttc" id="ardpq__mode_8c_html_ac3c29578703de424bea9548ad86bb4af"><div class="ttname"><a href="rdpq__mode_8c.html#ac3c29578703de424bea9548ad86bb4af">rdpq_set_mode_standard</a></div><div class="ttdeci">void rdpq_set_mode_standard(void)</div><div class="ttdoc">Reset render mode to standard.</div><div class="ttdef"><b>Definition</b> rdpq_mode.c:93</div></div>
+<div class="ttc" id="agroup__graphics_html_gae16bab5741f411ec4ef51b0295f6e705"><div class="ttname"><a href="group__graphics.html#gae16bab5741f411ec4ef51b0295f6e705">RGBA32</a></div><div class="ttdeci">#define RGBA32(rx, gx, bx, ax)</div><div class="ttdoc">Create a color_t from the R,G,B,A components in the RGBA32 range (0-255).</div><div class="ttdef"><b>Definition</b> graphics.h:96</div></div>
+<div class="ttc" id="ardpq_8c_html_a70a6556d7d088ca2b745fa145e3aeee3"><div class="ttname"><a href="rdpq_8c.html#a70a6556d7d088ca2b745fa145e3aeee3">rdpq_set_fill_color</a></div><div class="ttdeci">void rdpq_set_fill_color(color_t color)</div><div class="ttdoc">Enqueue a SET_FILL_COLOR RDP command.</div><div class="ttdef"><b>Definition</b> rdpq.h:872</div></div>
+<div class="ttc" id="ardpq_8c_html_a7ffd0e373836f8500094bdcbe85ce530"><div class="ttname"><a href="rdpq_8c.html#a7ffd0e373836f8500094bdcbe85ce530">rdpq_set_fog_color</a></div><div class="ttdeci">void rdpq_set_fog_color(color_t color)</div><div class="ttdoc">Set the RDP FOG blender register.</div><div class="ttdef"><b>Definition</b> rdpq.h:924</div></div>
+<div class="ttc" id="ardpq__mode_8c_html_a64a153623e5985ce5c434bf52ba6efa6"><div class="ttname"><a href="rdpq__mode_8c.html#a64a153623e5985ce5c434bf52ba6efa6">rdpq_mode_blender</a></div><div class="ttdeci">void rdpq_mode_blender(rdpq_blender_t blend)</div><div class="ttdoc">Configure the formula to use for blending.</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:604</div></div>
+<div class="ttc" id="ardpq__mode_8c_html_ac3c29578703de424bea9548ad86bb4af"><div class="ttname"><a href="rdpq__mode_8c.html#ac3c29578703de424bea9548ad86bb4af">rdpq_set_mode_standard</a></div><div class="ttdeci">void rdpq_set_mode_standard(void)</div><div class="ttdoc">Reset render mode to standard.</div><div class="ttdef"><b>Definition</b> rdpq_mode.c:94</div></div>
 <div class="ttc" id="ardpq__paragraph_8h_html_a0393a9b36cdb76c96ac662ad625b436b"><div class="ttname"><a href="rdpq__paragraph_8h.html#a0393a9b36cdb76c96ac662ad625b436b">rdpq_paragraph_t::bbox</a></div><div class="ttdeci">struct rdpq_paragraph_t::@82 bbox</div><div class="ttdoc">Bounding box of the text, relative to the drawing position.</div></div>
-<div class="ttc" id="ardpq__paragraph_8h_html_a7c72eef5fa6f30fe744d4ef41e90d8ad"><div class="ttname"><a href="rdpq__paragraph_8h.html#a7c72eef5fa6f30fe744d4ef41e90d8ad">rdpq_paragraph_t::y0</a></div><div class="ttdeci">float y0</div><div class="ttdoc">Alignment offset of the text.</div><div class="ttdef"><b>Definition</b> rdpq_paragraph.h:84</div></div>
-<div class="ttc" id="ardpq__paragraph_8h_html_structrdpq__paragraph__t"><div class="ttname"><a href="rdpq__paragraph_8h.html#structrdpq__paragraph__t">rdpq_paragraph_t</a></div><div class="ttdoc">A paragraph of text, fully laid out.</div><div class="ttdef"><b>Definition</b> rdpq_paragraph.h:72</div></div>
-<div class="ttc" id="ardpq__rect_8h_html_a9c6405f89d2fe70046330964c21ba124"><div class="ttname"><a href="rdpq__rect_8h.html#a9c6405f89d2fe70046330964c21ba124">rdpq_fill_rectangle</a></div><div class="ttdeci">#define rdpq_fill_rectangle(x0, y0, x1, y1)</div><div class="ttdoc">Draw a filled rectangle (RDP command: FILL_RECTANGLE)</div><div class="ttdef"><b>Definition</b> rdpq_rect.h:249</div></div>
+<div class="ttc" id="ardpq__paragraph_8h_html_a7c72eef5fa6f30fe744d4ef41e90d8ad"><div class="ttname"><a href="rdpq__paragraph_8h.html#a7c72eef5fa6f30fe744d4ef41e90d8ad">rdpq_paragraph_t::y0</a></div><div class="ttdeci">float y0</div><div class="ttdoc">Alignment offset of the text.</div><div class="ttdef"><b>Definition</b> rdpq_paragraph.h:85</div></div>
+<div class="ttc" id="ardpq__paragraph_8h_html_structrdpq__paragraph__t"><div class="ttname"><a href="rdpq__paragraph_8h.html#structrdpq__paragraph__t">rdpq_paragraph_t</a></div><div class="ttdoc">A paragraph of text, fully laid out.</div><div class="ttdef"><b>Definition</b> rdpq_paragraph.h:73</div></div>
+<div class="ttc" id="ardpq__rect_8h_html_a9c6405f89d2fe70046330964c21ba124"><div class="ttname"><a href="rdpq__rect_8h.html#a9c6405f89d2fe70046330964c21ba124">rdpq_fill_rectangle</a></div><div class="ttdeci">#define rdpq_fill_rectangle(x0, y0, x1, y1)</div><div class="ttdoc">Draw a filled rectangle (RDP command: FILL_RECTANGLE)</div><div class="ttdef"><b>Definition</b> rdpq_rect.h:251</div></div>
 </div><!-- fragment --> </div><hr/><h2 class="groupheader">Data Structure Documentation</h2>
 <a name="structrdpq__textparms__t" id="structrdpq__textparms__t"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#structrdpq__textparms__t">&#9670;&#160;</a></span>rdpq_textparms_t</h2>
@@ -509,7 +514,7 @@ Number of lines rendered (including wrapped lines) </td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="structrdpq__font__t.html">rdpq_font_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="rdpq__font__internal_8h.html#structrdpq__font__t">rdpq_font_t</a> *&#160;</td>
           <td class="paramname"><em>font</em>&#160;</td>
         </tr>
         <tr>
@@ -568,7 +573,7 @@ Number of lines rendered (including wrapped lines) </td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="structrdpq__font__t.html">rdpq_font_t</a> * rdpq_text_get_font </td>
+          <td class="memname">const <a class="el" href="rdpq__font__internal_8h.html#structrdpq__font__t">rdpq_font_t</a> * rdpq_text_get_font </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>font_id</em></td><td>)</td>
@@ -870,7 +875,7 @@ Number of lines rendered (including wrapped lines) </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:30 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

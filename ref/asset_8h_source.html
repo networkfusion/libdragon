@@ -82,62 +82,64 @@ $(document).ready(function() { init_codefold(0); });
 </div><!--header-->
 <div class="contents">
 <a href="asset_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef __LIBDRAGON_ASSET_H</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define __LIBDRAGON_ASSET_H</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#ifdef N64</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#include &quot;<a class="code" href="debug_8h.html">debug.h</a>&quot;</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#define assertf(x, ...) assert(x)</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keyword">extern</span> <span class="keywordtype">void</span> __asset_init_compression_lvl2(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword">extern</span> <span class="keywordtype">void</span> __asset_init_compression_lvl3(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="asset_8h.html#a34d5d636492bebbe03bae6ab8ee28e2a">   88</a></span><span class="preprocessor">#define ASSET_ALIGNMENT_MIN 16  </span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="foldopen" id="foldopen00113" data-start="" data-end="">
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="asset_8h.html#a6bdfd4d8e3a7e807dd7e1b8cb00332a4">  113</a></span><span class="preprocessor">#define asset_init_compression(level) ({ \</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">    switch (level) { \</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">    case 0: break; \</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">    case 1: break; \</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">    case 2: __asset_init_compression_lvl2(); break; \</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">    case 3: __asset_init_compression_lvl3(); break; \</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">    default: assertf(0, &quot;Unsupported compression level: %d&quot;, level); \</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">    } \</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">})</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef __LIBDRAGON_ASSET_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define __LIBDRAGON_ASSET_H</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#ifdef N64</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#include &quot;<a class="code" href="debug_8h.html">debug.h</a>&quot;</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#define assertf(x, ...) assert(x)</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="asset_8c.html#a3e0ede56befb743a20e6f49f947dfb96">__asset_init_compression_lvl2</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="asset_8c.html#a935d3c6dea995cb2164ee29657852aa8">__asset_init_compression_lvl3</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="asset_8h.html#a34d5d636492bebbe03bae6ab8ee28e2a">   90</a></span><span class="preprocessor">#define ASSET_ALIGNMENT_MIN 16  </span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="foldopen" id="foldopen00115" data-start="" data-end="">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="asset_8h.html#a6bdfd4d8e3a7e807dd7e1b8cb00332a4">  115</a></span><span class="preprocessor">#define asset_init_compression(level) ({ \</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">    switch (level) { \</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">    case 0: break; \</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">    case 1: break; \</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="preprocessor">    case 2: __asset_init_compression_lvl2(); break; \</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="preprocessor">    case 3: __asset_init_compression_lvl3(); break; \</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">    default: assertf(0, &quot;Unsupported compression level: %d&quot;, level); \</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">    } \</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">})</span></div>
 </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="keywordtype">void</span> *<a class="code hl_function" href="asset_8h.html#abfc5939446d9920b884df034e89428a9">asset_load</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fn, <span class="keywordtype">int</span> *sz);</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="keywordtype">void</span>* <a class="code hl_function" href="asset_8h.html#a30b5d1de803ff52b99c484b073ba76b7">asset_loadf</a>(FILE *f, <span class="keywordtype">int</span> *sz);</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="keywordtype">bool</span> <a class="code hl_function" href="asset_8h.html#a6cb89fccd164718c2551190edf1f6507">asset_loadf_into</a>(FILE *f, <span class="keywordtype">int</span> *sz, <span class="keywordtype">void</span> *buf, <span class="keywordtype">int</span> *buf_size);</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="asset_8h.html#ac731b2beb346c99f36fa8f355fb84509">  230</a></span>FILE *<a class="code hl_function" href="asset_8h.html#ac731b2beb346c99f36fa8f355fb84509">asset_fopen</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fn, <span class="keywordtype">int</span> *sz);</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>}</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="keywordtype">void</span> *<a class="code hl_function" href="asset_8h.html#abfc5939446d9920b884df034e89428a9">asset_load</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fn, <span class="keywordtype">int</span> *sz);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="keywordtype">void</span>* <a class="code hl_function" href="asset_8h.html#a30b5d1de803ff52b99c484b073ba76b7">asset_loadf</a>(FILE *f, <span class="keywordtype">int</span> *sz);</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="keywordtype">bool</span> <a class="code hl_function" href="asset_8h.html#a6cb89fccd164718c2551190edf1f6507">asset_loadf_into</a>(FILE *f, <span class="keywordtype">int</span> *sz, <span class="keywordtype">void</span> *buf, <span class="keywordtype">int</span> *buf_size);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno"><a class="line" href="asset_8h.html#ac731b2beb346c99f36fa8f355fb84509">  232</a></span>FILE *<a class="code hl_function" href="asset_8h.html#ac731b2beb346c99f36fa8f355fb84509">asset_fopen</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fn, <span class="keywordtype">int</span> *sz);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>}</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aasset_8h_html_a30b5d1de803ff52b99c484b073ba76b7"><div class="ttname"><a href="asset_8h.html#a30b5d1de803ff52b99c484b073ba76b7">asset_loadf</a></div><div class="ttdeci">void * asset_loadf(FILE *f, int *sz)</div><div class="ttdoc">Load an asset file (possibly uncompressing it)</div><div class="ttdef"><b>Definition</b> asset.c:242</div></div>
-<div class="ttc" id="aasset_8h_html_a6cb89fccd164718c2551190edf1f6507"><div class="ttname"><a href="asset_8h.html#a6cb89fccd164718c2551190edf1f6507">asset_loadf_into</a></div><div class="ttdeci">bool asset_loadf_into(FILE *f, int *sz, void *buf, int *buf_size)</div><div class="ttdoc">Load an asset file (possibly uncompressing it)</div><div class="ttdef"><b>Definition</b> asset.c:224</div></div>
-<div class="ttc" id="aasset_8h_html_abfc5939446d9920b884df034e89428a9"><div class="ttname"><a href="asset_8h.html#abfc5939446d9920b884df034e89428a9">asset_load</a></div><div class="ttdeci">void * asset_load(const char *fn, int *sz)</div><div class="ttdoc">Load an asset file (possibly uncompressing it)</div><div class="ttdef"><b>Definition</b> asset.c:250</div></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aasset_8c_html_a3e0ede56befb743a20e6f49f947dfb96"><div class="ttname"><a href="asset_8c.html#a3e0ede56befb743a20e6f49f947dfb96">__asset_init_compression_lvl2</a></div><div class="ttdeci">void __asset_init_compression_lvl2(void)</div><div class="ttdoc">Initialize compression level 2 (APLIB)</div><div class="ttdef"><b>Definition</b> asset.c:57</div></div>
+<div class="ttc" id="aasset_8c_html_a935d3c6dea995cb2164ee29657852aa8"><div class="ttname"><a href="asset_8c.html#a935d3c6dea995cb2164ee29657852aa8">__asset_init_compression_lvl3</a></div><div class="ttdeci">void __asset_init_compression_lvl3(void)</div><div class="ttdoc">Initialize compression level 3 (SHRINKLER)</div><div class="ttdef"><b>Definition</b> asset.c:73</div></div>
+<div class="ttc" id="aasset_8h_html_a30b5d1de803ff52b99c484b073ba76b7"><div class="ttname"><a href="asset_8h.html#a30b5d1de803ff52b99c484b073ba76b7">asset_loadf</a></div><div class="ttdeci">void * asset_loadf(FILE *f, int *sz)</div><div class="ttdoc">Load an asset file (possibly uncompressing it)</div><div class="ttdef"><b>Definition</b> asset.c:254</div></div>
+<div class="ttc" id="aasset_8h_html_a6cb89fccd164718c2551190edf1f6507"><div class="ttname"><a href="asset_8h.html#a6cb89fccd164718c2551190edf1f6507">asset_loadf_into</a></div><div class="ttdeci">bool asset_loadf_into(FILE *f, int *sz, void *buf, int *buf_size)</div><div class="ttdoc">Load an asset file (possibly uncompressing it)</div><div class="ttdef"><b>Definition</b> asset.c:235</div></div>
+<div class="ttc" id="aasset_8h_html_abfc5939446d9920b884df034e89428a9"><div class="ttname"><a href="asset_8h.html#abfc5939446d9920b884df034e89428a9">asset_load</a></div><div class="ttdeci">void * asset_load(const char *fn, int *sz)</div><div class="ttdoc">Load an asset file (possibly uncompressing it)</div><div class="ttdef"><b>Definition</b> asset.c:262</div></div>
 <div class="ttc" id="aasset_8h_html_ac731b2beb346c99f36fa8f355fb84509"><div class="ttname"><a href="asset_8h.html#ac731b2beb346c99f36fa8f355fb84509">asset_fopen</a></div><div class="ttdeci">FILE * asset_fopen(const char *fn, int *sz)</div><div class="ttdoc">Open an asset file for reading (with transparent decompression)</div></div>
 <div class="ttc" id="adebug_8h_html"><div class="ttname"><a href="debug_8h.html">debug.h</a></div><div class="ttdoc">Debugging Support.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:29 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

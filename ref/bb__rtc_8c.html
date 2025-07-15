@@ -150,7 +150,9 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>iQue Player (BB) Real-Time Clock (RTC) driver. </p>
-<dl class="section author"><dt>Author</dt><dd>Giovanni Bajo (<a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd>
+<dd>
+Christopher Bonhage <a href="#" onclick="location.href='mai'+'lto:'+'me@'+'ch'+'ris'+'to'+'phe'+'rb'+'onh'+'ag'+'e.c'+'om'; return false;">me@ch<span class="obfuscator">.nosp@m.</span>rist<span class="obfuscator">.nosp@m.</span>opher<span class="obfuscator">.nosp@m.</span>bonh<span class="obfuscator">.nosp@m.</span>age.c<span class="obfuscator">.nosp@m.</span>om</a> </dd></dl>
 </div><hr/><h2 class="groupheader">Data Structure Documentation</h2>
 <a name="structbb__rtc__state__t" id="structbb__rtc__state__t"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#structbb__rtc__state__t">&#9670;&#160;</a></span>bb_rtc_state_t</h2>
@@ -261,11 +263,11 @@ Level of the OUT pin. </td></tr>
 <b>Value:</b><div class="fragment"><div class="line">    ({ \</div>
 <div class="line">    gpio_cache = *<a class="code hl_define" href="bb__rtc_8c.html#a7bf0d96d71eb66d7687c0db5f8349c00">PI_BB_GPIO</a> &amp; ~(<a class="code hl_define" href="bb__rtc_8c.html#a16e00a0646739d853f240391b8b00020">I2C_DATA_OUT</a> | <a class="code hl_define" href="bb__rtc_8c.html#ab688ba72dabc33a74c48f98e7348ca06">I2C_CLOCK_OUT</a> | <a class="code hl_define" href="bb__rtc_8c.html#a7d72c0c00cb1bda8a70f170ef567aa55">I2C_DATA_BIT</a> | <a class="code hl_define" href="bb__rtc_8c.html#af00977d54201f49ac7af0a965274c086">I2C_CLOCK_BIT</a>); \</div>
 <div class="line">})</div>
-<div class="ttc" id="abb__rtc_8c_html_a16e00a0646739d853f240391b8b00020"><div class="ttname"><a href="bb__rtc_8c.html#a16e00a0646739d853f240391b8b00020">I2C_DATA_OUT</a></div><div class="ttdeci">#define I2C_DATA_OUT</div><div class="ttdoc">Data input/output.</div><div class="ttdef"><b>Definition</b> bb_rtc.c:17</div></div>
-<div class="ttc" id="abb__rtc_8c_html_a7bf0d96d71eb66d7687c0db5f8349c00"><div class="ttname"><a href="bb__rtc_8c.html#a7bf0d96d71eb66d7687c0db5f8349c00">PI_BB_GPIO</a></div><div class="ttdeci">#define PI_BB_GPIO</div><div class="ttdoc">BB GPIO register.</div><div class="ttdef"><b>Definition</b> bb_rtc.c:15</div></div>
-<div class="ttc" id="abb__rtc_8c_html_a7d72c0c00cb1bda8a70f170ef567aa55"><div class="ttname"><a href="bb__rtc_8c.html#a7d72c0c00cb1bda8a70f170ef567aa55">I2C_DATA_BIT</a></div><div class="ttdeci">#define I2C_DATA_BIT</div><div class="ttdoc">Data bit.</div><div class="ttdef"><b>Definition</b> bb_rtc.c:19</div></div>
-<div class="ttc" id="abb__rtc_8c_html_ab688ba72dabc33a74c48f98e7348ca06"><div class="ttname"><a href="bb__rtc_8c.html#ab688ba72dabc33a74c48f98e7348ca06">I2C_CLOCK_OUT</a></div><div class="ttdeci">#define I2C_CLOCK_OUT</div><div class="ttdoc">Clock input/output.</div><div class="ttdef"><b>Definition</b> bb_rtc.c:18</div></div>
-<div class="ttc" id="abb__rtc_8c_html_af00977d54201f49ac7af0a965274c086"><div class="ttname"><a href="bb__rtc_8c.html#af00977d54201f49ac7af0a965274c086">I2C_CLOCK_BIT</a></div><div class="ttdeci">#define I2C_CLOCK_BIT</div><div class="ttdoc">Clock bit.</div><div class="ttdef"><b>Definition</b> bb_rtc.c:20</div></div>
+<div class="ttc" id="abb__rtc_8c_html_a16e00a0646739d853f240391b8b00020"><div class="ttname"><a href="bb__rtc_8c.html#a16e00a0646739d853f240391b8b00020">I2C_DATA_OUT</a></div><div class="ttdeci">#define I2C_DATA_OUT</div><div class="ttdoc">Data input/output.</div><div class="ttdef"><b>Definition</b> bb_rtc.c:18</div></div>
+<div class="ttc" id="abb__rtc_8c_html_a7bf0d96d71eb66d7687c0db5f8349c00"><div class="ttname"><a href="bb__rtc_8c.html#a7bf0d96d71eb66d7687c0db5f8349c00">PI_BB_GPIO</a></div><div class="ttdeci">#define PI_BB_GPIO</div><div class="ttdoc">BB GPIO register.</div><div class="ttdef"><b>Definition</b> bb_rtc.c:16</div></div>
+<div class="ttc" id="abb__rtc_8c_html_a7d72c0c00cb1bda8a70f170ef567aa55"><div class="ttname"><a href="bb__rtc_8c.html#a7d72c0c00cb1bda8a70f170ef567aa55">I2C_DATA_BIT</a></div><div class="ttdeci">#define I2C_DATA_BIT</div><div class="ttdoc">Data bit.</div><div class="ttdef"><b>Definition</b> bb_rtc.c:20</div></div>
+<div class="ttc" id="abb__rtc_8c_html_ab688ba72dabc33a74c48f98e7348ca06"><div class="ttname"><a href="bb__rtc_8c.html#ab688ba72dabc33a74c48f98e7348ca06">I2C_CLOCK_OUT</a></div><div class="ttdeci">#define I2C_CLOCK_OUT</div><div class="ttdoc">Clock input/output.</div><div class="ttdef"><b>Definition</b> bb_rtc.c:19</div></div>
+<div class="ttc" id="abb__rtc_8c_html_af00977d54201f49ac7af0a965274c086"><div class="ttname"><a href="bb__rtc_8c.html#af00977d54201f49ac7af0a965274c086">I2C_CLOCK_BIT</a></div><div class="ttdeci">#define I2C_CLOCK_BIT</div><div class="ttdoc">Clock bit.</div><div class="ttdef"><b>Definition</b> bb_rtc.c:21</div></div>
 </div><!-- fragment -->
 <p>Initialize a I2C transaction. </p>
 
@@ -507,7 +509,7 @@ Level of the OUT pin. </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:30 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

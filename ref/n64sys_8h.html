@@ -247,12 +247,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>sys_bbplayer</b> (voi
 <tr class="memitem:ga3bbb609a58f6025ea3b8cb406ca4d823" id="r_ga3bbb609a58f6025ea3b8cb406ca4d823"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga3bbb609a58f6025ea3b8cb406ca4d823">inst_cache_invalidate_all</a> (void)</td></tr>
 <tr class="memdesc:ga3bbb609a58f6025ea3b8cb406ca4d823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force an instruction cache invalidate over whole memory.  <br /></td></tr>
 <tr class="separator:ga3bbb609a58f6025ea3b8cb406ca4d823"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4496cbe7966a01738242c1b214028eb0" id="r_ga4496cbe7966a01738242c1b214028eb0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga4496cbe7966a01738242c1b214028eb0">get_memory_size</a> ()</td></tr>
-<tr class="memdesc:ga4496cbe7966a01738242c1b214028eb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get amount of available memory.  <br /></td></tr>
-<tr class="separator:ga4496cbe7966a01738242c1b214028eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga28ba352e296d379426531772b874046d" id="r_ga28ba352e296d379426531772b874046d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga28ba352e296d379426531772b874046d">is_memory_expanded</a> ()</td></tr>
-<tr class="memdesc:ga28ba352e296d379426531772b874046d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is expansion pak in use.  <br /></td></tr>
-<tr class="separator:ga28ba352e296d379426531772b874046d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga20208f76196865aba3c188089187aeb5" id="r_ga20208f76196865aba3c188089187aeb5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga20208f76196865aba3c188089187aeb5">get_memory_size</a> (void)</td></tr>
+<tr class="memdesc:ga20208f76196865aba3c188089187aeb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get amount of available memory.  <br /></td></tr>
+<tr class="separator:ga20208f76196865aba3c188089187aeb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7079dd36260ff330df1bd83fab7cfca" id="r_gad7079dd36260ff330df1bd83fab7cfca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#gad7079dd36260ff330df1bd83fab7cfca">is_memory_expanded</a> (void)</td></tr>
+<tr class="memdesc:gad7079dd36260ff330df1bd83fab7cfca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is expansion pak in use.  <br /></td></tr>
+<tr class="separator:gad7079dd36260ff330df1bd83fab7cfca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga536cf32fcf76fe117b6964c9d09004a2" id="r_ga536cf32fcf76fe117b6964c9d09004a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga536cf32fcf76fe117b6964c9d09004a2">assert_memory_expanded</a> (void)</td></tr>
+<tr class="memdesc:ga536cf32fcf76fe117b6964c9d09004a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert that the expansion pak is present.  <br /></td></tr>
+<tr class="separator:ga536cf32fcf76fe117b6964c9d09004a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga26eb5aa0448bf9784f1cf3f9fb300192" id="r_ga26eb5aa0448bf9784f1cf3f9fb300192"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>sys_get_heap_stats</b> (<a class="el" href="group__n64sys.html#structheap__stats__t">heap_stats_t</a> *stats)</td></tr>
 <tr class="memdesc:ga26eb5aa0448bf9784f1cf3f9fb300192"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return information about memory usage of the heap. <br /></td></tr>
@@ -311,10 +314,15 @@ char&#160;</td><td class="memItemRight" valign="bottom"><b>__bss_end</b> []</td>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>N64 System Interface. </p>
+<dl class="section author"><dt>Author</dt><dd>Jennifer Taylor <a href="#" onclick="location.href='mai'+'lto:'+'dra'+'go'+'nmi'+'nd'+'ed@'+'dr'+'ago'+'nm'+'ind'+'ed'+'.co'+'m'; return false;">drago<span class="obfuscator">.nosp@m.</span>nmin<span class="obfuscator">.nosp@m.</span>ded@d<span class="obfuscator">.nosp@m.</span>rago<span class="obfuscator">.nosp@m.</span>nmind<span class="obfuscator">.nosp@m.</span>ed.c<span class="obfuscator">.nosp@m.</span>om</a> </dd>
+<dd>
+Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd>
+<dd>
+thekovic <a href="https://github.com/thekovic">https://github.com/thekovic</a> </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:29 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

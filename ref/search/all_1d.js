@@ -1,7 +1,7 @@
 var searchData=
 [
   ['y_0',['y',['../rdpq__paragraph_8h.html#a415290769594460e2e485922904f345d',1,'rdpq_paragraph_char_t.__unnamed79__.__unnamed81__::y'],['../group__joypad.html#a4ebcd5efb573dae914a65548e03557da',1,'joypad_buttons_t::y'],['../yuv_8h.html#afb59154ea4f0b2aec033c08d843671fd',1,'yuv_frame_t::y'],['../group__joybus__commands.html#a415290769594460e2e485922904f345d',1,'joybus_cmd_gcn_controller_read_port_t.recv::y'],['../group__joybus__commands.html#a415290769594460e2e485922904f345d',1,'joybus_cmd_gcn_controller_read_long_port_t.recv::y'],['../group__controller.html#a415290769594460e2e485922904f345d',1,'_SI_condat.__unnamed49__.__unnamed53__::y']]],
-  ['y0_1',['y0',['../rdpq__paragraph_8h.html#af05e43947edbff3f8b97071dd807598b',1,'rdpq_paragraph_t.bbox::y0'],['../structvi__preset__t_8display.html#af05e43947edbff3f8b97071dd807598b',1,'vi_preset_t.display::y0'],['../rdpq__paragraph_8h.html#a7c72eef5fa6f30fe744d4ef41e90d8ad',1,'rdpq_paragraph_t::y0'],['../rdpq__font_8h.html#a371db970c7d95f2319c6282f1f95772c',1,'rdpq_font_gmetrics_t::y0']]],
+  ['y0_1',['y0',['../rdpq__paragraph_8h.html#af05e43947edbff3f8b97071dd807598b',1,'rdpq_paragraph_t.bbox::y0'],['../vi_8c.html#af05e43947edbff3f8b97071dd807598b',1,'vi_preset_t.display::y0'],['../rdpq__paragraph_8h.html#a7c72eef5fa6f30fe744d4ef41e90d8ad',1,'rdpq_paragraph_t::y0'],['../rdpq__font_8h.html#a371db970c7d95f2319c6282f1f95772c',1,'rdpq_font_gmetrics_t::y0']]],
   ['y1_2',['y1',['../rdpq__paragraph_8h.html#a29361885c98c7f19165aa53829149ae4',1,'rdpq_paragraph_t.bbox::y1'],['../rdpq__debug_8c.html#a29361885c98c7f19165aa53829149ae4',1,'.clip::y1'],['../rdpq__font_8h.html#aea7e50900bc14806d10b85344c2b31ab',1,'rdpq_font_gmetrics_t::y1']]],
   ['year_3',['year',['../bb__rtc_8c.html#af99ea509e5e782cf64f6ecef43bbf5f5',1,'bb_rtc_state_t']]],
   ['ym5header_4',['ym5header',['../ym64_8c.html#structym5header',1,'']]],
@@ -17,8 +17,8 @@ var searchData=
   ['ym64player_5fstop_14',['ym64player_stop',['../ym64_8c.html#ab6cb93111fa136530d68eb8507f1ddc4',1,'ym64player_stop(ym64player_t *player):&#160;ym64.c'],['../ym64_8h.html#ab6cb93111fa136530d68eb8507f1ddc4',1,'ym64player_stop(ym64player_t *player):&#160;ym64.c']]],
   ['ym64player_5ft_15',['ym64player_t',['../ym64_8h.html#structym64player__t',1,'']]],
   ['ym64player_5ftell_16',['ym64player_tell',['../ym64_8c.html#a43a506a86fa0a0e29a68192cacf36f7a',1,'ym64player_tell(ym64player_t *player, int *pos, float *secs):&#160;ym64.c'],['../ym64_8h.html#a43a506a86fa0a0e29a68192cacf36f7a',1,'ym64player_tell(ym64player_t *player, int *pos, float *secs):&#160;ym64.c']]],
-  ['yoff_17',['yoff',['../structglyph__t.html#af2ff352275d19067a8031d32b2cc82c5',1,'glyph_t']]],
-  ['yoff2_18',['yoff2',['../structglyph__t.html#ae52b452531b5882aad9ac5f618172135',1,'glyph_t']]],
+  ['yoff_17',['yoff',['../rdpq__font__internal_8h.html#af2ff352275d19067a8031d32b2cc82c5',1,'glyph_t']]],
+  ['yoff2_18',['yoff2',['../rdpq__font__internal_8h.html#ae52b452531b5882aad9ac5f618172135',1,'glyph_t']]],
   ['yuv_2eh_19',['yuv.h',['../yuv_8h.html',1,'']]],
   ['yuv_5falign_5fcenter_20',['YUV_ALIGN_CENTER',['../yuv_8h.html#a94d21e6f7ad922e161e07355c5c87a0aa068f9747b1f660fb62040ccb958567a3',1,'yuv.h']]],
   ['yuv_5falign_5fmax_21',['YUV_ALIGN_MAX',['../yuv_8h.html#a94d21e6f7ad922e161e07355c5c87a0aa9ef72538c531beb1a200f7ef26b1994b',1,'yuv.h']]],

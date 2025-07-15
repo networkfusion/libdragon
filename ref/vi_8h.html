@@ -393,6 +393,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Video Interface Subsystem. </p>
+<dl class="section author"><dt>Author</dt><dd>Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
 <p>This module offers a low-level interface to VI programming. Most applications should use <a class="el" href="display_8h.html" title="Display Subsystem.">display.h</a>, which sits on top of <a class="el" href="vi_8h.html" title="Video Interface Subsystem.">vi.h</a>, and offers a higher level interface, plus automatic memory management of multiple framebuffers, FPS utilities, and much more.</p>
 <h2><a class="anchor" id="autotoc_md59"></a>
  Register read/write access</h2>
@@ -886,9 +887,9 @@ down</td>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">                                            <a class="code hl_define" href="vi_8h.html#a49a637f54fcd6e1a0c7392d737262d14">VI_BURST_START</a>(burst_start) | <a class="code hl_define" href="vi_8h.html#aacf526b8cd8ec7dba15012248d9e46c8">VI_VSYNC_WIDTH</a>(vsync_width) | \</div>
 <div class="line">                                            VI_BURST_WIDTH(burst_width) | <a class="code hl_define" href="vi_8h.html#ab634c835b497ad3ca1cf8324fff17bda">VI_HSYNC_WIDTH</a>(hsync_width)</div>
-<div class="ttc" id="avi_8h_html_a49a637f54fcd6e1a0c7392d737262d14"><div class="ttname"><a href="vi_8h.html#a49a637f54fcd6e1a0c7392d737262d14">VI_BURST_START</a></div><div class="ttdeci">#define VI_BURST_START(value)</div><div class="ttdoc">VI_BURST Register: set start of color burst in pixels from hsync.</div><div class="ttdef"><b>Definition</b> vi.h:259</div></div>
-<div class="ttc" id="avi_8h_html_aacf526b8cd8ec7dba15012248d9e46c8"><div class="ttname"><a href="vi_8h.html#aacf526b8cd8ec7dba15012248d9e46c8">VI_VSYNC_WIDTH</a></div><div class="ttdeci">#define VI_VSYNC_WIDTH(value)</div><div class="ttdoc">VI_BURST Register: set vertical sync width in half lines.</div><div class="ttdef"><b>Definition</b> vi.h:261</div></div>
-<div class="ttc" id="avi_8h_html_ab634c835b497ad3ca1cf8324fff17bda"><div class="ttname"><a href="vi_8h.html#ab634c835b497ad3ca1cf8324fff17bda">VI_HSYNC_WIDTH</a></div><div class="ttdeci">#define VI_HSYNC_WIDTH(value)</div><div class="ttdoc">VI_BURST Register: set horizontal sync width in pixels.</div><div class="ttdef"><b>Definition</b> vi.h:265</div></div>
+<div class="ttc" id="avi_8h_html_a49a637f54fcd6e1a0c7392d737262d14"><div class="ttname"><a href="vi_8h.html#a49a637f54fcd6e1a0c7392d737262d14">VI_BURST_START</a></div><div class="ttdeci">#define VI_BURST_START(value)</div><div class="ttdoc">VI_BURST Register: set start of color burst in pixels from hsync.</div><div class="ttdef"><b>Definition</b> vi.h:260</div></div>
+<div class="ttc" id="avi_8h_html_aacf526b8cd8ec7dba15012248d9e46c8"><div class="ttname"><a href="vi_8h.html#aacf526b8cd8ec7dba15012248d9e46c8">VI_VSYNC_WIDTH</a></div><div class="ttdeci">#define VI_VSYNC_WIDTH(value)</div><div class="ttdoc">VI_BURST Register: set vertical sync width in half lines.</div><div class="ttdef"><b>Definition</b> vi.h:262</div></div>
+<div class="ttc" id="avi_8h_html_ab634c835b497ad3ca1cf8324fff17bda"><div class="ttname"><a href="vi_8h.html#ab634c835b497ad3ca1cf8324fff17bda">VI_HSYNC_WIDTH</a></div><div class="ttdeci">#define VI_HSYNC_WIDTH(value)</div><div class="ttdoc">VI_BURST Register: set horizontal sync width in pixels.</div><div class="ttdef"><b>Definition</b> vi.h:266</div></div>
 </div><!-- fragment -->
 <p>VI_BURST Register: set all values. </p>
 
@@ -2062,8 +2063,9 @@ This setting is not compatible with dedithering (<a class="el" href="vi_8h.html#
 <p>This function calculates the appropriate VI borders to obtain the specified aspect ratio, and optionally adding a margin to make the picture CRT-safe.</p>
 <p>The margin is expressed as a percentage relative to the virtual VI display output (640x480). A good default for this margin for most CRTs is <a class="el" href="group__display.html#ga3f5793cb368fca2e0f6f9526747d540a">VI_CRT_MARGIN</a> (5%).</p>
 <p>For instance, to create a 16:9 resolution, you can do:</p>
-<div class="fragment"><div class="line"><a class="code hl_struct" href="vi_8h.html#structvi__borders__t">vi_borders_t</a> borders = vi_calc_borders(16./9, <span class="keyword">false</span>, 0, 0);</div>
-<div class="ttc" id="avi_8h_html_structvi__borders__t"><div class="ttname"><a href="vi_8h.html#structvi__borders__t">vi_borders_t</a></div><div class="ttdoc">Video Interface borders structure.</div><div class="ttdef"><b>Definition</b> vi.h:301</div></div>
+<div class="fragment"><div class="line"><a class="code hl_struct" href="vi_8h.html#structvi__borders__t">vi_borders_t</a> borders = <a class="code hl_function" href="vi_8c.html#affa5f33d9319dd4eb87d2f48c1828652">vi_calc_borders</a>(16./9, <span class="keyword">false</span>, 0, 0);</div>
+<div class="ttc" id="avi_8c_html_affa5f33d9319dd4eb87d2f48c1828652"><div class="ttname"><a href="vi_8c.html#affa5f33d9319dd4eb87d2f48c1828652">vi_calc_borders</a></div><div class="ttdeci">vi_borders_t vi_calc_borders(float aspect_ratio, float overscan_margin)</div><div class="ttdoc">Calculate correct VI borders for a target aspect ratio.</div><div class="ttdef"><b>Definition</b> vi.c:554</div></div>
+<div class="ttc" id="avi_8h_html_structvi__borders__t"><div class="ttname"><a href="vi_8h.html#structvi__borders__t">vi_borders_t</a></div><div class="ttdoc">Video Interface borders structure.</div><div class="ttdef"><b>Definition</b> vi.h:302</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">aspect_ratio</td><td>Target aspect ratio </td></tr>
@@ -2139,7 +2141,7 @@ This setting is not compatible with dedithering (<a class="el" href="vi_8h.html#
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:30 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

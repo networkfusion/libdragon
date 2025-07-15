@@ -135,7 +135,7 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga11298664525eef44964cb4879945e219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of ticks between Joybus identify commands.  <br /></td></tr>
 <tr class="separator:ga11298664525eef44964cb4879945e219"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga32d8f6f37335af8c3abeb56700a77b8b" id="r_ga32d8f6f37335af8c3abeb56700a77b8b"><td class="memItemLeft" align="right" valign="top"><a id="ga32d8f6f37335af8c3abeb56700a77b8b" name="ga32d8f6f37335af8c3abeb56700a77b8b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ASSERT_JOYPAD_INITIALIZED</b>()&#160;&#160;&#160;    assertf(joypad_init_refcount &gt; 0, &quot;joypad_init() was not called&quot;)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ASSERT_JOYPAD_INITIALIZED</b>()&#160;&#160;&#160;    <a class="el" href="debug_8h.html#a66673aad3e392c6b58054aebe66fe28e">assertf</a>(joypad_init_refcount &gt; 0, &quot;joypad_init() was not called&quot;)</td></tr>
 <tr class="memdesc:ga32d8f6f37335af8c3abeb56700a77b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience macro to ensure Joypad subsystem is initialized. <br /></td></tr>
 <tr class="separator:ga32d8f6f37335af8c3abeb56700a77b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga58a12fd7fb5e828bd6d4051e52516286" id="r_ga58a12fd7fb5e828bd6d4051e52516286"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga58a12fd7fb5e828bd6d4051e52516286">BB_HACK_FLAGS_SWAP_PORT1</a>&#160;&#160;&#160;((*(uint32_t *)0x8000038c) &amp; 3)</td></tr>
@@ -170,11 +170,11 @@ Macros</h2></td></tr>
 <tr class="memdesc:gac238c7a4dcdd5d27092cddabeffc879d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial state for GameCube controller origins. <br /></td></tr>
 <tr class="separator:gac238c7a4dcdd5d27092cddabeffc879d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga18617cf2d4460ec4365e7c40094c4fee" id="r_ga18617cf2d4460ec4365e7c40094c4fee"><td class="memItemLeft" align="right" valign="top"><a id="ga18617cf2d4460ec4365e7c40094c4fee" name="ga18617cf2d4460ec4365e7c40094c4fee"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLAMP_ANALOG_STICK</b>(value)&#160;&#160;&#160;CLAMP((int)(value), -127, 127)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLAMP_ANALOG_STICK</b>(value)&#160;&#160;&#160;<a class="el" href="utils_8h.html#a33bd933f5d4895b3b6d18c2d5fed91a0">CLAMP</a>((int)(value), -127, 127)</td></tr>
 <tr class="memdesc:ga18617cf2d4460ec4365e7c40094c4fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure value is in range of an analog stick axis. <br /></td></tr>
 <tr class="separator:ga18617cf2d4460ec4365e7c40094c4fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8f51b5e9d09d8cdb936316721b9826df" id="r_ga8f51b5e9d09d8cdb936316721b9826df"><td class="memItemLeft" align="right" valign="top"><a id="ga8f51b5e9d09d8cdb936316721b9826df" name="ga8f51b5e9d09d8cdb936316721b9826df"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLAMP_ANALOG_TRIGGER</b>(value)&#160;&#160;&#160;CLAMP((int)(value), 0, 255)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLAMP_ANALOG_TRIGGER</b>(value)&#160;&#160;&#160;<a class="el" href="utils_8h.html#a33bd933f5d4895b3b6d18c2d5fed91a0">CLAMP</a>((int)(value), 0, 255)</td></tr>
 <tr class="memdesc:ga8f51b5e9d09d8cdb936316721b9826df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure value is in range of an analog trigger. <br /></td></tr>
 <tr class="separator:ga8f51b5e9d09d8cdb936316721b9826df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga428d5dddfcb30475811097952c3d4fca" id="r_ga428d5dddfcb30475811097952c3d4fca"><td class="memItemLeft" align="right" valign="top"><a id="ga428d5dddfcb30475811097952c3d4fca" name="ga428d5dddfcb30475811097952c3d4fca"></a>
@@ -233,22 +233,22 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga0245d3cd70ee2e64c85a9b07ed35d392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joypad accessory states enumeration. <br /></td></tr>
 <tr class="separator:ga0245d3cd70ee2e64c85a9b07ed35d392"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0b64bfb89fc2195628b65eb3ece31c70" id="r_ga0b64bfb89fc2195628b65eb3ece31c70"><td class="memItemLeft" align="right" valign="top"><a id="ga0b64bfb89fc2195628b65eb3ece31c70" name="ga0b64bfb89fc2195628b65eb3ece31c70"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga0b64bfb89fc2195628b65eb3ece31c70">joypad_accessory_error_t</a> { <br />
-&#160;&#160;<b>JOYPAD_ACCESSORY_ERROR_PENDING</b> = -1
-, <b>JOYPAD_ACCESSORY_ERROR_NONE</b> = 0
-, <b>JOYPAD_ACCESSORY_ERROR_ABSENT</b>
-, <b>JOYPAD_ACCESSORY_ERROR_CHECKSUM</b>
+<tr class="memitem:ga0b64bfb89fc2195628b65eb3ece31c70" id="r_ga0b64bfb89fc2195628b65eb3ece31c70"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga0b64bfb89fc2195628b65eb3ece31c70">joypad_accessory_error_t</a> { <br />
+&#160;&#160;<a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70aa8a243e51990bdee34551037bcbaf73c">JOYPAD_ACCESSORY_ERROR_PENDING</a> = -1
+, <a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70ab8555da2d3cd3b336fd9321ed49339e0">JOYPAD_ACCESSORY_ERROR_NONE</a> = 0
+, <a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70ac910bfd5dfac4d16ab87df921411a983">JOYPAD_ACCESSORY_ERROR_ABSENT</a>
+, <a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70a06aa6899c02dccbf67a342dc7ce69175">JOYPAD_ACCESSORY_ERROR_CHECKSUM</a>
 , <br />
-&#160;&#160;<b>JOYPAD_ACCESSORY_ERROR_TRANSFER_PAK_STATUS_CHANGE</b>
-, <b>JOYPAD_ACCESSORY_ERROR_UNKNOWN</b>
+&#160;&#160;<a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70a60b92217d9a04be9911a693a11289755">JOYPAD_ACCESSORY_ERROR_TRANSFER_PAK_STATUS_CHANGE</a>
+, <a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70aa656cc143b361b6b0c27be4e13b19cee">JOYPAD_ACCESSORY_ERROR_UNKNOWN</a>
 <br />
  }</td></tr>
-<tr class="memdesc:ga0b64bfb89fc2195628b65eb3ece31c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joypad accessory errors enumeration. <br /></td></tr>
+<tr class="memdesc:ga0b64bfb89fc2195628b65eb3ece31c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joypad accessory error codes.  <a href="group__joypad.html#ga0b64bfb89fc2195628b65eb3ece31c70">More...</a><br /></td></tr>
 <tr class="separator:ga0b64bfb89fc2195628b65eb3ece31c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga01fa3481cede49666c59b74003274524" id="r_ga01fa3481cede49666c59b74003274524"><td class="memItemLeft" align="right" valign="top"><a id="ga01fa3481cede49666c59b74003274524" name="ga01fa3481cede49666c59b74003274524"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga01fa3481cede49666c59b74003274524">joypad_accessory_xfer_t</a> { <b>JOYPAD_ACCESSORY_XFER_READ</b>
-, <b>JOYPAD_ACCESSORY_XFER_WRITE</b>
+<tr class="memitem:ga01fa3481cede49666c59b74003274524" id="r_ga01fa3481cede49666c59b74003274524"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga01fa3481cede49666c59b74003274524">joypad_accessory_xfer_t</a> { <a class="el" href="group__joypad.html#gga01fa3481cede49666c59b74003274524a8901c711a64622ba0c828e032202f031">JOYPAD_ACCESSORY_XFER_READ</a>
+, <a class="el" href="group__joypad.html#gga01fa3481cede49666c59b74003274524a62d148c8704e62b81fbe0f90f629292f">JOYPAD_ACCESSORY_XFER_WRITE</a>
  }</td></tr>
-<tr class="memdesc:ga01fa3481cede49666c59b74003274524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of transfer performed by <a class="el" href="group__joypad.html#ga66c3c56133810a75783b594b85bee28b" title="Read or write data from a Joypad accessory asynchronously.">joypad_accessory_xfer_async</a>. <br /></td></tr>
+<tr class="memdesc:ga01fa3481cede49666c59b74003274524"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of transfer performed by <a class="el" href="group__joypad.html#ga66c3c56133810a75783b594b85bee28b" title="Read or write data from a Joypad accessory asynchronously.">joypad_accessory_xfer_async</a>.  <a href="group__joypad.html#ga01fa3481cede49666c59b74003274524">More...</a><br /></td></tr>
 <tr class="separator:ga01fa3481cede49666c59b74003274524"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5ab433686bfefb61bb6fe0b5075a0fc1" id="r_ga5ab433686bfefb61bb6fe0b5075a0fc1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga5ab433686bfefb61bb6fe0b5075a0fc1">joypad_rumble_method_t</a> { <a class="el" href="group__joypad.html#gga5ab433686bfefb61bb6fe0b5075a0fc1a7fe6648b67e233a55051c2d919125a2b">JOYPAD_RUMBLE_METHOD_NONE</a> = 0
 , <a class="el" href="group__joypad.html#gga5ab433686bfefb61bb6fe0b5075a0fc1a6e094a13b0d7785775580a6ad05f8219">JOYPAD_RUMBLE_METHOD_N64_RUMBLE_PAK</a>
@@ -425,9 +425,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga9c469c230cd34d3f695c23bc26082d0c" id="r_ga9c469c230cd34d3f695c23bc26082d0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga9c469c230cd34d3f695c23bc26082d0c">joypad_transfer_pak_store_async</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port, uint16_t cart_addr, void *src, size_t len)</td></tr>
 <tr class="memdesc:ga9c469c230cd34d3f695c23bc26082d0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store data on the GB cartridge inserted in a Transfer Pak.  <br /></td></tr>
 <tr class="separator:ga9c469c230cd34d3f695c23bc26082d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga747d5d7970a91a239e86abbccf5433c7" id="r_ga747d5d7970a91a239e86abbccf5433c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga747d5d7970a91a239e86abbccf5433c7">joypad_accessory_write_async</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port, uint16_t start_addr, void *src, size_t len, <a class="el" href="group__joypad.html#gac6c1a8b7ec38b3bd7124a7c8f6951b7f">joypad_accessory_io_callback_t</a> callback, void *ctx)</td></tr>
-<tr class="memdesc:ga747d5d7970a91a239e86abbccf5433c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to a Joypad accessory asynchronously.  <br /></td></tr>
-<tr class="separator:ga747d5d7970a91a239e86abbccf5433c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -1216,6 +1213,59 @@ Position of the analog R trigger. (0, 255) <p>This value will be close to zero w
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga0b64bfb89fc2195628b65eb3ece31c70" name="ga0b64bfb89fc2195628b65eb3ece31c70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0b64bfb89fc2195628b65eb3ece31c70">&#9670;&#160;</a></span>joypad_accessory_error_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__joypad.html#ga0b64bfb89fc2195628b65eb3ece31c70">joypad_accessory_error_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Joypad accessory error codes. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga0b64bfb89fc2195628b65eb3ece31c70aa8a243e51990bdee34551037bcbaf73c" name="gga0b64bfb89fc2195628b65eb3ece31c70aa8a243e51990bdee34551037bcbaf73c"></a>JOYPAD_ACCESSORY_ERROR_PENDING&#160;</td><td class="fielddoc"><p>Operation is pending <br  />
+ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga0b64bfb89fc2195628b65eb3ece31c70ab8555da2d3cd3b336fd9321ed49339e0" name="gga0b64bfb89fc2195628b65eb3ece31c70ab8555da2d3cd3b336fd9321ed49339e0"></a>JOYPAD_ACCESSORY_ERROR_NONE&#160;</td><td class="fielddoc"><p>No error. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga0b64bfb89fc2195628b65eb3ece31c70ac910bfd5dfac4d16ab87df921411a983" name="gga0b64bfb89fc2195628b65eb3ece31c70ac910bfd5dfac4d16ab87df921411a983"></a>JOYPAD_ACCESSORY_ERROR_ABSENT&#160;</td><td class="fielddoc"><p>Accessory is absent. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga0b64bfb89fc2195628b65eb3ece31c70a06aa6899c02dccbf67a342dc7ce69175" name="gga0b64bfb89fc2195628b65eb3ece31c70a06aa6899c02dccbf67a342dc7ce69175"></a>JOYPAD_ACCESSORY_ERROR_CHECKSUM&#160;</td><td class="fielddoc"><p>Checksum error. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga0b64bfb89fc2195628b65eb3ece31c70a60b92217d9a04be9911a693a11289755" name="gga0b64bfb89fc2195628b65eb3ece31c70a60b92217d9a04be9911a693a11289755"></a>JOYPAD_ACCESSORY_ERROR_TRANSFER_PAK_STATUS_CHANGE&#160;</td><td class="fielddoc"><p>Transfer Pak status changed. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga0b64bfb89fc2195628b65eb3ece31c70aa656cc143b361b6b0c27be4e13b19cee" name="gga0b64bfb89fc2195628b65eb3ece31c70aa656cc143b361b6b0c27be4e13b19cee"></a>JOYPAD_ACCESSORY_ERROR_UNKNOWN&#160;</td><td class="fielddoc"><p>Unknown error. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga01fa3481cede49666c59b74003274524" name="ga01fa3481cede49666c59b74003274524"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga01fa3481cede49666c59b74003274524">&#9670;&#160;</a></span>joypad_accessory_xfer_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__joypad.html#ga01fa3481cede49666c59b74003274524">joypad_accessory_xfer_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type of transfer performed by <a class="el" href="group__joypad.html#ga66c3c56133810a75783b594b85bee28b" title="Read or write data from a Joypad accessory asynchronously.">joypad_accessory_xfer_async</a>. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga01fa3481cede49666c59b74003274524a8901c711a64622ba0c828e032202f031" name="gga01fa3481cede49666c59b74003274524a8901c711a64622ba0c828e032202f031"></a>JOYPAD_ACCESSORY_XFER_READ&#160;</td><td class="fielddoc"><p>Read operation. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga01fa3481cede49666c59b74003274524a62d148c8704e62b81fbe0f90f629292f" name="gga01fa3481cede49666c59b74003274524a62d148c8704e62b81fbe0f90f629292f"></a>JOYPAD_ACCESSORY_XFER_WRITE&#160;</td><td class="fielddoc"><p>Write operation. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="ga5ab433686bfefb61bb6fe0b5075a0fc1" name="ga5ab433686bfefb61bb6fe0b5075a0fc1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga5ab433686bfefb61bb6fe0b5075a0fc1">&#9670;&#160;</a></span>joypad_rumble_method_t</h2>
 
@@ -2321,12 +2371,12 @@ Position of the analog R trigger. (0, 255) <p>This value will be close to zero w
 <p>This function can perform a bulk transfer of data from a Joypad accessory. A bulk transfer can read or write any number of bytes from any starting address in the accessory, including misaligned addresses.</p>
 <p>It builds upon the lower level primitives <a class="el" href="group__joybus.html#ga4ebee442e458278436daa756d21c2f08" title="Synchronously perform a Joybus N64 accessory read command.">joybus_accessory_read</a> and <a class="el" href="group__joybus.html#gabfdc256e8162679fb5b7adc1e24a7827" title="Synchronously perform a Joybus N64 accessory write command.">joybus_accessory_write</a>, which are limited to 32-byte, aligned data blocks. To perform misaligned writes, this function will perform read-modify-write operations on the accessory when needed.</p>
 <p>This function can operate on any Joypad accessory.</p>
-<p>The joybus protocol for accessories includes a builtin checksum to detect corruptions on the wire (that can indeed happen during normal operation). This function will automatically retry the transfer in case of a checksum error (up to some hardcoded number of times) and then eventually fail with a JOYPAD_ACCESSORY_ERROR_CHECKSUM error. If you get this error, it might be useless to try again and you can just assume the connection to the accessory is electrically faulty.</p>
+<p>The joybus protocol for accessories includes a builtin checksum to detect corruptions on the wire (that can indeed happen during normal operation). This function will automatically retry the transfer in case of a checksum error (up to some hardcoded number of times) and then eventually fail with a <a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70a06aa6899c02dccbf67a342dc7ce69175">JOYPAD_ACCESSORY_ERROR_CHECKSUM</a> error. If you get this error, it might be useless to try again and you can just assume the connection to the accessory is electrically faulty.</p>
 <dl class="section note"><dt>Note</dt><dd>Multi-bank Controller Paks (with sizes &gt; 32 KiB), require an explicit bank switch operation to access data beyond the first 32 KiB. See <a class="el" href="group__joypad.html#ga16f4d256acc2406142196811dab0cd04" title="Select the active bank for a Controller Pak.">joypad_controller_pak_set_bank</a>; notice also that only 32 KiB at a time will be available so the valid address range for Controller Paks is 0x0000-0x7FFF.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">port</td><td>Joypad port number (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb" title="Joypad Port Numbers.">joypad_port_t</a>) </td></tr>
-    <tr><td class="paramname">xfer</td><td>Transfer direction (JOYPAD_ACCESSORY_XFER_READ or JOYPAD_ACCESSORY_XFER_WRITE) </td></tr>
+    <tr><td class="paramname">xfer</td><td>Transfer direction ( <a class="el" href="group__joypad.html#gga01fa3481cede49666c59b74003274524a8901c711a64622ba0c828e032202f031">JOYPAD_ACCESSORY_XFER_READ</a> or <a class="el" href="group__joypad.html#gga01fa3481cede49666c59b74003274524a62d148c8704e62b81fbe0f90f629292f">JOYPAD_ACCESSORY_XFER_WRITE</a>) </td></tr>
     <tr><td class="paramname">start_addr</td><td>Starting address in the accessory to read from, or write to. There is no alignment requirement for this address. </td></tr>
     <tr><td class="paramname">dst</td><td>Destination buffer to read accessory data into. </td></tr>
     <tr><td class="paramname">len</td><td>Number of bytes to read. Any number of bytes can be read. </td></tr>
@@ -2388,7 +2438,7 @@ Position of the analog R trigger. (0, 255) <p>This value will be close to zero w
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">port</td><td>Joypad port number (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb" title="Joypad Port Numbers.">joypad_port_t</a>) </td></tr>
-    <tr><td class="paramname">xfer</td><td>Transfer direction (JOYPAD_ACCESSORY_XFER_READ or JOYPAD_ACCESSORY_XFER_WRITE) </td></tr>
+    <tr><td class="paramname">xfer</td><td>Transfer direction (<a class="el" href="group__joypad.html#gga01fa3481cede49666c59b74003274524a8901c711a64622ba0c828e032202f031">JOYPAD_ACCESSORY_XFER_READ</a> or <a class="el" href="group__joypad.html#gga01fa3481cede49666c59b74003274524a62d148c8704e62b81fbe0f90f629292f">JOYPAD_ACCESSORY_XFER_WRITE</a>) </td></tr>
     <tr><td class="paramname">start_addr</td><td>Starting address in the accessory to read from. There is no alignment requirement for this address. </td></tr>
     <tr><td class="paramname">dst</td><td>Destination buffer to read accessory data into. </td></tr>
     <tr><td class="paramname">len</td><td>Number of bytes to read. Any number of bytes can be read. </td></tr>
@@ -2579,75 +2629,10 @@ Position of the analog R trigger. (0, 255) <p>This value will be close to zero w
 
 </div>
 </div>
-<a id="ga747d5d7970a91a239e86abbccf5433c7" name="ga747d5d7970a91a239e86abbccf5433c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga747d5d7970a91a239e86abbccf5433c7">&#9670;&#160;</a></span>joypad_accessory_write_async()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void joypad_accessory_write_async </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a>&#160;</td>
-          <td class="paramname"><em>port</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>start_addr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>src</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>len</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="group__joypad.html#gac6c1a8b7ec38b3bd7124a7c8f6951b7f">joypad_accessory_io_callback_t</a>&#160;</td>
-          <td class="paramname"><em>callback</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ctx</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Write data to a Joypad accessory asynchronously. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">port</td><td>Joypad port number (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb" title="Joypad Port Numbers.">joypad_port_t</a>) </td></tr>
-    <tr><td class="paramname">start_addr</td><td>Starting address in the accessory to write to. </td></tr>
-    <tr><td class="paramname">src</td><td>Source buffer of data to write to the accessory. </td></tr>
-    <tr><td class="paramname">len</td><td>Number of bytes to write. </td></tr>
-    <tr><td class="paramname">callback</td><td>Callback function to call when the write operation completes. </td></tr>
-    <tr><td class="paramname">ctx</td><td>Opaque pointer to pass to the callback function. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:30 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

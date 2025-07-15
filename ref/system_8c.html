@@ -147,6 +147,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8877deace0c63591fee0cc9c94d249d3" id="r_a8877deace0c63591fee0cc9c94d249d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a8877deace0c63591fee0cc9c94d249d3">close</a> (int fileno)</td></tr>
 <tr class="memdesc:a8877deace0c63591fee0cc9c94d249d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a file.  <br /></td></tr>
 <tr class="separator:a8877deace0c63591fee0cc9c94d249d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb8090da2a212e27317ea48ead1a19d6" id="r_aeb8090da2a212e27317ea48ead1a19d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#aeb8090da2a212e27317ea48ead1a19d6">write</a> (int file, char *ptr, int len)</td></tr>
+<tr class="memdesc:aeb8090da2a212e27317ea48ead1a19d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to a file.  <br /></td></tr>
+<tr class="separator:aeb8090da2a212e27317ea48ead1a19d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacca6d970a0153055aa8c962067cdfdf1" id="r_gacca6d970a0153055aa8c962067cdfdf1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#gacca6d970a0153055aa8c962067cdfdf1">attach_filesystem</a> (const char *const prefix, <a class="el" href="structfilesystem__t.html">filesystem_t</a> *filesystem)</td></tr>
 <tr class="memdesc:gacca6d970a0153055aa8c962067cdfdf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a filesystem with newlib.  <br /></td></tr>
 <tr class="separator:gacca6d970a0153055aa8c962067cdfdf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -222,9 +225,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a342c2eae35d44df768ec0634c76bf68b" id="r_a342c2eae35d44df768ec0634c76bf68b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a342c2eae35d44df768ec0634c76bf68b">ioctl</a> (int fd, unsigned long cmd, void *argp)</td></tr>
 <tr class="memdesc:a342c2eae35d44df768ec0634c76bf68b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform IO Control Request.  <br /></td></tr>
 <tr class="separator:a342c2eae35d44df768ec0634c76bf68b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb8090da2a212e27317ea48ead1a19d6" id="r_aeb8090da2a212e27317ea48ead1a19d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#aeb8090da2a212e27317ea48ead1a19d6">write</a> (int file, char *ptr, int len)</td></tr>
-<tr class="memdesc:aeb8090da2a212e27317ea48ead1a19d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to a file.  <br /></td></tr>
-<tr class="separator:aeb8090da2a212e27317ea48ead1a19d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1cc997e92371733ee54ac57dcc73c75" id="r_aa1cc997e92371733ee54ac57dcc73c75"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#aa1cc997e92371733ee54ac57dcc73c75">ftruncate</a> (int file, off_t length)</td></tr>
 <tr class="memdesc:aa1cc997e92371733ee54ac57dcc73c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Truncate a file to the specified length.  <br /></td></tr>
 <tr class="separator:aa1cc997e92371733ee54ac57dcc73c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -299,6 +299,9 @@ uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>__entropy_state</
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>newlib Interface Hooks </p>
+<dl class="section author"><dt>Author</dt><dd>Jennifer Taylor <a href="#" onclick="location.href='mai'+'lto:'+'dra'+'go'+'nmi'+'nd'+'ed@'+'dr'+'ago'+'nm'+'ind'+'ed'+'.co'+'m'; return false;">drago<span class="obfuscator">.nosp@m.</span>nmin<span class="obfuscator">.nosp@m.</span>ded@d<span class="obfuscator">.nosp@m.</span>rago<span class="obfuscator">.nosp@m.</span>nmind<span class="obfuscator">.nosp@m.</span>ed.c<span class="obfuscator">.nosp@m.</span>om</a> </dd>
+<dd>
+Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
 </div><hr/><h2 class="groupheader">Data Structure Documentation</h2>
 <a name="structfs__mapping__t" id="structfs__mapping__t"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#structfs__mapping__t">&#9670;&#160;</a></span>fs_mapping_t</h2>
@@ -441,6 +444,51 @@ Filesystem callback pointers. </td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success or a negative value on error. </dd></dl>
+
+</div>
+</div>
+<a id="aeb8090da2a212e27317ea48ead1a19d6" name="aeb8090da2a212e27317ea48ead1a19d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb8090da2a212e27317ea48ead1a19d6">&#9670;&#160;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int write </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write data to a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>File handle </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>Pointer to buffer to write to file </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Length of data in bytes to be written</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The actual number of bytes written, or a negative value on error. </dd></dl>
 
 </div>
 </div>
@@ -1274,51 +1322,6 @@ Filesystem callback pointers. </td></tr>
 
 </div>
 </div>
-<a id="aeb8090da2a212e27317ea48ead1a19d6" name="aeb8090da2a212e27317ea48ead1a19d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb8090da2a212e27317ea48ead1a19d6">&#9670;&#160;</a></span>write()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int write </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>file</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>ptr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Write data to a file. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>File handle </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>Pointer to buffer to write to file </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Length of data in bytes to be written</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>The actual number of bytes written, or a negative value on error. </dd></dl>
-
-</div>
-</div>
 <a id="aa1cc997e92371733ee54ac57dcc73c75" name="aa1cc997e92371733ee54ac57dcc73c75"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa1cc997e92371733ee54ac57dcc73c75">&#9670;&#160;</a></span>ftruncate()</h2>
 
@@ -1797,7 +1800,7 @@ Filesystem callback pointers. </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:30 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

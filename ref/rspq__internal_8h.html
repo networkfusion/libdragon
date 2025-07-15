@@ -174,12 +174,15 @@ Variables</h2></td></tr>
 volatile int&#160;</td><td class="memItemRight" valign="bottom"><b>__rspq_syncpoints_done</b> [4]</td></tr>
 <tr class="memdesc:a87457602fcd53e23e8afb3c517b39070"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID of the last syncpoint reached by RSP (plus padding). <br /></td></tr>
 <tr class="separator:a87457602fcd53e23e8afb3c517b39070"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb63e6d2192e36555934f19f1a936fb0" id="r_aeb63e6d2192e36555934f19f1a936fb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrsp__ucode__t.html">rsp_ucode_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rspq__internal_8h.html#aeb63e6d2192e36555934f19f1a936fb0">rspq_overlay_ucodes</a> [RSPQ_MAX_OVERLAYS]</td></tr>
+<tr class="memitem:aeb63e6d2192e36555934f19f1a936fb0" id="r_aeb63e6d2192e36555934f19f1a936fb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrsp__ucode__t.html">rsp_ucode_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rspq__internal_8h.html#aeb63e6d2192e36555934f19f1a936fb0">rspq_overlay_ucodes</a> [<a class="el" href="rspq__constants_8h.html#aa188159bdb85fd42d9be0d348e746954">RSPQ_MAX_OVERLAYS</a>]</td></tr>
 <tr class="memdesc:aeb63e6d2192e36555934f19f1a936fb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registered overlays.  <br /></td></tr>
 <tr class="separator:aeb63e6d2192e36555934f19f1a936fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>RSP Command queue. </p>
+<dl class="section author"><dt>Author</dt><dd>Dennis Heinze <a href="#" onclick="location.href='mai'+'lto:'+'den'+'ni'+'sjp'+'.h'+'ein'+'ze'+'@gm'+'ai'+'l.c'+'om'; return false;">denni<span class="obfuscator">.nosp@m.</span>sjp.<span class="obfuscator">.nosp@m.</span>heinz<span class="obfuscator">.nosp@m.</span>e@gm<span class="obfuscator">.nosp@m.</span>ail.c<span class="obfuscator">.nosp@m.</span>om</a> </dd>
+<dd>
+Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
 </div><hr/><h2 class="groupheader">Data Structure Documentation</h2>
 <a name="structrspq__block__t" id="structrspq__block__t"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#structrspq__block__t">&#9670;&#160;</a></span>rspq_block_t</h2>
@@ -284,13 +287,13 @@ other_modes</td>
 <tr><td class="fieldtype">
 <a id="a6510388b74e65304e9ae45bd16375e30" name="a6510388b74e65304e9ae45bd16375e30"></a>uint32_t</td>
 <td class="fieldname">
-data_rdram[RSPQ_MAX_OVERLAYS]</td>
+data_rdram[<a class="el" href="rspq__constants_8h.html#aa188159bdb85fd42d9be0d348e746954">RSPQ_MAX_OVERLAYS</a>]</td>
 <td class="fielddoc">
 Packed RDRAM address of data segment and size. </td></tr>
 <tr><td class="fieldtype">
 <a id="aa411c2f469cd067b2db2662e111792a7" name="aa411c2f469cd067b2db2662e111792a7"></a>uint8_t</td>
 <td class="fieldname">
-idmap[RSPQ_MAX_OVERLAYS]</td>
+idmap[<a class="el" href="rspq__constants_8h.html#aa188159bdb85fd42d9be0d348e746954">RSPQ_MAX_OVERLAYS</a>]</td>
 <td class="fielddoc">
 Map of overlay IDs to base IDs. </td></tr>
 </table>
@@ -351,7 +354,7 @@ Overlay table. </td></tr>
 <tr><td class="fieldtype">
 <a id="a4c630b61de8b37527faef64f92972969" name="a4c630b61de8b37527faef64f92972969"></a>uint32_t</td>
 <td class="fieldname">
-rspq_pointer_stack[RSPQ_MAX_BLOCK_NESTING_LEVEL]</td>
+rspq_pointer_stack[<a class="el" href="rspq__constants_8h.html#ab616c52970b2e421f30a705b72c85046">RSPQ_MAX_BLOCK_NESTING_LEVEL</a>]</td>
 <td class="fielddoc">
 Pointer stack used by <a class="el" href="rspq__internal_8h.html#afa231099d07583c3ed0981e0bb665f55a3bcc1ebb86dbfab31f34d0153d3a9a14" title="RSPQ command: Call a block.">RSPQ_CMD_CALL</a> and <a class="el" href="rspq__internal_8h.html#afa231099d07583c3ed0981e0bb665f55ae3aa621c30e8ea451128c8ff98d14f44" title="RSPQ command: Return from a block.">RSPQ_CMD_RET</a>. </td></tr>
 <tr><td class="fieldtype">
@@ -610,7 +613,7 @@ false if there are no more callbacks to be processed </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structrsp__ucode__t.html">rsp_ucode_t</a>* rspq_overlay_ucodes[RSPQ_MAX_OVERLAYS]</td>
+          <td class="memname"><a class="el" href="structrsp__ucode__t.html">rsp_ucode_t</a>* rspq_overlay_ucodes[<a class="el" href="rspq__constants_8h.html#aa188159bdb85fd42d9be0d348e746954">RSPQ_MAX_OVERLAYS</a>]</td>
         </tr>
       </table>
   </td>
@@ -628,7 +631,7 @@ false if there are no more callbacks to be processed </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:30 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

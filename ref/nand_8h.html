@@ -163,6 +163,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>nand_init</b> (void)<
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>iQue NAND (flash) support </p>
+<dl class="section author"><dt>Author</dt><dd>Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
 <p>This module contains low-level functions to perform read/write operations on the iQue flash memory (NAND). The flash memory is used to store the operating system and the games. Contents in the flash are arranged using a custom filesystem called BBFS, which is implemented in the <a class="el" href="bbfs_8h.html" title="iQue BBFS flash filesytem">bbfs.h</a> module. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
 <a id="a342bd834284792fb6d89d45dcac24ec0" name="a342bd834284792fb6d89d45dcac24ec0"></a>
@@ -488,7 +489,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>nand_init</b> (void)<
 <p>On iQue, a special hardware component called the ATB (Address Translation Buffer?) allows to memory map blocks of flash to the PI bus. This allows for instance for a ROM to be mapped at 0x10000000, which is required for booting them.</p>
 <p>This function configures a specific mapping from a sequence of blocks to a PI address area. The flash blocks can be non consecutive, though there are some limits to the number of ATB entries that can be configured, so it is better to use consecutive blocks if possible.</p>
 <p>If multiple calls to <a class="el" href="nand_8h.html#a501ee9a86770b5273323b9cd0e771215" title="Memory-map flash blocks to PI address space via ATB.">nand_mmap</a> are done, they must be done in increasing <em>pi_address</em> order.</p>
-<p>The BBFS filesystem is configured to use consecutive blocks as much as possible for large files (&gt; 512 KiB). To map a file from a NAND formatted with the BBFS filesystem, you can use bbfs_get_file_blocks to get the list of blocks to map.</p>
+<p>The BBFS filesystem is configured to use consecutive blocks as much as possible for large files (&gt; 512 KiB). To map a file from a NAND formatted with the BBFS filesystem, you can use <a class="el" href="bbfs_8c.html#af6b5d98c56a99650951b42f1d1631383" title="Return the indices of NAND blocks that contain the file data.">bbfs_get_file_blocks</a> to get the list of blocks to map.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pi_address</td><td>PI address to map the blocks to </td></tr>
@@ -568,7 +569,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>nand_init</b> (void)<
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:29 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

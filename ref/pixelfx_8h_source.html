@@ -82,31 +82,31 @@ $(document).ready(function() { init_codefold(0); });
 </div><!--header-->
 <div class="contents">
 <a href="pixelfx_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef __LIBDRAGON_PIXELFX_H</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define __LIBDRAGON_PIXELFX_H</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__pixelfx.html#ga0b22641703bb470366fee28aa65fd752">pixelfx_send_game_id</a>(uint64_t rom_check_code, uint8_t media_format, uint8_t region_code);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__pixelfx.html#ga006ff8ceed83abc6b2d02537bd7bc54c">pixelfx_clear_game_id</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
- <span class="comment">/* pixelfx */</span><div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="agroup__pixelfx_html_ga006ff8ceed83abc6b2d02537bd7bc54c"><div class="ttname"><a href="group__pixelfx.html#ga006ff8ceed83abc6b2d02537bd7bc54c">pixelfx_clear_game_id</a></div><div class="ttdeci">void pixelfx_clear_game_id(void)</div><div class="ttdoc">Notifies the PixelFX console mod to clear the current Game ID.</div><div class="ttdef"><b>Definition</b> pixelfx.c:40</div></div>
-<div class="ttc" id="agroup__pixelfx_html_ga0b22641703bb470366fee28aa65fd752"><div class="ttname"><a href="group__pixelfx.html#ga0b22641703bb470366fee28aa65fd752">pixelfx_send_game_id</a></div><div class="ttdeci">void pixelfx_send_game_id(uint64_t rom_check_code, uint8_t media_format, uint8_t region_code)</div><div class="ttdoc">Notifies the PixelFX console mod of the current Game ID.</div><div class="ttdef"><b>Definition</b> pixelfx.c:17</div></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef __LIBDRAGON_PIXELFX_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define __LIBDRAGON_PIXELFX_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__pixelfx.html#ga0b22641703bb470366fee28aa65fd752">pixelfx_send_game_id</a>(uint64_t rom_check_code, uint8_t media_format, uint8_t region_code);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__pixelfx.html#ga006ff8ceed83abc6b2d02537bd7bc54c">pixelfx_clear_game_id</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+ <span class="comment">/* pixelfx */</span><div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__pixelfx_html_ga006ff8ceed83abc6b2d02537bd7bc54c"><div class="ttname"><a href="group__pixelfx.html#ga006ff8ceed83abc6b2d02537bd7bc54c">pixelfx_clear_game_id</a></div><div class="ttdeci">void pixelfx_clear_game_id(void)</div><div class="ttdoc">Notifies the PixelFX console mod to clear the current Game ID.</div><div class="ttdef"><b>Definition</b> pixelfx.c:41</div></div>
+<div class="ttc" id="agroup__pixelfx_html_ga0b22641703bb470366fee28aa65fd752"><div class="ttname"><a href="group__pixelfx.html#ga0b22641703bb470366fee28aa65fd752">pixelfx_send_game_id</a></div><div class="ttdeci">void pixelfx_send_game_id(uint64_t rom_check_code, uint8_t media_format, uint8_t region_code)</div><div class="ttdoc">Notifies the PixelFX console mod of the current Game ID.</div><div class="ttdef"><b>Definition</b> pixelfx.c:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:29 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -518,12 +518,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>sys_bbplayer</b> (voi
 <tr class="memitem:ga3bbb609a58f6025ea3b8cb406ca4d823" id="r_ga3bbb609a58f6025ea3b8cb406ca4d823"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga3bbb609a58f6025ea3b8cb406ca4d823">inst_cache_invalidate_all</a> (void)</td></tr>
 <tr class="memdesc:ga3bbb609a58f6025ea3b8cb406ca4d823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force an instruction cache invalidate over whole memory.  <br /></td></tr>
 <tr class="separator:ga3bbb609a58f6025ea3b8cb406ca4d823"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4496cbe7966a01738242c1b214028eb0" id="r_ga4496cbe7966a01738242c1b214028eb0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga4496cbe7966a01738242c1b214028eb0">get_memory_size</a> ()</td></tr>
-<tr class="memdesc:ga4496cbe7966a01738242c1b214028eb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get amount of available memory.  <br /></td></tr>
-<tr class="separator:ga4496cbe7966a01738242c1b214028eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga28ba352e296d379426531772b874046d" id="r_ga28ba352e296d379426531772b874046d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga28ba352e296d379426531772b874046d">is_memory_expanded</a> ()</td></tr>
-<tr class="memdesc:ga28ba352e296d379426531772b874046d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is expansion pak in use.  <br /></td></tr>
-<tr class="separator:ga28ba352e296d379426531772b874046d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga20208f76196865aba3c188089187aeb5" id="r_ga20208f76196865aba3c188089187aeb5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga20208f76196865aba3c188089187aeb5">get_memory_size</a> (void)</td></tr>
+<tr class="memdesc:ga20208f76196865aba3c188089187aeb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get amount of available memory.  <br /></td></tr>
+<tr class="separator:ga20208f76196865aba3c188089187aeb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7079dd36260ff330df1bd83fab7cfca" id="r_gad7079dd36260ff330df1bd83fab7cfca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#gad7079dd36260ff330df1bd83fab7cfca">is_memory_expanded</a> (void)</td></tr>
+<tr class="memdesc:gad7079dd36260ff330df1bd83fab7cfca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is expansion pak in use.  <br /></td></tr>
+<tr class="separator:gad7079dd36260ff330df1bd83fab7cfca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga536cf32fcf76fe117b6964c9d09004a2" id="r_ga536cf32fcf76fe117b6964c9d09004a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga536cf32fcf76fe117b6964c9d09004a2">assert_memory_expanded</a> (void)</td></tr>
+<tr class="memdesc:ga536cf32fcf76fe117b6964c9d09004a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assert that the expansion pak is present.  <br /></td></tr>
+<tr class="separator:ga536cf32fcf76fe117b6964c9d09004a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga26eb5aa0448bf9784f1cf3f9fb300192" id="r_ga26eb5aa0448bf9784f1cf3f9fb300192"><td class="memItemLeft" align="right" valign="top"><a id="ga26eb5aa0448bf9784f1cf3f9fb300192" name="ga26eb5aa0448bf9784f1cf3f9fb300192"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>sys_get_heap_stats</b> (<a class="el" href="group__n64sys.html#structheap__stats__t">heap_stats_t</a> *stats)</td></tr>
 <tr class="memdesc:ga26eb5aa0448bf9784f1cf3f9fb300192"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return information about memory usage of the heap. <br /></td></tr>
@@ -1347,7 +1350,7 @@ Used heap size in bytes. </td></tr>
 <div class="line">    <span class="keyword">const</span> <span class="keyword">volatile</span> <span class="keywordtype">void</span> *_addrp = (_addr); \</div>
 <div class="line">    (((<a class="code hl_typedef" href="group__n64sys.html#gaaf5dda50732dd08c2496ce37ad95b0cd">phys_addr_t</a>)(_addrp))&amp;~0xE0000000); \</div>
 <div class="line">})</div>
-<div class="ttc" id="agroup__n64sys_html_gaaf5dda50732dd08c2496ce37ad95b0cd"><div class="ttname"><a href="group__n64sys.html#gaaf5dda50732dd08c2496ce37ad95b0cd">phys_addr_t</a></div><div class="ttdeci">uint32_t phys_addr_t</div><div class="ttdoc">A physical address on the MIPS bus.</div><div class="ttdef"><b>Definition</b> n64sys.h:71</div></div>
+<div class="ttc" id="agroup__n64sys_html_gaaf5dda50732dd08c2496ce37ad95b0cd"><div class="ttname"><a href="group__n64sys.html#gaaf5dda50732dd08c2496ce37ad95b0cd">phys_addr_t</a></div><div class="ttdeci">uint32_t phys_addr_t</div><div class="ttdoc">A physical address on the MIPS bus.</div><div class="ttdef"><b>Definition</b> n64sys.h:75</div></div>
 </div><!-- fragment -->
 <p>Return the physical memory address for a given virtual address (pointer) </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -2224,8 +2227,8 @@ Used heap size in bytes. </td></tr>
 
 </div>
 </div>
-<a id="ga4496cbe7966a01738242c1b214028eb0" name="ga4496cbe7966a01738242c1b214028eb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4496cbe7966a01738242c1b214028eb0">&#9670;&#160;</a></span>get_memory_size()</h2>
+<a id="ga20208f76196865aba3c188089187aeb5" name="ga20208f76196865aba3c188089187aeb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga20208f76196865aba3c188089187aeb5">&#9670;&#160;</a></span>get_memory_size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2233,6 +2236,7 @@ Used heap size in bytes. </td></tr>
         <tr>
           <td class="memname">int get_memory_size </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2244,8 +2248,8 @@ Used heap size in bytes. </td></tr>
 
 </div>
 </div>
-<a id="ga28ba352e296d379426531772b874046d" name="ga28ba352e296d379426531772b874046d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga28ba352e296d379426531772b874046d">&#9670;&#160;</a></span>is_memory_expanded()</h2>
+<a id="gad7079dd36260ff330df1bd83fab7cfca" name="gad7079dd36260ff330df1bd83fab7cfca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad7079dd36260ff330df1bd83fab7cfca">&#9670;&#160;</a></span>is_memory_expanded()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2253,6 +2257,7 @@ Used heap size in bytes. </td></tr>
         <tr>
           <td class="memname">bool is_memory_expanded </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2260,9 +2265,31 @@ Used heap size in bytes. </td></tr>
 </div><div class="memdoc">
 
 <p>Is expansion pak in use. </p>
-<p>Checks whether the maximum available memory has been expanded to 8 MiB</p>
+<p>Checks whether the maximum available memory has been expanded to 8 MiB. If your application needs to the use of the expansion pak, you should provide an error message to the user if it is not present. Libdragon offers a function to do this, <a class="el" href="group__n64sys.html#ga536cf32fcf76fe117b6964c9d09004a2" title="Assert that the expansion pak is present.">assert_memory_expanded</a>, which will emit an error</p>
 <dl class="section return"><dt>Returns</dt><dd>true if expansion pak detected, false otherwise.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>On iQue, this function returns true only if the game has been assigned exactly 8 MiB of RAM. </dd></dl>
+
+</div>
+</div>
+<a id="ga536cf32fcf76fe117b6964c9d09004a2" name="ga536cf32fcf76fe117b6964c9d09004a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga536cf32fcf76fe117b6964c9d09004a2">&#9670;&#160;</a></span>assert_memory_expanded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void assert_memory_expanded </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assert that the expansion pak is present. </p>
+<p>This function will emit an error screen if the expansion pak is not present, and will halt the system. It should be called in main() to ensure that the expansion pak is present before proceeding with the rest of the application. This enforces a good pattern to make the application fails early with a proper error message (rather than a crash) if the expansion pak is not present.</p>
+<p>If you want to provide your own graphical error screen, use <a class="el" href="group__n64sys.html#gad7079dd36260ff330df1bd83fab7cfca" title="Is expansion pak in use.">is_memory_expanded</a> instead to check if the expansion pak is present, and then show your own error screen if it is not present. </p>
 
 </div>
 </div>
@@ -2582,7 +2609,7 @@ Used heap size in bytes. </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:30 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

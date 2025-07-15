@@ -80,7 +80,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Directory handling.  
+<p>Directory traversal, pattern matching, and globbing utilities.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
@@ -104,7 +104,8 @@ Functions</h2></td></tr>
 <tr class="separator:a9e23f5bba8b68bb4b7b99037983797c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Directory handling. </p>
+<div class="textblock"><p>Directory traversal, pattern matching, and globbing utilities. </p>
+<dl class="section author"><dt>Author</dt><dd>Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="ac70fd950d2eec32369d0f2fb31971a1c" name="ac70fd950d2eec32369d0f2fb31971a1c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac70fd950d2eec32369d0f2fb31971a1c">&#9670;&#160;</a></span>fnmatch_result_t</h2>
@@ -270,15 +271,16 @@ false The filename does not match the pattern </dd></dl>
 <p>This function walks a directory tree searching for files and directories that match a pattern. The pattern is a simplified version of fnmatch; see <a class="el" href="dir_8h.html#a27f3762885ec676b0b1c63be165ceb52" title="Check if a filename matches a pattern.">dir_fnmatch</a> for more information about the supported special characters.</p>
 <p>The callback function is called for each file and directory that matches the pattern. The callback can then decide how to proceed using its return value (see <a class="el" href="dir_8h.html#a17aa9fb20b0bab90ccd8e3a8d822fb23" title="Callback function for directory walking.">dir_walk_callback_t</a> for more information).</p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> mycb(<span class="keyword">const</span> <span class="keywordtype">char</span> *fn, <a class="code hl_struct" href="group__system.html#structdir__t">dir_t</a> *dir, <span class="keywordtype">void</span> *data) {</div>
-<div class="line">   debugf(<span class="stringliteral">&quot;Found sprite file: %s\n&quot;</span>, fn);</div>
+<div class="line">   <a class="code hl_define" href="debug_8h.html#aa3e8be416ef1525cfd3230204b56d184">debugf</a>(<span class="stringliteral">&quot;Found sprite file: %s\n&quot;</span>, fn);</div>
 <div class="line">   <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="dir_8h.html#a2f80701c36e79c0640d91c788feee0b3a9eb7f52f27cb6d18cf287ab7b0403f5f">DIR_WALK_CONTINUE</a>;</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Search for all files with a .sprite extension in all directories under rom:/</span></div>
 <div class="line"><a class="code hl_function" href="dir_8c.html#a9e23f5bba8b68bb4b7b99037983797c9">dir_glob</a>(<span class="stringliteral">&quot;**/*.sprite&quot;</span>, <span class="stringliteral">&quot;rom:/&quot;</span>, mycb, NULL);</div>
-<div class="ttc" id="adir_8c_html_a9e23f5bba8b68bb4b7b99037983797c9"><div class="ttname"><a href="dir_8c.html#a9e23f5bba8b68bb4b7b99037983797c9">dir_glob</a></div><div class="ttdeci">int dir_glob(const char *pattern, const char *path, dir_walk_callback_t cb, void *data)</div><div class="ttdoc">Glob a directory tree using a pattern.</div><div class="ttdef"><b>Definition</b> dir.c:169</div></div>
-<div class="ttc" id="adir_8h_html_a2f80701c36e79c0640d91c788feee0b3a9eb7f52f27cb6d18cf287ab7b0403f5f"><div class="ttname"><a href="dir_8h.html#a2f80701c36e79c0640d91c788feee0b3a9eb7f52f27cb6d18cf287ab7b0403f5f">DIR_WALK_CONTINUE</a></div><div class="ttdeci">@ DIR_WALK_CONTINUE</div><div class="ttdoc">Continue walking.</div><div class="ttdef"><b>Definition</b> dir.h:92</div></div>
-<div class="ttc" id="agroup__system_html_structdir__t"><div class="ttname"><a href="group__system.html#structdir__t">dir_t</a></div><div class="ttdoc">Directory entry structure.</div><div class="ttdef"><b>Definition</b> dir.h:35</div></div>
+<div class="ttc" id="adebug_8h_html_aa3e8be416ef1525cfd3230204b56d184"><div class="ttname"><a href="debug_8h.html#aa3e8be416ef1525cfd3230204b56d184">debugf</a></div><div class="ttdeci">#define debugf(msg,...)</div><div class="ttdoc">Write a message to the debugging channel.</div><div class="ttdef"><b>Definition</b> debug.h:181</div></div>
+<div class="ttc" id="adir_8c_html_a9e23f5bba8b68bb4b7b99037983797c9"><div class="ttname"><a href="dir_8c.html#a9e23f5bba8b68bb4b7b99037983797c9">dir_glob</a></div><div class="ttdeci">int dir_glob(const char *pattern, const char *path, dir_walk_callback_t cb, void *data)</div><div class="ttdoc">Glob a directory tree using a pattern.</div><div class="ttdef"><b>Definition</b> dir.c:170</div></div>
+<div class="ttc" id="adir_8h_html_a2f80701c36e79c0640d91c788feee0b3a9eb7f52f27cb6d18cf287ab7b0403f5f"><div class="ttname"><a href="dir_8h.html#a2f80701c36e79c0640d91c788feee0b3a9eb7f52f27cb6d18cf287ab7b0403f5f">DIR_WALK_CONTINUE</a></div><div class="ttdeci">@ DIR_WALK_CONTINUE</div><div class="ttdoc">Continue walking.</div><div class="ttdef"><b>Definition</b> dir.h:94</div></div>
+<div class="ttc" id="agroup__system_html_structdir__t"><div class="ttname"><a href="group__system.html#structdir__t">dir_t</a></div><div class="ttdoc">Directory entry structure.</div><div class="ttdef"><b>Definition</b> dir.h:37</div></div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>the glob pattern is matched against pathnames <b>relative</b> to the starting directory. For example, if you start the search at "rom:/sprites", the pattern "hero/*.sprite" will match all files with a .sprite extension in the "rom:/sprites/hero" directory.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -300,7 +302,7 @@ false The filename does not match the pattern </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:30 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

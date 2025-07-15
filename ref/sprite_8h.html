@@ -157,6 +157,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>sprite_free</b> (<a c
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>2D Graphics </p>
+<dl class="section author"><dt>Author</dt><dd>Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
 </div><hr/><h2 class="groupheader">Data Structure Documentation</h2>
 <a name="structsprite__t" id="structsprite__t"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#structsprite__t">&#9670;&#160;</a></span>sprite_t</h2>
@@ -173,7 +174,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>sprite_free</b> (<a c
 <p>A "sprite" (as saved in a <code>.sprite</code> file) is a 2D image with metadata attached to them to facilitate drawing it onto N64.</p>
 <p>Despite the name, a libdragon sprite is basically the basic format to handle assets for images. It is commonly used for handling textures, full screen images like splash screens, tile maps, font pictures, and even "real" 2D sprites.</p>
 <p>If the sprite uses a color-indexed format like <a class="el" href="surface_8h.html#a01f43f3d6c80a7658bf729bfaf3136e1ae7c884ef15b16d8bb1fe78d46aa209c4" title="Format CI4: color index 4-bit (paletted, 2 indices per byte)">FMT_CI4</a> or <a class="el" href="surface_8h.html#a01f43f3d6c80a7658bf729bfaf3136e1a1d1f3cf5eb79947c79274c2a353e86aa" title="Format CI8: color index 8-bit (paletted, 1 index per byte)">FMT_CI8</a>, the sprite contains also the corresponding palette.</p>
-<p>To convert an image file to libdragon's sprite format, use the mksprite tool. To load a sprite into memory, use sprite_load. </p>
+<p>To convert an image file to libdragon's sprite format, use the mksprite tool. To load a sprite into memory, use <a class="el" href="sprite_8c.html#a746970338ac3f8db984b4f08fc6e9a21" title="Load a sprite from a filesystem (eg: ROM)">sprite_load</a>. </p>
 </div><table class="fieldtable">
 <tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
@@ -237,7 +238,7 @@ Start of graphics data. </td></tr>
 </div><div class="memdoc">
 <div class="textblock"><p>Sprite detail texture information structure. </p>
 <p>A "detail texture" is a 2D image with metadata attached to it to increase the perceived resolution of the main sprite when rendering with little to no additional TMEM usage.</p>
-<p>If the sprite uses a detail texture, its information can be retreived using the sprite_get_detail_pixels function.</p>
+<p>If the sprite uses a detail texture, its information can be retreived using the <a class="el" href="sprite_8c.html#a3a867668cd0119fe7182e992698d1193" title="Create a surface_t pointing to the contents of a detail texture.">sprite_get_detail_pixels</a> function.</p>
 <p>To include a detail texture to libdragon's sprite format, use the mksprite tool with &ndash;detail argument.</p>
 <p><a class="el" href="rdpq__sprite_8c.html#a4455ad310d3a18a04c2ffee53dd0f944" title="Upload a sprite to TMEM, making it ready for drawing.">rdpq_sprite_upload</a> automatically uploads detail textures associated with the sprite. </p>
 </div><table class="fieldtable">
@@ -307,7 +308,7 @@ Various flags, including texture format. </td></tr>
 
 <p>Load a sprite from a filesystem (eg: ROM) </p>
 <p>This function loads a full sprite from a filesystem. Notice that there is no streaming support, so the file is fully loaded into RDRAM, in its final uncompressed format.</p>
-<p>sprite_load internally uses the asset API (asset_load), so the sprite file is transparently uncompressed if needed.</p>
+<p>sprite_load internally uses the asset API (<a class="el" href="asset_8c.html#abfc5939446d9920b884df034e89428a9" title="Load an asset file (possibly uncompressing it)">asset_load</a>), so the sprite file is transparently uncompressed if needed.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fn</td><td>Filename of the sprite, including filesystem specifier. For instance: "rom:/hero.sprite" to load from DFS. </td></tr>
@@ -716,7 +717,7 @@ Various flags, including texture format. </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:30 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

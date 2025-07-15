@@ -82,49 +82,49 @@ $(document).ready(function() { init_codefold(0); });
 </div><!--header-->
 <div class="contents">
 <a href="kirq_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef LIBDRAGON_KERNEL_KIRQ_H</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define LIBDRAGON_KERNEL_KIRQ_H</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">typedef</span> <span class="keyword">struct </span>kcond_s <a class="code hl_struct" href="group__kernel.html#structkcond__t">kcond_t</a>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="kirq_8h.html">   34</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    int64_t counter;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_struct" href="group__kernel.html#structkcond__t">kcond_t</a> *cond;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>} <a class="code hl_struct" href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#ifndef LIBDRAGON_KERNEL_KIRQ_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#define LIBDRAGON_KERNEL_KIRQ_H</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">typedef</span> <span class="keyword">struct </span>kcond_s <a class="code hl_struct" href="group__kernel.html#structkcond__t">kcond_t</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="kirq_8h.html">   35</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    int64_t counter;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_struct" href="group__kernel.html#structkcond__t">kcond_t</a> *cond;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>} <a class="code hl_struct" href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a>;</div>
 </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><a class="code hl_struct" href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a> <a class="code hl_function" href="kirq_8h.html#a97667455fbfa1d65db29c1a29496e410">kirq_begin_wait_sp</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><a class="code hl_struct" href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a> <a class="code hl_function" href="kirq_8h.html#acb9afe24c2e0bffae112ae84063834d9">kirq_begin_wait_dp</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><a class="code hl_struct" href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a> <a class="code hl_function" href="kirq_8h.html#a671a58e5dc3b6b74b86929c0a165e828">kirq_begin_wait_si</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><a class="code hl_struct" href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a> <a class="code hl_function" href="kirq_8h.html#af0cc4b3e819781186c5ef2935e95990a">kirq_begin_wait_ai</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><a class="code hl_struct" href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a> <a class="code hl_function" href="kirq_8h.html#a521279e5980a25ea0ebf2d3cc6c7e14e">kirq_begin_wait_vi</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><a class="code hl_struct" href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a> <a class="code hl_function" href="kirq_8h.html#a484c9a95ba2ea3d9618b395ab3c70ec9">kirq_begin_wait_pi</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keywordtype">void</span> <a class="code hl_function" href="kirq_8h.html#a2941dd79a32492534284f70f8823bc64">kirq_wait</a>(<a class="code hl_struct" href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a> *<a class="code hl_function" href="system_8c.html#a6655447bab00753d59759423bf28e22e">wait</a>);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="agroup__kernel_html_structkcond__t"><div class="ttname"><a href="group__kernel.html#structkcond__t">kcond_t</a></div><div class="ttdoc">A condition variable for synchronization.</div><div class="ttdef"><b>Definition</b> kernel.h:128</div></div>
-<div class="ttc" id="akirq_8h_html_a2941dd79a32492534284f70f8823bc64"><div class="ttname"><a href="kirq_8h.html#a2941dd79a32492534284f70f8823bc64">kirq_wait</a></div><div class="ttdeci">void kirq_wait(kirq_wait_t *wait)</div><div class="ttdoc">Wait until the interrupt is triggered.</div><div class="ttdef"><b>Definition</b> kirq.c:74</div></div>
-<div class="ttc" id="akirq_8h_html_a484c9a95ba2ea3d9618b395ab3c70ec9"><div class="ttname"><a href="kirq_8h.html#a484c9a95ba2ea3d9618b395ab3c70ec9">kirq_begin_wait_pi</a></div><div class="ttdeci">kirq_wait_t kirq_begin_wait_pi(void)</div><div class="ttdoc">Create an kirq wait object for PI interrupts.</div><div class="ttdef"><b>Definition</b> kirq.c:66</div></div>
-<div class="ttc" id="akirq_8h_html_a521279e5980a25ea0ebf2d3cc6c7e14e"><div class="ttname"><a href="kirq_8h.html#a521279e5980a25ea0ebf2d3cc6c7e14e">kirq_begin_wait_vi</a></div><div class="ttdeci">kirq_wait_t kirq_begin_wait_vi(void)</div><div class="ttdoc">Create an kirq wait object for VI interrupts.</div><div class="ttdef"><b>Definition</b> kirq.c:58</div></div>
-<div class="ttc" id="akirq_8h_html_a671a58e5dc3b6b74b86929c0a165e828"><div class="ttname"><a href="kirq_8h.html#a671a58e5dc3b6b74b86929c0a165e828">kirq_begin_wait_si</a></div><div class="ttdeci">kirq_wait_t kirq_begin_wait_si(void)</div><div class="ttdoc">Create an kirq wait object for SI interrupts.</div><div class="ttdef"><b>Definition</b> kirq.c:42</div></div>
-<div class="ttc" id="akirq_8h_html_a97667455fbfa1d65db29c1a29496e410"><div class="ttname"><a href="kirq_8h.html#a97667455fbfa1d65db29c1a29496e410">kirq_begin_wait_sp</a></div><div class="ttdeci">kirq_wait_t kirq_begin_wait_sp(void)</div><div class="ttdoc">Create an kirq wait object for SP interrupts.</div><div class="ttdef"><b>Definition</b> kirq.c:26</div></div>
-<div class="ttc" id="akirq_8h_html_acb9afe24c2e0bffae112ae84063834d9"><div class="ttname"><a href="kirq_8h.html#acb9afe24c2e0bffae112ae84063834d9">kirq_begin_wait_dp</a></div><div class="ttdeci">kirq_wait_t kirq_begin_wait_dp(void)</div><div class="ttdoc">Create an kirq wait object for DP interrupts.</div><div class="ttdef"><b>Definition</b> kirq.c:34</div></div>
-<div class="ttc" id="akirq_8h_html_af0cc4b3e819781186c5ef2935e95990a"><div class="ttname"><a href="kirq_8h.html#af0cc4b3e819781186c5ef2935e95990a">kirq_begin_wait_ai</a></div><div class="ttdeci">kirq_wait_t kirq_begin_wait_ai(void)</div><div class="ttdoc">Create an kirq wait object for AI interrupts.</div><div class="ttdef"><b>Definition</b> kirq.c:50</div></div>
-<div class="ttc" id="akirq_8h_html_structkirq__wait__t"><div class="ttname"><a href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a></div><div class="ttdoc">Kirq waiting structure.</div><div class="ttdef"><b>Definition</b> kirq.h:34</div></div>
-<div class="ttc" id="asystem_8c_html_a6655447bab00753d59759423bf28e22e"><div class="ttname"><a href="system_8c.html#a6655447bab00753d59759423bf28e22e">wait</a></div><div class="ttdeci">int wait(int *status)</div><div class="ttdoc">Wait for a child process.</div><div class="ttdef"><b>Definition</b> system.c:1269</div></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><a class="code hl_struct" href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a> <a class="code hl_function" href="kirq_8h.html#a97667455fbfa1d65db29c1a29496e410">kirq_begin_wait_sp</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><a class="code hl_struct" href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a> <a class="code hl_function" href="kirq_8h.html#acb9afe24c2e0bffae112ae84063834d9">kirq_begin_wait_dp</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><a class="code hl_struct" href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a> <a class="code hl_function" href="kirq_8h.html#a671a58e5dc3b6b74b86929c0a165e828">kirq_begin_wait_si</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><a class="code hl_struct" href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a> <a class="code hl_function" href="kirq_8h.html#af0cc4b3e819781186c5ef2935e95990a">kirq_begin_wait_ai</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><a class="code hl_struct" href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a> <a class="code hl_function" href="kirq_8h.html#a521279e5980a25ea0ebf2d3cc6c7e14e">kirq_begin_wait_vi</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><a class="code hl_struct" href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a> <a class="code hl_function" href="kirq_8h.html#a484c9a95ba2ea3d9618b395ab3c70ec9">kirq_begin_wait_pi</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keywordtype">void</span> <a class="code hl_function" href="kirq_8h.html#a2941dd79a32492534284f70f8823bc64">kirq_wait</a>(<a class="code hl_struct" href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a> *<a class="code hl_function" href="system_8c.html#a6655447bab00753d59759423bf28e22e">wait</a>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__kernel_html_structkcond__t"><div class="ttname"><a href="group__kernel.html#structkcond__t">kcond_t</a></div><div class="ttdoc">A condition variable for synchronization.</div><div class="ttdef"><b>Definition</b> kernel.h:129</div></div>
+<div class="ttc" id="akirq_8h_html_a2941dd79a32492534284f70f8823bc64"><div class="ttname"><a href="kirq_8h.html#a2941dd79a32492534284f70f8823bc64">kirq_wait</a></div><div class="ttdeci">void kirq_wait(kirq_wait_t *wait)</div><div class="ttdoc">Wait until the interrupt is triggered.</div><div class="ttdef"><b>Definition</b> kirq.c:78</div></div>
+<div class="ttc" id="akirq_8h_html_a484c9a95ba2ea3d9618b395ab3c70ec9"><div class="ttname"><a href="kirq_8h.html#a484c9a95ba2ea3d9618b395ab3c70ec9">kirq_begin_wait_pi</a></div><div class="ttdeci">kirq_wait_t kirq_begin_wait_pi(void)</div><div class="ttdoc">Create an kirq wait object for PI interrupts.</div><div class="ttdef"><b>Definition</b> kirq.c:70</div></div>
+<div class="ttc" id="akirq_8h_html_a521279e5980a25ea0ebf2d3cc6c7e14e"><div class="ttname"><a href="kirq_8h.html#a521279e5980a25ea0ebf2d3cc6c7e14e">kirq_begin_wait_vi</a></div><div class="ttdeci">kirq_wait_t kirq_begin_wait_vi(void)</div><div class="ttdoc">Create an kirq wait object for VI interrupts.</div><div class="ttdef"><b>Definition</b> kirq.c:62</div></div>
+<div class="ttc" id="akirq_8h_html_a671a58e5dc3b6b74b86929c0a165e828"><div class="ttname"><a href="kirq_8h.html#a671a58e5dc3b6b74b86929c0a165e828">kirq_begin_wait_si</a></div><div class="ttdeci">kirq_wait_t kirq_begin_wait_si(void)</div><div class="ttdoc">Create an kirq wait object for SI interrupts.</div><div class="ttdef"><b>Definition</b> kirq.c:46</div></div>
+<div class="ttc" id="akirq_8h_html_a97667455fbfa1d65db29c1a29496e410"><div class="ttname"><a href="kirq_8h.html#a97667455fbfa1d65db29c1a29496e410">kirq_begin_wait_sp</a></div><div class="ttdeci">kirq_wait_t kirq_begin_wait_sp(void)</div><div class="ttdoc">Create an kirq wait object for SP interrupts.</div><div class="ttdef"><b>Definition</b> kirq.c:30</div></div>
+<div class="ttc" id="akirq_8h_html_acb9afe24c2e0bffae112ae84063834d9"><div class="ttname"><a href="kirq_8h.html#acb9afe24c2e0bffae112ae84063834d9">kirq_begin_wait_dp</a></div><div class="ttdeci">kirq_wait_t kirq_begin_wait_dp(void)</div><div class="ttdoc">Create an kirq wait object for DP interrupts.</div><div class="ttdef"><b>Definition</b> kirq.c:38</div></div>
+<div class="ttc" id="akirq_8h_html_af0cc4b3e819781186c5ef2935e95990a"><div class="ttname"><a href="kirq_8h.html#af0cc4b3e819781186c5ef2935e95990a">kirq_begin_wait_ai</a></div><div class="ttdeci">kirq_wait_t kirq_begin_wait_ai(void)</div><div class="ttdoc">Create an kirq wait object for AI interrupts.</div><div class="ttdef"><b>Definition</b> kirq.c:54</div></div>
+<div class="ttc" id="akirq_8h_html_structkirq__wait__t"><div class="ttname"><a href="kirq_8h.html#structkirq__wait__t">kirq_wait_t</a></div><div class="ttdoc">Kirq waiting structure.</div><div class="ttdef"><b>Definition</b> kirq.h:35</div></div>
+<div class="ttc" id="asystem_8c_html_a6655447bab00753d59759423bf28e22e"><div class="ttname"><a href="system_8c.html#a6655447bab00753d59759423bf28e22e">wait</a></div><div class="ttdeci">int wait(int *status)</div><div class="ttdoc">Wait for a child process.</div><div class="ttdef"><b>Definition</b> system.c:1280</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:29 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

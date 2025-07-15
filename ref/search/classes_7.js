@@ -10,5 +10,5 @@ var searchData=
   ['fm_5fvec4_5ft_7',['fm_vec4_t',['../fgeom_8h.html#unionfm__vec4__t',1,'']]],
   ['fm_5fvec4_5ft_2e_5f_5funnamed71_5f_5f_8',['fm_vec4_t.__unnamed71__',['../fgeom_8h.html#structfm__vec4__t_8____unnamed71____',1,'']]],
   ['fs_5fmapping_5ft_9',['fs_mapping_t',['../system_8c.html#structfs__mapping__t',1,'']]],
-  ['fsck_5fstate_5ft_10',['fsck_state_t',['../structfsck__state__t.html',1,'']]]
+  ['fsck_5fstate_5ft_10',['fsck_state_t',['../bbfs_8c.html#structfsck__state__t',1,'']]]
 ];

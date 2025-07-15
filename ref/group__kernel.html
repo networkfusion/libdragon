@@ -142,11 +142,11 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga35b5d4f6131572d8f273cfed3f9f929d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag reserved for usage in the inspector. <br /></td></tr>
 <tr class="separator:ga35b5d4f6131572d8f273cfed3f9f929d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad9bc2de8b08747a6bb9762e98086c8bc" id="r_gad9bc2de8b08747a6bb9762e98086c8bc"><td class="memItemLeft" align="right" valign="top"><a id="gad9bc2de8b08747a6bb9762e98086c8bc" name="gad9bc2de8b08747a6bb9762e98086c8bc"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>TDATA_SIZE</b>&#160;&#160;&#160;((uint32_t)(__tdata_end)-(uint32_t)(__tdata_start))</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TDATA_SIZE</b>&#160;&#160;&#160;((uint32_t)(<a class="el" href="kernel_8c.html#a3d6c18c6f830890ad62bf15b4d5ab462">__tdata_end</a>)-(uint32_t)(<a class="el" href="kernel_8c.html#a80217d07dfc4ba7a8ad2ff5b52a719df">__tdata_start</a>))</td></tr>
 <tr class="memdesc:gad9bc2de8b08747a6bb9762e98086c8bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of .tdata section. <br /></td></tr>
 <tr class="separator:gad9bc2de8b08747a6bb9762e98086c8bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga43f1d8cda3c4d69e8afed643c36ba583" id="r_ga43f1d8cda3c4d69e8afed643c36ba583"><td class="memItemLeft" align="right" valign="top"><a id="ga43f1d8cda3c4d69e8afed643c36ba583" name="ga43f1d8cda3c4d69e8afed643c36ba583"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>TLS_SIZE</b>&#160;&#160;&#160;((uint32_t)(__tls_end)-(uint32_t)(__tls_base))</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TLS_SIZE</b>&#160;&#160;&#160;((uint32_t)(<a class="el" href="kernel_8c.html#abefe97e68f9ff8c092e66cd5eb572fec">__tls_end</a>)-(uint32_t)(<a class="el" href="kernel_8c.html#ac27d4cfd86a3a5001b5257afb6ca48dd">__tls_base</a>))</td></tr>
 <tr class="memdesc:ga43f1d8cda3c4d69e8afed643c36ba583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of .tdata and .tbss sections combined. <br /></td></tr>
 <tr class="separator:ga43f1d8cda3c4d69e8afed643c36ba583"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga16bd81611968f01a593b6885fcd517bf" id="r_ga16bd81611968f01a593b6885fcd517bf"><td class="memItemLeft" align="right" valign="top"><a id="ga16bd81611968f01a593b6885fcd517bf" name="ga16bd81611968f01a593b6885fcd517bf"></a>
@@ -498,7 +498,7 @@ interrupt_sr</td>
 
 <p>Syscall handler to run the scheduler and optionally switch current thread. </p>
 <p>Syscall handler to run the scheduler and optionally switch current thread.</p>
-<p>This is the main scheduling function. It is invoked by the interrupt handler if explicitly requested via a syscall exception (KTHREAD_SWITCH) or if an interrupt handler is preempting the current thread (KTHREAD_SWITCH_ISR).</p>
+<p>This is the main scheduling function. It is invoked by the interrupt handler if explicitly requested via a syscall exception (<a class="el" href="kernel_8c.html#ae58431b4b6d55e77e832f7d89b4eb4c6" title="Execute a context switch.">KTHREAD_SWITCH</a>) or if an interrupt handler is preempting the current thread (<a class="el" href="kernel_8c.html#afa4b711610bd4e5cbc2723fef1dc87ed" title="Executed a context switch, during an ongoing interrupt service routine.">KTHREAD_SWITCH_ISR</a>).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">stack_state</td><td>Stack pointer containing the register block for the the current thread.</td></tr>
@@ -1465,7 +1465,7 @@ false If the condition was not signaled in time </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:30 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -1,9 +1,9 @@
 var searchData=
 [
   ['x_0',['x',['../group__joypad.html#aea393db8b946bcf20eeca62502b1c121',1,'joypad_buttons_t::x'],['../group__joybus__commands.html#a9dd4e461268c8034f5c8564e155c67a6',1,'joybus_cmd_gcn_controller_read_port_t.recv::x'],['../group__joybus__commands.html#a9dd4e461268c8034f5c8564e155c67a6',1,'joybus_cmd_gcn_controller_read_long_port_t.recv::x'],['../group__controller.html#a9dd4e461268c8034f5c8564e155c67a6',1,'_SI_condat.__unnamed49__.__unnamed53__::x'],['../rdpq__paragraph_8h.html#a9dd4e461268c8034f5c8564e155c67a6',1,'rdpq_paragraph_char_t.__unnamed79__.__unnamed81__::x']]],
-  ['x0_1',['x0',['../rdpq__font_8h.html#a1ad9ace35aa6ff903d3e7c1c5349ac6b',1,'rdpq_font_gmetrics_t::x0'],['../structvi__preset__t_8display.html#ae50eb7598b580311bab8f39bb8f4815b',1,'vi_preset_t.display::x0'],['../rdpq__paragraph_8h.html#ae50eb7598b580311bab8f39bb8f4815b',1,'rdpq_paragraph_t.bbox::x0']]],
+  ['x0_1',['x0',['../rdpq__font_8h.html#a1ad9ace35aa6ff903d3e7c1c5349ac6b',1,'rdpq_font_gmetrics_t::x0'],['../vi_8c.html#ae50eb7598b580311bab8f39bb8f4815b',1,'vi_preset_t.display::x0'],['../rdpq__paragraph_8h.html#ae50eb7598b580311bab8f39bb8f4815b',1,'rdpq_paragraph_t.bbox::x0']]],
   ['x1_2',['x1',['../rdpq__paragraph_8h.html#a6dbf9ac2da09ee1d3debf5a51873ec6d',1,'rdpq_paragraph_t.bbox::x1'],['../rdpq__font_8h.html#afdce7a81218d7d763f98e5cd81b38cfb',1,'rdpq_font_gmetrics_t::x1']]],
-  ['xadvance_3',['xadvance',['../rdpq__font_8h.html#a15878e576399456c86c784a2a94734a3',1,'rdpq_font_gmetrics_t::xadvance'],['../structglyph__t.html#a5d9542081f328107faadaa171a93bc30',1,'glyph_t::xadvance']]],
+  ['xadvance_3',['xadvance',['../rdpq__font_8h.html#a15878e576399456c86c784a2a94734a3',1,'rdpq_font_gmetrics_t::xadvance'],['../rdpq__font__internal_8h.html#a5d9542081f328107faadaa171a93bc30',1,'glyph_t::xadvance']]],
   ['xbus_4',['RDRAM vs XBUS',['../rdpq_8c.html#autotoc_md22',1,'']]],
   ['xm64_2ec_5',['xm64.c',['../xm64_8c.html',1,'']]],
   ['xm64_2eh_6',['xm64.h',['../xm64_8h.html',1,'']]],
@@ -21,6 +21,6 @@ var searchData=
   ['xm64player_5ft_18',['xm64player_t',['../xm64_8h.html#structxm64player__t',1,'']]],
   ['xm64player_5ft_2eseek_19',['xm64player_t.seek',['../xm64_8h.html#structxm64player__t_8seek',1,'']]],
   ['xm64player_5ftell_20',['xm64player_tell',['../xm64_8c.html#ad9f7f73b665f7a25d310b7943d50a2a4',1,'xm64player_tell(xm64player_t *player, int *patidx, int *row, float *secs):&#160;xm64.c'],['../xm64_8h.html#ad9f7f73b665f7a25d310b7943d50a2a4',1,'xm64player_tell(xm64player_t *player, int *patidx, int *row, float *secs):&#160;xm64.c']]],
-  ['xoff_21',['xoff',['../structglyph__t.html#ad33ab5deab017ee7e68f1f80f13abe60',1,'glyph_t']]],
-  ['xoff2_22',['xoff2',['../structglyph__t.html#a4bc8ea2878cb8c822bcaced9fe277749',1,'glyph_t']]]
+  ['xoff_21',['xoff',['../rdpq__font__internal_8h.html#ad33ab5deab017ee7e68f1f80f13abe60',1,'glyph_t']]],
+  ['xoff2_22',['xoff2',['../rdpq__font__internal_8h.html#a4bc8ea2878cb8c822bcaced9fe277749',1,'glyph_t']]]
 ];

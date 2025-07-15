@@ -219,6 +219,9 @@ const <a class="el" href="group__display.html#structresolution__t">resolution_t<
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Display Subsystem. </p>
+<dl class="section author"><dt>Author</dt><dd>Jennifer Taylor <a href="#" onclick="location.href='mai'+'lto:'+'dra'+'go'+'nmi'+'nd'+'ed@'+'dr'+'ago'+'nm'+'ind'+'ed'+'.co'+'m'; return false;">drago<span class="obfuscator">.nosp@m.</span>nmin<span class="obfuscator">.nosp@m.</span>ded@d<span class="obfuscator">.nosp@m.</span>rago<span class="obfuscator">.nosp@m.</span>nmind<span class="obfuscator">.nosp@m.</span>ed.c<span class="obfuscator">.nosp@m.</span>om</a> </dd>
+<dd>
+Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
 <p>The display subsystem module is responsible for initializing the proper video mode for displaying 2D, 3D and software graphics. It is the higher level module that most applications should use to configure the video output.</p>
 <p>To set up video on the N64, code should call <a class="el" href="group__display.html#ga1763c553f071d40c4bd18cee77ae98a1" title="Initialize the display to a particular resolution and bit depth.">display_init</a> with the appropriate options. It is a powerful API with many options (see <a class="el" href="group__display.html#structresolution__t" title="Video resolution structure.">resolution_t</a>) but it can still be a simple one-liner for basic cases. It allows to configure any resolution including custom ones, any aspect ratio, any kind of letterboxing, overscan, interlacing, and so on. It also allocates a framebuffer chain.</p>
 <p>Once the display has been set, a surface can be requested from the display subsystem using <a class="el" href="group__display.html#gaf8ad0501f0408430e3b40f0f626a33bd" title="Get a display buffer for rendering.">display_get</a>. To draw to the acquired surface, code should use functions present in the <a class="el" href="group__rdpq.html">RDPQ: Hardware-accelerated drawing API</a> or <a class="el" href="group__graphics.html">2D Graphics</a> modules (the latter being just a simpler, CPU-only small graphic library).</p>
@@ -232,7 +235,7 @@ Frame counter, delta time and frame limiter</h2>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 30 2025 22:10:29 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

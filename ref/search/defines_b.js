@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['nand_5faddr_5fblock_0',['NAND_ADDR_BLOCK',['../nand_8h.html#a4e1d0fd7be8002eee1ea88a603bb3c28',1,'nand.h']]],
-  ['nand_5faddr_5fmake_1',['NAND_ADDR_MAKE',['../nand_8h.html#ade50585c3a8908fd921169169c22529f',1,'nand.h']]],
-  ['nand_5faddr_5foffset_2',['NAND_ADDR_OFFSET',['../nand_8h.html#ac85183882940a47c62b8a4e655f9d4ce',1,'nand.h']]],
-  ['nand_5faddr_5fpage_3',['NAND_ADDR_PAGE',['../nand_8h.html#a35f0f37cb07da2c6d7629211c95a6a4c',1,'nand.h']]],
-  ['nand_5fblock_5fsize_4',['NAND_BLOCK_SIZE',['../nand_8h.html#a7a01ea720d2a1179a2624cca2761f915',1,'nand.h']]],
-  ['nand_5fpage_5fsize_5',['NAND_PAGE_SIZE',['../nand_8h.html#a2e3cf7d6c572b5d3ce810048eabf7786',1,'nand.h']]],
-  ['num_5fbuffers_6',['num_buffers',['../audio_8c.html#aac028f4c15ac7f78a44be5db76cfbec7',1,'NUM_BUFFERS:&#160;audio.c'],['../display_8c.html#aac028f4c15ac7f78a44be5db76cfbec7',1,'NUM_BUFFERS:&#160;display.c']]]
+  ['likely_0',['LIKELY',['../utils_8h.html#a19c8a29a0efa439fe0df43e3c80e8439',1,'utils.h']]],
+  ['literals_5frun_5flen_1',['LITERALS_RUN_LEN',['../lz4__dec_8c.html#a9263cdf3a2a8d8cff920ef11b8bdc719',1,'lz4_dec.c']]],
+  ['lz4_5fdecompress_5finplace_5fmargin_2',['LZ4_DECOMPRESS_INPLACE_MARGIN',['../lz4__dec__internal_8h.html#a9f72fb4b02669a5e7e2259e414afac4a',1,'lz4_dec_internal.h']]],
+  ['lz4ultra_5fdecompressor_5fbuild_5flen_3',['LZ4ULTRA_DECOMPRESSOR_BUILD_LEN',['../lz4__dec_8c.html#ae0fe94c60d66b128dac6b339cbeb5ea1',1,'lz4_dec.c']]]
 ];
