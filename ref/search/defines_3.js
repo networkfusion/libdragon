@@ -20,5 +20,6 @@ var searchData=
   ['context_5fgroup_5fsize_17',['CONTEXT_GROUP_SIZE',['../shrinkler__dec_8c.html#a8042d8af3a405089f1012054c5b14ce0',1,'shrinkler_dec.c']]],
   ['context_5fkind_18',['CONTEXT_KIND',['../shrinkler__dec_8c.html#a64fa6a81a3a8e5c0dcac57fba6db069e',1,'shrinkler_dec.c']]],
   ['context_5frepeated_19',['CONTEXT_REPEATED',['../shrinkler__dec_8c.html#a450370df5532da548889f49be5074696',1,'shrinkler_dec.c']]],
-  ['cthreads_5fdefault_5fstack_5fsize_20',['CTHREADS_DEFAULT_STACK_SIZE',['../threads_8h.html#a1fe8052fd0ffe6137c268aa716f035d0',1,'threads.h']]]
+  ['cpakfs_5ftrace_20',['CPAKFS_TRACE',['../cpakfs__internal_8h.html#a68777e8a7f0a67ba784bfe884fc1c35b',1,'cpakfs_internal.h']]],
+  ['cthreads_5fdefault_5fstack_5fsize_21',['CTHREADS_DEFAULT_STACK_SIZE',['../threads_8h.html#a1fe8052fd0ffe6137c268aa716f035d0',1,'threads.h']]]
 ];

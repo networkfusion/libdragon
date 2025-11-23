@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -129,6 +130,7 @@ Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'
 
 <p>Install a custom line handler. </p>
 <p>This is an advanced function that installs a custom callback that will be run at the beginning of a specific screen line.</p>
+<p>The line number is sometimes called "half-line": it is a <em>even</em> value between 0 and 524 (or 624 on PAL), which can be thought of as two times the actual TV scanline (which is 262 or 312 on PAL). If you pass an odd value, it'll be rounded to even automatically. It is the same reference system used by other VI registers and functions such as <a class="el" href="vi_8c.html#a835d20f5e49259d0e2c5f235f4f56da7" title="Set the active display output area.">vi_set_output</a> or <a class="el" href="vi_8c.html#aa007c0ac6f96a30e0c2653a0030d9657" title="Return the current scanline, and optionally the current field.">vi_get_scanline</a>.</p>
 <p>The main usage of this function is to implement raster effects, that is, changing VI configuration at the beginning of a specific raster line. This is extremely finnicky and timing sensitive: you need to be sure to modify the VI before the horizontal blank period is finished, and that period is extremely short. So normally, you'll want to install the handler the line before, spin-wait in the handler until the next line begins, and only then directly write to the VI registers. In this case, you can also use <a class="el" href="vi_8c.html#a0a9ddd529470b388eadc237682b35b3c" title="Stabilize the value of a VI register by rewriting it at vblank.">vi_stabilize</a> to ensure that registers are automatically reset at the beginning of a frame, if needed.</p>
 <dl class="section note"><dt>Note</dt><dd>Do <em>NOT</em> use this function to implement a frame buffer switch. If you just want to switch framebuffers at the beginning of a frame, use <a class="el" href="vi_8c.html#a83c02ddfe3505556329f99bbaedcdffb" title="Install a custom vblank handler.">vi_install_vblank_handler</a> instead, as it is far less time-sensitive, and also more efficient.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -166,7 +168,7 @@ Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

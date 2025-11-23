@@ -8,5 +8,10 @@ var searchData=
   ['cop1_2eh_5',['cop1.h',['../cop1_8h.html',1,'']]],
   ['cpak_2ec_6',['cpak.c',['../cpak_8c.html',1,'']]],
   ['cpak_2eh_7',['cpak.h',['../cpak_8h.html',1,'']]],
-  ['cthreads_2ec_8',['cthreads.c',['../cthreads_8c.html',1,'']]]
+  ['cpakfs_2ec_8',['cpakfs.c',['../cpakfs_8c.html',1,'']]],
+  ['cpakfs_2eh_9',['cpakfs.h',['../cpakfs_8h.html',1,'']]],
+  ['cpakfs_5ffsck_2ec_10',['cpakfs_fsck.c',['../cpakfs__fsck_8c.html',1,'']]],
+  ['cpakfs_5finternal_2eh_11',['cpakfs_internal.h',['../cpakfs__internal_8h.html',1,'']]],
+  ['cpakfs_5fpath_2ec_12',['cpakfs_path.c',['../cpakfs__path_8c.html',1,'']]],
+  ['cthreads_2ec_13',['cthreads.c',['../cthreads_8c.html',1,'']]]
 ];

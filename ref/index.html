@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -73,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p align="center"><a class="anchor" id="md_README"></a> </p>
-<p><img src="https://github.com/user-attachments/assets/74c67b9b-ddb7-4527-bc61-86d244205c65#gh-dark-mode-only" alt="" width="400" class="inline"/> <img src="https://github.com/user-attachments/assets/02586355-e89e-4aac-a208-5ae465287bd7#gh-light-mode-only" alt="" width="400" class="inline"/> </p>
+<p><img src="https://github.com/user-attachments/assets/74c67b9b-ddb7-4527-bc61-86d244205c65#gh-dark-mode-only" alt="" id="gh-dark-mode-only" width="400" class="inline"/> <img src="https://github.com/user-attachments/assets/02586355-e89e-4aac-a208-5ae465287bd7#gh-light-mode-only" alt="" id="gh-light-mode-only" width="400" class="inline"/> </p>
 <p><a href="https://github.com/DragonMinded/libdragon/actions/workflows/build-toolchain-library-and-roms.yml"><img src="https://github.com/DragonMinded/libdragon/actions/workflows/build-toolchain-library-and-roms.yml/badge.svg?branch=trunk" alt="Build" style="pointer-events: none;" class="inline"/></a></p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Welcome to libdragon</h1>
@@ -84,7 +85,7 @@ Welcome to libdragon</h1>
 <ul>
 <li>Based on modern GCC (version 14) and Newlib, for a full C11 programming experience. A Docker container is available to quickly set up the programming environment.</li>
 <li>The GCC toolchain is 64 bit capable to be able to use the full R4300 capabilities (commercial games and libultra are based on a 32-bit ABI and is not possible to use 64-bit registers and opcodes with it)</li>
-<li>Can be developed with newer-generation emulators (Ares) and development cartridges (64drive, EverDrive64, SummerCart64).</li>
+<li>Can be developed with newer-generation emulators (Ares, Gopher64) and development cartridges (64drive, EverDrive64, SummerCart64).</li>
 <li>Support both vanilla N64 and iQue Player (Chinese variant). It is possible to run ROMs built with libdragon on iQue without modifying the source code.</li>
 <li>2D accelerated graphics:<ul>
 <li>Comprehensive RDP library called <a href="https://github.com/DragonMinded/libdragon/wiki/Rdpq">rdpq</a> that offers both low-level access and very high-level blitting functions.</li>
@@ -123,7 +124,7 @@ Welcome to libdragon</h1>
 <li>Debugging:<ul>
 <li>Clear error screens with symbolized stack traces in case of crashes</li>
 <li>Codebase is filled with assertions, so that you get a nice error screen instead of a console lockup.</li>
-<li>Printf-debugging via <code><a class="el" href="debug_8h.html#aa3e8be416ef1525cfd3230204b56d184" title="Write a message to the debugging channel.">debugf()</a></code> which are redirected to your PC console in emulators and to USB via compatible tools (UNFLoader, g64drive).</li>
+<li>Printf-debugging via <code><a class="el" href="debug_8c.html#a9d7b18857c2b18437251bcc38c866d35" title="Write a message to the debugging channel.">debugf()</a></code> which are redirected to your PC console in emulators and to USB via compatible tools (UNFLoader, g64drive).</li>
 </ul>
 </li>
 <li>Support for standard N64 controllers and memory paks.</li>
@@ -170,8 +171,12 @@ Getting started: how to run a ROM</h1>
 <h2><a class="anchor" id="autotoc_md4"></a>
 Using emulators</h2>
 <p>libdragon targets real N64 hardware and uses many advanced corners of the hardware not used by old commercial games, and thus requires a modern N64 emulator which focuses on full hardware emulation.</p>
-<p>At the moment, the only emulator that accurately emulates the hardware (and does not just focus on playing old classics) is <a href="https://github.com/ares-emulator/ares">Ares</a>. Ares requires a modern PC with a discrete GPU with Vulkan support.</p>
-<p>You can develop 99% of your game using libdragon and the Ares emulator, and be confident that the game will correctly run on hardware as well. Make sure to turn on the "Homebrew mode" in Ares to enable developer specific checks during emulation that will simplify the debugging experience.</p>
+<p>At the moment, the only emulators that accurately emulate the hardware (and does not just focus on playing old classics) are:</p><ul>
+<li><a href="https://github.com/ares-emulator/ares">Ares</a></li>
+<li><a href="https://github.com/gopher64/gopher64">Gopher64</a>.</li>
+</ul>
+<p>Both require a modern PC with a discrete GPU with Vulkan support. Gopher64 is more performant for gaming.</p>
+<p>Ares has more development-oriented features so it is suggested during development. You can develop 99% of your game using libdragon and the Ares emulator, and be confident that the game will correctly run on hardware as well. Make sure to turn on the "Homebrew mode" in Ares to enable developer specific checks during emulation that will simplify the debugging experience.</p>
 <h2><a class="anchor" id="autotoc_md5"></a>
 Using a development cartridge on a real N64</h2>
 <p>All cartridges that are able to load custom ROMs should be able to successfully load libdragon ROMs via either USB/serial, or from a MMC/SD card. For instance, the following are known to work: 64drive, EverDrive64 (all models), SC64.</p>
@@ -199,7 +204,7 @@ Resources</h1>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:57 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

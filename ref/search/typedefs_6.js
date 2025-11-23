@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['kqueue_5ft_0',['kqueue_t',['../kqueue_8h.html#adb13e0d2e0a7f5f3bf2ab273f8f3bc60',1,'kqueue.h']]],
-  ['kthread_5ft_1',['kthread_t',['../group__kernel.html#ga3ae31e0a0b03da173220e4f22cd70b7a',1,'kernel.h']]]
+  ['inspector_5fpage_5ft_0',['inspector_page_t',['../exception__internal_8h.html#a59adf1e9b53d777b976bf4b011238740',1,'exception_internal.h']]]
 ];

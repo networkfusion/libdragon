@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -202,9 +203,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>__thlist_remove</b> (
 <tr class="memitem:gab60c7527a712441eb099bf5eee4012da" id="r_gab60c7527a712441eb099bf5eee4012da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#gab60c7527a712441eb099bf5eee4012da">kthread_set_pri</a> (<a class="el" href="structkthread__t.html">kthread_t</a> *th, int8_t pri)</td></tr>
 <tr class="memdesc:gab60c7527a712441eb099bf5eee4012da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change priority of a thread.  <br /></td></tr>
 <tr class="separator:gab60c7527a712441eb099bf5eee4012da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6658800652843561851344a8c23292fe" id="r_ga6658800652843561851344a8c23292fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#ga6658800652843561851344a8c23292fe">kthread_sleep</a> (uint32_t ticks)</td></tr>
-<tr class="memdesc:ga6658800652843561851344a8c23292fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for the specified interval, allowing execution of other threads.  <br /></td></tr>
-<tr class="separator:ga6658800652843561851344a8c23292fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6eb05d622198df37c6ad4f8911c87d0" id="r_gab6eb05d622198df37c6ad4f8911c87d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#gab6eb05d622198df37c6ad4f8911c87d0">kthread_sleep</a> (int64_t ticks)</td></tr>
+<tr class="memdesc:gab6eb05d622198df37c6ad4f8911c87d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for the specified interval, allowing execution of other threads.  <br /></td></tr>
+<tr class="separator:gab6eb05d622198df37c6ad4f8911c87d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0c66c11d399bd9403592ec63dda70be4" id="r_ga0c66c11d399bd9403592ec63dda70be4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#ga0c66c11d399bd9403592ec63dda70be4">kthread_backtrace</a> (<a class="el" href="structkthread__t.html">kthread_t</a> *th, void *buffer, int size)</td></tr>
 <tr class="memdesc:ga0c66c11d399bd9403592ec63dda70be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the backtrace of the specified thread.  <br /></td></tr>
 <tr class="separator:ga0c66c11d399bd9403592ec63dda70be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -235,6 +236,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>__thlist_remove</b> (
 <tr class="memitem:gaba6177eff8388269efb91dd5089ec921" id="r_gaba6177eff8388269efb91dd5089ec921"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#gaba6177eff8388269efb91dd5089ec921">kcond_signal</a> (<a class="el" href="group__kernel.html#structkcond__t">kcond_t</a> *cond)</td></tr>
 <tr class="memdesc:gaba6177eff8388269efb91dd5089ec921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal a condition variable.  <br /></td></tr>
 <tr class="separator:gaba6177eff8388269efb91dd5089ec921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11b453338c25da60744ac16d46499c89" id="r_ga11b453338c25da60744ac16d46499c89"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>__kcond_signal_isr</b> (<a class="el" href="group__kernel.html#structkcond__t">kcond_t</a> *cond)</td></tr>
+<tr class="memdesc:ga11b453338c25da60744ac16d46499c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal a condition within interrupt. <br /></td></tr>
+<tr class="separator:ga11b453338c25da60744ac16d46499c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7b36bab025228f6d7b62dda4e267584d" id="r_ga7b36bab025228f6d7b62dda4e267584d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#ga7b36bab025228f6d7b62dda4e267584d">kcond_broadcast</a> (<a class="el" href="group__kernel.html#structkcond__t">kcond_t</a> *cond)</td></tr>
 <tr class="memdesc:ga7b36bab025228f6d7b62dda4e267584d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broadcast a condition variable.  <br /></td></tr>
 <tr class="separator:ga7b36bab025228f6d7b62dda4e267584d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,10 +255,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>__thlist_remove</b> (
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a355887abd84d8d5d3822b67bf97f7d53" id="r_a355887abd84d8d5d3822b67bf97f7d53"><td class="memItemLeft" align="right" valign="top"><a id="a355887abd84d8d5d3822b67bf97f7d53" name="a355887abd84d8d5d3822b67bf97f7d53"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>th_cur_tp</b> = <a class="el" href="ktls_8h.html#a9d75fc2730ca1001f1283a22b56f29d0">KERNEL_TP_INVALID</a></td></tr>
-<tr class="memdesc:a355887abd84d8d5d3822b67bf97f7d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current thread TLS. <br /></td></tr>
-<tr class="separator:a355887abd84d8d5d3822b67bf97f7d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c4f9c72ee4f404c6bad04edfe6fdc01" id="r_a0c4f9c72ee4f404c6bad04edfe6fdc01"><td class="memItemLeft" align="right" valign="top"><a id="a0c4f9c72ee4f404c6bad04edfe6fdc01" name="a0c4f9c72ee4f404c6bad04edfe6fdc01"></a>
 <a class="el" href="structkthread__t.html">kthread_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>th_main</b></td></tr>
 <tr class="memdesc:a0c4f9c72ee4f404c6bad04edfe6fdc01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main thread. <br /></td></tr>
@@ -280,30 +281,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>__isr_force_schedule<
 int&#160;</td><td class="memItemRight" valign="bottom"><b>__interrupt_sr</b></td></tr>
 <tr class="memdesc:a1f96cc2df4392ee5d2014819ce242aef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value of the status register at the moment interrupts got disabled. <br /></td></tr>
 <tr class="separator:a1f96cc2df4392ee5d2014819ce242aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac27d4cfd86a3a5001b5257afb6ca48dd" id="r_ac27d4cfd86a3a5001b5257afb6ca48dd"><td class="memItemLeft" align="right" valign="top"><a id="ac27d4cfd86a3a5001b5257afb6ca48dd" name="ac27d4cfd86a3a5001b5257afb6ca48dd"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>__tls_base</b> []</td></tr>
-<tr class="memdesc:ac27d4cfd86a3a5001b5257afb6ca48dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLS base address (linker symbol) <br /></td></tr>
-<tr class="separator:ac27d4cfd86a3a5001b5257afb6ca48dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80217d07dfc4ba7a8ad2ff5b52a719df" id="r_a80217d07dfc4ba7a8ad2ff5b52a719df"><td class="memItemLeft" align="right" valign="top"><a id="a80217d07dfc4ba7a8ad2ff5b52a719df" name="a80217d07dfc4ba7a8ad2ff5b52a719df"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>__tdata_start</b> []</td></tr>
-<tr class="memdesc:a80217d07dfc4ba7a8ad2ff5b52a719df"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLS data start (linker symbol) <br /></td></tr>
-<tr class="separator:a80217d07dfc4ba7a8ad2ff5b52a719df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d6c18c6f830890ad62bf15b4d5ab462" id="r_a3d6c18c6f830890ad62bf15b4d5ab462"><td class="memItemLeft" align="right" valign="top"><a id="a3d6c18c6f830890ad62bf15b4d5ab462" name="a3d6c18c6f830890ad62bf15b4d5ab462"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>__tdata_end</b> []</td></tr>
-<tr class="memdesc:a3d6c18c6f830890ad62bf15b4d5ab462"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLS data end (linker symbol) <br /></td></tr>
-<tr class="separator:a3d6c18c6f830890ad62bf15b4d5ab462"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4da44ec7c8bd2e13c0bf7f3e43967c6f" id="r_a4da44ec7c8bd2e13c0bf7f3e43967c6f"><td class="memItemLeft" align="right" valign="top"><a id="a4da44ec7c8bd2e13c0bf7f3e43967c6f" name="a4da44ec7c8bd2e13c0bf7f3e43967c6f"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>__tbss_start</b> []</td></tr>
-<tr class="memdesc:a4da44ec7c8bd2e13c0bf7f3e43967c6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLS BSS start (linker symbol) <br /></td></tr>
-<tr class="separator:a4da44ec7c8bd2e13c0bf7f3e43967c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f216285374a226ce8e83965c3d21bae" id="r_a0f216285374a226ce8e83965c3d21bae"><td class="memItemLeft" align="right" valign="top"><a id="a0f216285374a226ce8e83965c3d21bae" name="a0f216285374a226ce8e83965c3d21bae"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>__tbss_end</b> []</td></tr>
-<tr class="memdesc:a0f216285374a226ce8e83965c3d21bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLS BSS end (linker symbol) <br /></td></tr>
-<tr class="separator:a0f216285374a226ce8e83965c3d21bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abefe97e68f9ff8c092e66cd5eb572fec" id="r_abefe97e68f9ff8c092e66cd5eb572fec"><td class="memItemLeft" align="right" valign="top"><a id="abefe97e68f9ff8c092e66cd5eb572fec" name="abefe97e68f9ff8c092e66cd5eb572fec"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>__tls_end</b> []</td></tr>
-<tr class="memdesc:abefe97e68f9ff8c092e66cd5eb572fec"><td class="mdescLeft">&#160;</td><td class="mdescRight">TLS end (linker symbol) <br /></td></tr>
-<tr class="separator:abefe97e68f9ff8c092e66cd5eb572fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14ae8825b4167fbe61a5a939f0a9ce2a" id="r_a14ae8825b4167fbe61a5a939f0a9ce2a"><td class="memItemLeft" align="right" valign="top"><a id="a14ae8825b4167fbe61a5a939f0a9ce2a" name="a14ae8825b4167fbe61a5a939f0a9ce2a"></a>
 char&#160;</td><td class="memItemRight" valign="bottom"><b>__th_tdata_copy</b> []</td></tr>
 <tr class="memdesc:a14ae8825b4167fbe61a5a939f0a9ce2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread TLS data copy (linker symbol) <br /></td></tr>
@@ -392,9 +369,9 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>__tdata_align</b></
 <div class="line">    __thlist_add_pri(&amp;__list, (th)); \</div>
 <div class="line">    (list) = <a class="code hl_define" href="group__n64sys.html#ga54fca3c0f8e1be138f320b3dcce4366f">PhysicalAddr</a>(__list); \</div>
 <div class="line">})</div>
-<div class="ttc" id="agroup__n64sys_html_ga54fca3c0f8e1be138f320b3dcce4366f"><div class="ttname"><a href="group__n64sys.html#ga54fca3c0f8e1be138f320b3dcce4366f">PhysicalAddr</a></div><div class="ttdeci">#define PhysicalAddr(_addr)</div><div class="ttdoc">Return the physical memory address for a given virtual address (pointer)</div><div class="ttdef"><b>Definition</b> n64sys.h:84</div></div>
-<div class="ttc" id="agroup__n64sys_html_ga6cbe8a16157397f5f7db9faf12ab5be4"><div class="ttname"><a href="group__n64sys.html#ga6cbe8a16157397f5f7db9faf12ab5be4">VirtualCachedAddr</a></div><div class="ttdeci">#define VirtualCachedAddr(_addr)</div><div class="ttdoc">Create a virtual addresses in a cached segment to access a physical address.</div><div class="ttdef"><b>Definition</b> n64sys.h:104</div></div>
-<div class="ttc" id="astructkthread__t_html"><div class="ttname"><a href="structkthread__t.html">kthread_t</a></div><div class="ttdoc">a kernel thread for parallel execution</div><div class="ttdef"><b>Definition</b> kernel_internal.h:51</div></div>
+<div class="ttc" id="agroup__n64sys_html_ga54fca3c0f8e1be138f320b3dcce4366f"><div class="ttname"><a href="group__n64sys.html#ga54fca3c0f8e1be138f320b3dcce4366f">PhysicalAddr</a></div><div class="ttdeci">#define PhysicalAddr(_addr)</div><div class="ttdoc">Return the physical memory address for a given virtual address (pointer)</div><div class="ttdef"><b>Definition</b> n64sys.h:67</div></div>
+<div class="ttc" id="agroup__n64sys_html_ga6cbe8a16157397f5f7db9faf12ab5be4"><div class="ttname"><a href="group__n64sys.html#ga6cbe8a16157397f5f7db9faf12ab5be4">VirtualCachedAddr</a></div><div class="ttdeci">#define VirtualCachedAddr(_addr)</div><div class="ttdoc">Create a virtual addresses in a cached segment to access a physical address.</div><div class="ttdef"><b>Definition</b> n64sys.h:87</div></div>
+<div class="ttc" id="astructkthread__t_html"><div class="ttname"><a href="structkthread__t.html">kthread_t</a></div><div class="ttdoc">a kernel thread for parallel execution</div><div class="ttdef"><b>Definition</b> kernel_internal.h:46</div></div>
 </div><!-- fragment -->
 <p>Add a thread to a physical address list sorted by priority. </p>
 
@@ -431,7 +408,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>__tdata_align</b></
 <div class="line">    (list) = <a class="code hl_define" href="group__n64sys.html#ga54fca3c0f8e1be138f320b3dcce4366f">PhysicalAddr</a>(__list); \</div>
 <div class="line">    __ret; \</div>
 <div class="line">})</div>
-<div class="ttc" id="akernel_8c_html_a167b6f68d9d5bad47605546db8696e39"><div class="ttname"><a href="kernel_8c.html#a167b6f68d9d5bad47605546db8696e39">__thlist_remove</a></div><div class="ttdeci">bool __thlist_remove(kthread_t **list, kthread_t *th)</div><div class="ttdoc">Remove an element from a thread list.</div><div class="ttdef"><b>Definition</b> kernel.c:201</div></div>
+<div class="ttc" id="akernel_8c_html_a167b6f68d9d5bad47605546db8696e39"><div class="ttname"><a href="kernel_8c.html#a167b6f68d9d5bad47605546db8696e39">__thlist_remove</a></div><div class="ttdeci">bool __thlist_remove(kthread_t **list, kthread_t *th)</div><div class="ttdoc">Remove an element from a thread list.</div><div class="ttdef"><b>Definition</b> kernel.c:189</div></div>
 </div><!-- fragment -->
 <p>Remove an element from a physical address thread list. </p>
 
@@ -468,7 +445,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>__tdata_align</b></
 <div class="line">    (src) = <a class="code hl_define" href="group__n64sys.html#ga54fca3c0f8e1be138f320b3dcce4366f">PhysicalAddr</a>(__src); \</div>
 <div class="line">    __ret; \</div>
 <div class="line">})</div>
-<div class="ttc" id="akernel_8c_html_ae885a5d43d7b6470299e919560770d65"><div class="ttname"><a href="kernel_8c.html#ae885a5d43d7b6470299e919560770d65">__thlist_splice_pri</a></div><div class="ttdeci">bool __thlist_splice_pri(kthread_t **dst, kthread_t **src)</div><div class="ttdoc">Move all threads from list src to list dst, respecting priority.</div><div class="ttdef"><b>Definition</b> kernel.c:232</div></div>
+<div class="ttc" id="akernel_8c_html_ae885a5d43d7b6470299e919560770d65"><div class="ttname"><a href="kernel_8c.html#ae885a5d43d7b6470299e919560770d65">__thlist_splice_pri</a></div><div class="ttdeci">bool __thlist_splice_pri(kthread_t **dst, kthread_t **src)</div><div class="ttdoc">Move all threads from list src to list dst, respecting priority.</div><div class="ttdef"><b>Definition</b> kernel.c:220</div></div>
 </div><!-- fragment -->
 <p>Splice threads from physical address list respecting priority. </p>
 
@@ -557,7 +534,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>__tdata_align</b></
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

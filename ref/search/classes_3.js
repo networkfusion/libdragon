@@ -7,5 +7,6 @@ var searchData=
   ['bbfs_5fopenfile_5ft_4',['bbfs_openfile_t',['../bbfs_8c.html#structbbfs__openfile__t',1,'']]],
   ['bbfs_5fstate_5ft_5',['bbfs_state_t',['../bbfs_8c.html#structbbfs__state__t',1,'']]],
   ['bbfs_5fsuperblock_5ft_6',['bbfs_superblock_t',['../bbfs_8c.html#structbbfs__superblock__t',1,'']]],
-  ['bt_5ffunc_5ft_7',['bt_func_t',['../backtrace__internal_8h.html#structbt__func__t',1,'']]]
+  ['bio_5fsensor_5freader_5ft_7',['bio_sensor_reader_t',['../group__bio__sensor.html#structbio__sensor__reader__t',1,'']]],
+  ['bt_5ffunc_5ft_8',['bt_func_t',['../backtrace__internal_8h.html#structbt__func__t',1,'']]]
 ];

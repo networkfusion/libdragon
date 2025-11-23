@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -106,6 +107,7 @@ $(function() {
 <li>JOYBUS_BLOCK_DWORDS&#160;:&#160;<a class="el" href="group__joybus.html#gabd5f84cf2323e720ab0b79fff05e8383">joybus.h</a></li>
 <li>JOYBUS_BLOCK_SIZE&#160;:&#160;<a class="el" href="group__joybus.html#ga96357e747d908aa6c354b507d9b0fdc4">joybus.h</a></li>
 <li>joybus_callback_t&#160;:&#160;<a class="el" href="group__joybus.html#gaaf2e487c05f4f27e3b36af3c54ff66c1">joybus.h</a></li>
+<li>joybus_close()&#160;:&#160;<a class="el" href="group__joybus.html#ga935c9a92331a548ef4ef4167af5fdc5a">joybus.c</a>, <a class="el" href="group__joybus.html#ga935c9a92331a548ef4ef4167af5fdc5a">joybus.h</a></li>
 <li>joybus_cmd_64gb_link_cable_read_port_t&#160;:&#160;<a class="el" href="group__joybus__commands.html#gac4c8f2ac853652626cc488a3b33315e7">joybus_commands.h</a></li>
 <li>joybus_cmd_64gb_link_cable_write_port_t&#160;:&#160;<a class="el" href="group__joybus__commands.html#ga77a289429215a64550bf8a74f812ada4">joybus_commands.h</a></li>
 <li>joybus_cmd_gba_link_cable_read_port_t&#160;:&#160;<a class="el" href="group__joybus__commands.html#gac53b25b46e5c5086279b222bfd62b937">joybus_commands.h</a></li>
@@ -140,10 +142,17 @@ $(function() {
 <li>JOYBUS_COMMAND_OFFSET_RECV_LEN&#160;:&#160;<a class="el" href="group__joybus__commands.html#gafc6729134056c4037ab7e3770069b396">joybus_commands.h</a></li>
 <li>JOYBUS_COMMAND_OFFSET_SEND_LEN&#160;:&#160;<a class="el" href="group__joybus__commands.html#ga0919d489166ddd6337cdcb1a60639c85">joybus_commands.h</a></li>
 <li>JOYBUS_COMMAND_SKIP_SIZE&#160;:&#160;<a class="el" href="group__joybus__commands.html#ga0514731bcff6b9ce84b9aa34b7c76b85">joybus_commands.h</a></li>
-<li>joybus_exec()&#160;:&#160;<a class="el" href="group__joybus.html#ga6d62432ce8ecd83cd1588716fd28fdb7">joybus.c</a>, <a class="el" href="group__joybus.html#ga6d62432ce8ecd83cd1588716fd28fdb7">joybus.h</a></li>
+<li>JOYBUS_DETECT_CONNECTED&#160;:&#160;<a class="el" href="group__joybus.html#ggaf8dc4c1c93bdee8c9bd6ad43db226870a3ea8b23527ed1fad034c5e3fd124c673">joybus.h</a></li>
+<li>JOYBUS_DETECT_DISCONNECTED&#160;:&#160;<a class="el" href="group__joybus.html#ggaf8dc4c1c93bdee8c9bd6ad43db226870a070511a0ab732b27a981559b19a9a2a9">joybus.h</a></li>
+<li>joybus_detect_now()&#160;:&#160;<a class="el" href="group__joybus.html#ga1a292648030bc9b1111658199db12257">joybus.c</a>, <a class="el" href="group__joybus.html#ga1a292648030bc9b1111658199db12257">joybus.h</a></li>
+<li>JOYBUS_DETECT_POLLED&#160;:&#160;<a class="el" href="group__joybus.html#ggaf8dc4c1c93bdee8c9bd6ad43db226870a74d1f9e9e53267f09fa286eac66c24fd">joybus.h</a></li>
+<li>joybus_detection_callback_t&#160;:&#160;<a class="el" href="group__joybus.html#ga33941df8dca7db069fbae3c80f103143">joybus.h</a></li>
+<li>joybus_detection_event_t&#160;:&#160;<a class="el" href="group__joybus.html#gaf8dc4c1c93bdee8c9bd6ad43db226870">joybus.h</a></li>
+<li>joybus_exec()&#160;:&#160;<a class="el" href="group__joybus.html#ga6d62432ce8ecd83cd1588716fd28fdb7">joybus.h</a>, <a class="el" href="group__joybus.html#ga6d62432ce8ecd83cd1588716fd28fdb7">joybus.c</a></li>
 <li>joybus_exec_async()&#160;:&#160;<a class="el" href="group__joybus.html#ga244b4723690e3c15da23bdbfda2cb7d1">joybus.c</a>, <a class="el" href="group__joybus.html#ga244b4723690e3c15da23bdbfda2cb7d1">joybus.h</a></li>
 <li>joybus_exec_cmd()&#160;:&#160;<a class="el" href="group__joybus.html#gab9ed6f44c13006456f30709a48e122d0">joybus.c</a>, <a class="el" href="group__joybus.html#gab9ed6f44c13006456f30709a48e122d0">joybus.h</a></li>
 <li>joybus_exec_cmd_struct&#160;:&#160;<a class="el" href="group__joybus.html#gab66a8f8b5399fc6a3499fee9bf62c477">joybus.h</a></li>
+<li>joybus_get_identifier()&#160;:&#160;<a class="el" href="group__joybus.html#ga31275bbb756ebd4172714574934e6fbf">joybus.c</a>, <a class="el" href="group__joybus.html#ga31275bbb756ebd4172714574934e6fbf">joybus.h</a></li>
 <li>JOYBUS_IDENTIFIER_64GB_LINK_CABLE&#160;:&#160;<a class="el" href="group__joybus.html#ga662f92afa4a66274f9a23e413fab28a0">joybus.h</a></li>
 <li>JOYBUS_IDENTIFIER_CART_EEPROM_16KBIT&#160;:&#160;<a class="el" href="group__joybus.html#gafc31d9207fd140d10b9c13f286275710">joybus.h</a></li>
 <li>JOYBUS_IDENTIFIER_CART_EEPROM_4KBIT&#160;:&#160;<a class="el" href="group__joybus.html#ga048806afe0f25cc3c66bebaae163715a">joybus.h</a></li>
@@ -160,7 +169,8 @@ $(function() {
 <li>JOYBUS_IDENTIFIER_NONE&#160;:&#160;<a class="el" href="group__joybus.html#gae4add21eabfd4f9ef2c948735fe3d888">joybus.h</a></li>
 <li>JOYBUS_IDENTIFIER_PLATFORM_GCN&#160;:&#160;<a class="el" href="group__joybus.html#ga01d8a332fb379a3540be01dd5a13401d">joybus.h</a></li>
 <li>joybus_identifier_t&#160;:&#160;<a class="el" href="group__joybus.html#gad91e902f4c8cb12fb4f5aa288d423b44">joybus.h</a></li>
-<li>JOYBUS_IDENTIFIER_UNKNOWN&#160;:&#160;<a class="el" href="group__joybus.html#ga2b7e5db8ee4ab401afa2b16eda7f77ae">joybus.h</a></li>
+<li>joybus_identifiers_hot&#160;:&#160;<a class="el" href="joybus_8c.html#ab38927e1a5244b39c3f5def391d998dc">joybus.c</a></li>
+<li>JOYBUS_IDENTIFY_INTERVAL_TICKS&#160;:&#160;<a class="el" href="joybus_8c.html#a5caa3144976375a2601c39ae98f59b1d">joybus.c</a></li>
 <li>JOYBUS_IDENTIFY_STATUS_ACCESSORY_ABSENT&#160;:&#160;<a class="el" href="group__joybus.html#ga87fbaf483083862e11c9ec2e5b74dc0a">joybus.h</a></li>
 <li>JOYBUS_IDENTIFY_STATUS_ACCESSORY_CHANGED&#160;:&#160;<a class="el" href="group__joybus.html#ga05b5b4ae0febddcf5739f30e538b58a5">joybus.h</a></li>
 <li>JOYBUS_IDENTIFY_STATUS_ACCESSORY_MASK&#160;:&#160;<a class="el" href="group__joybus.html#gab8800bb58a6c542f24e3d1c0e609dbff">joybus.h</a></li>
@@ -169,8 +179,11 @@ $(function() {
 <li>JOYBUS_IDENTIFY_STATUS_COMMAND_CHECKSUM_ERROR&#160;:&#160;<a class="el" href="group__joybus.html#ga43595188cc663796720f3296e3ac13f1">joybus.h</a></li>
 <li>JOYBUS_IDENTIFY_STATUS_EEPROM_BUSY&#160;:&#160;<a class="el" href="group__joybus.html#ga09f5e586412001a8b8e64ee6fc7bcef2">joybus.h</a></li>
 <li>JOYBUS_IDENTIFY_STATUS_GCN_RUMBLE_ACTIVE&#160;:&#160;<a class="el" href="group__joybus.html#ga2798f796fd03ba614e780500331f6c52">joybus.h</a></li>
+<li>joybus_identify_status_hot&#160;:&#160;<a class="el" href="joybus_8c.html#af8bec618e687dc3f932f999c5002afdc">joybus.c</a></li>
 <li>JOYBUS_IDENTIFY_STATUS_VOICE_RECOGNITON_READY&#160;:&#160;<a class="el" href="group__joybus.html#ga2539284553ef0faa96297e9ad5a51dd7">joybus.h</a></li>
+<li>joybus_init()&#160;:&#160;<a class="el" href="group__joybus.html#ga8f4ce40c87b3a5eff4eb74a134d96849">joybus.c</a>, <a class="el" href="group__joybus.html#ga8f4ce40c87b3a5eff4eb74a134d96849">joybus.h</a></li>
 <li>JOYBUS_PORT_COUNT&#160;:&#160;<a class="el" href="group__joybus.html#ga9e1b79695ea3cde099212a15b8553bc1">joybus.h</a></li>
+<li>joybus_register_detection_callback()&#160;:&#160;<a class="el" href="group__joybus.html#ga8514d2dd3f712dbe316e6e74f7a37e89">joybus.h</a>, <a class="el" href="group__joybus.html#ga8514d2dd3f712dbe316e6e74f7a37e89">joybus.c</a></li>
 <li>JOYBUS_RTC_BLOCK_CONTROL&#160;:&#160;<a class="el" href="group__joybus__rtc.html#gga2404ab7dc703d7415cd9b78f2b04441ca138654d62497431362f64c3aa4dcb805">joybus_rtc.c</a></li>
 <li>JOYBUS_RTC_BLOCK_EMPTY&#160;:&#160;<a class="el" href="group__joybus__rtc.html#gga2404ab7dc703d7415cd9b78f2b04441ca9db340d47cfeee796569e071954b3df7">joybus_rtc.c</a></li>
 <li>joybus_rtc_block_t&#160;:&#160;<a class="el" href="group__joybus__rtc.html#ga2404ab7dc703d7415cd9b78f2b04441c">joybus_rtc.c</a></li>
@@ -213,6 +226,39 @@ $(function() {
 <li>JOYBUS_TRANSFER_PAK_STATUS_CART_PULLED&#160;:&#160;<a class="el" href="group__joybus.html#gaed8274ac3a93f9c3987fef52cf511529">joybus_accessory_internal.h</a></li>
 <li>JOYBUS_TRANSFER_PAK_STATUS_POWER&#160;:&#160;<a class="el" href="group__joybus.html#ga47a89e28eb0d1ac79c4509a0c21dee88">joybus_accessory_internal.h</a></li>
 <li>JOYBUS_TRANSFER_PAK_STATUS_RESET&#160;:&#160;<a class="el" href="group__joybus.html#ga52fc05b2bc770735f07efea1680fc152">joybus_accessory_internal.h</a></li>
+<li>joybus_unregister_detection_callback()&#160;:&#160;<a class="el" href="group__joybus.html#ga556bad5eb1297dba0f926f20ea6a1c32">joybus.h</a>, <a class="el" href="group__joybus.html#ga556bad5eb1297dba0f926f20ea6a1c32">joybus.c</a></li>
+<li>JOYFRAME_ERR_FINISHED&#160;:&#160;<a class="el" href="joyframe_8h.html#a33bb869842445dafca99513afde07784a57e68154000b19f325983bfb3f4a2755">joyframe.h</a></li>
+<li>JOYFRAME_ERR_NO_DEVICE&#160;:&#160;<a class="el" href="joyframe_8h.html#a33bb869842445dafca99513afde07784a6d1e9ec7f0e52648c4f074a23ddf06eb">joyframe.h</a></li>
+<li>joyframe_err_t&#160;:&#160;<a class="el" href="joyframe_8h.html#a33bb869842445dafca99513afde07784">joyframe.h</a></li>
+<li>JOYFRAME_ERR_TIMEOUT&#160;:&#160;<a class="el" href="joyframe_8h.html#a33bb869842445dafca99513afde07784a279550dc6ede16ac053ac9b198e9e8fe">joyframe.h</a></li>
+<li>JOYFRAME_ESC_END&#160;:&#160;<a class="el" href="joyframe_8h.html#ad679cbd488fdb375c06b3f6f72d0e4ab">joyframe.h</a></li>
+<li>JOYFRAME_ESC_NOP&#160;:&#160;<a class="el" href="joyframe_8h.html#a008678f6492a54d500235b44c4de6415">joyframe.h</a></li>
+<li>JOYFRAME_ESC_RESET&#160;:&#160;<a class="el" href="joyframe_8h.html#a0e1023e98d8503240370882717dd9be1">joyframe.h</a></li>
+<li>JOYFRAME_ESC_SKIP&#160;:&#160;<a class="el" href="joyframe_8h.html#aa76b4c6949b0e4b239c4b8a815233a9e">joyframe.h</a></li>
+<li>joyframe_read()&#160;:&#160;<a class="el" href="joyframe_8c.html#ae29b80518b6412eeefa11cb3820ee909">joyframe.c</a>, <a class="el" href="joyframe_8h.html#ae29b80518b6412eeefa11cb3820ee909">joyframe.h</a></li>
+<li>joyframe_read_begin&#160;:&#160;<a class="el" href="joyframe_8h.html#a98b8d26fd537f1473038b740136eb203">joyframe.h</a></li>
+<li>joyframe_read_IDENTIFY()&#160;:&#160;<a class="el" href="joyframe_8h.html#aeab815afb2413bba47e23039edf02368">joyframe.h</a></li>
+<li>joyframe_read_N64_ACCESSORY_READ()&#160;:&#160;<a class="el" href="joyframe_8h.html#ac0d9b5de076f5385acaa0f7f575eabe2">joyframe.h</a></li>
+<li>joyframe_read_N64_ACCESSORY_WRITE()&#160;:&#160;<a class="el" href="joyframe_8h.html#a40d5391a27a64cf6fbabcdc39efda8ca">joyframe.h</a></li>
+<li>joyframe_read_RESET()&#160;:&#160;<a class="el" href="joyframe_8h.html#afda0f54461c67a6b4d7447b071753463">joyframe.h</a></li>
+<li>joyframe_read_skip&#160;:&#160;<a class="el" href="joyframe_8h.html#a9c0de6850fcdee3b02f5702f692f66fa">joyframe.h</a></li>
+<li>JOYFRAME_RESET&#160;:&#160;<a class="el" href="joyframe_8h.html#a33bb869842445dafca99513afde07784aa16911db986b7d2069f2b9a5236415d8">joyframe.h</a></li>
+<li>JOYFRAME_RX_NO_DEVICE&#160;:&#160;<a class="el" href="joyframe_8h.html#ad75b0a5088517e1e913d4ff64d877ad1">joyframe.h</a></li>
+<li>JOYFRAME_RX_TIMEOUT&#160;:&#160;<a class="el" href="joyframe_8h.html#a86e64246463943f399fe7659b3454e09">joyframe.h</a></li>
+<li>JOYFRAME_SKIPPED&#160;:&#160;<a class="el" href="joyframe_8h.html#a33bb869842445dafca99513afde07784aa8de31d4231f8071ee04864641de01fc">joyframe.h</a></li>
+<li>joyframe_t&#160;:&#160;<a class="el" href="joyframe_8h.html#aa5ab52be5f0701dd8b9ba7eabc77ad16">joyframe.h</a></li>
+<li>JOYFRAME_TX_RESET&#160;:&#160;<a class="el" href="joyframe_8h.html#ac20ab4bfdc327939b7da3cdf55accc1b">joyframe.h</a></li>
+<li>JOYFRAME_TX_SKIP&#160;:&#160;<a class="el" href="joyframe_8h.html#a4551bf5a4055ae7bba877e6fa41948f6">joyframe.h</a></li>
+<li>joyframe_write&#160;:&#160;<a class="el" href="joyframe_8h.html#a1caecc29f1b3144593abfcd7b10dc92b">joyframe.h</a></li>
+<li>joyframe_write_begin&#160;:&#160;<a class="el" href="joyframe_8h.html#ad40706d521b221052491c01983faac3d">joyframe.h</a></li>
+<li>joyframe_write_end&#160;:&#160;<a class="el" href="joyframe_8h.html#aea9e5fa3b11b6d8e5be1614902fcfee5">joyframe.h</a></li>
+<li>joyframe_write_IDENTIFY()&#160;:&#160;<a class="el" href="joyframe_8h.html#a1a2cb9cabd7a8ecbc0ccece35e3a06d9">joyframe.h</a></li>
+<li>joyframe_write_N64_ACCESSORY_READ()&#160;:&#160;<a class="el" href="joyframe_8h.html#a2639b5e96cd8b79220e1ef6eb8c3bfcb">joyframe.h</a></li>
+<li>joyframe_write_N64_ACCESSORY_WRITE()&#160;:&#160;<a class="el" href="joyframe_8h.html#af3367b45948acf9f7eaee40a6381badc">joyframe.h</a></li>
+<li>joyframe_write_N64_CONTROLLER_READ()&#160;:&#160;<a class="el" href="joyframe_8h.html#a595fa7b80e2a4d965ee2684ddebedc97">joyframe.h</a></li>
+<li>joyframe_write_RESET()&#160;:&#160;<a class="el" href="joyframe_8h.html#aa7dce1e5f908e6c18c00df0fdcf08607">joyframe.h</a></li>
+<li>joyframe_write_reset&#160;:&#160;<a class="el" href="joyframe_8h.html#afbf36706ba786549671048efe5d4fa09">joyframe.h</a></li>
+<li>joyframe_write_skip&#160;:&#160;<a class="el" href="joyframe_8h.html#a258c1a7fe346cedc891817c2909eac36">joyframe.h</a></li>
 <li>JOYPAD_2D_ANY&#160;:&#160;<a class="el" href="group__joypad.html#gga70c14d54ed83d8ea6ca691f09015f93fa1a811aafba5a2b295679b01e73d523d3">joypad.h</a></li>
 <li>JOYPAD_2D_C&#160;:&#160;<a class="el" href="group__joypad.html#gga70c14d54ed83d8ea6ca691f09015f93face10df08fbe9ce73b36e683e1b1a2bca">joypad.h</a></li>
 <li>JOYPAD_2D_DPAD&#160;:&#160;<a class="el" href="group__joypad.html#gga70c14d54ed83d8ea6ca691f09015f93faa7f1c5de3247f78c1a94f62a027399e2">joypad.h</a></li>
@@ -230,10 +276,11 @@ $(function() {
 <li>JOYPAD_8WAY_UP&#160;:&#160;<a class="el" href="group__joypad.html#ggaeda394451b9f1f9748f4fb57a0c1cca5afa045e0a0c6c8e539781f16ac247bbfe">joypad.h</a></li>
 <li>JOYPAD_8WAY_UP_LEFT&#160;:&#160;<a class="el" href="group__joypad.html#ggaeda394451b9f1f9748f4fb57a0c1cca5a6af49769d4389e4ccd28084663098678">joypad.h</a></li>
 <li>JOYPAD_8WAY_UP_RIGHT&#160;:&#160;<a class="el" href="group__joypad.html#ggaeda394451b9f1f9748f4fb57a0c1cca5a8002817a41962cdb035e527498196282">joypad.h</a></li>
-<li>joypad_accessories_hot&#160;:&#160;<a class="el" href="group__joypad.html#gaacd5bd2cbe36912c8c8c2fed8bef6b8c">joypad.c</a>, <a class="el" href="group__joypad.html#gaacd5bd2cbe36912c8c8c2fed8bef6b8c">joypad_internal.h</a></li>
+<li>joypad_accessories_hot&#160;:&#160;<a class="el" href="group__joypad.html#gaacd5bd2cbe36912c8c8c2fed8bef6b8c">joypad_internal.h</a>, <a class="el" href="group__joypad.html#gaacd5bd2cbe36912c8c8c2fed8bef6b8c">joypad.c</a></li>
 <li>joypad_accessory_detect_async()&#160;:&#160;<a class="el" href="group__joypad.html#ga17a6a36534af3315b9c3d924d0e226a5">joypad_accessory.c</a></li>
 <li>JOYPAD_ACCESSORY_ERROR_ABSENT&#160;:&#160;<a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70ac910bfd5dfac4d16ab87df921411a983">joypad_accessory.h</a></li>
 <li>JOYPAD_ACCESSORY_ERROR_CHECKSUM&#160;:&#160;<a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70a06aa6899c02dccbf67a342dc7ce69175">joypad_accessory.h</a></li>
+<li>JOYPAD_ACCESSORY_ERROR_CONTROLLER_PAK_BANK_SWITCH&#160;:&#160;<a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70a1bf810555134d013e21c413a7c8b8030">joypad_accessory.h</a></li>
 <li>JOYPAD_ACCESSORY_ERROR_NONE&#160;:&#160;<a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70ab8555da2d3cd3b336fd9321ed49339e0">joypad_accessory.h</a></li>
 <li>JOYPAD_ACCESSORY_ERROR_PENDING&#160;:&#160;<a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70aa8a243e51990bdee34551037bcbaf73c">joypad_accessory.h</a></li>
 <li>joypad_accessory_error_t&#160;:&#160;<a class="el" href="group__joypad.html#ga0b64bfb89fc2195628b65eb3ece31c70">joypad_accessory.h</a></li>
@@ -270,10 +317,9 @@ $(function() {
 <li>joypad_close()&#160;:&#160;<a class="el" href="group__joypad.html#gaea6ceda126939b118e75fb3116db3309">joypad.c</a></li>
 <li>JOYPAD_CONTROLLER_PAK_BANK_SWITCH_ADDRESS&#160;:&#160;<a class="el" href="group__joypad.html#ga1ed67c1248297dd0f06be516a55f538d">joypad_accessory.h</a></li>
 <li>joypad_controller_pak_set_bank()&#160;:&#160;<a class="el" href="group__joypad.html#ga16f4d256acc2406142196811dab0cd04">joypad_accessory.c</a></li>
+<li>joypad_controller_pak_supports_bankswitching()&#160;:&#160;<a class="el" href="group__joypad.html#ga5043f6297d8c29c078f4dbd61d7b7c83">joypad_accessory.c</a></li>
 <li>joypad_devices_hot&#160;:&#160;<a class="el" href="group__joypad.html#ga45c01219fbabcd61f6bb71b9bc9686a8">joypad.c</a>, <a class="el" href="group__joypad.html#ga45c01219fbabcd61f6bb71b9bc9686a8">joypad_internal.h</a></li>
 <li>JOYPAD_GCN_ORIGIN_INIT&#160;:&#160;<a class="el" href="group__joypad.html#gac238c7a4dcdd5d27092cddabeffc879d">joypad_internal.h</a></li>
-<li>joypad_get_accessory_error()&#160;:&#160;<a class="el" href="group__joypad.html#ga35d783639e31863ea8fdc627ecb86fab">joypad.c</a></li>
-<li>joypad_get_accessory_state()&#160;:&#160;<a class="el" href="group__joypad.html#ga237c57a3d8b90bb26cecc622f1e26f0e">joypad.c</a></li>
 <li>joypad_get_accessory_type()&#160;:&#160;<a class="el" href="group__joypad.html#gab9f9440ae434b228dbd49f1c70009417">joypad.c</a></li>
 <li>joypad_get_axis_held()&#160;:&#160;<a class="el" href="group__joypad.html#ga1dd18cc5bb2614b1813a78d89169c9e5">joypad.c</a></li>
 <li>joypad_get_axis_pressed()&#160;:&#160;<a class="el" href="group__joypad.html#ga6deb2c7ad50a017e8d3af1ed918fa64c">joypad.c</a></li>
@@ -283,14 +329,11 @@ $(function() {
 <li>joypad_get_buttons_pressed()&#160;:&#160;<a class="el" href="group__joypad.html#gaf37446b3cfc6480bd82f5ab102f378cd">joypad.c</a></li>
 <li>joypad_get_buttons_released()&#160;:&#160;<a class="el" href="group__joypad.html#gad451dfb96051097c77dcd44261354a50">joypad.c</a></li>
 <li>joypad_get_direction()&#160;:&#160;<a class="el" href="group__joypad.html#ga3b7e4bd40d30feb8dec501b8fcbad168">joypad.c</a></li>
-<li>joypad_get_identifier()&#160;:&#160;<a class="el" href="group__joypad.html#gafd402303ac2d8f5df4740ea105aad498">joypad.c</a></li>
 <li>joypad_get_inputs()&#160;:&#160;<a class="el" href="group__joypad.html#gaaa7e3a3b41052aebb6ee16882a62e194">joypad.c</a></li>
 <li>joypad_get_rumble_active()&#160;:&#160;<a class="el" href="group__joypad.html#gaa4642833396a082c0924d43d013495c6">joypad.c</a></li>
 <li>joypad_get_rumble_supported()&#160;:&#160;<a class="el" href="group__joypad.html#gab89e532e9cd064d23859755f7b042d6f">joypad.c</a></li>
 <li>joypad_get_style()&#160;:&#160;<a class="el" href="group__joypad.html#ga9234ca39c2da65bf5af5d50f344c30fb">joypad.c</a></li>
 <li>joypad_get_transfer_pak_status()&#160;:&#160;<a class="el" href="group__joypad.html#ga89835697c34680779fba11548b1446e9">joypad.c</a></li>
-<li>joypad_identifiers_hot&#160;:&#160;<a class="el" href="group__joypad.html#gada0d6aefbadc5e4b8323d7baa5da0385">joypad.c</a>, <a class="el" href="group__joypad.html#gada0d6aefbadc5e4b8323d7baa5da0385">joypad_internal.h</a></li>
-<li>JOYPAD_IDENTIFY_INTERVAL_TICKS&#160;:&#160;<a class="el" href="group__joypad.html#ga11298664525eef44964cb4879945e219">joypad.c</a></li>
 <li>joypad_init()&#160;:&#160;<a class="el" href="group__joypad.html#gac5e6c45f691d77eaa9f4c4a82b3b7fe4">joypad.c</a></li>
 <li>joypad_is_connected()&#160;:&#160;<a class="el" href="group__joypad.html#ga8ca4e5897f1463f83beec7c2d42af598">joypad.c</a></li>
 <li>joypad_origins_hot&#160;:&#160;<a class="el" href="group__joypad.html#ga46e9d3ffdf5e12dbb715a18d55d2b99f">joypad.c</a>, <a class="el" href="group__joypad.html#ga46e9d3ffdf5e12dbb715a18d55d2b99f">joypad_internal.h</a></li>
@@ -330,7 +373,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:57 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

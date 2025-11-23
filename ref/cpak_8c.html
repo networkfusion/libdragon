@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -74,459 +75,49 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">cpak.c File Reference</div></div>
+  <div class="headertitle"><div class="title">cpak.c File Reference<div class="ingroups"><a class="el" href="group__libdragon.html">libdragon</a> &raquo; <a class="el" href="group__controller.html">Controller Subsystem</a> &raquo; <a class="el" href="group__controllerpak.html">Controller Pak Filesystem Routines</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Controller Pak raw access.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:unioncpakfs__id__t" id="r_unioncpakfs__id__t"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpak_8c.html#unioncpakfs__id__t">cpakfs_id_t</a></td></tr>
-<tr class="memdesc:unioncpakfs__id__t"><td class="mdescLeft">&#160;</td><td class="mdescRight">ID sector.  <a href="cpak_8c.html#unioncpakfs__id__t">More...</a><br /></td></tr>
-<tr class="separator:unioncpakfs__id__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:structcpakfs__note__t" id="r_structcpakfs__note__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpak_8c.html#structcpakfs__note__t">cpakfs_note_t</a></td></tr>
-<tr class="memdesc:structcpakfs__note__t"><td class="mdescLeft">&#160;</td><td class="mdescRight">A note (similar to inode)  <a href="cpak_8c.html#structcpakfs__note__t">More...</a><br /></td></tr>
-<tr class="separator:structcpakfs__note__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:structcpakfs__t" id="r_structcpakfs__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpak_8c.html#structcpakfs__t">cpakfs_t</a></td></tr>
-<tr class="memdesc:structcpakfs__t"><td class="mdescLeft">&#160;</td><td class="mdescRight">A mounted cpak filesystem.  <a href="cpak_8c.html#structcpakfs__t">More...</a><br /></td></tr>
-<tr class="separator:structcpakfs__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:structcpakfs__openfile__t" id="r_structcpakfs__openfile__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpak_8c.html#structcpakfs__openfile__t">cpakfs_openfile_t</a></td></tr>
-<tr class="memdesc:structcpakfs__openfile__t"><td class="mdescLeft">&#160;</td><td class="mdescRight">A open file in the cpakfs.  <a href="cpak_8c.html#structcpakfs__openfile__t">More...</a><br /></td></tr>
-<tr class="separator:structcpakfs__openfile__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:structcpakfs__id__t_8____unnamed8____" id="r_structcpakfs__id__t_8____unnamed8____"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpak_8c.html#structcpakfs__id__t_8____unnamed8____">cpakfs_id_t.__unnamed8__</a></td></tr>
-<tr class="separator:structcpakfs__id__t_8____unnamed8____"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a5edf8a74ee6f8a4dcc832484cbe273a0" id="r_a5edf8a74ee6f8a4dcc832484cbe273a0"><td class="memItemLeft" align="right" valign="top"><a id="a5edf8a74ee6f8a4dcc832484cbe273a0" name="a5edf8a74ee6f8a4dcc832484cbe273a0"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_NOTES</b>&#160;&#160;&#160;16</td></tr>
-<tr class="memdesc:a5edf8a74ee6f8a4dcc832484cbe273a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of notes in a controller pak. <br /></td></tr>
-<tr class="separator:a5edf8a74ee6f8a4dcc832484cbe273a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d467c1d283fdfa1f2081ba1e0d01b6e" id="r_a7d467c1d283fdfa1f2081ba1e0d01b6e"><td class="memItemLeft" align="right" valign="top"><a id="a7d467c1d283fdfa1f2081ba1e0d01b6e" name="a7d467c1d283fdfa1f2081ba1e0d01b6e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>PAGE_SIZE</b>&#160;&#160;&#160;256</td></tr>
-<tr class="memdesc:a7d467c1d283fdfa1f2081ba1e0d01b6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Page size in bytes. <br /></td></tr>
-<tr class="separator:a7d467c1d283fdfa1f2081ba1e0d01b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad51ded0bbd705f02f73fc60c0b721ced" id="r_ad51ded0bbd705f02f73fc60c0b721ced"><td class="memItemLeft" align="right" valign="top"><a id="ad51ded0bbd705f02f73fc60c0b721ced" name="ad51ded0bbd705f02f73fc60c0b721ced"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>BLOCK_SIZE</b>&#160;&#160;&#160;32</td></tr>
-<tr class="memdesc:ad51ded0bbd705f02f73fc60c0b721ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Block size in bytes. <br /></td></tr>
+<tr class="memdesc:ad51ded0bbd705f02f73fc60c0b721ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of a block in the controller pak (32 bytes) <br /></td></tr>
 <tr class="separator:ad51ded0bbd705f02f73fc60c0b721ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10cb888ea42a334a42f063e1c412f043" id="r_a10cb888ea42a334a42f063e1c412f043"><td class="memItemLeft" align="right" valign="top"><a id="a10cb888ea42a334a42f063e1c412f043" name="a10cb888ea42a334a42f063e1c412f043"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>FAT_TERMINATOR</b>&#160;&#160;&#160;1</td></tr>
-<tr class="memdesc:a10cb888ea42a334a42f063e1c412f043"><td class="mdescLeft">&#160;</td><td class="mdescRight">FAT value marking the end of the file. <br /></td></tr>
-<tr class="separator:a10cb888ea42a334a42f063e1c412f043"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96789ca9d43b2b08d20c974db73a814c" id="r_a96789ca9d43b2b08d20c974db73a814c"><td class="memItemLeft" align="right" valign="top"><a id="a96789ca9d43b2b08d20c974db73a814c" name="a96789ca9d43b2b08d20c974db73a814c"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>FAT_UNUSED</b>&#160;&#160;&#160;3</td></tr>
-<tr class="memdesc:a96789ca9d43b2b08d20c974db73a814c"><td class="mdescLeft">&#160;</td><td class="mdescRight">FAT value marking an unused block. <br /></td></tr>
-<tr class="separator:a96789ca9d43b2b08d20c974db73a814c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad90815c395e68d645f9b72cdf35a8b85" id="r_ad90815c395e68d645f9b72cdf35a8b85"><td class="memItemLeft" align="right" valign="top"><a id="ad90815c395e68d645f9b72cdf35a8b85" name="ad90815c395e68d645f9b72cdf35a8b85"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>FAT_VALID</b>(n)&#160;&#160;&#160;((n) &gt;= 5)</td></tr>
-<tr class="memdesc:ad90815c395e68d645f9b72cdf35a8b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the FAT value refers to a block (rather than being a control value) <br /></td></tr>
-<tr class="separator:ad90815c395e68d645f9b72cdf35a8b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73ef8e68842b20d697c0b8e43a8a4302" id="r_a73ef8e68842b20d697c0b8e43a8a4302"><td class="memItemLeft" align="right" valign="top"><a id="a73ef8e68842b20d697c0b8e43a8a4302" name="a73ef8e68842b20d697c0b8e43a8a4302"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>NOTE_STATUS_OCCUPIED</b>&#160;&#160;&#160;(1&lt;&lt;9)</td></tr>
-<tr class="memdesc:a73ef8e68842b20d697c0b8e43a8a4302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to mark a note as occupied (not empty) <br /></td></tr>
-<tr class="separator:a73ef8e68842b20d697c0b8e43a8a4302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9984254ee3f0ea285bfb8a4e127e557c" id="r_a9984254ee3f0ea285bfb8a4e127e557c"><td class="memItemLeft" align="right" valign="top"><a id="a9984254ee3f0ea285bfb8a4e127e557c" name="a9984254ee3f0ea285bfb8a4e127e557c"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>NOTE_STATUS_SIZE</b>&#160;&#160;&#160;(1&lt;&lt;0)</td></tr>
-<tr class="memdesc:a9984254ee3f0ea285bfb8a4e127e557c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libdragon extension to store the size of the note (not implemented yet) <br /></td></tr>
-<tr class="separator:a9984254ee3f0ea285bfb8a4e127e557c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2efe865ff164db8804ce39db3f0c3ad3" id="r_a2efe865ff164db8804ce39db3f0c3ad3"><td class="memItemLeft" align="right" valign="top"><a id="a2efe865ff164db8804ce39db3f0c3ad3" name="a2efe865ff164db8804ce39db3f0c3ad3"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>FLAG_READING</b>&#160;&#160;&#160;(1&lt;&lt;0)</td></tr>
-<tr class="memdesc:a2efe865ff164db8804ce39db3f0c3ad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to mark a file as being read. <br /></td></tr>
-<tr class="separator:a2efe865ff164db8804ce39db3f0c3ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b0e82f3b404a6b080a7e9b33cdc108d" id="r_a8b0e82f3b404a6b080a7e9b33cdc108d"><td class="memItemLeft" align="right" valign="top"><a id="a8b0e82f3b404a6b080a7e9b33cdc108d" name="a8b0e82f3b404a6b080a7e9b33cdc108d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>FLAG_WRITING</b>&#160;&#160;&#160;(1&lt;&lt;1)</td></tr>
-<tr class="memdesc:a8b0e82f3b404a6b080a7e9b33cdc108d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to mark a file as being written. <br /></td></tr>
-<tr class="separator:a8b0e82f3b404a6b080a7e9b33cdc108d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d1c5d4009b74ff41d5d6fdae15e7e0b" id="r_a5d1c5d4009b74ff41d5d6fdae15e7e0b"><td class="memItemLeft" align="right" valign="top"><a id="a5d1c5d4009b74ff41d5d6fdae15e7e0b" name="a5d1c5d4009b74ff41d5d6fdae15e7e0b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>FLAG_NOTE_DIRTY</b>&#160;&#160;&#160;(1&lt;&lt;2)</td></tr>
-<tr class="memdesc:a5d1c5d4009b74ff41d5d6fdae15e7e0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to mark a file whose note requires being rewritten. <br /></td></tr>
-<tr class="separator:a5d1c5d4009b74ff41d5d6fdae15e7e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9e7833f2439dbd3c50137fe3cca9212" id="r_ad9e7833f2439dbd3c50137fe3cca9212"><td class="memItemLeft" align="right" valign="top"><a id="ad9e7833f2439dbd3c50137fe3cca9212" name="ad9e7833f2439dbd3c50137fe3cca9212"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>FLAG_FAT_DIRTY</b>&#160;&#160;&#160;(1&lt;&lt;3)</td></tr>
-<tr class="memdesc:ad9e7833f2439dbd3c50137fe3cca9212"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to mark a file whose FAT requires being rewritten. <br /></td></tr>
-<tr class="separator:ad9e7833f2439dbd3c50137fe3cca9212"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a02bf1a1501fe3a9485243370047791ef" id="r_a02bf1a1501fe3a9485243370047791ef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpak_8c.html#a02bf1a1501fe3a9485243370047791ef">cpak_mount</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port, const char *prefix)</td></tr>
-<tr class="memdesc:a02bf1a1501fe3a9485243370047791ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount the controller pak as filesystem.  <br /></td></tr>
-<tr class="separator:a02bf1a1501fe3a9485243370047791ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdb372f395a78b9d17b8c36cf533ccb4" id="r_afdb372f395a78b9d17b8c36cf533ccb4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpak_8c.html#afdb372f395a78b9d17b8c36cf533ccb4">cpak_unmount</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port)</td></tr>
-<tr class="memdesc:afdb372f395a78b9d17b8c36cf533ccb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unmount the controller pak filesystem.  <br /></td></tr>
-<tr class="separator:afdb372f395a78b9d17b8c36cf533ccb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae52db56feefcf9029a12a18b09a6968d" id="r_ae52db56feefcf9029a12a18b09a6968d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpak_8c.html#ae52db56feefcf9029a12a18b09a6968d">cpak_get_serial</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port, uint8_t serial[24])</td></tr>
-<tr class="memdesc:ae52db56feefcf9029a12a18b09a6968d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the serial number of a controller pak.  <br /></td></tr>
-<tr class="separator:ae52db56feefcf9029a12a18b09a6968d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a132113db183029046781690f38785a56" id="r_a132113db183029046781690f38785a56"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpak_8c.html#a132113db183029046781690f38785a56">cpak_get_stats</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port, <a class="el" href="cpak_8h.html#structcpak__stats__t">cpak_stats_t</a> *stats)</td></tr>
-<tr class="memdesc:a132113db183029046781690f38785a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the usage state of a controller pak.  <br /></td></tr>
-<tr class="separator:a132113db183029046781690f38785a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1de5f3128ccfc797fd9b69cca96c9cb" id="r_ab1de5f3128ccfc797fd9b69cca96c9cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpak_8c.html#ab1de5f3128ccfc797fd9b69cca96c9cb">cpak_fsck</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port, bool fix_errors)</td></tr>
-<tr class="memdesc:ab1de5f3128ccfc797fd9b69cca96c9cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the integrity of a controller pak.  <br /></td></tr>
-<tr class="separator:ab1de5f3128ccfc797fd9b69cca96c9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2611c83eac703b12c1f43242492e2b96" id="r_a2611c83eac703b12c1f43242492e2b96"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpak_8c.html#a2611c83eac703b12c1f43242492e2b96">cpak_read</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port, uint8_t bank, uint16_t address, void *buffer, size_t len)</td></tr>
+<tr class="memdesc:a2611c83eac703b12c1f43242492e2b96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from a controller pak.  <br /></td></tr>
+<tr class="separator:a2611c83eac703b12c1f43242492e2b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a835808133f470bb54551a0c16d093452" id="r_a835808133f470bb54551a0c16d093452"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpak_8c.html#a835808133f470bb54551a0c16d093452">cpak_write</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port, uint8_t bank, uint16_t address, const void *buffer, size_t len)</td></tr>
+<tr class="memdesc:a835808133f470bb54551a0c16d093452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to a controller pak.  <br /></td></tr>
+<tr class="separator:a835808133f470bb54551a0c16d093452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cdeca23ac496a3f801e3141c25a63b2" id="r_a7cdeca23ac496a3f801e3141c25a63b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpak_8c.html#a7cdeca23ac496a3f801e3141c25a63b2">cpak_supports_bankswitching</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port)</td></tr>
+<tr class="memdesc:a7cdeca23ac496a3f801e3141c25a63b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a controller pak supports bankswitching or not.  <br /></td></tr>
+<tr class="separator:a7cdeca23ac496a3f801e3141c25a63b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae105e2bedc4b37d8c602b6147caafbf" id="r_aae105e2bedc4b37d8c602b6147caafbf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpak_8c.html#aae105e2bedc4b37d8c602b6147caafbf">cpak_probe_banks</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port)</td></tr>
+<tr class="memdesc:aae105e2bedc4b37d8c602b6147caafbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Probe the number of banks in a controller pak.  <br /></td></tr>
+<tr class="separator:aae105e2bedc4b37d8c602b6147caafbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
-</div><hr/><h2 class="groupheader">Data Structure Documentation</h2>
-<a name="unioncpakfs__id__t" id="unioncpakfs__id__t"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#unioncpakfs__id__t">&#9670;&#160;</a></span>cpakfs_id_t</h2>
+<div class="textblock"><p>Controller Pak raw access. </p>
+<dl class="section author"><dt>Author</dt><dd>Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a2611c83eac703b12c1f43242492e2b96" name="a2611c83eac703b12c1f43242492e2b96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2611c83eac703b12c1f43242492e2b96">&#9670;&#160;</a></span>cpak_read()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">union cpakfs_id_t</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="textblock"><p>ID sector. </p>
-</div><table class="fieldtable">
-<tr><th colspan="3">Data Fields</th></tr>
-<tr><td class="fieldtype">
-<a id="a83caec94bb28917d92242b3000df5693" name="a83caec94bb28917d92242b3000df5693"></a>struct <a class="el" href="cpak_8c.html#structcpakfs__id__t_8____unnamed8____">cpakfs_id_t.__unnamed8__</a></td>
-<td class="fieldname">
-__unnamed__</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a05fb34b7f97795c4c0943d87f911873a" name="a05fb34b7f97795c4c0943d87f911873a"></a>uint8_t</td>
-<td class="fieldname">
-data8[32]</td>
-<td class="fielddoc">
-Raw data (8-bit access) </td></tr>
-<tr><td class="fieldtype">
-<a id="a8042ae62aa951f673efde287bf546ff9" name="a8042ae62aa951f673efde287bf546ff9"></a>uint16_t</td>
-<td class="fieldname">
-data16[16]</td>
-<td class="fielddoc">
-Raw data (16-bit access) </td></tr>
-</table>
-
-</div>
-</div>
-<a name="structcpakfs__note__t" id="structcpakfs__note__t"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#structcpakfs__note__t">&#9670;&#160;</a></span>cpakfs_note_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct cpakfs_note_t</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="textblock"><p>A note (similar to inode) </p>
-</div><table class="fieldtable">
-<tr><th colspan="3">Data Fields</th></tr>
-<tr><td class="fieldtype">
-<a id="a7e8475a8f133bc63eb52a775e5d3a3cd" name="a7e8475a8f133bc63eb52a775e5d3a3cd"></a>char</td>
-<td class="fieldname">
-gamecode[4]</td>
-<td class="fielddoc">
-Game code (ASCII, 4 chars) </td></tr>
-<tr><td class="fieldtype">
-<a id="a05c3868c4662c8acd5f3242b3f288aef" name="a05c3868c4662c8acd5f3242b3f288aef"></a>char</td>
-<td class="fieldname">
-pubcode[2]</td>
-<td class="fielddoc">
-Publisher code (ASCII, 2 chars) </td></tr>
-<tr><td class="fieldtype">
-<a id="a01c51dd986a7dc41278c7a878e5d8185" name="a01c51dd986a7dc41278c7a878e5d8185"></a>uint16_t</td>
-<td class="fieldname">
-first_page</td>
-<td class="fielddoc">
-First page where data is stored. </td></tr>
-<tr><td class="fieldtype">
-<a id="af6db4d1341121370f1467aa75436f754" name="af6db4d1341121370f1467aa75436f754"></a>uint16_t</td>
-<td class="fieldname">
-status</td>
-<td class="fielddoc">
-Status flags (bit 2: occupied) </td></tr>
-<tr><td class="fieldtype">
-<a id="af33a779fcbe040c23aef4061ad9dbf31" name="af33a779fcbe040c23aef4061ad9dbf31"></a>uint16_t</td>
-<td class="fieldname">
-unused</td>
-<td class="fielddoc">
-Unused. </td></tr>
-<tr><td class="fieldtype">
-<a id="a50bd0ed561c574962e54108c5b15a3b2" name="a50bd0ed561c574962e54108c5b15a3b2"></a>uint8_t</td>
-<td class="fieldname">
-ext[4]</td>
-<td class="fielddoc">
-File extension (custom codepage) </td></tr>
-<tr><td class="fieldtype">
-<a id="a1c4f2e48f4a76aad48e8999dc19e56a5" name="a1c4f2e48f4a76aad48e8999dc19e56a5"></a>uint8_t</td>
-<td class="fieldname">
-filename[16]</td>
-<td class="fielddoc">
-Filename (custom codepage) </td></tr>
-</table>
-
-</div>
-</div>
-<a name="structcpakfs__t" id="structcpakfs__t"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#structcpakfs__t">&#9670;&#160;</a></span>cpakfs_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct cpakfs_t</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="textblock"><p>A mounted cpak filesystem. </p>
-</div><table class="fieldtable">
-<tr><th colspan="3">Data Fields</th></tr>
-<tr><td class="fieldtype">
-<a id="a10ba3a20b393835f06e0331bde37220b" name="a10ba3a20b393835f06e0331bde37220b"></a><a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a></td>
-<td class="fieldname">
-port</td>
-<td class="fielddoc">
-Joypad port. </td></tr>
-<tr><td class="fieldtype">
-<a id="ac09b183e789aa9221f0800463c6053d9" name="ac09b183e789aa9221f0800463c6053d9"></a><a class="el" href="cpak_8c.html#structcpakfs__note__t">cpakfs_note_t</a></td>
-<td class="fieldname">
-notes[<a class="el" href="cpak_8c.html#a5edf8a74ee6f8a4dcc832484cbe273a0">MAX_NOTES</a>]</td>
-<td class="fielddoc">
-Cache of all the notes. </td></tr>
-<tr><td class="fieldtype">
-<a id="a75f886e2a56a0c61c133679056cb3f7b" name="a75f886e2a56a0c61c133679056cb3f7b"></a>uint16_t</td>
-<td class="fieldname">
-notes_mask</td>
-<td class="fielddoc">
-Bitmask of read notes. </td></tr>
-<tr><td class="fieldtype">
-<a id="a9f3b55e0e79ce3391318babbd0b89a00" name="a9f3b55e0e79ce3391318babbd0b89a00"></a>int</td>
-<td class="fieldname">
-cur_bank</td>
-<td class="fielddoc">
-Current bank for multi-bank cpaks. </td></tr>
-<tr><td class="fieldtype">
-<a id="ab7acbf94dcf275ac7c69c8573dee0f51" name="ab7acbf94dcf275ac7c69c8573dee0f51"></a>int</td>
-<td class="fieldname">
-fat_idx</td>
-<td class="fielddoc">
-Index of the FAT that was read (0 or 1) </td></tr>
-<tr><td class="fieldtype">
-<a id="a139730fe4d2a25e9c9520c6b1da9214f" name="a139730fe4d2a25e9c9520c6b1da9214f"></a>int</td>
-<td class="fieldname">
-fat_size</td>
-<td class="fielddoc">
-Size of the FAT in bytes. </td></tr>
-<tr><td class="fieldtype">
-<a id="a29507134144bbfe1c248a65cf330dbaf" name="a29507134144bbfe1c248a65cf330dbaf"></a>uint16_t</td>
-<td class="fieldname">
-fat[]</td>
-<td class="fielddoc">
-FAT entries. </td></tr>
-</table>
-
-</div>
-</div>
-<a name="structcpakfs__openfile__t" id="structcpakfs__openfile__t"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#structcpakfs__openfile__t">&#9670;&#160;</a></span>cpakfs_openfile_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct cpakfs_openfile_t</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="textblock"><p>A open file in the cpakfs. </p>
-</div><table class="fieldtable">
-<tr><th colspan="3">Data Fields</th></tr>
-<tr><td class="fieldtype">
-<a id="a63b28792f23eedb9fe17e107d121ecaa" name="a63b28792f23eedb9fe17e107d121ecaa"></a>int</td>
-<td class="fieldname">
-port</td>
-<td class="fielddoc">
-Joypad port. </td></tr>
-<tr><td class="fieldtype">
-<a id="ad5fdaab6b5107bd0908d32982a58f2a4" name="ad5fdaab6b5107bd0908d32982a58f2a4"></a><a class="el" href="cpak_8c.html#structcpakfs__note__t">cpakfs_note_t</a> *</td>
-<td class="fieldname">
-note</td>
-<td class="fielddoc">
-Note this file is associated with. </td></tr>
-<tr><td class="fieldtype">
-<a id="ac44ebff476bb2df9dfc3c46fd439f9b5" name="ac44ebff476bb2df9dfc3c46fd439f9b5"></a>int</td>
-<td class="fieldname">
-pos</td>
-<td class="fielddoc">
-Current position in the file. </td></tr>
-<tr><td class="fieldtype">
-<a id="ad935c3249c29f5be0dc7d67c7efd4a0b" name="ad935c3249c29f5be0dc7d67c7efd4a0b"></a>int</td>
-<td class="fieldname">
-size</td>
-<td class="fielddoc">
-File size. </td></tr>
-<tr><td class="fieldtype">
-<a id="aba0f439aeb6765fb7784a64ac96ac7d7" name="aba0f439aeb6765fb7784a64ac96ac7d7"></a>uint16_t *</td>
-<td class="fieldname">
-cur_page_ptr</td>
-<td class="fielddoc">
-Pointer to the current page in the FAT (or in the note) </td></tr>
-<tr><td class="fieldtype">
-<a id="a8043fe674aad9e15a0bb9e9a0ee525d7" name="a8043fe674aad9e15a0bb9e9a0ee525d7"></a>uint8_t</td>
-<td class="fieldname">
-flags</td>
-<td class="fielddoc">
-Flags. </td></tr>
-</table>
-
-</div>
-</div>
-<a name="structcpakfs__id__t_8____unnamed8____" id="structcpakfs__id__t_8____unnamed8____"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#structcpakfs__id__t_8____unnamed8____">&#9670;&#160;</a></span>cpakfs_id_t.__unnamed8__</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct cpakfs_id_t.__unnamed8__</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="textblock"></div><table class="fieldtable">
-<tr><th colspan="3">Data Fields</th></tr>
-<tr><td class="fieldtype">
-<a id="a496a1e220155e3491a9591e6dff8b07a" name="a496a1e220155e3491a9591e6dff8b07a"></a>uint8_t</td>
-<td class="fieldname">
-serial[24]</td>
-<td class="fielddoc">
-Serial number. </td></tr>
-<tr><td class="fieldtype">
-<a id="a8f5d1559bda3b99edf705ae669eec754" name="a8f5d1559bda3b99edf705ae669eec754"></a>uint16_t</td>
-<td class="fieldname">
-device_id_lsb</td>
-<td class="fielddoc">
-Device ID (in the LSB). Bit 0 should be 1. </td></tr>
-<tr><td class="fieldtype">
-<a id="a08b5ea2dfa05247f1cae8b3ef95c7d54" name="a08b5ea2dfa05247f1cae8b3ef95c7d54"></a>uint16_t</td>
-<td class="fieldname">
-bank_size_msb</td>
-<td class="fielddoc">
-Bank size (in the MSB): number of FAT entries. </td></tr>
-<tr><td class="fieldtype">
-<a id="a5be4762aaefc763b9916002eff172367" name="a5be4762aaefc763b9916002eff172367"></a>uint16_t</td>
-<td class="fieldname">
-checksum1</td>
-<td class="fielddoc">
-Checksum of the first 14 words. </td></tr>
-<tr><td class="fieldtype">
-<a id="a04c84da631d62a4458f6126143e7faf4" name="a04c84da631d62a4458f6126143e7faf4"></a>uint16_t</td>
-<td class="fieldname">
-checksum2</td>
-<td class="fielddoc">
-Reversed checksum of the first 14 words. </td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a02bf1a1501fe3a9485243370047791ef" name="a02bf1a1501fe3a9485243370047791ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02bf1a1501fe3a9485243370047791ef">&#9670;&#160;</a></span>cpak_mount()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int cpak_mount </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a>&#160;</td>
-          <td class="paramname"><em>port</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>prefix</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Mount the controller pak as filesystem. </p>
-<p>This function mounts the contents of a controller pak as a virtual filesystem, with the specified prefix. After this function successfully return, it is possible to access the notes in the cpak using standard C functions like fopen.</p>
-<div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="cpak_8c.html#a02bf1a1501fe3a9485243370047791ef">cpak_mount</a>(<a class="code hl_enumvalue" href="group__joypad.html#ggaf1f491d1f9849be157cb4a50705c8dcba57a21034d1303ee700edf660663697d8">JOYPAD_PORT_1</a>, <span class="stringliteral">&quot;cpak1:/&quot;</span>) &lt; 0) {</div>
-<div class="line">   <span class="comment">// handle errors, by inspecting errno [...]</span></div>
-<div class="line">   <span class="keywordflow">return</span>;</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// Read the following note:</span></div>
-<div class="line"><span class="comment">//   Game code: NAFJ</span></div>
-<div class="line"><span class="comment">//   Publisher code: 01</span></div>
-<div class="line"><span class="comment">//   Filename: DOUBUTSUNOMORI</span></div>
-<div class="line"><span class="comment">//   File extension: A</span></div>
-<div class="line">FILE *f = fopen(<span class="stringliteral">&quot;cpak1:/NAFJ.01/DOUBUTSUNOMORI.A&quot;</span>);</div>
-<div class="ttc" id="acpak_8c_html_a02bf1a1501fe3a9485243370047791ef"><div class="ttname"><a href="cpak_8c.html#a02bf1a1501fe3a9485243370047791ef">cpak_mount</a></div><div class="ttdeci">int cpak_mount(joypad_port_t port, const char *prefix)</div><div class="ttdoc">Mount the controller pak as filesystem.</div><div class="ttdef"><b>Definition</b> cpak.c:858</div></div>
-<div class="ttc" id="agroup__joypad_html_ggaf1f491d1f9849be157cb4a50705c8dcba57a21034d1303ee700edf660663697d8"><div class="ttname"><a href="group__joypad.html#ggaf1f491d1f9849be157cb4a50705c8dcba57a21034d1303ee700edf660663697d8">JOYPAD_PORT_1</a></div><div class="ttdeci">@ JOYPAD_PORT_1</div><div class="ttdoc">Joypad Port 1.</div><div class="ttdef"><b>Definition</b> joypad.h:76</div></div>
-</div><!-- fragment --><p>The virtual filesystem structure is as follows:</p><ul>
-<li>Root directory contains no files, only subdirectories. The name of the subdirectories is a 4.2 ASCII string that encode the game code and publisher code (eg: "NSME.01")</li>
-<li>Within each subdirectory, you can find one or multiple files that are the notes found in the cpak. The filenames are UTF-8 strings that must adhere to the special cpak charset.</li>
-<li>Empty directories do not exist.</li>
-</ul>
-<p>In case of error while mounting the filesystem, errno is set as follows:</p>
-<ul>
-<li>EIO: Input/output error on the wire. The serial connection is faulty, so either the cable is damaged or the cpak is electrically unstable.</li>
-<li>ENXIO: The controller pak or the whole joypad has been abruptly disconnected during the operation.</li>
-<li>ENODEV: the controller pak appears not to contain a valid filesystem, or it was corrupted. Use <a class="el" href="cpak_8h.html#ab1de5f3128ccfc797fd9b69cca96c9cb" title="Check the integrity of a controller pak.">cpak_fsck</a> to try recovering the contents.</li>
-</ul>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">port</td><td>Cpak to mount, identified by the joypad port </td></tr>
-    <tr><td class="paramname">prefix</td><td>Filesystem prefix to use for mounting. Suggested name is "cpakN:/" where "N" is the controller port (1..4). </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if success, negative value in case of error (and errno is set) </dd></dl>
-
-</div>
-</div>
-<a id="afdb372f395a78b9d17b8c36cf533ccb4" name="afdb372f395a78b9d17b8c36cf533ccb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdb372f395a78b9d17b8c36cf533ccb4">&#9670;&#160;</a></span>cpak_unmount()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int cpak_unmount </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a>&#160;</td>
-          <td class="paramname"><em>port</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Unmount the controller pak filesystem. </p>
-<p>This function unmounts the controller pak filesystem, waiting for all pending operations to complete.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">port</td><td>The controller pak to unmount </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if success, negative value in case of error (and errno is set) </dd></dl>
-
-</div>
-</div>
-<a id="ae52db56feefcf9029a12a18b09a6968d" name="ae52db56feefcf9029a12a18b09a6968d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae52db56feefcf9029a12a18b09a6968d">&#9670;&#160;</a></span>cpak_get_serial()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int cpak_get_serial </td>
+          <td class="memname">int cpak_read </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a>&#160;</td>
           <td class="paramname"><em>port</em>, </td>
@@ -535,7 +126,25 @@ Reversed checksum of the first 14 words. </td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>serial</em>[24]&#160;</td>
+          <td class="paramname"><em>bank</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -545,29 +154,33 @@ Reversed checksum of the first 14 words. </td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Read the serial number of a controller pak. </p>
-<p>This function reads the 20-byte serial number of a controller pak. This is a unique identifier that can be used to distinguish between different controller paks. It is normally generated with random data when the controller pak is formatted, so it does not contain printable characters.</p>
+<p>Read data from a controller pak. </p>
+<p>This is a low-level operation that reads a sequence of raw bytes from the controller pak, with no filesystem semantics. A typical use case for this function is dumping the contents of a controller pak.</p>
+<p>The function will switch to the specified bank (unless it is already in that bank), and then read the specified number of bytes from the specified address. The read can be of any length, and the address does not need to be aligned, but the read cannot cross banks.</p>
+<dl class="section note"><dt>Note</dt><dd>There is no way for this function to know how many banks the controller pak has. The caller must ensure that the bank exists, otherwise the behavior is undefined. You can use the <a class="el" href="cpak_8h.html#aae105e2bedc4b37d8c602b6147caafbf" title="Probe the number of banks in a controller pak.">cpak_probe_banks</a> function to determine the number of banks, via hardware probing, or <a class="el" href="cpakfs_8c.html#aa121d51eaf4159e9e494dc3e3d4cc4d7" title="Read the usage state of a controller pak.">cpakfs_get_stats</a> to get the number of banks as recorded in the filesystem.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">port</td><td>The controller pak to read the serial from </td></tr>
-    <tr><td class="paramname">serial</td><td>The buffer where to store the serial number (24 bytes) </td></tr>
+    <tr><td class="paramname">port</td><td>Joypad port number (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb" title="Joypad Port Numbers.">joypad_port_t</a>) </td></tr>
+    <tr><td class="paramname">bank</td><td>Bank number to read from. The caller must ensure that the bank exists, otherwise the behavior is undefined. <br  />
+ </td></tr>
+    <tr><td class="paramname">address</td><td>Starting address in the controller pak to read from. Allowed range is 0-0x7FFF. </td></tr>
+    <tr><td class="paramname">buffer</td><td>Buffer to read the data into </td></tr>
+    <tr><td class="paramname">len</td><td>Number of bytes to read. The caller must ensure that the length does not exceed the bank size (0x8000). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if the serial was successfully read </dd>
-<dd>
-negative if an error occurred (eg: no cpak on the specified port), and errno is set accordingly. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int Number of bytes read, or negative value in case of error (errno will be set). </dd></dl>
 
 </div>
 </div>
-<a id="a132113db183029046781690f38785a56" name="a132113db183029046781690f38785a56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a132113db183029046781690f38785a56">&#9670;&#160;</a></span>cpak_get_stats()</h2>
+<a id="a835808133f470bb54551a0c16d093452" name="a835808133f470bb54551a0c16d093452"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a835808133f470bb54551a0c16d093452">&#9670;&#160;</a></span>cpak_write()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int cpak_get_stats </td>
+          <td class="memname">int cpak_write </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a>&#160;</td>
           <td class="paramname"><em>port</em>, </td>
@@ -575,8 +188,26 @@ negative if an error occurred (eg: no cpak on the specified port), and errno is 
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="cpak_8h.html#structcpak__stats__t">cpak_stats_t</a> *&#160;</td>
-          <td class="paramname"><em>stats</em>&#160;</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>bank</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -586,65 +217,90 @@ negative if an error occurred (eg: no cpak on the specified port), and errno is 
       </table>
 </div><div class="memdoc">
 
-<p>Read the usage state of a controller pak. </p>
+<p>Write data to a controller pak. </p>
+<p>This is a low-level operation that writes a sequence of raw bytes to the controller pak, with no filesystem semantics. A typical use case for this function is restoring a dump to a controller pak.</p>
+<p>The function will switch to the specified bank (unless it is already in that bank), and then write the specified number of bytes to the specified address. The write can be of any length, and the address does not need to be aligned, but the write cannot cross banks.</p>
+<dl class="section note"><dt>Note</dt><dd>There is no way for this function to know how many banks the controller pak has. The caller must ensure that the bank exists, otherwise the behavior is undefined. You can use the <a class="el" href="cpak_8h.html#aae105e2bedc4b37d8c602b6147caafbf" title="Probe the number of banks in a controller pak.">cpak_probe_banks</a> function to determine the number of banks, via hardware probing, or <a class="el" href="cpakfs_8c.html#aa121d51eaf4159e9e494dc3e3d4cc4d7" title="Read the usage state of a controller pak.">cpakfs_get_stats</a> to get the number of banks as recorded in the filesystem.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">port</td><td>The controller pak to read the usage state from </td></tr>
-    <tr><td class="paramname">stats</td><td>The structure where to store the usage statistics </td></tr>
+    <tr><td class="paramname">port</td><td>Joypad port number (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb" title="Joypad Port Numbers.">joypad_port_t</a>) </td></tr>
+    <tr><td class="paramname">bank</td><td>Bank number to write to. The caller must ensure that the bank exists, otherwise the behavior is undefined. </td></tr>
+    <tr><td class="paramname">address</td><td>Starting address in the controller pak to write to. Allowed range is 0-0x7FFF. </td></tr>
+    <tr><td class="paramname">buffer</td><td>Buffer to write the data from </td></tr>
+    <tr><td class="paramname">len</td><td>Number of bytes to write. The caller must ensure that the length does not exceed the bank size (0x8000). </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if the serial was successfully read </dd>
-<dd>
-negative if an error occurred (eg: no cpak on the specified port), and errno is set accordingly. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int Number of bytes written, or negative value in case of error (errno will be set). </dd></dl>
 
 </div>
 </div>
-<a id="ab1de5f3128ccfc797fd9b69cca96c9cb" name="ab1de5f3128ccfc797fd9b69cca96c9cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1de5f3128ccfc797fd9b69cca96c9cb">&#9670;&#160;</a></span>cpak_fsck()</h2>
+<a id="a7cdeca23ac496a3f801e3141c25a63b2" name="a7cdeca23ac496a3f801e3141c25a63b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cdeca23ac496a3f801e3141c25a63b2">&#9670;&#160;</a></span>cpak_supports_bankswitching()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int cpak_fsck </td>
+          <td class="memname">bool cpak_supports_bankswitching </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a>&#160;</td>
-          <td class="paramname"><em>port</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>port</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>fix_errors</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Check the integrity of a controller pak. </p>
-<p>This function checks the integrity of a controller pak. It is useful to check if the controller pak is corrupted or if the filesystem is corrupted.</p>
+<p>Check if a controller pak supports bankswitching or not. </p>
+<p>This function does not perform I/O, as the accessory detection code already checked if the controller pak allows for bankswitching or not.</p>
+<p>Notice that this function is meant purely for debugging purposes; the whole cpak module was designed so that there is no need to change behavior based on whether the controller pak supports bankswitching or not.</p>
+<p>Notice also that supporting bankswitching does not mean that the controller pak does actually have multiple banks. Some controller paks (including official first-party ones) may support bankswitching but only have a single bank available.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">port</td><td>The controller pak to check the integrity of </td></tr>
-    <tr><td class="paramname">fix_errors</td><td>Whether to fix the errors found </td></tr>
+    <tr><td class="paramname">port</td><td>Joypad port to check </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if the integrity check was successful </dd>
+<dl class="section return"><dt>Returns</dt><dd>true if the controller pak supports bankswitching, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="aae105e2bedc4b37d8c602b6147caafbf" name="aae105e2bedc4b37d8c602b6147caafbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae105e2bedc4b37d8c602b6147caafbf">&#9670;&#160;</a></span>cpak_probe_banks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cpak_probe_banks </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a>&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Probe the number of banks in a controller pak. </p>
+<p>This function probes the number of banks in a controller pak, by attempting to switch to each bank and performing a write test to check if the bank actually exists. It then restores the existing contents in all banks, so that the operation is non-destructive.</p>
+<p>The standard controller paks have a single bank of 32 KiB, so this function will always return 1 for them.</p>
+<dl class="section note"><dt>Note</dt><dd>This is a low-level operation that is useful during formatting or similar operations. For most applications, just mount the filesystem and use the <a class="el" href="cpakfs_8c.html#aa121d51eaf4159e9e494dc3e3d4cc4d7" title="Read the usage state of a controller pak.">cpakfs_get_stats</a> function to get the number of banks as recorded in the filesystem.</dd>
 <dd>
-negative if an error occurred (eg: no cpak on the specified port), and errno is set accordingly. </dd></dl>
+The function uses the first block in each bank. With the standard filesystem, this block is called "label area", is unused, and is often used/corrupted by games, so even if the cpak is removed during the operation, the filesystem will not be corrupted.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Joypad port to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int Number of banks found, or negative value in case of error </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -115,9 +116,8 @@ Macros</h2></td></tr>
 <tr class="memitem:a996f7be338ccb40d1a2a5abc1ad61759" id="r_a996f7be338ccb40d1a2a5abc1ad61759"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a996f7be338ccb40d1a2a5abc1ad61759">ABS</a>(x)</td></tr>
 <tr class="memdesc:a996f7be338ccb40d1a2a5abc1ad61759"><td class="mdescLeft">&#160;</td><td class="mdescRight">Absolute number.  <br /></td></tr>
 <tr class="separator:a996f7be338ccb40d1a2a5abc1ad61759"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a929d64164484b7cab1bc1372de51441f" id="r_a929d64164484b7cab1bc1372de51441f"><td class="memItemLeft" align="right" valign="top"><a id="a929d64164484b7cab1bc1372de51441f" name="a929d64164484b7cab1bc1372de51441f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>F2I</b>(f)&#160;&#160;&#160;({ uint32_t __i; memcpy(&amp;__i, &amp;(f), 4); __i; })</td></tr>
-<tr class="memdesc:a929d64164484b7cab1bc1372de51441f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type-safe bitcast from float to integer. <br /></td></tr>
+<tr class="memitem:a929d64164484b7cab1bc1372de51441f" id="r_a929d64164484b7cab1bc1372de51441f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a929d64164484b7cab1bc1372de51441f">F2I</a>(f)</td></tr>
+<tr class="memdesc:a929d64164484b7cab1bc1372de51441f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type-safe bitcast from float to integer.  <br /></td></tr>
 <tr class="separator:a929d64164484b7cab1bc1372de51441f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ed29e840d4bfc797384a05fe7eda9fe" id="r_a4ed29e840d4bfc797384a05fe7eda9fe"><td class="memItemLeft" align="right" valign="top"><a id="a4ed29e840d4bfc797384a05fe7eda9fe" name="a4ed29e840d4bfc797384a05fe7eda9fe"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>I2F</b>(i)&#160;&#160;&#160;({ float __f; memcpy(&amp;__f, &amp;(i), 4); __f; })</td></tr>
@@ -269,10 +269,35 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>__utf8_decode</b>
 
 </div>
 </div>
+<a id="a929d64164484b7cab1bc1372de51441f" name="a929d64164484b7cab1bc1372de51441f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a929d64164484b7cab1bc1372de51441f">&#9670;&#160;</a></span>F2I</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define F2I</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">f</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    ({ \</div>
+<div class="line">    _Static_assert(__builtin_types_compatible_p(typeof(f), <span class="keywordtype">float</span>) || \</div>
+<div class="line">                   __builtin_types_compatible_p(typeof(f), <span class="keyword">const</span> <span class="keywordtype">float</span>), \</div>
+<div class="line">                   <span class="stringliteral">&quot;F2I requires a float argument&quot;</span>); \</div>
+<div class="line">    uint32_t __i; memcpy(&amp;__i, &amp;(f), 4); __i; })</div>
+</div><!-- fragment -->
+<p>Type-safe bitcast from float to integer. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

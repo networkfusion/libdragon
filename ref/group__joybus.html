@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -100,6 +101,9 @@ Files</h2></td></tr>
 <tr class="memitem:joybus__accessory_8h" id="r_joybus__accessory_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joybus__accessory_8h.html">joybus_accessory.h</a></td></tr>
 <tr class="memdesc:joybus__accessory_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joybus accessory utilities. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:joyframe_8h" id="r_joyframe_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joyframe_8h.html">joyframe.h</a></td></tr>
+<tr class="memdesc:joyframe_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joybus frame construction macros. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -132,9 +136,18 @@ Typedefs</h2></td></tr>
 <tr class="memitem:gaaf2e487c05f4f27e3b36af3c54ff66c1" id="r_gaaf2e487c05f4f27e3b36af3c54ff66c1"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#gaaf2e487c05f4f27e3b36af3c54ff66c1">joybus_callback_t</a>) (uint64_t *out_dwords, void *ctx)</td></tr>
 <tr class="memdesc:gaaf2e487c05f4f27e3b36af3c54ff66c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function signature for <a class="el" href="group__joybus.html#ga244b4723690e3c15da23bdbfda2cb7d1" title="Execute an asynchronous joybus message.">joybus_exec_async</a>.  <br /></td></tr>
 <tr class="separator:gaaf2e487c05f4f27e3b36af3c54ff66c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga33941df8dca7db069fbae3c80f103143" id="r_ga33941df8dca7db069fbae3c80f103143"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#ga33941df8dca7db069fbae3c80f103143">joybus_detection_callback_t</a>) (<a class="el" href="group__joybus.html#gad91e902f4c8cb12fb4f5aa288d423b44">joybus_identifier_t</a> identifier, <a class="el" href="group__joybus.html#gaf8dc4c1c93bdee8c9bd6ad43db226870">joybus_detection_event_t</a> event, int port, uint8_t device_status, void *ctx)</td></tr>
+<tr class="memdesc:ga33941df8dca7db069fbae3c80f103143"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joybus detection callback function type.  <br /></td></tr>
+<tr class="separator:ga33941df8dca7db069fbae3c80f103143"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:gaf8dc4c1c93bdee8c9bd6ad43db226870" id="r_gaf8dc4c1c93bdee8c9bd6ad43db226870"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#gaf8dc4c1c93bdee8c9bd6ad43db226870">joybus_detection_event_t</a> { <a class="el" href="group__joybus.html#ggaf8dc4c1c93bdee8c9bd6ad43db226870a070511a0ab732b27a981559b19a9a2a9">JOYBUS_DETECT_DISCONNECTED</a> = 0
+, <a class="el" href="group__joybus.html#ggaf8dc4c1c93bdee8c9bd6ad43db226870a74d1f9e9e53267f09fa286eac66c24fd">JOYBUS_DETECT_POLLED</a> = 1
+, <a class="el" href="group__joybus.html#ggaf8dc4c1c93bdee8c9bd6ad43db226870a3ea8b23527ed1fad034c5e3fd124c673">JOYBUS_DETECT_CONNECTED</a> = 2
+ }</td></tr>
+<tr class="memdesc:gaf8dc4c1c93bdee8c9bd6ad43db226870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joybus detection events enumeration.  <a href="group__joybus.html#gaf8dc4c1c93bdee8c9bd6ad43db226870">More...</a><br /></td></tr>
+<tr class="separator:gaf8dc4c1c93bdee8c9bd6ad43db226870"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4aa970f937fe45430c4490663a67910e" id="r_ga4aa970f937fe45430c4490663a67910e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#ga4aa970f937fe45430c4490663a67910e">joybus_accessory_io_status_t</a> { <a class="el" href="group__joybus.html#gga4aa970f937fe45430c4490663a67910ea9ce54cfcb94ead9daf96c43c39bada0b">JOYBUS_ACCESSORY_IO_STATUS_OK</a> = 0
 , <a class="el" href="group__joybus.html#gga4aa970f937fe45430c4490663a67910ead7328eab584fbe96bc2850fabe4f4d5f">JOYBUS_ACCESSORY_IO_STATUS_NO_DEVICE</a> = -1
 , <a class="el" href="group__joybus.html#gga4aa970f937fe45430c4490663a67910ea69bd7db4470c1206bd098fec411baea4">JOYBUS_ACCESSORY_IO_STATUS_NO_PAK</a> = -2
@@ -166,6 +179,13 @@ Functions</h2></td></tr>
 <tr class="memitem:gabfdc256e8162679fb5b7adc1e24a7827" id="r_gabfdc256e8162679fb5b7adc1e24a7827"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#gabfdc256e8162679fb5b7adc1e24a7827">joybus_accessory_write</a> (int port, uint16_t addr, const uint8_t *data)</td></tr>
 <tr class="memdesc:gabfdc256e8162679fb5b7adc1e24a7827"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronously perform a Joybus N64 accessory write command.  <br /></td></tr>
 <tr class="separator:gabfdc256e8162679fb5b7adc1e24a7827"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f4ce40c87b3a5eff4eb74a134d96849" id="r_ga8f4ce40c87b3a5eff4eb74a134d96849"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#ga8f4ce40c87b3a5eff4eb74a134d96849">joybus_init</a> (void)</td></tr>
+<tr class="memdesc:ga8f4ce40c87b3a5eff4eb74a134d96849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the Joybus subsystem, and background detection support.  <br /></td></tr>
+<tr class="separator:ga8f4ce40c87b3a5eff4eb74a134d96849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga935c9a92331a548ef4ef4167af5fdc5a" id="r_ga935c9a92331a548ef4ef4167af5fdc5a"><td class="memItemLeft" align="right" valign="top"><a id="ga935c9a92331a548ef4ef4167af5fdc5a" name="ga935c9a92331a548ef4ef4167af5fdc5a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>joybus_close</b> (void)</td></tr>
+<tr class="memdesc:ga935c9a92331a548ef4ef4167af5fdc5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitialize the joybus subsystem and detection support. <br /></td></tr>
+<tr class="separator:ga935c9a92331a548ef4ef4167af5fdc5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga244b4723690e3c15da23bdbfda2cb7d1" id="r_ga244b4723690e3c15da23bdbfda2cb7d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#ga244b4723690e3c15da23bdbfda2cb7d1">joybus_exec_async</a> (const void *input, <a class="el" href="group__joybus.html#gaaf2e487c05f4f27e3b36af3c54ff66c1">joybus_callback_t</a> callback, void *ctx)</td></tr>
 <tr class="memdesc:ga244b4723690e3c15da23bdbfda2cb7d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute an asynchronous joybus message.  <br /></td></tr>
 <tr class="separator:ga244b4723690e3c15da23bdbfda2cb7d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,6 +195,18 @@ Functions</h2></td></tr>
 <tr class="memitem:gab9ed6f44c13006456f30709a48e122d0" id="r_gab9ed6f44c13006456f30709a48e122d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#gab9ed6f44c13006456f30709a48e122d0">joybus_exec_cmd</a> (int port, size_t send_len, size_t recv_len, const void *send_data, void *recv_data)</td></tr>
 <tr class="memdesc:gab9ed6f44c13006456f30709a48e122d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a Joybus command synchronously on the given port.  <br /></td></tr>
 <tr class="separator:gab9ed6f44c13006456f30709a48e122d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8514d2dd3f712dbe316e6e74f7a37e89" id="r_ga8514d2dd3f712dbe316e6e74f7a37e89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#ga8514d2dd3f712dbe316e6e74f7a37e89">joybus_register_detection_callback</a> (<a class="el" href="group__joybus.html#ga33941df8dca7db069fbae3c80f103143">joybus_detection_callback_t</a> callback, void *ctx)</td></tr>
+<tr class="memdesc:ga8514d2dd3f712dbe316e6e74f7a37e89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a callback to be notified of Joybus detection events.  <br /></td></tr>
+<tr class="separator:ga8514d2dd3f712dbe316e6e74f7a37e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga556bad5eb1297dba0f926f20ea6a1c32" id="r_ga556bad5eb1297dba0f926f20ea6a1c32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#ga556bad5eb1297dba0f926f20ea6a1c32">joybus_unregister_detection_callback</a> (<a class="el" href="group__joybus.html#ga33941df8dca7db069fbae3c80f103143">joybus_detection_callback_t</a> callback, void *ctx)</td></tr>
+<tr class="memdesc:ga556bad5eb1297dba0f926f20ea6a1c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister a callback for Joybus detection events.  <br /></td></tr>
+<tr class="separator:ga556bad5eb1297dba0f926f20ea6a1c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1a292648030bc9b1111658199db12257" id="r_ga1a292648030bc9b1111658199db12257"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#ga1a292648030bc9b1111658199db12257">joybus_detect_now</a> (void)</td></tr>
+<tr class="memdesc:ga1a292648030bc9b1111658199db12257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Immediately poll all Joybus ports for connected devices.  <br /></td></tr>
+<tr class="separator:ga1a292648030bc9b1111658199db12257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga31275bbb756ebd4172714574934e6fbf" id="r_ga31275bbb756ebd4172714574934e6fbf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__joybus.html#gad91e902f4c8cb12fb4f5aa288d423b44">joybus_identifier_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#ga31275bbb756ebd4172714574934e6fbf">joybus_get_identifier</a> (int port, uint8_t *status)</td></tr>
+<tr class="memdesc:ga31275bbb756ebd4172714574934e6fbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Joybus identifier for a specific port.  <br /></td></tr>
+<tr class="separator:ga31275bbb756ebd4172714574934e6fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Joybus N64 accessory address masks</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p><a class="anchor" id="JOYBUS_ACCESSORY_ADDR_MASK"></a></p>
@@ -328,12 +360,8 @@ Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Joybus identifier values</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p><a class="anchor" id="JOYBUS_IDENTIFIER"></a></p>
 </td></tr>
-<tr class="memitem:ga2b7e5db8ee4ab401afa2b16eda7f77ae" id="r_ga2b7e5db8ee4ab401afa2b16eda7f77ae"><td class="memItemLeft" align="right" valign="top"><a id="ga2b7e5db8ee4ab401afa2b16eda7f77ae" name="ga2b7e5db8ee4ab401afa2b16eda7f77ae"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>JOYBUS_IDENTIFIER_UNKNOWN</b>&#160;&#160;&#160;0x0000</td></tr>
-<tr class="memdesc:ga2b7e5db8ee4ab401afa2b16eda7f77ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joybus identifier for an unknown or malfunctioning device. <br /></td></tr>
-<tr class="separator:ga2b7e5db8ee4ab401afa2b16eda7f77ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae4add21eabfd4f9ef2c948735fe3d888" id="r_gae4add21eabfd4f9ef2c948735fe3d888"><td class="memItemLeft" align="right" valign="top"><a id="gae4add21eabfd4f9ef2c948735fe3d888" name="gae4add21eabfd4f9ef2c948735fe3d888"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>JOYBUS_IDENTIFIER_NONE</b>&#160;&#160;&#160;0xFFFF</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>JOYBUS_IDENTIFIER_NONE</b>&#160;&#160;&#160;0x0000</td></tr>
 <tr class="memdesc:gae4add21eabfd4f9ef2c948735fe3d888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joybus identifier for a port with no device connected. <br /></td></tr>
 <tr class="separator:gae4add21eabfd4f9ef2c948735fe3d888"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab66d0a557e5436063c475fb17dbea216" id="r_gab66d0a557e5436063c475fb17dbea216"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joybus.html#gab66d0a557e5436063c475fb17dbea216">JOYBUS_IDENTIFIER_N64_VOICE_RECOGNITION</a>&#160;&#160;&#160;0x0001</td></tr>
@@ -734,7 +762,7 @@ Transfer Pak "Powered-On" status bit. </td></tr>
 <div class="line">        (<span class="keywordtype">void</span> *)&amp;cmd.send,                \</div>
 <div class="line">        (<span class="keywordtype">void</span> *)&amp;cmd.recv                 \</div>
 <div class="line">    )</div>
-<div class="ttc" id="agroup__joybus_html_gab9ed6f44c13006456f30709a48e122d0"><div class="ttname"><a href="group__joybus.html#gab9ed6f44c13006456f30709a48e122d0">joybus_exec_cmd</a></div><div class="ttdeci">void joybus_exec_cmd(int port, size_t send_len, size_t recv_len, const void *send_data, void *recv_data)</div><div class="ttdoc">Execute a Joybus command synchronously on the given port.</div><div class="ttdef"><b>Definition</b> joybus.h:345</div></div>
+<div class="ttc" id="agroup__joybus_html_gab9ed6f44c13006456f30709a48e122d0"><div class="ttname"><a href="group__joybus.html#gab9ed6f44c13006456f30709a48e122d0">joybus_exec_cmd</a></div><div class="ttdeci">void joybus_exec_cmd(int port, size_t send_len, size_t recv_len, const void *send_data, void *recv_data)</div><div class="ttdoc">Execute a Joybus command synchronously on the given port.</div><div class="ttdef"><b>Definition</b> joybus.h:365</div></div>
 </div><!-- fragment -->
 <p>Execute a Joybus command struct synchronously. </p>
 <p>This macro is a convenience wrapper around <a class="el" href="group__joybus.html#gab9ed6f44c13006456f30709a48e122d0" title="Execute a Joybus command synchronously on the given port.">joybus_exec_cmd</a> that uses the send and recv fields of the struct to set the proper arguments.</p>
@@ -791,7 +819,59 @@ Transfer Pak "Powered-On" status bit. </td></tr>
 
 </div>
 </div>
+<a id="ga33941df8dca7db069fbae3c80f103143" name="ga33941df8dca7db069fbae3c80f103143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga33941df8dca7db069fbae3c80f103143">&#9670;&#160;</a></span>joybus_detection_callback_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* joybus_detection_callback_t) (<a class="el" href="group__joybus.html#gad91e902f4c8cb12fb4f5aa288d423b44">joybus_identifier_t</a> identifier, <a class="el" href="group__joybus.html#gaf8dc4c1c93bdee8c9bd6ad43db226870">joybus_detection_event_t</a> event, int port, uint8_t device_status, void *ctx)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Joybus detection callback function type. </p>
+<p>This function is called during the periodic poll of devices performed by the joybus module. It allows libraries to build upon the Joybus subsystem to provide higher-level functionality, and being notified of changes in the connected devices.</p>
+<p>At any point the callback is called, the device could have been just plugged, just unplugged, or just polled with no change. Since the hardware protocol allows the device to also relay a 8-bit status byte, this is also provided to the callback; the interpretation is device-specific.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">identifier</td><td>The identifier of the Joybus device. </td></tr>
+    <tr><td class="paramname">event</td><td>Whether the device was just plugged in, unplugged, or just polled with no change. </td></tr>
+    <tr><td class="paramname">port</td><td>The Joybus port the device is connected to. </td></tr>
+    <tr><td class="paramname">device_status</td><td>The status of the Joybus device as returned by it. </td></tr>
+    <tr><td class="paramname">ctx</td><td>User-defined context pointer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="gaf8dc4c1c93bdee8c9bd6ad43db226870" name="gaf8dc4c1c93bdee8c9bd6ad43db226870"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf8dc4c1c93bdee8c9bd6ad43db226870">&#9670;&#160;</a></span>joybus_detection_event_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__joybus.html#gaf8dc4c1c93bdee8c9bd6ad43db226870">joybus_detection_event_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Joybus detection events enumeration. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaf8dc4c1c93bdee8c9bd6ad43db226870a070511a0ab732b27a981559b19a9a2a9" name="ggaf8dc4c1c93bdee8c9bd6ad43db226870a070511a0ab732b27a981559b19a9a2a9"></a>JOYBUS_DETECT_DISCONNECTED&#160;</td><td class="fielddoc"><p>Device was just disconnected. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf8dc4c1c93bdee8c9bd6ad43db226870a74d1f9e9e53267f09fa286eac66c24fd" name="ggaf8dc4c1c93bdee8c9bd6ad43db226870a74d1f9e9e53267f09fa286eac66c24fd"></a>JOYBUS_DETECT_POLLED&#160;</td><td class="fielddoc"><p>Device status was polled. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf8dc4c1c93bdee8c9bd6ad43db226870a3ea8b23527ed1fad034c5e3fd124c673" name="ggaf8dc4c1c93bdee8c9bd6ad43db226870a3ea8b23527ed1fad034c5e3fd124c673"></a>JOYBUS_DETECT_CONNECTED&#160;</td><td class="fielddoc"><p>Device was just connected. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="ga4aa970f937fe45430c4490663a67910e" name="ga4aa970f937fe45430c4490663a67910e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga4aa970f937fe45430c4490663a67910e">&#9670;&#160;</a></span>joybus_accessory_io_status_t</h2>
 
@@ -1133,6 +1213,28 @@ Transfer Pak "Powered-On" status bit. </td></tr>
 
 </div>
 </div>
+<a id="ga8f4ce40c87b3a5eff4eb74a134d96849" name="ga8f4ce40c87b3a5eff4eb74a134d96849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8f4ce40c87b3a5eff4eb74a134d96849">&#9670;&#160;</a></span>joybus_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void joybus_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the Joybus subsystem, and background detection support. </p>
+<p>This function starts the Joybus subsystem. It begins periodically monitoring all the controller ports (by default, once per second), to check whether new Joybus devices (normally, controllers) are plugged-in or removed.</p>
+<p>Libraries can register callbacks to be notified of detection events for any type of device via <a class="el" href="group__joybus.html#ga8514d2dd3f712dbe316e6e74f7a37e89" title="Register a callback to be notified of Joybus detection events.">joybus_register_detection_callback</a>. </p>
+
+</div>
+</div>
 <a id="ga244b4723690e3c15da23bdbfda2cb7d1" name="ga244b4723690e3c15da23bdbfda2cb7d1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga244b4723690e3c15da23bdbfda2cb7d1">&#9670;&#160;</a></span>joybus_exec_async()</h2>
 
@@ -1293,10 +1395,151 @@ This function is not part of the public API yet because we want to evaluate the 
 
 </div>
 </div>
+<a id="ga8514d2dd3f712dbe316e6e74f7a37e89" name="ga8514d2dd3f712dbe316e6e74f7a37e89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8514d2dd3f712dbe316e6e74f7a37e89">&#9670;&#160;</a></span>joybus_register_detection_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void joybus_register_detection_callback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__joybus.html#ga33941df8dca7db069fbae3c80f103143">joybus_detection_callback_t</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a callback to be notified of Joybus detection events. </p>
+<p>This function registers a callback to be called whenever a Joybus device is plugged in or removed. The callback is called under interrupt, so it should either issue followup joybus commands asynchronously (via <a class="el" href="group__joybus.html#ga244b4723690e3c15da23bdbfda2cb7d1" title="Execute an asynchronous joybus message.">joybus_exec_async</a>), or arrange to handle the event later in a safer context.</p>
+<p>Multiple callbacks can be registered and they will all receive events for all devices on all ports. To unregister a callback, use <a class="el" href="group__joybus.html#ga556bad5eb1297dba0f926f20ea6a1c32" title="Unregister a callback for Joybus detection events.">joybus_unregister_detection_callback</a>.</p>
+<p>If you are building support for a specific joybus device, you should register your callback, filter events for the device identifier you support, and handle them accordingly.</p>
+<dl class="section note"><dt>Note</dt><dd>When calling this function, the callback will be immediately notified of all currently connected devices, with the <a class="el" href="group__joybus.html#ggaf8dc4c1c93bdee8c9bd6ad43db226870a3ea8b23527ed1fad034c5e3fd124c673" title="Device was just connected.">JOYBUS_DETECT_CONNECTED</a> event.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>The callback function to register. </td></tr>
+    <tr><td class="paramname">ctx</td><td>User-defined context pointer to pass to the callback.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__joybus.html#ga556bad5eb1297dba0f926f20ea6a1c32" title="Unregister a callback for Joybus detection events.">joybus_unregister_detection_callback</a> </dd></dl>
+
+</div>
+</div>
+<a id="ga556bad5eb1297dba0f926f20ea6a1c32" name="ga556bad5eb1297dba0f926f20ea6a1c32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga556bad5eb1297dba0f926f20ea6a1c32">&#9670;&#160;</a></span>joybus_unregister_detection_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void joybus_unregister_detection_callback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__joybus.html#ga33941df8dca7db069fbae3c80f103143">joybus_detection_callback_t</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unregister a callback for Joybus detection events. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>The callback function to unregister. </td></tr>
+    <tr><td class="paramname">ctx</td><td>User-defined context pointer passed to the callback. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga1a292648030bc9b1111658199db12257" name="ga1a292648030bc9b1111658199db12257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1a292648030bc9b1111658199db12257">&#9670;&#160;</a></span>joybus_detect_now()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void joybus_detect_now </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Immediately poll all Joybus ports for connected devices. </p>
+<p>This function immediately polls all Joybus ports for connected devices, and calls any registered hotplug callbacks if any device was connected or disconnected.</p>
+<p>Normally, the Joybus subsystem automatically polls all ports once per second. This function can be used to force an immediate poll, for example after initializing the Joybus subsystem via <a class="el" href="group__joybus.html#ga8f4ce40c87b3a5eff4eb74a134d96849" title="Initialize the Joybus subsystem, and background detection support.">joybus_init</a>. </p>
+
+</div>
+</div>
+<a id="ga31275bbb756ebd4172714574934e6fbf" name="ga31275bbb756ebd4172714574934e6fbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga31275bbb756ebd4172714574934e6fbf">&#9670;&#160;</a></span>joybus_get_identifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__joybus.html#gad91e902f4c8cb12fb4f5aa288d423b44">joybus_identifier_t</a> joybus_get_identifier </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Joybus identifier for a specific port. </p>
+<p>This function returns the last known identifier for a specific Joybus port. The identifier is updated automatically by the Joybus subsystem during periodic polling, or when <a class="el" href="group__joybus.html#ga1a292648030bc9b1111658199db12257" title="Immediately poll all Joybus ports for connected devices.">joybus_detect_now</a> is called.</p>
+<dl class="section note"><dt>Note</dt><dd>The values returned by this function can change at any time as they react to interrupts.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">port</td><td>The Joybus port (0-4) to query. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">status</td><td>Optional pointer to a variable to store the device status. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>joypad_identifier_t The Joybus identifier for the specified port. </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

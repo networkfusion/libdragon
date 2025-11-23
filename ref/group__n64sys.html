@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -73,7 +74,6 @@ $(function() {
 <a href="#files">Files</a> &#124;
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
@@ -89,6 +89,9 @@ Files</h2></td></tr>
 <tr class="memitem:n64sys_8c" id="r_n64sys_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n64sys_8c.html">n64sys.c</a></td></tr>
 <tr class="memdesc:n64sys_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">N64 System Interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:vaddr64_8c" id="r_vaddr64_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vaddr64_8c.html">vaddr64.c</a></td></tr>
+<tr class="memdesc:vaddr64_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">64-bit virtual address space access functions <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:cop0_8h" id="r_cop0_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cop0_8h.html">cop0.h</a></td></tr>
 <tr class="memdesc:cop0_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">N64 COP0 Interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,12 +101,18 @@ Files</h2></td></tr>
 <tr class="memitem:n64sys_8h" id="r_n64sys_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n64sys_8h.html">n64sys.h</a></td></tr>
 <tr class="memdesc:n64sys_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">N64 System Interface. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:vaddr64_8h" id="r_vaddr64_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vaddr64_8h.html">vaddr64.h</a></td></tr>
+<tr class="memdesc:vaddr64_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">64-bit virtual address space access functions <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:structheap__stats__t" id="r_structheap__stats__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#structheap__stats__t">heap_stats_t</a></td></tr>
 <tr class="memdesc:structheap__stats__t"><td class="mdescLeft">&#160;</td><td class="mdescRight">Heap statistics.  <a href="group__n64sys.html#structheap__stats__t">More...</a><br /></td></tr>
 <tr class="separator:structheap__stats__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structsys__version__t" id="r_structsys__version__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#structsys__version__t">sys_version_t</a></td></tr>
+<tr class="memdesc:structsys__version__t"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libdragon version information.  <a href="group__n64sys.html#structsys__version__t">More...</a><br /></td></tr>
+<tr class="separator:structsys__version__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -191,6 +200,70 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_ERL</b>&#160;&#160;&#160;0x00000004</td></tr>
 <tr class="memdesc:ga81700617afd959418764c1fcb643b033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: within error. <br /></td></tr>
 <tr class="separator:ga81700617afd959418764c1fcb643b033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadaabc4c0d4945bfcdd0abff413baa2b9" id="r_gadaabc4c0d4945bfcdd0abff413baa2b9"><td class="memItemLeft" align="right" valign="top"><a id="gadaabc4c0d4945bfcdd0abff413baa2b9" name="gadaabc4c0d4945bfcdd0abff413baa2b9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_KSU</b>&#160;&#160;&#160;0x00000018</td></tr>
+<tr class="memdesc:gadaabc4c0d4945bfcdd0abff413baa2b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: kernel/user mode. <br /></td></tr>
+<tr class="separator:gadaabc4c0d4945bfcdd0abff413baa2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga772427665efef02cef7ff7c8aa190855" id="r_ga772427665efef02cef7ff7c8aa190855"><td class="memItemLeft" align="right" valign="top"><a id="ga772427665efef02cef7ff7c8aa190855" name="ga772427665efef02cef7ff7c8aa190855"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_UX</b>&#160;&#160;&#160;0x00000020</td></tr>
+<tr class="memdesc:ga772427665efef02cef7ff7c8aa190855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: 64-bit addressing in user mode. <br /></td></tr>
+<tr class="separator:ga772427665efef02cef7ff7c8aa190855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga48bb0ddda7ed89c5964aefe32d919a33" id="r_ga48bb0ddda7ed89c5964aefe32d919a33"><td class="memItemLeft" align="right" valign="top"><a id="ga48bb0ddda7ed89c5964aefe32d919a33" name="ga48bb0ddda7ed89c5964aefe32d919a33"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_SX</b>&#160;&#160;&#160;0x00000040</td></tr>
+<tr class="memdesc:ga48bb0ddda7ed89c5964aefe32d919a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: 64-bit addressing in supervisor mode. <br /></td></tr>
+<tr class="separator:ga48bb0ddda7ed89c5964aefe32d919a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa6a56e41147ee7d451e4050b9be44a4f" id="r_gaa6a56e41147ee7d451e4050b9be44a4f"><td class="memItemLeft" align="right" valign="top"><a id="gaa6a56e41147ee7d451e4050b9be44a4f" name="gaa6a56e41147ee7d451e4050b9be44a4f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_KX</b>&#160;&#160;&#160;0x00000080</td></tr>
+<tr class="memdesc:gaa6a56e41147ee7d451e4050b9be44a4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: 64-bit addressing in kernel mode. <br /></td></tr>
+<tr class="separator:gaa6a56e41147ee7d451e4050b9be44a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8955f2413f6a9b8a7ff27d30250ba166" id="r_ga8955f2413f6a9b8a7ff27d30250ba166"><td class="memItemLeft" align="right" valign="top"><a id="ga8955f2413f6a9b8a7ff27d30250ba166" name="ga8955f2413f6a9b8a7ff27d30250ba166"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_IM</b>&#160;&#160;&#160;0x0000FF00</td></tr>
+<tr class="memdesc:ga8955f2413f6a9b8a7ff27d30250ba166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: interrupt mask bits. <br /></td></tr>
+<tr class="separator:ga8955f2413f6a9b8a7ff27d30250ba166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga85b095789b50d2a1a4c2e34898a68fc2" id="r_ga85b095789b50d2a1a4c2e34898a68fc2"><td class="memItemLeft" align="right" valign="top"><a id="ga85b095789b50d2a1a4c2e34898a68fc2" name="ga85b095789b50d2a1a4c2e34898a68fc2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_IM_SHIFT</b>&#160;&#160;&#160;8</td></tr>
+<tr class="memdesc:ga85b095789b50d2a1a4c2e34898a68fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: interrupt mask bits shift. <br /></td></tr>
+<tr class="separator:ga85b095789b50d2a1a4c2e34898a68fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad044955ae3d9ed6ae93f890f2125526d" id="r_gad044955ae3d9ed6ae93f890f2125526d"><td class="memItemLeft" align="right" valign="top"><a id="gad044955ae3d9ed6ae93f890f2125526d" name="gad044955ae3d9ed6ae93f890f2125526d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_SR</b>&#160;&#160;&#160;0x00010000</td></tr>
+<tr class="memdesc:gad044955ae3d9ed6ae93f890f2125526d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: soft reset. <br /></td></tr>
+<tr class="separator:gad044955ae3d9ed6ae93f890f2125526d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29208c05edc5f0fa6784ee1a242b4253" id="r_ga29208c05edc5f0fa6784ee1a242b4253"><td class="memItemLeft" align="right" valign="top"><a id="ga29208c05edc5f0fa6784ee1a242b4253" name="ga29208c05edc5f0fa6784ee1a242b4253"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_TS</b>&#160;&#160;&#160;0x00020000</td></tr>
+<tr class="memdesc:ga29208c05edc5f0fa6784ee1a242b4253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: TLB shutdown. <br /></td></tr>
+<tr class="separator:ga29208c05edc5f0fa6784ee1a242b4253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd04d1cb9317b657cf4d1dfeee1cf78d" id="r_gabd04d1cb9317b657cf4d1dfeee1cf78d"><td class="memItemLeft" align="right" valign="top"><a id="gabd04d1cb9317b657cf4d1dfeee1cf78d" name="gabd04d1cb9317b657cf4d1dfeee1cf78d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_BEV</b>&#160;&#160;&#160;0x00400000</td></tr>
+<tr class="memdesc:gabd04d1cb9317b657cf4d1dfeee1cf78d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: use boot exception vectors. <br /></td></tr>
+<tr class="separator:gabd04d1cb9317b657cf4d1dfeee1cf78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b06bd95227a4733745d761d6318e6d5" id="r_ga3b06bd95227a4733745d761d6318e6d5"><td class="memItemLeft" align="right" valign="top"><a id="ga3b06bd95227a4733745d761d6318e6d5" name="ga3b06bd95227a4733745d761d6318e6d5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_RE</b>&#160;&#160;&#160;0x02000000</td></tr>
+<tr class="memdesc:ga3b06bd95227a4733745d761d6318e6d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: reverse endian. <br /></td></tr>
+<tr class="separator:ga3b06bd95227a4733745d761d6318e6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae81e10c4e35873bae542bffb502e67da" id="r_gae81e10c4e35873bae542bffb502e67da"><td class="memItemLeft" align="right" valign="top"><a id="gae81e10c4e35873bae542bffb502e67da" name="gae81e10c4e35873bae542bffb502e67da"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_FR</b>&#160;&#160;&#160;0x04000000</td></tr>
+<tr class="memdesc:gae81e10c4e35873bae542bffb502e67da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: FPU register mode. <br /></td></tr>
+<tr class="separator:gae81e10c4e35873bae542bffb502e67da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf80741cdeb7c1059133b0c30251b5fb2" id="r_gaf80741cdeb7c1059133b0c30251b5fb2"><td class="memItemLeft" align="right" valign="top"><a id="gaf80741cdeb7c1059133b0c30251b5fb2" name="gaf80741cdeb7c1059133b0c30251b5fb2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_RP</b>&#160;&#160;&#160;0x08000000</td></tr>
+<tr class="memdesc:gaf80741cdeb7c1059133b0c30251b5fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: reduced power. <br /></td></tr>
+<tr class="separator:gaf80741cdeb7c1059133b0c30251b5fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadb5130dac9897ae5dd243d8f227f7a6b" id="r_gadb5130dac9897ae5dd243d8f227f7a6b"><td class="memItemLeft" align="right" valign="top"><a id="gadb5130dac9897ae5dd243d8f227f7a6b" name="gadb5130dac9897ae5dd243d8f227f7a6b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_CU0</b>&#160;&#160;&#160;0x10000000</td></tr>
+<tr class="memdesc:gadb5130dac9897ae5dd243d8f227f7a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: coprocessor 0 usable. <br /></td></tr>
+<tr class="separator:gadb5130dac9897ae5dd243d8f227f7a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga72cca4235cbe27dd9e13a16899d8f4bf" id="r_ga72cca4235cbe27dd9e13a16899d8f4bf"><td class="memItemLeft" align="right" valign="top"><a id="ga72cca4235cbe27dd9e13a16899d8f4bf" name="ga72cca4235cbe27dd9e13a16899d8f4bf"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_CU1</b>&#160;&#160;&#160;0x20000000</td></tr>
+<tr class="memdesc:ga72cca4235cbe27dd9e13a16899d8f4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: coprocessor 1 usable. <br /></td></tr>
+<tr class="separator:ga72cca4235cbe27dd9e13a16899d8f4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa6016ffccedd175070fbe34d28f92b9a" id="r_gaa6016ffccedd175070fbe34d28f92b9a"><td class="memItemLeft" align="right" valign="top"><a id="gaa6016ffccedd175070fbe34d28f92b9a" name="gaa6016ffccedd175070fbe34d28f92b9a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_CU2</b>&#160;&#160;&#160;0x40000000</td></tr>
+<tr class="memdesc:gaa6016ffccedd175070fbe34d28f92b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: coprocessor 2 usable. <br /></td></tr>
+<tr class="separator:gaa6016ffccedd175070fbe34d28f92b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa0cc32cd1226110f7bfc317984941ed9" id="r_gaa0cc32cd1226110f7bfc317984941ed9"><td class="memItemLeft" align="right" valign="top"><a id="gaa0cc32cd1226110f7bfc317984941ed9" name="gaa0cc32cd1226110f7bfc317984941ed9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_CU3</b>&#160;&#160;&#160;0x80000000</td></tr>
+<tr class="memdesc:gaa0cc32cd1226110f7bfc317984941ed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: coprocessor 3 usable. <br /></td></tr>
+<tr class="separator:gaa0cc32cd1226110f7bfc317984941ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae5b5beedec5d8fb382744877c760c343" id="r_gae5b5beedec5d8fb382744877c760c343"><td class="memItemLeft" align="right" valign="top"><a id="gae5b5beedec5d8fb382744877c760c343" name="gae5b5beedec5d8fb382744877c760c343"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_CAUSE_BD</b>&#160;&#160;&#160;0x80000000</td></tr>
 <tr class="memdesc:gae5b5beedec5d8fb382744877c760c343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cause: exception triggered in delay slot. <br /></td></tr>
@@ -389,6 +462,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga14c8df17b8a56f3f6d582275688e757d" id="r_ga14c8df17b8a56f3f6d582275688e757d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga14c8df17b8a56f3f6d582275688e757d">VirtualUncachedAddr</a>(_addr)&#160;&#160;&#160;((void *)(((unsigned long)(_addr))|0xA0000000))</td></tr>
 <tr class="memdesc:ga14c8df17b8a56f3f6d582275688e757d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a virtual addresses in an uncached segment to access a physical address.  <br /></td></tr>
 <tr class="separator:ga14c8df17b8a56f3f6d582275688e757d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafffdeec116125b8b83eceddd4e7941af" id="r_gafffdeec116125b8b83eceddd4e7941af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#gafffdeec116125b8b83eceddd4e7941af">VirtualUncachedAddr64</a>(_addr)&#160;&#160;&#160;((<a class="el" href="n64types_8h.html#aa4c24059302205687e4a68dbb973d266">vaddr64_t</a>)(((_addr))|0x9000000000000000ull))</td></tr>
+<tr class="memdesc:gafffdeec116125b8b83eceddd4e7941af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a virtual addresses in a 64-bit uncached segment to access a physical address.  <br /></td></tr>
+<tr class="separator:gafffdeec116125b8b83eceddd4e7941af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2a6fc83e86b9c1a343f50a219edd10c7" id="r_ga2a6fc83e86b9c1a343f50a219edd10c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga2a6fc83e86b9c1a343f50a219edd10c7">UncachedAddr</a>(_addr)&#160;&#160;&#160;((void *)(((unsigned long)(_addr))|0x20000000))</td></tr>
 <tr class="memdesc:ga2a6fc83e86b9c1a343f50a219edd10c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the uncached memory address for a given virtual address.  <br /></td></tr>
 <tr class="separator:ga2a6fc83e86b9c1a343f50a219edd10c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -446,12 +522,6 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>TICKS_TO_MS</b>(val)&#160;&#160;&#160;(((val) / (<a class="el" href="group__n64sys.html#ga3dd7b7d41c220904632461a2d95d61cf">TICKS_PER_SECOND</a> / 1000)))</td></tr>
 <tr class="memdesc:ga6377ac2d56054bba13b5c5157a026292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns equivalent count ticks for the given microseconds. <br /></td></tr>
 <tr class="separator:ga6377ac2d56054bba13b5c5157a026292"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:gaaf5dda50732dd08c2496ce37ad95b0cd" id="r_gaaf5dda50732dd08c2496ce37ad95b0cd"><td class="memItemLeft" align="right" valign="top">typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#gaaf5dda50732dd08c2496ce37ad95b0cd">phys_addr_t</a></td></tr>
-<tr class="memdesc:gaaf5dda50732dd08c2496ce37ad95b0cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A physical address on the MIPS bus.  <br /></td></tr>
-<tr class="separator:gaaf5dda50732dd08c2496ce37ad95b0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -546,9 +616,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>sys_get_heap_stats</b
 <tr class="memitem:ga47a0e268efc40af2363e375440df2552" id="r_ga47a0e268efc40af2363e375440df2552"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__n64sys.html#ga26192e81cb759946e1a943b3f242ef7a">reset_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga47a0e268efc40af2363e375440df2552">sys_reset_type</a> (void)</td></tr>
 <tr class="memdesc:ga47a0e268efc40af2363e375440df2552"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get reset type.  <br /></td></tr>
 <tr class="separator:ga47a0e268efc40af2363e375440df2552"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga98ea3676e949788a8826c0dcaffdbb2e" id="r_ga98ea3676e949788a8826c0dcaffdbb2e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga98ea3676e949788a8826c0dcaffdbb2e">getentropy32</a> (void)</td></tr>
-<tr class="memdesc:ga98ea3676e949788a8826c0dcaffdbb2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return 32-bit of entropy.  <br /></td></tr>
-<tr class="separator:ga98ea3676e949788a8826c0dcaffdbb2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga02ef0703856e19e17dd1e3575ad4d771" id="r_ga02ef0703856e19e17dd1e3575ad4d771"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n64types_8h.html#abbde255c6ff18b478f46cb7fdf1357e6">pi_addr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga02ef0703856e19e17dd1e3575ad4d771">sys_elf_address</a> (void)</td></tr>
+<tr class="memdesc:ga02ef0703856e19e17dd1e3575ad4d771"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the PI address of the main ELF in ROM.  <br /></td></tr>
+<tr class="separator:ga02ef0703856e19e17dd1e3575ad4d771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa076a12ae427a76303e17ece0d4a521" id="r_gaaa076a12ae427a76303e17ece0d4a521"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#gaaa076a12ae427a76303e17ece0d4a521">sys_get_version</a> (<a class="el" href="group__n64sys.html#structsys__version__t">sys_version_t</a> *version)</td></tr>
+<tr class="memdesc:gaaa076a12ae427a76303e17ece0d4a521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the version of Libdragon.  <br /></td></tr>
+<tr class="separator:gaaa076a12ae427a76303e17ece0d4a521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacf53fb4d652e09a6ed6175f1ad96d138" id="r_gacf53fb4d652e09a6ed6175f1ad96d138"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#gacf53fb4d652e09a6ed6175f1ad96d138">sys_hw_memset</a> (void *ptr, uint8_t value, size_t len)</td></tr>
+<tr class="memdesc:gacf53fb4d652e09a6ed6175f1ad96d138"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a hardware-accelerated memory set.  <br /></td></tr>
+<tr class="separator:gacf53fb4d652e09a6ed6175f1ad96d138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5472a5f87fd97e72a02d0248b4b7ec85" id="r_ga5472a5f87fd97e72a02d0248b4b7ec85"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga5472a5f87fd97e72a02d0248b4b7ec85">sys_hw_memset16</a> (void *ptr, uint16_t value, size_t len)</td></tr>
+<tr class="memdesc:ga5472a5f87fd97e72a02d0248b4b7ec85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a hardware-accelerated memory set of a 16-bit pattern.  <br /></td></tr>
+<tr class="separator:ga5472a5f87fd97e72a02d0248b4b7ec85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga91b1dd06505f7ecf111a3fd476fb3a85" id="r_ga91b1dd06505f7ecf111a3fd476fb3a85"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga91b1dd06505f7ecf111a3fd476fb3a85">sys_hw_memset32</a> (void *ptr, uint32_t value, size_t len)</td></tr>
+<tr class="memdesc:ga91b1dd06505f7ecf111a3fd476fb3a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a hardware-accelerated memory set of a 32-bit pattern.  <br /></td></tr>
+<tr class="separator:ga91b1dd06505f7ecf111a3fd476fb3a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00f81f18aa10130196e590b79cfd2a2b" id="r_ga00f81f18aa10130196e590b79cfd2a2b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga00f81f18aa10130196e590b79cfd2a2b">sys_hw_memset64</a> (void *ptr, uint64_t value, size_t len)</td></tr>
+<tr class="memdesc:ga00f81f18aa10130196e590b79cfd2a2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a hardware-accelerated memory set of a 64-bit pattern.  <br /></td></tr>
+<tr class="separator:ga00f81f18aa10130196e590b79cfd2a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -564,25 +649,6 @@ char&#160;</td><td class="memItemRight" valign="bottom"><b>__rom_end</b> []</td>
 char&#160;</td><td class="memItemRight" valign="bottom"><b>__bss_end</b> []</td></tr>
 <tr class="memdesc:gad07593be6cf1d4ebe605cbdb85f8956b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Symbol at the end of code, data, sdata, and bss (set by the linker) <br /></td></tr>
 <tr class="separator:gad07593be6cf1d4ebe605cbdb85f8956b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader">64-bit address space access</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p>Functions to access the full 64-bit address space</p>
-<p>Libdragon uses the O64 ABI, in which pointers are 32-bit wide. This is the right choice for basically all standard use cases because doubling the size of the pointers would waste more memory in all data structures where pointers are stored.</p>
-<p>The VR4300 CPU does support a full 64-bit virtual address space though, which might be used for some very niche use case (like e.g. emulator tests) Since it is not possible to create a 64-bit pointer in C because of the chosen ABI, these functions are provided in substitution.</p>
-<p>The virtual address must be provided as a 64-bit integer. </p>
-</td></tr>
-<tr class="memitem:gaf295299980b5f471c0ddcacfe33bbf88" id="r_gaf295299980b5f471c0ddcacfe33bbf88"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#gaf295299980b5f471c0ddcacfe33bbf88">mem_read8</a> (uint64_t vaddr)</td></tr>
-<tr class="memdesc:gaf295299980b5f471c0ddcacfe33bbf88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a 8-bit value from memory at the given 64-bit virtual address.  <br /></td></tr>
-<tr class="separator:gaf295299980b5f471c0ddcacfe33bbf88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2aea92b793cb2cb0024e3c3f76f42f86" id="r_ga2aea92b793cb2cb0024e3c3f76f42f86"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga2aea92b793cb2cb0024e3c3f76f42f86">mem_read16</a> (uint64_t vaddr)</td></tr>
-<tr class="memdesc:ga2aea92b793cb2cb0024e3c3f76f42f86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a 16-bit value from memory at the given 64-bit virtual address.  <br /></td></tr>
-<tr class="separator:ga2aea92b793cb2cb0024e3c3f76f42f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad2e40ee85f2dc2bce6569642eeab7316" id="r_gad2e40ee85f2dc2bce6569642eeab7316"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#gad2e40ee85f2dc2bce6569642eeab7316">mem_read32</a> (uint64_t vaddr)</td></tr>
-<tr class="memdesc:gad2e40ee85f2dc2bce6569642eeab7316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a 32-bit value from memory at the given 64-bit virtual address.  <br /></td></tr>
-<tr class="separator:gad2e40ee85f2dc2bce6569642eeab7316"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4c66990ca4a34f67cc1bbcb3a21e46be" id="r_ga4c66990ca4a34f67cc1bbcb3a21e46be"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga4c66990ca4a34f67cc1bbcb3a21e46be">mem_read64</a> (uint64_t vaddr)</td></tr>
-<tr class="memdesc:ga4c66990ca4a34f67cc1bbcb3a21e46be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a 64-bit value from memory at the given 64-bit virtual address.  <br /></td></tr>
-<tr class="separator:ga4c66990ca4a34f67cc1bbcb3a21e46be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>N64 bootup and cache interfaces. </p>
@@ -614,6 +680,49 @@ Total heap size in bytes. </td></tr>
 used</td>
 <td class="fielddoc">
 Used heap size in bytes. </td></tr>
+</table>
+
+</div>
+</div>
+<a name="structsys__version__t" id="structsys__version__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structsys__version__t">&#9670;&#160;</a></span>sys_version_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct sys_version_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Libdragon version information. </p>
+<p>This structure contains information about the current version of Libdragon, that was embedded in the ROM at build time. </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="aabfafda46712e9a4ae287220f02cf192" name="aabfafda46712e9a4ae287220f02cf192"></a>char</td>
+<td class="fieldname">
+branch[32+1]</td>
+<td class="fielddoc">
+Branch name (normally "stable" or "preview") </td></tr>
+<tr><td class="fieldtype">
+<a id="a57c71369485f9d22f92524a944aaeaac" name="a57c71369485f9d22f92524a944aaeaac"></a>char</td>
+<td class="fieldname">
+hash[20+1]</td>
+<td class="fielddoc">
+Commit hash (SHA1) </td></tr>
+<tr><td class="fieldtype">
+<a id="ae89048e8ffd0267d79bf7c4202974c22" name="ae89048e8ffd0267d79bf7c4202974c22"></a>char</td>
+<td class="fieldname">
+commit_date[16+1]</td>
+<td class="fielddoc">
+Commit date (YYYY-MM-DD) </td></tr>
+<tr><td class="fieldtype">
+<a id="a4f68cda14ececd984b1880508048da33" name="a4f68cda14ececd984b1880508048da33"></a>bool</td>
+<td class="fieldname">
+dirty</td>
+<td class="fielddoc">
+True if Libdragon repository was dirty at build time. </td></tr>
 </table>
 
 </div>
@@ -1348,9 +1457,9 @@ Used heap size in bytes. </td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    ({ \</div>
 <div class="line">    <span class="keyword">const</span> <span class="keyword">volatile</span> <span class="keywordtype">void</span> *_addrp = (_addr); \</div>
-<div class="line">    (((<a class="code hl_typedef" href="group__n64sys.html#gaaf5dda50732dd08c2496ce37ad95b0cd">phys_addr_t</a>)(_addrp))&amp;~0xE0000000); \</div>
+<div class="line">    (((<a class="code hl_typedef" href="n64types_8h.html#aaf5dda50732dd08c2496ce37ad95b0cd">phys_addr_t</a>)(_addrp))&amp;~0xE0000000); \</div>
 <div class="line">})</div>
-<div class="ttc" id="agroup__n64sys_html_gaaf5dda50732dd08c2496ce37ad95b0cd"><div class="ttname"><a href="group__n64sys.html#gaaf5dda50732dd08c2496ce37ad95b0cd">phys_addr_t</a></div><div class="ttdeci">uint32_t phys_addr_t</div><div class="ttdoc">A physical address on the MIPS bus.</div><div class="ttdef"><b>Definition</b> n64sys.h:75</div></div>
+<div class="ttc" id="an64types_8h_html_aaf5dda50732dd08c2496ce37ad95b0cd"><div class="ttname"><a href="n64types_8h.html#aaf5dda50732dd08c2496ce37ad95b0cd">phys_addr_t</a></div><div class="ttdeci">uint32_t phys_addr_t</div><div class="ttdoc">A physical address on the MIPS bus.</div><div class="ttdef"><b>Definition</b> n64types.h:61</div></div>
 </div><!-- fragment -->
 <p>Return the physical memory address for a given virtual address (pointer) </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1418,6 +1527,35 @@ Used heap size in bytes. </td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A void pointer to the uncached memory address </dd></dl>
+
+</div>
+</div>
+<a id="gafffdeec116125b8b83eceddd4e7941af" name="gafffdeec116125b8b83eceddd4e7941af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafffdeec116125b8b83eceddd4e7941af">&#9670;&#160;</a></span>VirtualUncachedAddr64</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VirtualUncachedAddr64</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_addr</td><td>)</td>
+          <td>&#160;&#160;&#160;((<a class="el" href="n64types_8h.html#aa4c24059302205687e4a68dbb973d266">vaddr64_t</a>)(((_addr))|0x9000000000000000ull))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a virtual addresses in a 64-bit uncached segment to access a physical address. </p>
+<p>This function is similar to <a class="el" href="group__n64sys.html#ga14c8df17b8a56f3f6d582275688e757d" title="Create a virtual addresses in an uncached segment to access a physical address.">VirtualUncachedAddr</a>, but it returns a 64-bit virtual address (<a class="el" href="n64types_8h.html#aa4c24059302205687e4a68dbb973d266" title="A 64-bit virtual address (aka &quot;pointer&quot;)">vaddr64_t</a>) instead of a 32-bit address (pointer). This is useful to access specific portions of the physical address space that are not accessible using 32-bit addresses, like the upper part of the PI space.</p>
+<p>Use sys_vaddr_readN and sys_vaddr_writeN to read from and write to 64-bit virtual addresses.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">_addr</td><td>Physical address to convert to a virtual address</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A 64-bit virtual address to access the physical address </dd></dl>
 
 </div>
 </div>
@@ -1708,26 +1846,6 @@ Used heap size in bytes. </td></tr>
 <p>This is similar to t1 &lt; t2, but it correctly handles timer overflows which are very frequent. Notice that the hardware counter overflows every ~91 seconds, so it's not possible to compare times that are more than ~45 seconds apart.</p>
 <p>Use <a class="el" href="group__n64sys.html#ga3686b92a0667e9774993808f4d2ac2b4" title="Read the number of ticks since system startup.">get_ticks()</a> to get a 64-bit counter that never overflows.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__n64sys.html#ga3686b92a0667e9774993808f4d2ac2b4" title="Read the number of ticks since system startup.">get_ticks</a> </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="gaaf5dda50732dd08c2496ce37ad95b0cd" name="gaaf5dda50732dd08c2496ce37ad95b0cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaaf5dda50732dd08c2496ce37ad95b0cd">&#9670;&#160;</a></span>phys_addr_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef uint32_t <a class="el" href="group__n64sys.html#gaaf5dda50732dd08c2496ce37ad95b0cd">phys_addr_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>A physical address on the MIPS bus. </p>
-<p>Physical addresses are 32-bit wide, and are used to address the memory space of the MIPS R4300 CPU. The MIPS R4300 CPU has a 32-bit address bus, and can address up to 4 GiB of memory.</p>
-<p>Physical addresses are just numbers, they cannot be used as pointers (dereferenced). To access them, you must first convert them virtual addresses using the <a class="el" href="group__n64sys.html#ga6cbe8a16157397f5f7db9faf12ab5be4" title="Create a virtual addresses in a cached segment to access a physical address.">VirtualCachedAddr</a> or <a class="el" href="group__n64sys.html#ga14c8df17b8a56f3f6d582275688e757d" title="Create a virtual addresses in an uncached segment to access a physical address.">VirtualUncachedAddr</a> macros.</p>
-<p>In general, libdragon will try to use <a class="el" href="group__n64sys.html#gaaf5dda50732dd08c2496ce37ad95b0cd" title="A physical address on the MIPS bus.">phys_addr_t</a> whenever a physical address is expected or returned, and C pointers for virtual addresses. Unfortunately, not all codebase can be changed to follow this convention for backward compatibility reasons. </p>
 
 </div>
 </div>
@@ -2444,14 +2562,14 @@ Used heap size in bytes. </td></tr>
 
 </div>
 </div>
-<a id="ga98ea3676e949788a8826c0dcaffdbb2e" name="ga98ea3676e949788a8826c0dcaffdbb2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga98ea3676e949788a8826c0dcaffdbb2e">&#9670;&#160;</a></span>getentropy32()</h2>
+<a id="ga02ef0703856e19e17dd1e3575ad4d771" name="ga02ef0703856e19e17dd1e3575ad4d771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga02ef0703856e19e17dd1e3575ad4d771">&#9670;&#160;</a></span>sys_elf_address()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t getentropy32 </td>
+          <td class="memname"><a class="el" href="n64types_8h.html#abbde255c6ff18b478f46cb7fdf1357e6">pi_addr_t</a> sys_elf_address </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -2460,156 +2578,238 @@ Used heap size in bytes. </td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return 32-bit of entropy. </p>
-<p>This is a simplified API for <a class="el" href="system_8c.html#aa4d88adc1ca537d4281029a2745fbbc0" title="Generate an array of unpredictable random numbers.">getentropy()</a> to just return 32-bit of entropy instead of an arbitrary buffer. Useful for instance to seed srand().</p>
-<dl class="section return"><dt>Returns</dt><dd>uint32_t 32-bit of entropy </dd></dl>
+<p>Get the PI address of the main ELF in ROM. </p>
+<p>This function returns the PI address of the main ELF in ROM, that is, the address where the running application has been loaded from.</p>
+<p>This is only useful in some very niche cases, eg. for manually loading sections of the ELF at runtime, or inspecting custom ROM layouts.</p>
+<p>Use <a class="el" href="group__dma.html#ga9c79d4f41eacb14335a0fac57fecf0a0" title="Read data from a peripheral through PI DMA, waiting for completion.">dma_read</a> or <a class="el" href="group__dma.html#ga3888b19d3c25fd2d4a7a44dba1b165fc" title="Read a 32 bit integer from a peripheral on the PI bus using the CPU.">io_read</a> to access the ROM contents at this address space.</p>
+<dl class="section return"><dt>Returns</dt><dd>Address of the the ELF in PI space (ROM) </dd></dl>
 
 </div>
 </div>
-<a id="gaf295299980b5f471c0ddcacfe33bbf88" name="gaf295299980b5f471c0ddcacfe33bbf88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf295299980b5f471c0ddcacfe33bbf88">&#9670;&#160;</a></span>mem_read8()</h2>
+<a id="gaaa076a12ae427a76303e17ece0d4a521" name="gaaa076a12ae427a76303e17ece0d4a521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaa076a12ae427a76303e17ece0d4a521">&#9670;&#160;</a></span>sys_get_version()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t mem_read8 </td>
+          <td class="memname">bool sys_get_version </td>
           <td>(</td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>vaddr</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="group__n64sys.html#structsys__version__t">sys_version_t</a> *&#160;</td>
+          <td class="paramname"><em>version</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Read a 8-bit value from memory at the given 64-bit virtual address. </p>
+<p>Get the version of Libdragon. </p>
+<p>This function will fill the version structure with the information about the current version of Libdragon, that was embedded in the ROM at build time.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vaddr</td><td>64-bit virtual address </td></tr>
+    <tr><td class="paramname">version</td><td>Pointer to the version structure to fill </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the read value </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the version information was successfully retrieved, false otherwise </dd></dl>
 
 </div>
 </div>
-<a id="ga2aea92b793cb2cb0024e3c3f76f42f86" name="ga2aea92b793cb2cb0024e3c3f76f42f86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2aea92b793cb2cb0024e3c3f76f42f86">&#9670;&#160;</a></span>mem_read16()</h2>
+<a id="gacf53fb4d652e09a6ed6175f1ad96d138" name="gacf53fb4d652e09a6ed6175f1ad96d138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacf53fb4d652e09a6ed6175f1ad96d138">&#9670;&#160;</a></span>sys_hw_memset()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t mem_read16 </td>
+          <td class="memname">void * sys_hw_memset </td>
           <td>(</td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>vaddr</em></td><td>)</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Read a 16-bit value from memory at the given 64-bit virtual address. </p>
+<p>Perform a hardware-accelerated memory set. </p>
+<p>This function uses a special function in the RCP (MI repeat mode) to perform a fast memset operation. The actual speed is about 6x a standard 64-bit memeset, and 12x a 32-bit memset.</p>
+<p>You can use both cached and uncached memory addresses. For cached addresses, full cache coherency is guaranteed (so it will behave like a CPU memset would do).</p>
+<p>All the sys_hw_memsetN functions run at the same speed, so this function is just as fast as <a class="el" href="group__n64sys.html#ga00f81f18aa10130196e590b79cfd2a2b" title="Perform a hardware-accelerated memory set of a 64-bit pattern.">sys_hw_memset64</a>. You don't need to use the 64-bit version unless you have a 64-bit pattern to repeat.</p>
+<dl class="section note"><dt>Note</dt><dd>This special mode is not supported on the iQue player, so this function falls back to a standard memset when run on iQue.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vaddr</td><td>64-bit virtual address </td></tr>
+    <tr><td class="paramname">ptr</td><td>Pointer to the memory area to set </td></tr>
+    <tr><td class="paramname">value</td><td>Value to repeat across the memory area </td></tr>
+    <tr><td class="paramname">len</td><td>Length of the memory area in bytes </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the read value </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The same pointer passed to it</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__n64sys.html#ga5472a5f87fd97e72a02d0248b4b7ec85" title="Perform a hardware-accelerated memory set of a 16-bit pattern.">sys_hw_memset16</a> </dd>
+<dd>
+<a class="el" href="group__n64sys.html#ga91b1dd06505f7ecf111a3fd476fb3a85" title="Perform a hardware-accelerated memory set of a 32-bit pattern.">sys_hw_memset32</a> </dd>
+<dd>
+<a class="el" href="group__n64sys.html#ga00f81f18aa10130196e590b79cfd2a2b" title="Perform a hardware-accelerated memory set of a 64-bit pattern.">sys_hw_memset64</a> </dd></dl>
 
 </div>
 </div>
-<a id="gad2e40ee85f2dc2bce6569642eeab7316" name="gad2e40ee85f2dc2bce6569642eeab7316"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad2e40ee85f2dc2bce6569642eeab7316">&#9670;&#160;</a></span>mem_read32()</h2>
+<a id="ga5472a5f87fd97e72a02d0248b4b7ec85" name="ga5472a5f87fd97e72a02d0248b4b7ec85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5472a5f87fd97e72a02d0248b4b7ec85">&#9670;&#160;</a></span>sys_hw_memset16()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t mem_read32 </td>
+          <td class="memname">void * sys_hw_memset16 </td>
           <td>(</td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>vaddr</em></td><td>)</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Read a 32-bit value from memory at the given 64-bit virtual address. </p>
+<p>Perform a hardware-accelerated memory set of a 16-bit pattern. </p>
+<p>This function is similar to <a class="el" href="group__n64sys.html#gacf53fb4d652e09a6ed6175f1ad96d138" title="Perform a hardware-accelerated memory set.">sys_hw_memset</a>, but repeats a 16-bit value instead of an 8-bit value. For instance, doing a memset of value 0xAABB for 7 bytes will result in the following memory contents: AA BB AA BB AA BB AA</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vaddr</td><td>64-bit virtual address </td></tr>
+    <tr><td class="paramname">ptr</td><td>Pointer to the memory area to set </td></tr>
+    <tr><td class="paramname">value</td><td>16-bit value to repeat across the memory area </td></tr>
+    <tr><td class="paramname">len</td><td>Length of the memory area in bytes </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the read value </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The same pointer passed to it </dd></dl>
 
 </div>
 </div>
-<a id="ga4c66990ca4a34f67cc1bbcb3a21e46be" name="ga4c66990ca4a34f67cc1bbcb3a21e46be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4c66990ca4a34f67cc1bbcb3a21e46be">&#9670;&#160;</a></span>mem_read64()</h2>
+<a id="ga91b1dd06505f7ecf111a3fd476fb3a85" name="ga91b1dd06505f7ecf111a3fd476fb3a85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga91b1dd06505f7ecf111a3fd476fb3a85">&#9670;&#160;</a></span>sys_hw_memset32()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint64_t mem_read64 </td>
+          <td class="memname">void * sys_hw_memset32 </td>
           <td>(</td>
-          <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>vaddr</em></td><td>)</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Read a 64-bit value from memory at the given 64-bit virtual address. </p>
+<p>Perform a hardware-accelerated memory set of a 32-bit pattern. </p>
+<p>This function is similar to <a class="el" href="group__n64sys.html#gacf53fb4d652e09a6ed6175f1ad96d138" title="Perform a hardware-accelerated memory set.">sys_hw_memset</a>, but repeats a 32-bit value instead of an 8-bit value. For instance, doing a memset of value 0xAABBCCDD for 7 bytes will result in the following memory contents: AA BB CC DD AA BB CC</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vaddr</td><td>64-bit virtual address </td></tr>
+    <tr><td class="paramname">ptr</td><td>Pointer to the memory area to set </td></tr>
+    <tr><td class="paramname">value</td><td>32-bit value to repeat across the memory area </td></tr>
+    <tr><td class="paramname">len</td><td>Length of the memory area in bytes </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the read value </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The same pointer passed to it </dd></dl>
+
+</div>
+</div>
+<a id="ga00f81f18aa10130196e590b79cfd2a2b" name="ga00f81f18aa10130196e590b79cfd2a2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga00f81f18aa10130196e590b79cfd2a2b">&#9670;&#160;</a></span>sys_hw_memset64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * sys_hw_memset64 </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform a hardware-accelerated memory set of a 64-bit pattern. </p>
+<p>This function is similar to <a class="el" href="group__n64sys.html#gacf53fb4d652e09a6ed6175f1ad96d138" title="Perform a hardware-accelerated memory set.">sys_hw_memset</a>, but repeats a 64-bit value instead of an 8-bit value. For instance, doing a memset of value 0xAABBCCDD11223344 for 11 bytes will result in the following memory contents: AA BB CC DD 11 22 33 44 AA BB CC</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>Pointer to the memory area to set </td></tr>
+    <tr><td class="paramname">value</td><td>64-bit value to repeat across the memory area </td></tr>
+    <tr><td class="paramname">len</td><td>Length of the memory area in bytes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The same pointer passed to it </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

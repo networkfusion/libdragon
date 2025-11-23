@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -195,7 +196,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Attach the RDP to a surface and clear it. </p>
-<p>This function is similar to <a class="el" href="rdpq__attach_8h.html#a67bd7bcd3d71538f5a10d50ba73b6b10" title="Attach the RDP to a color surface (and optionally a Z buffer)">rdpq_attach</a>, but it also clears the surface to full black (color 0) immediately after attaching. If a z-buffer is specified, it is also cleared (to 0xFFFC).</p>
+<p>This function is similar to <a class="el" href="rdpq__attach_8h.html#a67bd7bcd3d71538f5a10d50ba73b6b10" title="Attach the RDP to a color surface (and optionally a Z buffer)">rdpq_attach</a>, but it also clears the surface to full black (color 0) immediately after attaching. If a z-buffer is specified, it is also cleared (to <a class="el" href="rdpq__macros_8h.html#a71e6de72756b9cb4ef4a44508b7a40ac" title="The maximum Z value, which is the default reset value for the Z-Buffer.">ZBUF_MAX</a>).</p>
 <p>This function is just a shortcut for calling <a class="el" href="rdpq__attach_8h.html#a67bd7bcd3d71538f5a10d50ba73b6b10" title="Attach the RDP to a color surface (and optionally a Z buffer)">rdpq_attach</a>, <a class="el" href="rdpq__attach_8h.html#a57062dc5e71cc6531b82785cf56be865" title="Clear the current render target with the specified color.">rdpq_clear</a> and <a class="el" href="rdpq__attach_8h.html#a047f715076b21ea45112d91360812809" title="Reset the current Z buffer to a given value.">rdpq_clear_z</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -466,7 +467,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

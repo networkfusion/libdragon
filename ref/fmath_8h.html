@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -127,6 +128,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ab5306110233e1820d066c74740277ad1" id="r_ab5306110233e1820d066c74740277ad1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmath_8h.html#ab5306110233e1820d066c74740277ad1">fm_atan2f</a> (float y, float x)</td></tr>
 <tr class="memdesc:ab5306110233e1820d066c74740277ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Faster version of atan2f.  <br /></td></tr>
 <tr class="separator:ab5306110233e1820d066c74740277ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9310148a2e1f61632b7d9a42b906aeb" id="r_ae9310148a2e1f61632b7d9a42b906aeb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fmath_8h.html#ae9310148a2e1f61632b7d9a42b906aeb">fm_exp</a> (float x)</td></tr>
+<tr class="memdesc:ae9310148a2e1f61632b7d9a42b906aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Approximation of exp(x) with a relative error &lt;3%. This is several times faster than exp(x). The implementation uses a method by Nicole Schraudolph.  <br /></td></tr>
+<tr class="separator:ae9310148a2e1f61632b7d9a42b906aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1428ed86c1871641cb5906fbb5589dbb" id="r_a1428ed86c1871641cb5906fbb5589dbb"><td class="memItemLeft" align="right" valign="top"><a id="a1428ed86c1871641cb5906fbb5589dbb" name="a1428ed86c1871641cb5906fbb5589dbb"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>fm_lerp</b> (float a, float b, float t)</td></tr>
 <tr class="memdesc:a1428ed86c1871641cb5906fbb5589dbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linearly interpolate between two scalar values. <br /></td></tr>
@@ -345,6 +349,27 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>fm_lerp</b> (float a
 
 </div>
 </div>
+<a id="ae9310148a2e1f61632b7d9a42b906aeb" name="ae9310148a2e1f61632b7d9a42b906aeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9310148a2e1f61632b7d9a42b906aeb">&#9670;&#160;</a></span>fm_exp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float fm_exp </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Approximation of exp(x) with a relative error &lt;3%. This is several times faster than exp(x). The implementation uses a method by Nicole Schraudolph. </p>
+<p>Note that this function does not have bounds check and will overflow if x is not in ~(-85;85) range. It is recommended to clamp x and do fm_exp(CLAMP(x, -85, 85)) </p>
+
+</div>
+</div>
 <a id="a5854e3b23e035ed44092d1e17936b55b" name="a5854e3b23e035ed44092d1e17936b55b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5854e3b23e035ed44092d1e17936b55b">&#9670;&#160;</a></span>fm_lerp_angle()</h2>
 
@@ -420,7 +445,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>fm_lerp</b> (float a
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

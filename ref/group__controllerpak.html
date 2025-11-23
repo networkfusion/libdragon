@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -83,8 +84,23 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
 Files</h2></td></tr>
+<tr class="memitem:cpak_8c" id="r_cpak_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpak_8c.html">cpak.c</a></td></tr>
+<tr class="memdesc:cpak_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controller Pak raw access. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:cpakfs_8c" id="r_cpakfs_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpakfs_8c.html">cpakfs.c</a></td></tr>
+<tr class="memdesc:cpakfs_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controller Pak Filesystem Routines. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:cpakfs__path_8c" id="r_cpakfs__path_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpakfs__path_8c.html">cpakfs_path.c</a></td></tr>
+<tr class="memdesc:cpakfs__path_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controller Pak Filesystem Routines. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:mempak_8c" id="r_mempak_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mempak_8c.html">mempak.c</a></td></tr>
 <tr class="memdesc:mempak_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controller Pak Filesystem Routine. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:cpak_8h" id="r_cpak_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpak_8h.html">cpak.h</a></td></tr>
+<tr class="memdesc:cpak_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controller Pak raw access. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:cpakfs_8h" id="r_cpakfs_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cpakfs_8h.html">cpakfs.h</a></td></tr>
+<tr class="memdesc:cpakfs_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controller Pak filesystem library. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:mempak_8h" id="r_mempak_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mempak_8h.html">mempak.h</a></td></tr>
 <tr class="memdesc:mempak_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Controller Pak Filesystem Routines. <br /></td></tr>
@@ -136,7 +152,7 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Managed Controller Pak interface. </p>
 <p>The Controller Pak system is a subsystem of the <a class="el" href="group__controller.html">Controller Subsystem</a>. Before attempting to read from or write to a Controller Pak, be sure you have initialized the Joypad subsystem with <a class="el" href="group__joypad.html#gac5e6c45f691d77eaa9f4c4a82b3b7fe4" title="Initialize the Joypad subsystem.">joypad_init</a> and verified that you have a Controller Pak in the correct controller using <a class="el" href="group__joypad.html#gab9f9440ae434b228dbd49f1c70009417" title="Get the Joypad accessory type for a Joypad port.">joypad_get_accessory_type</a>.</p>
-<p>To read and write to the Controller Pak in an organized way compatible with official software, first check that the Controller Pak is valid using <a class="el" href="group__controllerpak.html#gaf245021aed55de7a17cf417d41cdc32f" title="Return whether a Controller Pak is valid.">validate_mempak</a>. If the Controller Pak is invalid, it will need to be formatted using <a class="el" href="group__controllerpak.html#ga14df2d1b0aeb7436cabd95294eb29b9f" title="Format a Controller Pak.">format_mempak</a>. Once the Controller Pak is considered valid, existing notes can be enumerated using <a class="el" href="group__controllerpak.html#gaaa54d6b5cea4be11738f951318ebc758" title="Read an entry on a Controller Pak.">get_mempak_entry</a>. To read the data associated with a note, use <a class="el" href="group__controllerpak.html#ga7e07b0ab92a7f383b355f5ed99c5f727" title="Read the data associated with an entry on a Controller Pak.">read_mempak_entry_data</a>. To write a new note to the Controller Pak, use <a class="el" href="group__controllerpak.html#ga520a9d2a4eb81c7f40ed2fcc9ecafecc" title="Write associated data to a Controller Pak entry.">write_mempak_entry_data</a>. Note that there is no append functionality so if a note is being updated, ensure you have deleted the old note first using <a class="el" href="group__controllerpak.html#gaa56a78fe3d1d2b9427afe8d5894156df" title="Delete a Controller Pak entry and associated data.">delete_mempak_entry</a>. Code should be careful to check how many blocks are free before writing using <a class="el" href="group__controllerpak.html#ga5b092c36dbd886af01b0c4be86554946" title="Return the number of free blocks on a Controller Pak.">get_mempak_free_space</a>. </p>
+<p>See <a class="el" href="cpak_8h.html" title="Controller Pak raw access.">cpak.h</a> for the API. </p>
 <hr/><h2 class="groupheader">Data Structure Documentation</h2>
 <a name="structentry__structure__t" id="structentry__structure__t"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#structentry__structure__t">&#9670;&#160;</a></span>entry_structure_t</h2>
@@ -629,7 +645,7 @@ Name of this entry (UTF-8) <p>The name is limited to 16 characters for name, and
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,6 +103,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5ddc74f3d3bb47c0754c7bd282946e9d" id="r_ga5ddc74f3d3bb47c0754c7bd282946e9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__joypad.html#ga0b64bfb89fc2195628b65eb3ece31c70">joypad_accessory_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga5ddc74f3d3bb47c0754c7bd282946e9d">joypad_accessory_xfer</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port, <a class="el" href="group__joypad.html#ga01fa3481cede49666c59b74003274524">joypad_accessory_xfer_t</a> xfer, uint16_t start_addr, void *dst, size_t len)</td></tr>
 <tr class="memdesc:ga5ddc74f3d3bb47c0754c7bd282946e9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read or write data from a joypad accessory.  <br /></td></tr>
 <tr class="separator:ga5ddc74f3d3bb47c0754c7bd282946e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5043f6297d8c29c078f4dbd61d7b7c83" id="r_ga5043f6297d8c29c078f4dbd61d7b7c83"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga5043f6297d8c29c078f4dbd61d7b7c83">joypad_controller_pak_supports_bankswitching</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port)</td></tr>
+<tr class="memdesc:ga5043f6297d8c29c078f4dbd61d7b7c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the Controller Pak supports bankswitching.  <br /></td></tr>
+<tr class="separator:ga5043f6297d8c29c078f4dbd61d7b7c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga16f4d256acc2406142196811dab0cd04" id="r_ga16f4d256acc2406142196811dab0cd04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__joypad.html#ga0b64bfb89fc2195628b65eb3ece31c70">joypad_accessory_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga16f4d256acc2406142196811dab0cd04">joypad_controller_pak_set_bank</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port, uint8_t bank)</td></tr>
 <tr class="memdesc:ga16f4d256acc2406142196811dab0cd04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select the active bank for a Controller Pak.  <br /></td></tr>
 <tr class="separator:ga16f4d256acc2406142196811dab0cd04"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,11 +121,13 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Joypad accessory helpers. </p>
-<dl class="section author"><dt>Author</dt><dd>Christopher Bonhage <a href="#" onclick="location.href='mai'+'lto:'+'me@'+'ch'+'ris'+'to'+'phe'+'rb'+'onh'+'ag'+'e.c'+'om'; return false;">me@ch<span class="obfuscator">.nosp@m.</span>rist<span class="obfuscator">.nosp@m.</span>opher<span class="obfuscator">.nosp@m.</span>bonh<span class="obfuscator">.nosp@m.</span>age.c<span class="obfuscator">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Christopher Bonhage <a href="#" onclick="location.href='mai'+'lto:'+'me@'+'ch'+'ris'+'to'+'phe'+'rb'+'onh'+'ag'+'e.c'+'om'; return false;">me@ch<span class="obfuscator">.nosp@m.</span>rist<span class="obfuscator">.nosp@m.</span>opher<span class="obfuscator">.nosp@m.</span>bonh<span class="obfuscator">.nosp@m.</span>age.c<span class="obfuscator">.nosp@m.</span>om</a> </dd>
+<dd>
+Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,7 @@ Macros</h2></td></tr>
 Enumerations</h2></td></tr>
 <tr class="memitem:a99fb83031ce9923c84392b4e92f956b5" id="r_a99fb83031ce9923c84392b4e92f956b5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="dragonfs_8c.html#a99fb83031ce9923c84392b4e92f956b5aa30e5e88c091325c9384d853412526f7">WALK_CHDIR</a>
 , <a class="el" href="dragonfs_8c.html#a99fb83031ce9923c84392b4e92f956b5a15241e0f0717e074c00737e79e411351">WALK_OPEN</a>
+, <a class="el" href="dragonfs_8c.html#a99fb83031ce9923c84392b4e92f956b5a031352583c1262cbe47296b05a7d397c">WALK_STAT</a>
  }</td></tr>
 <tr class="memdesc:a99fb83031ce9923c84392b4e92f956b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Directory walking flags.  <a href="dragonfs_8c.html#a99fb83031ce9923c84392b4e92f956b5">More...</a><br /></td></tr>
 <tr class="separator:a99fb83031ce9923c84392b4e92f956b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,7 +142,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a16adfb1647241b51f362517c3992f05e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the file size of an open file.  <br /></td></tr>
 <tr class="separator:a16adfb1647241b51f362517c3992f05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b526624aebcf3d93a825edeb1ae4e63" id="r_a8b526624aebcf3d93a825edeb1ae4e63"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dragonfs_8c.html#a8b526624aebcf3d93a825edeb1ae4e63">dfs_rom_addr</a> (const char *path)</td></tr>
-<tr class="memdesc:a8b526624aebcf3d93a825edeb1ae4e63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the physical address of a file (in ROM space)  <br /></td></tr>
+<tr class="memdesc:a8b526624aebcf3d93a825edeb1ae4e63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the PI address of a file (in ROM space)  <br /></td></tr>
 <tr class="separator:a8b526624aebcf3d93a825edeb1ae4e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21290370e2deb70ec5f157db307fb12f" id="r_a21290370e2deb70ec5f157db307fb12f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dragonfs_8c.html#a21290370e2deb70ec5f157db307fb12f">dfs_rom_size</a> (const char *path)</td></tr>
 <tr class="memdesc:a21290370e2deb70ec5f157db307fb12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of a file (in ROM data)  <br /></td></tr>
@@ -158,7 +160,9 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>dfs_strerror<
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>DragonFS. </p>
-<dl class="section author"><dt>Author</dt><dd>Jennifer Taylor <a href="#" onclick="location.href='mai'+'lto:'+'dra'+'go'+'nmi'+'nd'+'ed@'+'dr'+'ago'+'nm'+'ind'+'ed'+'.co'+'m'; return false;">drago<span class="obfuscator">.nosp@m.</span>nmin<span class="obfuscator">.nosp@m.</span>ded@d<span class="obfuscator">.nosp@m.</span>rago<span class="obfuscator">.nosp@m.</span>nmind<span class="obfuscator">.nosp@m.</span>ed.c<span class="obfuscator">.nosp@m.</span>om</a> </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Jennifer Taylor <a href="#" onclick="location.href='mai'+'lto:'+'dra'+'go'+'nmi'+'nd'+'ed@'+'dr'+'ago'+'nm'+'ind'+'ed'+'.co'+'m'; return false;">drago<span class="obfuscator">.nosp@m.</span>nmin<span class="obfuscator">.nosp@m.</span>ded@d<span class="obfuscator">.nosp@m.</span>rago<span class="obfuscator">.nosp@m.</span>nmind<span class="obfuscator">.nosp@m.</span>ed.c<span class="obfuscator">.nosp@m.</span>om</a> </dd>
+<dd>
+Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a99fb83031ce9923c84392b4e92f956b5" name="a99fb83031ce9923c84392b4e92f956b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a99fb83031ce9923c84392b4e92f956b5">&#9670;&#160;</a></span>anonymous enum</h2>
@@ -177,6 +181,8 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>dfs_strerror<
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a99fb83031ce9923c84392b4e92f956b5aa30e5e88c091325c9384d853412526f7" name="a99fb83031ce9923c84392b4e92f956b5aa30e5e88c091325c9384d853412526f7"></a>WALK_CHDIR&#160;</td><td class="fielddoc"><p>Walk the directory structure for the purpose of changing directories. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a99fb83031ce9923c84392b4e92f956b5a15241e0f0717e074c00737e79e411351" name="a99fb83031ce9923c84392b4e92f956b5a15241e0f0717e074c00737e79e411351"></a>WALK_OPEN&#160;</td><td class="fielddoc"><p>Walk the directory structure for the purpose of opening a file or directory. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a99fb83031ce9923c84392b4e92f956b5a031352583c1262cbe47296b05a7d397c" name="a99fb83031ce9923c84392b4e92f956b5a031352583c1262cbe47296b05a7d397c"></a>WALK_STAT&#160;</td><td class="fielddoc"><p>Walk the directory structure for the purpose of inspecting a file or directory. </p>
 </td></tr>
 </table>
 
@@ -526,7 +532,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>dfs_strerror<
       </table>
 </div><div class="memdoc">
 
-<p>Return the physical address of a file (in ROM space) </p>
+<p>Return the PI address of a file (in ROM space) </p>
 <p>This function should be used for highly-specialized, high-performance use cases. Using dfs_open / dfs_read is generally acceptable performance-wise, and is easier to use rather than managing direct access to PI space.</p>
 <p>Direct access to ROM data must go through io_read or dma_read. Do not dereference directly as the console might hang if the PI is busy.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -535,7 +541,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>dfs_strerror<
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the physical address of the file body, or 0 if the file was not found.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the PI address of the file body, or 0 if the file was not found.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="dragonfs_8h.html#a21290370e2deb70ec5f157db307fb12f" title="Return the size of a file (in ROM data)">dfs_rom_size</a> </dd></dl>
 
 </div>
@@ -565,7 +571,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>dfs_strerror<
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The size of a file in ROM, or DFS_ENOFILE if the file was not found.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="dragonfs_8h.html#a8b526624aebcf3d93a825edeb1ae4e63" title="Return the physical address of a file (in ROM space)">dfs_rom_addr</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="dragonfs_8h.html#aa6138c0c0a1246370f0156bc1eba0d70" title="Return the PI address of a file (in ROM space)">dfs_rom_addr</a> </dd></dl>
 
 </div>
 </div>
@@ -605,7 +611,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>dfs_strerror<
         <tr>
           <td class="memname">int dfs_init </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype"><a class="el" href="n64types_8h.html#abbde255c6ff18b478f46cb7fdf1357e6">pi_addr_t</a>&#160;</td>
           <td class="paramname"><em>base_fs_loc</em></td><td>)</td>
           <td></td>
         </tr>
@@ -614,11 +620,11 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>dfs_strerror<
 
 <p>Initialize the filesystem. </p>
 <p>Given a base offset where the filesystem should be found, this function will initialize the filesystem to read from cartridge space. This function will also register DragonFS with newlib so that standard POSIX/C file operations work with DragonFS, using the "rom:/" prefix".</p>
-<p>The function needs to know where the DFS image is located within the cartridge space. To simplify this, you can pass <a class="el" href="group__dfs.html#ga1d81e04e879a844f4d733a3982bf85ee" title="Default filesystem location.">DFS_DEFAULT_LOCATION</a> which tells <a class="el" href="dragonfs_8h.html#a7ca0762367965bd8a6dbbe07b7ad3022" title="Initialize the filesystem.">dfs_init</a> to search for the DFS image by itself, using the rompak TOC (see <a class="el" href="rompak__internal_8h.html" title="ROM bundle support.">rompak_internal.h</a>). Most users should use this option.</p>
-<p>Otherwise, if the ROM cannot be built with a rompak TOC for some reason, a virtual address should be passed. This is normally 0xB0000000 + the offset used when building your ROM + the size of the header file used (typically 0x1000).</p>
+<p>The function needs to know where the DFS image is located within the cartridge space. To simplify this, you can pass <a class="el" href="group__dfs.html#ga1d81e04e879a844f4d733a3982bf85ee" title="Default filesystem location.">DFS_DEFAULT_LOCATION</a> which tells <a class="el" href="dragonfs_8h.html#ae40e76bb3ad6151e29d4dc50f1c2b5ee" title="Initialize the filesystem.">dfs_init</a> to search for the DFS image by itself, using the rompak TOC (see <a class="el" href="rompak__internal_8h.html" title="ROM bundle support.">rompak_internal.h</a>). Most users should use this option.</p>
+<p>Otherwise, if the ROM cannot be built with a rompak TOC for some reason, a PI address should be passed. This is normally 0x10000000 + the offset at which the DFS image is located within the ROM.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">base_fs_loc</td><td>Virtual address in cartridge space at which to find the filesystem, or DFS_DEFAULT_LOCATION to automatically search for the filesystem in the cartridge (using the rompak).</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">base_fs_loc</td><td>PI address in cartridge space at which to find the filesystem, or DFS_DEFAULT_LOCATION to automatically search for the filesystem in the cartridge (using the rompak).</td></tr>
   </table>
   </dd>
 </dl>
@@ -629,7 +635,7 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>dfs_strerror<
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

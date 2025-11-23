@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -141,18 +142,6 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>TH_FLAG_INSPECTOR1</b>&#160;&#160;&#160;(1&lt;&lt;7)</td></tr>
 <tr class="memdesc:ga35b5d4f6131572d8f273cfed3f9f929d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag reserved for usage in the inspector. <br /></td></tr>
 <tr class="separator:ga35b5d4f6131572d8f273cfed3f9f929d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad9bc2de8b08747a6bb9762e98086c8bc" id="r_gad9bc2de8b08747a6bb9762e98086c8bc"><td class="memItemLeft" align="right" valign="top"><a id="gad9bc2de8b08747a6bb9762e98086c8bc" name="gad9bc2de8b08747a6bb9762e98086c8bc"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>TDATA_SIZE</b>&#160;&#160;&#160;((uint32_t)(<a class="el" href="kernel_8c.html#a3d6c18c6f830890ad62bf15b4d5ab462">__tdata_end</a>)-(uint32_t)(<a class="el" href="kernel_8c.html#a80217d07dfc4ba7a8ad2ff5b52a719df">__tdata_start</a>))</td></tr>
-<tr class="memdesc:gad9bc2de8b08747a6bb9762e98086c8bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of .tdata section. <br /></td></tr>
-<tr class="separator:gad9bc2de8b08747a6bb9762e98086c8bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga43f1d8cda3c4d69e8afed643c36ba583" id="r_ga43f1d8cda3c4d69e8afed643c36ba583"><td class="memItemLeft" align="right" valign="top"><a id="ga43f1d8cda3c4d69e8afed643c36ba583" name="ga43f1d8cda3c4d69e8afed643c36ba583"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>TLS_SIZE</b>&#160;&#160;&#160;((uint32_t)(<a class="el" href="kernel_8c.html#abefe97e68f9ff8c092e66cd5eb572fec">__tls_end</a>)-(uint32_t)(<a class="el" href="kernel_8c.html#ac27d4cfd86a3a5001b5257afb6ca48dd">__tls_base</a>))</td></tr>
-<tr class="memdesc:ga43f1d8cda3c4d69e8afed643c36ba583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of .tdata and .tbss sections combined. <br /></td></tr>
-<tr class="separator:ga43f1d8cda3c4d69e8afed643c36ba583"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga16bd81611968f01a593b6885fcd517bf" id="r_ga16bd81611968f01a593b6885fcd517bf"><td class="memItemLeft" align="right" valign="top"><a id="ga16bd81611968f01a593b6885fcd517bf" name="ga16bd81611968f01a593b6885fcd517bf"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>TP_OFFSET</b>&#160;&#160;&#160;0x7000</td></tr>
-<tr class="memdesc:ga16bd81611968f01a593b6885fcd517bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset of Pointer for TLS accesses. <br /></td></tr>
-<tr class="separator:ga16bd81611968f01a593b6885fcd517bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga112fe15423880efa37a6880c5c290dbf" id="r_ga112fe15423880efa37a6880c5c290dbf"><td class="memItemLeft" align="right" valign="top"><a id="ga112fe15423880efa37a6880c5c290dbf" name="ga112fe15423880efa37a6880c5c290dbf"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>KMUTEX_STANDARD</b>&#160;&#160;&#160;0</td></tr>
 <tr class="memdesc:ga112fe15423880efa37a6880c5c290dbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard mutex. <br /></td></tr>
@@ -161,6 +150,13 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>KMUTEX_RECURSIVE</b>&#160;&#160;&#160;(1&lt;&lt;0)</td></tr>
 <tr class="memdesc:gac1681a348411b961528c467d15eaa31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursive mutex. <br /></td></tr>
 <tr class="separator:gac1681a348411b961528c467d15eaa31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga501a18a4a25867dbd68de0b79b38d126" id="r_ga501a18a4a25867dbd68de0b79b38d126"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#ga501a18a4a25867dbd68de0b79b38d126">kthread_lock</a>()&#160;&#160;&#160;<a class="el" href="interrupt_8c.html#a52651bf1923b2c97e8b4da0ac6b99fdb">disable_interrupts</a>()</td></tr>
+<tr class="memdesc:ga501a18a4a25867dbd68de0b79b38d126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock the current thread (disable preemption)  <br /></td></tr>
+<tr class="separator:ga501a18a4a25867dbd68de0b79b38d126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae3f2c0f1853a9ca83a52fa9ea50db618" id="r_gae3f2c0f1853a9ca83a52fa9ea50db618"><td class="memItemLeft" align="right" valign="top"><a id="gae3f2c0f1853a9ca83a52fa9ea50db618" name="gae3f2c0f1853a9ca83a52fa9ea50db618"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>kthread_unlock</b>()&#160;&#160;&#160;<a class="el" href="interrupt_8c.html#a154b837080a092ecbab0735a0254c4b4">enable_interrupts</a>()</td></tr>
+<tr class="memdesc:gae3f2c0f1853a9ca83a52fa9ea50db618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlock the current thread (reenable preemption) <br /></td></tr>
+<tr class="separator:gae3f2c0f1853a9ca83a52fa9ea50db618"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -173,6 +169,10 @@ Functions</h2></td></tr>
 <tr class="memitem:gab991d0b2e393a42dc7bbf91f6486e647" id="r_gab991d0b2e393a42dc7bbf91f6486e647"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#gab991d0b2e393a42dc7bbf91f6486e647">__kcond_broadcast_isr</a> (<a class="el" href="group__kernel.html#structkcond__t">kcond_t</a> *cond)</td></tr>
 <tr class="memdesc:gab991d0b2e393a42dc7bbf91f6486e647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broadcast a condition under interrupt.  <br /></td></tr>
 <tr class="separator:gab991d0b2e393a42dc7bbf91f6486e647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11b453338c25da60744ac16d46499c89" id="r_ga11b453338c25da60744ac16d46499c89"><td class="memItemLeft" align="right" valign="top"><a id="ga11b453338c25da60744ac16d46499c89" name="ga11b453338c25da60744ac16d46499c89"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>__kcond_signal_isr</b> (<a class="el" href="group__kernel.html#structkcond__t">kcond_t</a> *cond)</td></tr>
+<tr class="memdesc:ga11b453338c25da60744ac16d46499c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal a condition within interrupt. <br /></td></tr>
+<tr class="separator:ga11b453338c25da60744ac16d46499c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga66b3ddb5c7ff397bd362c6ad1b116a52" id="r_ga66b3ddb5c7ff397bd362c6ad1b116a52"><td class="memItemLeft" align="right" valign="top"><a id="ga66b3ddb5c7ff397bd362c6ad1b116a52" name="ga66b3ddb5c7ff397bd362c6ad1b116a52"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>__kirq_init</b> (void)</td></tr>
 <tr class="memdesc:ga66b3ddb5c7ff397bd362c6ad1b116a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize kirq condition variables. <br /></td></tr>
@@ -184,6 +184,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>__kirq_init</b> (void
 <a class="el" href="structkthread__t.html">kthread_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>__kthread_new_internal</b> (const char *name, int stack_size, int8_t pri, uint8_t flag, int(*user_entry)(void *), void *user_data)</td></tr>
 <tr class="memdesc:gad16878612e2837704fe0aaecc4185d8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal thread creation function with also flags. <br /></td></tr>
 <tr class="separator:gad16878612e2837704fe0aaecc4185d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6f55d34b44e3ec1e1df209ffba571de" id="r_gaf6f55d34b44e3ec1e1df209ffba571de"><td class="memItemLeft" align="right" valign="top"><a id="gaf6f55d34b44e3ec1e1df209ffba571de" name="gaf6f55d34b44e3ec1e1df209ffba571de"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>__kernel_register_switch_hook</b> (void(*hook)(<a class="el" href="structkthread__t.html">kthread_t</a> *, <a class="el" href="structkthread__t.html">kthread_t</a> *))</td></tr>
+<tr class="memdesc:gaf6f55d34b44e3ec1e1df209ffba571de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a hook to be called on every thread switch. <br /></td></tr>
+<tr class="separator:gaf6f55d34b44e3ec1e1df209ffba571de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36245e30deca476463d63554107ab3d7" id="r_ga36245e30deca476463d63554107ab3d7"><td class="memItemLeft" align="right" valign="top"><a id="ga36245e30deca476463d63554107ab3d7" name="ga36245e30deca476463d63554107ab3d7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>__kernel_unregister_switch_hook</b> (void(*hook)(<a class="el" href="structkthread__t.html">kthread_t</a> *, <a class="el" href="structkthread__t.html">kthread_t</a> *))</td></tr>
+<tr class="memdesc:ga36245e30deca476463d63554107ab3d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister a previously registered thread switch hook. <br /></td></tr>
+<tr class="separator:ga36245e30deca476463d63554107ab3d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4db644bdbd151cead611dccc896b0d6b" id="r_ga4db644bdbd151cead611dccc896b0d6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structkthread__t.html">kthread_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#ga4db644bdbd151cead611dccc896b0d6b">kernel_init</a> (void)</td></tr>
 <tr class="memdesc:ga4db644bdbd151cead611dccc896b0d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the multi-threading kernel.  <br /></td></tr>
 <tr class="separator:ga4db644bdbd151cead611dccc896b0d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,9 +216,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>__kirq_init</b> (void
 <tr class="memitem:ga0c66c11d399bd9403592ec63dda70be4" id="r_ga0c66c11d399bd9403592ec63dda70be4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#ga0c66c11d399bd9403592ec63dda70be4">kthread_backtrace</a> (<a class="el" href="structkthread__t.html">kthread_t</a> *th, void *buffer, int size)</td></tr>
 <tr class="memdesc:ga0c66c11d399bd9403592ec63dda70be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the backtrace of the specified thread.  <br /></td></tr>
 <tr class="separator:ga0c66c11d399bd9403592ec63dda70be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6658800652843561851344a8c23292fe" id="r_ga6658800652843561851344a8c23292fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#ga6658800652843561851344a8c23292fe">kthread_sleep</a> (uint32_t ticks)</td></tr>
-<tr class="memdesc:ga6658800652843561851344a8c23292fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for the specified interval, allowing execution of other threads.  <br /></td></tr>
-<tr class="separator:ga6658800652843561851344a8c23292fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6eb05d622198df37c6ad4f8911c87d0" id="r_gab6eb05d622198df37c6ad4f8911c87d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#gab6eb05d622198df37c6ad4f8911c87d0">kthread_sleep</a> (int64_t ticks)</td></tr>
+<tr class="memdesc:gab6eb05d622198df37c6ad4f8911c87d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for the specified interval, allowing execution of other threads.  <br /></td></tr>
+<tr class="separator:gab6eb05d622198df37c6ad4f8911c87d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab60c7527a712441eb099bf5eee4012da" id="r_gab60c7527a712441eb099bf5eee4012da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#gab60c7527a712441eb099bf5eee4012da">kthread_set_pri</a> (<a class="el" href="structkthread__t.html">kthread_t</a> *th, int8_t pri)</td></tr>
 <tr class="memdesc:gab60c7527a712441eb099bf5eee4012da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change priority of a thread.  <br /></td></tr>
 <tr class="separator:gab60c7527a712441eb099bf5eee4012da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -271,10 +279,6 @@ Variables</h2></td></tr>
 <tr class="memitem:ga07a6d2a6ac58797b93937b228d88d2bd" id="r_ga07a6d2a6ac58797b93937b228d88d2bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#ga07a6d2a6ac58797b93937b228d88d2bd">__kernel</a></td></tr>
 <tr class="memdesc:ga07a6d2a6ac58797b93937b228d88d2bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the multithreading kernel has been initialized and is running.  <br /></td></tr>
 <tr class="separator:ga07a6d2a6ac58797b93937b228d88d2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac27d4cfd86a3a5001b5257afb6ca48dd" id="r_gac27d4cfd86a3a5001b5257afb6ca48dd"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#gac27d4cfd86a3a5001b5257afb6ca48dd">__tls_base</a> []</td></tr>
-<tr class="separator:gac27d4cfd86a3a5001b5257afb6ca48dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabefe97e68f9ff8c092e66cd5eb572fec" id="r_gabefe97e68f9ff8c092e66cd5eb572fec"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#gabefe97e68f9ff8c092e66cd5eb572fec">__tls_end</a> []</td></tr>
-<tr class="separator:gabefe97e68f9ff8c092e66cd5eb572fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabf7265028fde0be0da908571f7486466" id="r_gabf7265028fde0be0da908571f7486466"><td class="memItemLeft" align="right" valign="top"><a id="gabf7265028fde0be0da908571f7486466" name="gabf7265028fde0be0da908571f7486466"></a>
 <a class="el" href="group__kernel.html#structkcond__t">kcond_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>__kirq_cond_sp</b></td></tr>
 <tr class="memdesc:gabf7265028fde0be0da908571f7486466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Condition variable for SP interrupt. <br /></td></tr>
@@ -335,6 +339,7 @@ Variables</h2></td></tr>
 <div class="textblock"><p>A mutex for synchronization. </p>
 <p>A mutex is a synchronization primitive that can be used to protect shared resources from concurrent access. A mutex can be locked by only one thread at a time; if another thread tries to lock a mutex that is already locked, it will block until the mutex is unlocked.</p>
 <p>The mutex can be created with the KMUTEX_RECURSIVE flag, so that the same thread can lock the mutex multiple times without blocking. In this case, the mutex must be unlocked the same number of times it was locked.</p>
+<p>To create a mutex, you can either zero-initialize it or use <a class="el" href="group__kernel.html#ga5505974d97a34ff7ae7c93c3fc2a5876" title="Inititalize a new mutex.">kmutex_init</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>The contents of this structure are subject to change and should be considered internal. Do not access or modify any field directly. The structure is exposed only to allow creation in a static context (that is, without malloc).</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__kernel.html#ga5505974d97a34ff7ae7c93c3fc2a5876" title="Inititalize a new mutex.">kmutex_init</a> </dd>
 <dd>
@@ -343,34 +348,7 @@ Variables</h2></td></tr>
 <a class="el" href="group__kernel.html#ga689bc0a91209a4ac921aa71c74d84426" title="Release a lock to the mutex.">kmutex_unlock</a> </dd>
 <dd>
 <a class="el" href="group__kernel.html#ga5986e11e86b321b890c3e7802d5a2a4f" title="Destroy a mutex.">kmutex_destroy</a> </dd></dl>
-</div><table class="fieldtable">
-<tr><th colspan="3">Data Fields</th></tr>
-<tr><td class="fieldtype">
-<a id="a3f0a864176848fb633bedeee61fe47ec" name="a3f0a864176848fb633bedeee61fe47ec"></a>uint8_t</td>
-<td class="fieldname">
-flags: 8</td>
-<td class="fielddoc">
-Flags for the mutex. </td></tr>
-<tr><td class="fieldtype">
-<a id="ab5214e97f01dd14c0525a7fc393a0e47" name="ab5214e97f01dd14c0525a7fc393a0e47"></a><a class="el" href="group__n64sys.html#gaaf5dda50732dd08c2496ce37ad95b0cd">phys_addr_t</a></td>
-<td class="fieldname">
-owner: 24</td>
-<td class="fielddoc">
-Owner thread. </td></tr>
-<tr><td class="fieldtype">
-<a id="ab30f5c6b11d89c56f8a9fb7a9ec9b117" name="ab30f5c6b11d89c56f8a9fb7a9ec9b117"></a>uint8_t</td>
-<td class="fieldname">
-counter: 8</td>
-<td class="fielddoc">
-Recursive lock counter. </td></tr>
-<tr><td class="fieldtype">
-<a id="ab3931e70e74536b2f779590e29643da3" name="ab3931e70e74536b2f779590e29643da3"></a><a class="el" href="group__n64sys.html#gaaf5dda50732dd08c2496ce37ad95b0cd">phys_addr_t</a></td>
-<td class="fieldname">
-waiting: 24</td>
-<td class="fielddoc">
-List of waiting threads. </td></tr>
-</table>
-
+</div>
 </div>
 </div>
 <a name="structkcond__t" id="structkcond__t"></a>
@@ -435,6 +413,30 @@ interrupt_sr</td>
  </p>
 </td></tr>
 </table>
+
+</div>
+</div>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga501a18a4a25867dbd68de0b79b38d126" name="ga501a18a4a25867dbd68de0b79b38d126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga501a18a4a25867dbd68de0b79b38d126">&#9670;&#160;</a></span>kthread_lock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define kthread_lock</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="interrupt_8c.html#a52651bf1923b2c97e8b4da0ac6b99fdb">disable_interrupts</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lock the current thread (disable preemption) </p>
+<p>This function makes the current thread "locked": the kernel will not switch away from it, and keep it running until <a class="el" href="group__kernel.html#gae3f2c0f1853a9ca83a52fa9ea50db618" title="Unlock the current thread (reenable preemption)">kthread_unlock</a> is called.</p>
+<p>This function is extremely fast, and lighter than a mutex. On the other hand, it does not allow for granular locking of resources since preemption is fully disabled.</p>
+<p>The intended use case to create <em>small</em> critical sections where you want only the current thread to manipulate some shared data structure.</p>
+<p>You can nest calls to <a class="el" href="group__kernel.html#ga501a18a4a25867dbd68de0b79b38d126" title="Lock the current thread (disable preemption)">kthread_lock()</a> multiple times, as long as you then call <a class="el" href="group__kernel.html#gae3f2c0f1853a9ca83a52fa9ea50db618" title="Unlock the current thread (reenable preemption)">kthread_unlock</a> the same number of times. </p>
 
 </div>
 </div>
@@ -758,8 +760,8 @@ interrupt_sr</td>
 
 </div>
 </div>
-<a id="ga6658800652843561851344a8c23292fe" name="ga6658800652843561851344a8c23292fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6658800652843561851344a8c23292fe">&#9670;&#160;</a></span>kthread_sleep()</h2>
+<a id="gab6eb05d622198df37c6ad4f8911c87d0" name="gab6eb05d622198df37c6ad4f8911c87d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab6eb05d622198df37c6ad4f8911c87d0">&#9670;&#160;</a></span>kthread_sleep()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -767,7 +769,7 @@ interrupt_sr</td>
         <tr>
           <td class="memname">void kthread_sleep </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">int64_t&#160;</td>
           <td class="paramname"><em>ticks</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1049,6 +1051,7 @@ false if the thread is still running </dd></dl>
 <p>Inititalize a new mutex. </p>
 <p>A mutex is a synchronization primitive that can be used to protect shared resources from concurrent access. A mutex can be locked by only one thread at a time; if another thread tries to lock a mutex that is already locked, it will block until the mutex is unlocked.</p>
 <p>The mutex can be created with the KMUTEX_RECURSIVE flag, so that the same thread can lock the mutex multiple times without blocking. In this case, the mutex must be unlocked the same number of times it was locked.</p>
+<p>Notice that it's not mandatory to initialize a mutex with this functions, as zeroing the memory is enough to create a valid, non-recursive mutex.</p>
 <dl class="section note"><dt>Note</dt><dd>Mutexes are not recursive by default.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1416,56 +1419,10 @@ false If the condition was not signaled in time </dd></dl>
 
 </div>
 </div>
-<a id="gac27d4cfd86a3a5001b5257afb6ca48dd" name="gac27d4cfd86a3a5001b5257afb6ca48dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac27d4cfd86a3a5001b5257afb6ca48dd">&#9670;&#160;</a></span>__tls_base</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">char __tls_base[]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>TLS Base Linker Symbol </p>
-
-</div>
-</div>
-<a id="gabefe97e68f9ff8c092e66cd5eb572fec" name="gabefe97e68f9ff8c092e66cd5eb572fec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabefe97e68f9ff8c092e66cd5eb572fec">&#9670;&#160;</a></span>__tls_end</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">char __tls_end[]</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>TLS End Linker Symbol </p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

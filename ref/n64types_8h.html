@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -95,6 +96,15 @@ Typedefs</h2></td></tr>
 <tr class="memitem:aea7e5d6606c0426b4ba3238babfacf8a" id="r_aea7e5d6606c0426b4ba3238babfacf8a"><td class="memItemLeft" align="right" valign="top">typedef uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n64types_8h.html#aea7e5d6606c0426b4ba3238babfacf8a">u_uint16_t</a></td></tr>
 <tr class="memdesc:aea7e5d6606c0426b4ba3238babfacf8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unaligned 16-bit integer type.  <br /></td></tr>
 <tr class="separator:aea7e5d6606c0426b4ba3238babfacf8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf5dda50732dd08c2496ce37ad95b0cd" id="r_aaf5dda50732dd08c2496ce37ad95b0cd"><td class="memItemLeft" align="right" valign="top">typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n64types_8h.html#aaf5dda50732dd08c2496ce37ad95b0cd">phys_addr_t</a></td></tr>
+<tr class="memdesc:aaf5dda50732dd08c2496ce37ad95b0cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A physical address on the MIPS bus.  <br /></td></tr>
+<tr class="separator:aaf5dda50732dd08c2496ce37ad95b0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbde255c6ff18b478f46cb7fdf1357e6" id="r_abbde255c6ff18b478f46cb7fdf1357e6"><td class="memItemLeft" align="right" valign="top">typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n64types_8h.html#abbde255c6ff18b478f46cb7fdf1357e6">pi_addr_t</a></td></tr>
+<tr class="memdesc:abbde255c6ff18b478f46cb7fdf1357e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A PI address (on the peripheral bus)  <br /></td></tr>
+<tr class="separator:abbde255c6ff18b478f46cb7fdf1357e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4c24059302205687e4a68dbb973d266" id="r_aa4c24059302205687e4a68dbb973d266"><td class="memItemLeft" align="right" valign="top">typedef uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="n64types_8h.html#aa4c24059302205687e4a68dbb973d266">vaddr64_t</a></td></tr>
+<tr class="memdesc:aa4c24059302205687e4a68dbb973d266"><td class="mdescLeft">&#160;</td><td class="mdescRight">A 64-bit virtual address (aka "pointer")  <br /></td></tr>
+<tr class="separator:aa4c24059302205687e4a68dbb973d266"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Custom types used by libdragon. </p>
@@ -151,10 +161,66 @@ Typedefs</h2></td></tr>
 
 </div>
 </div>
+<a id="aaf5dda50732dd08c2496ce37ad95b0cd" name="aaf5dda50732dd08c2496ce37ad95b0cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf5dda50732dd08c2496ce37ad95b0cd">&#9670;&#160;</a></span>phys_addr_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint32_t <a class="el" href="n64types_8h.html#aaf5dda50732dd08c2496ce37ad95b0cd">phys_addr_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A physical address on the MIPS bus. </p>
+<p>Physical addresses are 32-bit wide, and are used to address the memory space of the MIPS R4300 CPU. The MIPS R4300 CPU has a 32-bit address bus, and can address up to 4 GiB of memory.</p>
+<p>Physical addresses are just numbers, they cannot be used as pointers (dereferenced). To access them, you must first convert them virtual addresses using the <a class="el" href="group__n64sys.html#ga6cbe8a16157397f5f7db9faf12ab5be4" title="Create a virtual addresses in a cached segment to access a physical address.">VirtualCachedAddr</a> or <a class="el" href="group__n64sys.html#ga14c8df17b8a56f3f6d582275688e757d" title="Create a virtual addresses in an uncached segment to access a physical address.">VirtualUncachedAddr</a> macros.</p>
+<p>In general, libdragon will try to use <a class="el" href="n64types_8h.html#aaf5dda50732dd08c2496ce37ad95b0cd" title="A physical address on the MIPS bus.">phys_addr_t</a> whenever a physical address is expected or returned, and C pointers for virtual addresses. Unfortunately, not all codebase can be changed to follow this convention for backward compatibility reasons. </p>
+
+</div>
+</div>
+<a id="abbde255c6ff18b478f46cb7fdf1357e6" name="abbde255c6ff18b478f46cb7fdf1357e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbde255c6ff18b478f46cb7fdf1357e6">&#9670;&#160;</a></span>pi_addr_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint32_t <a class="el" href="n64types_8h.html#abbde255c6ff18b478f46cb7fdf1357e6">pi_addr_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A PI address (on the peripheral bus) </p>
+<p>The peripheral bus (PI) is a 32-bit address space used to address devices on the cartridge slot or the bottom slot (N64DD).</p>
+<p>Accessing PI addresses is only possible via DMA or I/O operations, as performed by <a class="el" href="group__dma.html#ga9c79d4f41eacb14335a0fac57fecf0a0" title="Read data from a peripheral through PI DMA, waiting for completion.">dma_read</a>, <a class="el" href="group__dma.html#gaba28e5db067d400f6134c90daf0757c9" title="Write to a peripheral.">dma_write</a>, <a class="el" href="group__dma.html#ga3888b19d3c25fd2d4a7a44dba1b165fc" title="Read a 32 bit integer from a peripheral on the PI bus using the CPU.">io_read</a>, and <a class="el" href="group__dma.html#gad623a096e65b76a559dc52d11b537c3e" title="Write a 32 bit integer to a peripheral on the PI bus using the CPU.">io_write</a>.</p>
+<p>A large portion of the PI address space is also memory mapped to the CPU's address space, meaning that some PI addresses are also valid physical addresses. Check the N64 memory map to see the full mapping of PI addresses, or use <a class="el" href="group__dma.html#ga49cbd4325eb7c35eac970053a4403b9f" title="Check whether the specified PI address can be accessed doing I/O from CPU.">io_accessible</a> if you need to check that at runtime. </p>
+
+</div>
+</div>
+<a id="aa4c24059302205687e4a68dbb973d266" name="aa4c24059302205687e4a68dbb973d266"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4c24059302205687e4a68dbb973d266">&#9670;&#160;</a></span>vaddr64_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint64_t <a class="el" href="n64types_8h.html#aa4c24059302205687e4a68dbb973d266">vaddr64_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A 64-bit virtual address (aka "pointer") </p>
+<p>VR4300 CPU supports a full 64-bit virtual address space, but this is useful only in some very niche use cases. To avoid wasting memory and performance, Libdragon uses a ILP32 ABI, meaning that C pointers are 32-bit wide (which works because MIPS64 address space has been designed to be backwards compatible with MIPS32).</p>
+<p>In the rare cases where a full 64-bit virtual address is needed, we cannot use a C pointer, so this type is provided instead. To access the memory at this address, you must use the sys_vaddr_read* and sys_vaddr_write* functions. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

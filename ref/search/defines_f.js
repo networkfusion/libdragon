@@ -1,7 +1,7 @@
 var searchData=
 [
   ['pack32_0',['pack32',['../inspector_8c.html#ad6ad9dd25047991a16f2a15e5def5a49',1,'inspector.c']]],
-  ['page_5fsize_1',['PAGE_SIZE',['../cpak_8c.html#a7d467c1d283fdfa1f2081ba1e0d01b6e',1,'cpak.c']]],
+  ['page_5fsize_1',['PAGE_SIZE',['../cpakfs__internal_8h.html#a7d467c1d283fdfa1f2081ba1e0d01b6e',1,'cpakfs_internal.h']]],
   ['pi_5fbb_5faes_5fctrl_2',['PI_BB_AES_CTRL',['../interrupt_8c.html#aa7f57f1ac2da9c2aa6feeef588e40160',1,'interrupt.c']]],
   ['pi_5fbb_5faes_5fiv_3',['PI_BB_AES_IV',['../nand_8c.html#a93ecc8c13c5abe5216e7e1cc56a20092',1,'nand.c']]],
   ['pi_5fbb_5faes_5fkey_4',['PI_BB_AES_KEY',['../nand_8c.html#ad24cd3a888293109df6ed315769010ea',1,'nand.c']]],
@@ -34,9 +34,6 @@ var searchData=
   ['pi_5fcart_5faddr_31',['PI_CART_ADDR',['../nand_8c.html#a6cd13d43fe8799f8d51a61c8126ef2fc',1,'nand.c']]],
   ['pi_5fclear_5finterrupt_32',['PI_CLEAR_INTERRUPT',['../interrupt_8c.html#a883150d32c343267c7c046c0f55cc44b',1,'interrupt.c']]],
   ['pi_5fdram_5faddr_33',['PI_DRAM_ADDR',['../nand_8c.html#aa18917e3e33e3a61f7ce5632e8cc15eb',1,'nand.c']]],
-  ['pi_5fstatus_5fdma_5fbusy_34',['PI_STATUS_DMA_BUSY',['../dma_8c.html#a60d5ee8aff563bfe2a9a39fe86b524aa',1,'dma.c']]],
-  ['pi_5fstatus_5ferror_35',['PI_STATUS_ERROR',['../dma_8c.html#af401a56499cca3cc25b19defa3d5dcc8',1,'dma.c']]],
-  ['pi_5fstatus_5fio_5fbusy_36',['PI_STATUS_IO_BUSY',['../dma_8c.html#acd66f53b97aed895b5d032c824bf384a',1,'dma.c']]],
-  ['ptr_5fdecode_37',['ptr_decode',['../model64_8c.html#aae0e91b4a5a9155bdeab65d8fb22164a',1,'PTR_DECODE:&#160;model64.c'],['../rdpq__font_8c.html#ab9302acc46501e1131d6a923a782f71c',1,'PTR_DECODE:&#160;rdpq_font.c']]],
-  ['ptr_5fencode_38',['ptr_encode',['../model64_8c.html#a2315be11a04c661233e70505ed12a72b',1,'PTR_ENCODE:&#160;model64.c'],['../rdpq__font_8c.html#aa2cf831af4482622a680e2756e6bccdc',1,'PTR_ENCODE:&#160;rdpq_font.c']]]
+  ['ptr_5fdecode_34',['ptr_decode',['../model64_8c.html#aae0e91b4a5a9155bdeab65d8fb22164a',1,'PTR_DECODE:&#160;model64.c'],['../rdpq__font_8c.html#ab9302acc46501e1131d6a923a782f71c',1,'PTR_DECODE:&#160;rdpq_font.c'],['../rdpq__mat_8c.html#ab9302acc46501e1131d6a923a782f71c',1,'PTR_DECODE:&#160;rdpq_mat.c']]],
+  ['ptr_5fencode_35',['ptr_encode',['../model64_8c.html#a2315be11a04c661233e70505ed12a72b',1,'PTR_ENCODE:&#160;model64.c'],['../rdpq__font_8c.html#aa2cf831af4482622a680e2756e6bccdc',1,'PTR_ENCODE:&#160;rdpq_font.c']]]
 ];

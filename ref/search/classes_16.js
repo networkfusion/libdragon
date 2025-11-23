@@ -1,6 +1,16 @@
 var searchData=
 [
-  ['xm64_5fheader_5ft_0',['xm64_header_t',['../xm64_8c.html#structxm64__header__t',1,'']]],
-  ['xm64player_5ft_1',['xm64player_t',['../xm64_8h.html#structxm64player__t',1,'']]],
-  ['xm64player_5ft_2eseek_2',['xm64player_t.seek',['../xm64_8h.html#structxm64player__t_8seek',1,'']]]
+  ['wav64_5fcompression_5ft_0',['wav64_compression_t',['../structwav64__compression__t.html',1,'']]],
+  ['wav64_5fheader_5ft_1',['wav64_header_t',['../wav64__internal_8h.html#structwav64__header__t',1,'']]],
+  ['wav64_5fheader_5fvadpcm_5ft_2',['wav64_header_vadpcm_t',['../wav64__vadpcm__internal_8h.html#structwav64__header__vadpcm__t',1,'']]],
+  ['wav64_5floadparms_5ft_3',['wav64_loadparms_t',['../wav64_8h.html#structwav64__loadparms__t',1,'']]],
+  ['wav64_5fopus_5fheader_5fext_4',['wav64_opus_header_ext',['../wav64__opus_8c.html#structwav64__opus__header__ext',1,'']]],
+  ['wav64_5fstate_5ft_5',['wav64_state_t',['../wav64__internal_8h.html#structwav64__state__t',1,'']]],
+  ['wav64_5fstate_5fvadpcm_5ft_6',['wav64_state_vadpcm_t',['../wav64__vadpcm__internal_8h.html#structwav64__state__vadpcm__t',1,'']]],
+  ['wav64_5ft_7',['wav64_t',['../wav64_8h.html#structwav64__t',1,'']]],
+  ['wav64_5fvadpcm_5fhuffctx_5ft_8',['wav64_vadpcm_huffctx_t',['../wav64__vadpcm__internal_8h.html#structwav64__vadpcm__huffctx__t',1,'']]],
+  ['wav64_5fvadpcm_5fhufftable_5ft_9',['wav64_vadpcm_hufftable_t',['../wav64__vadpcm__internal_8h.html#structwav64__vadpcm__hufftable__t',1,'']]],
+  ['wav64_5fvadpcm_5fskippoint_5ft_10',['wav64_vadpcm_skippoint_t',['../wav64__vadpcm__internal_8h.html#structwav64__vadpcm__skippoint__t',1,'']]],
+  ['wav64_5fvadpcm_5fvector_5ft_11',['wav64_vadpcm_vector_t',['../wav64__vadpcm__internal_8h.html#structwav64__vadpcm__vector__t',1,'']]],
+  ['waveform_5ft_12',['waveform_t',['../mixer_8h.html#structwaveform__t',1,'']]]
 ];

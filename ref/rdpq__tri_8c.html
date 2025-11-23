@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,7 +100,7 @@ Macros</h2></td></tr>
 <tr class="separator:a4fd43a3da50a4816e28658a666d90e03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fb613ddfceb7573a840c84b146f273c" id="r_a1fb613ddfceb7573a840c84b146f273c"><td class="memItemLeft" align="right" valign="top"><a id="a1fb613ddfceb7573a840c84b146f273c" name="a1fb613ddfceb7573a840c84b146f273c"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>tracef</b>(fmt, ...)&#160;&#160;&#160;({ })</td></tr>
-<tr class="memdesc:a1fb613ddfceb7573a840c84b146f273c"><td class="mdescLeft">&#160;</td><td class="mdescRight">like <a class="el" href="debug_8h.html#aa3e8be416ef1525cfd3230204b56d184" title="Write a message to the debugging channel.">debugf()</a>, but writes only if <a class="el" href="rdpq__tri_8c.html#a4fd43a3da50a4816e28658a666d90e03" title="Set to 1 to activate tracing of all parameters of all triangles.">TRIANGLE_TRACE</a> is not 0 <br /></td></tr>
+<tr class="memdesc:a1fb613ddfceb7573a840c84b146f273c"><td class="mdescLeft">&#160;</td><td class="mdescRight">like <a class="el" href="debug_8c.html#a9d7b18857c2b18437251bcc38c866d35" title="Write a message to the debugging channel.">debugf()</a>, but writes only if <a class="el" href="rdpq__tri_8c.html#a4fd43a3da50a4816e28658a666d90e03" title="Set to 1 to activate tracing of all parameters of all triangles.">TRIANGLE_TRACE</a> is not 0 <br /></td></tr>
 <tr class="separator:a1fb613ddfceb7573a840c84b146f273c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -284,8 +285,8 @@ Inverse triangle normal (used to calculate gradients) </td></tr>
 <div class="ttc" id="agroup__graphics_html_gae16bab5741f411ec4ef51b0295f6e705"><div class="ttname"><a href="group__graphics.html#gae16bab5741f411ec4ef51b0295f6e705">RGBA32</a></div><div class="ttdeci">#define RGBA32(rx, gx, bx, ax)</div><div class="ttdoc">Create a color_t from the R,G,B,A components in the RGBA32 range (0-255).</div><div class="ttdef"><b>Definition</b> graphics.h:96</div></div>
 <div class="ttc" id="ardpq_8c_html_ad25a8b6c5eb35fb2253f601c3be24867"><div class="ttname"><a href="rdpq_8c.html#ad25a8b6c5eb35fb2253f601c3be24867">rdpq_set_prim_color</a></div><div class="ttdeci">void rdpq_set_prim_color(color_t color)</div><div class="ttdoc">Set the RDP PRIM combiner register (color only) (RDP command: SET_PRIM_COLOR)</div><div class="ttdef"><b>Definition</b> rdpq.h:986</div></div>
 <div class="ttc" id="ardpq__macros_8h_html_a623cc6b579a82d6ca5086d3fbba50285"><div class="ttname"><a href="rdpq__macros_8h.html#a623cc6b579a82d6ca5086d3fbba50285">RDPQ_COMBINER_FLAT</a></div><div class="ttdeci">#define RDPQ_COMBINER_FLAT</div><div class="ttdoc">Draw a flat color. Configure the color via rdpq_set_prim_color.</div><div class="ttdef"><b>Definition</b> rdpq_macros.h:473</div></div>
-<div class="ttc" id="ardpq__mode_8c_html_a7aaec7357eb3343339d9373b1a963a57"><div class="ttname"><a href="rdpq__mode_8c.html#a7aaec7357eb3343339d9373b1a963a57">rdpq_mode_combiner</a></div><div class="ttdeci">void rdpq_mode_combiner(rdpq_combiner_t comb)</div><div class="ttdoc">Configure the color combiner.</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:470</div></div>
-<div class="ttc" id="ardpq__mode_8c_html_ac3c29578703de424bea9548ad86bb4af"><div class="ttname"><a href="rdpq__mode_8c.html#ac3c29578703de424bea9548ad86bb4af">rdpq_set_mode_standard</a></div><div class="ttdeci">void rdpq_set_mode_standard(void)</div><div class="ttdoc">Reset render mode to standard.</div><div class="ttdef"><b>Definition</b> rdpq_mode.c:94</div></div>
+<div class="ttc" id="ardpq__mode_8c_html_a7aaec7357eb3343339d9373b1a963a57"><div class="ttname"><a href="rdpq__mode_8c.html#a7aaec7357eb3343339d9373b1a963a57">rdpq_mode_combiner</a></div><div class="ttdeci">void rdpq_mode_combiner(rdpq_combiner_t comb)</div><div class="ttdoc">Configure the color combiner.</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:481</div></div>
+<div class="ttc" id="ardpq__mode_8c_html_ac3c29578703de424bea9548ad86bb4af"><div class="ttname"><a href="rdpq__mode_8c.html#ac3c29578703de424bea9548ad86bb4af">rdpq_set_mode_standard</a></div><div class="ttdeci">void rdpq_set_mode_standard(void)</div><div class="ttdoc">Reset render mode to standard.</div><div class="ttdef"><b>Definition</b> rdpq_mode.c:98</div></div>
 <div class="ttc" id="ardpq__tri_8c_html_a614234de275518683c066ffc6c381503"><div class="ttname"><a href="rdpq__tri_8c.html#a614234de275518683c066ffc6c381503">TRIFMT_FILL</a></div><div class="ttdeci">const rdpq_trifmt_t TRIFMT_FILL</div><div class="ttdoc">Format descriptor for a solid-filled triangle.</div><div class="ttdef"><b>Definition</b> rdpq_tri.c:40</div></div>
 <div class="ttc" id="ardpq__tri_8c_html_afb11d915a7ce8903b2b3e5ed9ef7936e"><div class="ttname"><a href="rdpq__tri_8c.html#afb11d915a7ce8903b2b3e5ed9ef7936e">rdpq_triangle</a></div><div class="ttdeci">void rdpq_triangle(const rdpq_trifmt_t *fmt, const float *v1, const float *v2, const float *v3)</div><div class="ttdoc">Draw a triangle (RDP command: TRI_*)</div><div class="ttdef"><b>Definition</b> rdpq_tri.c:534</div></div>
 </div><!-- fragment --><p>The three vertices (v1, v2, v3) can be provided in any order (clockwise or counter-clockwise). The function will render the triangle in any case (so back-face culling must be handled before calling it).</p>
@@ -471,7 +472,7 @@ Inverse triangle normal (used to calculate gradients) </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

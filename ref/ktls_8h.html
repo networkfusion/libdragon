@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -74,61 +75,28 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">ktls.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
 <p><a href="ktls_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a9d75fc2730ca1001f1283a22b56f29d0" id="r_a9d75fc2730ca1001f1283a22b56f29d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ktls_8h.html#a9d75fc2730ca1001f1283a22b56f29d0">KERNEL_TP_INVALID</a>&#160;&#160;&#160;((void *)0x5FFF8001)</td></tr>
-<tr class="memdesc:a9d75fc2730ca1001f1283a22b56f29d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalid thread pointer value.  <br /></td></tr>
-<tr class="separator:a9d75fc2730ca1001f1283a22b56f29d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a55fb4eeab8ab07bc3288eb1acfabd7d2" id="r_a55fb4eeab8ab07bc3288eb1acfabd7d2"><td class="memItemLeft" align="right" valign="top"><a id="a55fb4eeab8ab07bc3288eb1acfabd7d2" name="a55fb4eeab8ab07bc3288eb1acfabd7d2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>__asm__</b> (&quot;.ifndef __RDHWR_WAS_DEFINED&quot; &quot;\n&quot; &quot;.macro rdhwr rt, rd&quot; &quot;\n&quot; &quot;    lw \\rt, %gprel(<a class="el" href="kernel_8c.html#a355887abd84d8d5d3822b67bf97f7d53">th_cur_tp</a>)($gp)&quot; &quot;\n&quot; &quot;.endm&quot; &quot;\n&quot; &quot;.set __RDHWR_WAS_DEFINED, 1&quot; &quot;\n&quot; &quot;.endif&quot; &quot;\n&quot;)</td></tr>
-<tr class="memdesc:a55fb4eeab8ab07bc3288eb1acfabd7d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assembly macro for thread-local storage access. <br /></td></tr>
-<tr class="separator:a55fb4eeab8ab07bc3288eb1acfabd7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a355887abd84d8d5d3822b67bf97f7d53" id="r_a355887abd84d8d5d3822b67bf97f7d53"><td class="memItemLeft" align="right" valign="top"><a id="a355887abd84d8d5d3822b67bf97f7d53" name="a355887abd84d8d5d3822b67bf97f7d53"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>th_cur_tp</b></td></tr>
-<tr class="memdesc:a355887abd84d8d5d3822b67bf97f7d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current thread TLS. <br /></td></tr>
-<tr class="separator:a355887abd84d8d5d3822b67bf97f7d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbc2bef5661900f801e7b622d2d213ff" id="r_acbc2bef5661900f801e7b622d2d213ff"><td class="memItemLeft" align="right" valign="top"><a id="acbc2bef5661900f801e7b622d2d213ff" name="acbc2bef5661900f801e7b622d2d213ff"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>__asm__</b> (&quot;.ifndef __RDHWR_WAS_DEFINED&quot; &quot;\n&quot; &quot;.macro rdhwr rt, rd&quot; &quot;\n&quot; &quot;    lw \\rt, %gprel(<a class="el" href="ktls_8c.html#aec50d85f0d73a7a7d402d38e3c2730c6">__th_cur_tp</a>)($gp)&quot; &quot;\n&quot; &quot;.endm&quot; &quot;\n&quot; &quot;.set __RDHWR_WAS_DEFINED, 1&quot; &quot;\n&quot; &quot;.endif&quot; &quot;\n&quot;)</td></tr>
+<tr class="memdesc:acbc2bef5661900f801e7b622d2d213ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assembly macro for thread-local storage access. <br /></td></tr>
+<tr class="separator:acbc2bef5661900f801e7b622d2d213ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Liam Coleman <a href="#" onclick="location.href='mai'+'lto:'+'gam'+'em'+'ast'+'er'+'plc'+'@g'+'mai'+'l.'+'com'; return false;">gamem<span class="obfuscator">.nosp@m.</span>aste<span class="obfuscator">.nosp@m.</span>rplc@<span class="obfuscator">.nosp@m.</span>gmai<span class="obfuscator">.nosp@m.</span>l.com</a> </dd>
 <dd>
 Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a9d75fc2730ca1001f1283a22b56f29d0" name="a9d75fc2730ca1001f1283a22b56f29d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d75fc2730ca1001f1283a22b56f29d0">&#9670;&#160;</a></span>KERNEL_TP_INVALID</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define KERNEL_TP_INVALID&#160;&#160;&#160;((void *)0x5FFF8001)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Invalid thread pointer value. </p>
-<p>This is used to indicate that the current thread pointer is invalid, which happens during exception processing. If the code happens to access TLS, it will dereference this, and the exception code in __get_exception_name will be able to detect this and print an useful error message. </p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -1,28 +1,4 @@
 var searchData=
 [
-  ['rdpq_5fparagraph_5fflag_5fantialias_5ffix_0',['RDPQ_PARAGRAPH_FLAG_ANTIALIAS_FIX',['../rdpq__paragraph_8h.html#a3d0fc9f0eb14a4feb4d2ac01ea7aeee1a84636d973ec4ffc1bb31933933f4892f',1,'rdpq_paragraph.h']]],
-  ['rdpq_5fparagraph_5fflag_5fmalloc_1',['RDPQ_PARAGRAPH_FLAG_MALLOC',['../rdpq__paragraph_8h.html#a3d0fc9f0eb14a4feb4d2ac01ea7aeee1a1116e65dcdb052dc92c3acf0110cbd68',1,'rdpq_paragraph.h']]],
-  ['reset_5fcold_2',['RESET_COLD',['../group__n64sys.html#gga26192e81cb759946e1a943b3f242ef7aa3196b74971170ed62c9cdae363daa8b3',1,'n64sys.h']]],
-  ['reset_5fwarm_3',['RESET_WARM',['../group__n64sys.html#gga26192e81cb759946e1a943b3f242ef7aa86706a91fd9585546eca167533d60339',1,'n64sys.h']]],
-  ['rspq_5fcmd_5fcall_4',['RSPQ_CMD_CALL',['../rspq__internal_8h.html#afa231099d07583c3ed0981e0bb665f55a3bcc1ebb86dbfab31f34d0153d3a9a14',1,'rspq_internal.h']]],
-  ['rspq_5fcmd_5fdma_5',['RSPQ_CMD_DMA',['../rspq__internal_8h.html#afa231099d07583c3ed0981e0bb665f55a4f90128f18e525784c2a00b5d92f5840',1,'rspq_internal.h']]],
-  ['rspq_5fcmd_5finvalid_6',['RSPQ_CMD_INVALID',['../rspq__internal_8h.html#afa231099d07583c3ed0981e0bb665f55a2c76820fdf4fc98985983a7d5ec0a207',1,'rspq_internal.h']]],
-  ['rspq_5fcmd_5fjump_7',['RSPQ_CMD_JUMP',['../rspq__internal_8h.html#afa231099d07583c3ed0981e0bb665f55a58023050f9d78e7cf4dc6c6cee07b6e5',1,'rspq_internal.h']]],
-  ['rspq_5fcmd_5fnoop_8',['RSPQ_CMD_NOOP',['../rspq__internal_8h.html#afa231099d07583c3ed0981e0bb665f55ac263376942e30a199a0193d7c8c19c3c',1,'rspq_internal.h']]],
-  ['rspq_5fcmd_5frdp_5fappend_5fbuffer_9',['RSPQ_CMD_RDP_APPEND_BUFFER',['../rspq__internal_8h.html#afa231099d07583c3ed0981e0bb665f55abe06e92ff0ad671b894d7406f36caf6a',1,'rspq_internal.h']]],
-  ['rspq_5fcmd_5frdp_5fset_5fbuffer_10',['RSPQ_CMD_RDP_SET_BUFFER',['../rspq__internal_8h.html#afa231099d07583c3ed0981e0bb665f55aa632d525553a22d75f1ad4cf7d932c4f',1,'rspq_internal.h']]],
-  ['rspq_5fcmd_5frdp_5fwait_5fidle_11',['RSPQ_CMD_RDP_WAIT_IDLE',['../rspq__internal_8h.html#afa231099d07583c3ed0981e0bb665f55a8311a9a6271403dd01632a572a3b6dcf',1,'rspq_internal.h']]],
-  ['rspq_5fcmd_5fret_12',['RSPQ_CMD_RET',['../rspq__internal_8h.html#afa231099d07583c3ed0981e0bb665f55ae3aa621c30e8ea451128c8ff98d14f44',1,'rspq_internal.h']]],
-  ['rspq_5fcmd_5fswap_5fbuffers_13',['RSPQ_CMD_SWAP_BUFFERS',['../rspq__internal_8h.html#afa231099d07583c3ed0981e0bb665f55a8d8fd35254ac74cdb0b1abdb364fb64e',1,'rspq_internal.h']]],
-  ['rspq_5fcmd_5ftest_5fwrite_5fstatus_14',['RSPQ_CMD_TEST_WRITE_STATUS',['../rspq__internal_8h.html#afa231099d07583c3ed0981e0bb665f55a150bd208a5199e21f87ee2e093dabe56',1,'rspq_internal.h']]],
-  ['rspq_5fcmd_5fwrite_5fstatus_15',['RSPQ_CMD_WRITE_STATUS',['../rspq__internal_8h.html#afa231099d07583c3ed0981e0bb665f55ae0ee81ba2ae47bd82a5cf662bab63ca5',1,'rspq_internal.h']]],
-  ['rtc_5fsource_5fbb_16',['RTC_SOURCE_BB',['../group__rtc.html#ggaf361c072d6c657eb72cf1946a6d7c7cca572e89ca6a496ee2ec318ece0dfdb08f',1,'rtc.h']]],
-  ['rtc_5fsource_5fdd_17',['RTC_SOURCE_DD',['../group__rtc.html#ggaf361c072d6c657eb72cf1946a6d7c7cca9124380bb2375585bf402bbd58c24f3f',1,'rtc.h']]],
-  ['rtc_5fsource_5fjoybus_18',['RTC_SOURCE_JOYBUS',['../group__rtc.html#ggaf361c072d6c657eb72cf1946a6d7c7cca9217eca92f8bed6983ccfd1c5309c3d9',1,'rtc.h']]],
-  ['rtc_5fsource_5fnone_19',['RTC_SOURCE_NONE',['../group__rtc.html#ggaf361c072d6c657eb72cf1946a6d7c7ccae195ac3bf31f9bb72f256cd660a25e4e',1,'rtc.h']]],
-  ['rtc_5fstate_5finit_20',['RTC_STATE_INIT',['../group__rtc.html#gga32714b4699fbf187f87a3a57244db37bab6dbb00e27e4ec6efb6820eddc8ee212',1,'rtc.c']]],
-  ['rtc_5fstate_5fjoybus_5fdetecting_21',['RTC_STATE_JOYBUS_DETECTING',['../group__rtc.html#gga32714b4699fbf187f87a3a57244db37ba34bc51d88d30467fad6e812a2e9f1a72',1,'rtc.c']]],
-  ['rtc_5fstate_5fjoybus_5freading_22',['RTC_STATE_JOYBUS_READING',['../group__rtc.html#gga32714b4699fbf187f87a3a57244db37ba4afcc528edf8ab92bd19eeef31c858e4',1,'rtc.c']]],
-  ['rtc_5fstate_5fjoybus_5fstarting_23',['RTC_STATE_JOYBUS_STARTING',['../group__rtc.html#gga32714b4699fbf187f87a3a57244db37ba16ca48d4081fb83fb863442d74562cdb',1,'rtc.c']]],
-  ['rtc_5fstate_5fready_24',['RTC_STATE_READY',['../group__rtc.html#gga32714b4699fbf187f87a3a57244db37badcea1afa49aeec5962419f4bee30062d',1,'rtc.c']]]
+  ['nand_5fmmap_5fencrypted_0',['NAND_MMAP_ENCRYPTED',['../nand_8h.html#aa7594ca952e4f4bfcfab6b76982099d3a06cd4c034e6c396e5f238c8602cf8401',1,'nand.h']]]
 ];

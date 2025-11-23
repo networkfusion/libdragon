@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -299,10 +300,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>__CART_handler</b> (v
 <tr class="memitem:a26128b1c791cce90293199e3fc572a19" id="r_a26128b1c791cce90293199e3fc572a19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interrupt_8c.html#a26128b1c791cce90293199e3fc572a19">set_BB_MD_interrupt</a> (int active)</td></tr>
 <tr class="memdesc:a26128b1c791cce90293199e3fc572a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable the BBPlayer MD interrupt.  <br /></td></tr>
 <tr class="separator:a26128b1c791cce90293199e3fc572a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72e02641a29de5f343f8507140b46b8e" id="r_a72e02641a29de5f343f8507140b46b8e"><td class="memItemLeft" align="right" valign="top"><a id="a72e02641a29de5f343f8507140b46b8e" name="a72e02641a29de5f343f8507140b46b8e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>__init_interrupts</b> ()</td></tr>
-<tr class="memdesc:a72e02641a29de5f343f8507140b46b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the interrupt controller. <br /></td></tr>
-<tr class="separator:a72e02641a29de5f343f8507140b46b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a693732f4344b06cf022da4d7f62d180c" id="r_a693732f4344b06cf022da4d7f62d180c"><td class="memItemLeft" align="right" valign="top"><a id="a693732f4344b06cf022da4d7f62d180c" name="a693732f4344b06cf022da4d7f62d180c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>__init_interrupts</b> (void)</td></tr>
+<tr class="memdesc:a693732f4344b06cf022da4d7f62d180c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the interrupt controller. <br /></td></tr>
+<tr class="separator:a693732f4344b06cf022da4d7f62d180c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52651bf1923b2c97e8b4da0ac6b99fdb" id="r_a52651bf1923b2c97e8b4da0ac6b99fdb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interrupt_8c.html#a52651bf1923b2c97e8b4da0ac6b99fdb">disable_interrupts</a> ()</td></tr>
 <tr class="memdesc:a52651bf1923b2c97e8b4da0ac6b99fdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable interrupts systemwide.  <br /></td></tr>
 <tr class="separator:a52651bf1923b2c97e8b4da0ac6b99fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -513,6 +514,10 @@ Thar0 <a href="https://github.com/Thar0">https://github.com/Thar0</a> </dd></dl>
 </div><div class="memdoc">
 
 <p>Register a VI callback. </p>
+<p>This function will be called on any programmer VI interrupt, so possibly more than once per frame if the application uses line interrupts via the VI library. Normally, it will be called on vblank.</p>
+<dl class="section note"><dt>Note</dt><dd>Most applications should not use this function directly, but instead let the VI library manage interrupts, and use <a class="el" href="vi_8c.html#a83c02ddfe3505556329f99bbaedcdffb" title="Install a custom vblank handler.">vi_install_vblank_handler</a> to install a custom vblank handler.</dd>
+<dd>
+VI interrupts are not generated until the VI is turned on. Use <a class="el" href="vi_8c.html#ab754a7182635d4dd588e2f2056bee397" title="Initialize the VI module.">vi_init</a> or <a class="el" href="group__display.html#ga1763c553f071d40c4bd18cee77ae98a1" title="Initialize the display to a particular resolution and bit depth.">display_init</a> to turn the VI on.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>Function to call when a VI interrupt occurs </td></tr>
@@ -1393,6 +1398,9 @@ Thar0 <a href="https://github.com/Thar0">https://github.com/Thar0</a> </dd></dl>
 </div><div class="memdoc">
 
 <p>Enable or disable the VI interrupt. </p>
+<dl class="section note"><dt>Note</dt><dd>Most applications should not use this function directly, but instead let the VI library handle interrupts, and use <a class="el" href="vi_8c.html#a83c02ddfe3505556329f99bbaedcdffb" title="Install a custom vblank handler.">vi_install_vblank_handler</a> to install a custom vblank handler.</dd>
+<dd>
+Even if enabled here in the interrupt controller, VI interrupts are not generated until the VI is turned on. Use <a class="el" href="vi_8c.html#ab754a7182635d4dd588e2f2056bee397" title="Initialize the VI module.">vi_init</a> or <a class="el" href="group__display.html#ga1763c553f071d40c4bd18cee77ae98a1" title="Initialize the display to a particular resolution and bit depth.">display_init</a> to turn the VI on.</dd></dl>
 <p>The VI interrupt is generated when the VI begins displaying a specific line of the display output. The line number configured always refers to the final TV output, so it should be either in the range 0..524 (NTSC) or 0..624 (PAL). The vblank happens at the beginning of the display period, in range 0..33 (NTSC) or 0..43 (PAL). A common value used to trigger the interrupt at the beginning of the vblank is 2.</p>
 <p>In non-interlaced modes, the VI only draws on even lines, so configuring the interrupt on an odd line causes the interrupt to never trigger. In interlace modes, instead, the VI alternates between even lines and odd lines, so any specific line will trigger an interrupt only every other frame. If you need an interrupt every frame in interlaced mode, you will need to reconfigure the interrupt every frame, alternating between an odd and an even number.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1809,6 +1817,7 @@ Thar0 <a href="https://github.com/Thar0">https://github.com/Thar0</a> </dd></dl>
         <tr>
           <td class="memname">void disable_interrupts </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1829,6 +1838,7 @@ Thar0 <a href="https://github.com/Thar0">https://github.com/Thar0</a> </dd></dl>
         <tr>
           <td class="memname">void enable_interrupts </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1849,6 +1859,7 @@ Thar0 <a href="https://github.com/Thar0">https://github.com/Thar0</a> </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="group__interrupt.html#ga366982e291c08c36c7352ea07a6e096c">interrupt_state_t</a> get_interrupts_state </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1916,7 +1927,7 @@ Thar0 <a href="https://github.com/Thar0">https://github.com/Thar0</a> </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

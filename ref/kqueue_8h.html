@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,9 +100,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a83f3c02b7b969c5037831dbd20523e62" id="r_a83f3c02b7b969c5037831dbd20523e62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kqueue_8h.html#a83f3c02b7b969c5037831dbd20523e62">kqueue_put</a> (<a class="el" href="kqueue_8c.html#structkqueue__t">kqueue_t</a> *queue, void *element)</td></tr>
 <tr class="memdesc:a83f3c02b7b969c5037831dbd20523e62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an element to the queue.  <br /></td></tr>
 <tr class="separator:a83f3c02b7b969c5037831dbd20523e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4cac60c3c0902978288815867013cd" id="r_a5b4cac60c3c0902978288815867013cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kqueue_8h.html#a5b4cac60c3c0902978288815867013cd">kqueue_try_put_isr</a> (<a class="el" href="kqueue_8c.html#structkqueue__t">kqueue_t</a> *queue, void *element)</td></tr>
+<tr class="memdesc:a5b4cac60c3c0902978288815867013cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempt to add an element to a queue from an interrupt context.  <br /></td></tr>
+<tr class="separator:a5b4cac60c3c0902978288815867013cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aaa5cf8280064a02dd79299e217c3e7" id="r_a2aaa5cf8280064a02dd79299e217c3e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kqueue_8h.html#a2aaa5cf8280064a02dd79299e217c3e7">kqueue_try_put</a> (<a class="el" href="kqueue_8c.html#structkqueue__t">kqueue_t</a> *queue, void *element, uint32_t ticks)</td></tr>
+<tr class="memdesc:a2aaa5cf8280064a02dd79299e217c3e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to add an element to the queue with timeout.  <br /></td></tr>
+<tr class="separator:a2aaa5cf8280064a02dd79299e217c3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cce8cdb47fbba71e23ba26b9500b5db" id="r_a5cce8cdb47fbba71e23ba26b9500b5db"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kqueue_8h.html#a5cce8cdb47fbba71e23ba26b9500b5db">kqueue_get</a> (<a class="el" href="kqueue_8c.html#structkqueue__t">kqueue_t</a> *queue)</td></tr>
 <tr class="memdesc:a5cce8cdb47fbba71e23ba26b9500b5db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an element from the queue.  <br /></td></tr>
 <tr class="separator:a5cce8cdb47fbba71e23ba26b9500b5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14173bcecddb058b031578ab12807faa" id="r_a14173bcecddb058b031578ab12807faa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kqueue_8h.html#a14173bcecddb058b031578ab12807faa">kqueue_try_get</a> (<a class="el" href="kqueue_8c.html#structkqueue__t">kqueue_t</a> *queue, void **element, uint32_t ticks)</td></tr>
+<tr class="memdesc:a14173bcecddb058b031578ab12807faa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try to remove an element from the queue with timeout.  <br /></td></tr>
+<tr class="separator:a14173bcecddb058b031578ab12807faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad857c7538b32c6e7392b84e87aee301" id="r_aad857c7538b32c6e7392b84e87aee301"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kqueue_8h.html#aad857c7538b32c6e7392b84e87aee301">kqueue_count</a> (<a class="el" href="kqueue_8c.html#structkqueue__t">kqueue_t</a> *queue)</td></tr>
 <tr class="memdesc:aad857c7538b32c6e7392b84e87aee301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of elements in the queue.  <br /></td></tr>
 <tr class="separator:aad857c7538b32c6e7392b84e87aee301"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -234,6 +244,90 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5b4cac60c3c0902978288815867013cd" name="a5b4cac60c3c0902978288815867013cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b4cac60c3c0902978288815867013cd">&#9670;&#160;</a></span>kqueue_try_put_isr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kqueue_try_put_isr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="kqueue_8c.html#structkqueue__t">kqueue_t</a> *&#160;</td>
+          <td class="paramname"><em>queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>element</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Attempt to add an element to a queue from an interrupt context. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">queue</td><td>Pointer to the queue structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>Pointer to the element to add</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the element was added to the queue, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a2aaa5cf8280064a02dd79299e217c3e7" name="a2aaa5cf8280064a02dd79299e217c3e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aaa5cf8280064a02dd79299e217c3e7">&#9670;&#160;</a></span>kqueue_try_put()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kqueue_try_put </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="kqueue_8c.html#structkqueue__t">kqueue_t</a> *&#160;</td>
+          <td class="paramname"><em>queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>element</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ticks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Try to add an element to the queue with timeout. </p>
+<p>This function adds an element to the queue. If the queue is full, the function will block until there is space in the queue or the timer expires.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">queue</td><td>Pointer to the queue structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">element</td><td>Pointer to the element to add </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ticks</td><td>Number of hardware ticks to wait</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the element was added to the queue, false on timeout </dd></dl>
+
+</div>
+</div>
 <a id="a5cce8cdb47fbba71e23ba26b9500b5db" name="a5cce8cdb47fbba71e23ba26b9500b5db"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5cce8cdb47fbba71e23ba26b9500b5db">&#9670;&#160;</a></span>kqueue_get()</h2>
 
@@ -259,6 +353,52 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to the element removed </dd></dl>
+
+</div>
+</div>
+<a id="a14173bcecddb058b031578ab12807faa" name="a14173bcecddb058b031578ab12807faa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14173bcecddb058b031578ab12807faa">&#9670;&#160;</a></span>kqueue_try_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kqueue_try_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="kqueue_8c.html#structkqueue__t">kqueue_t</a> *&#160;</td>
+          <td class="paramname"><em>queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **&#160;</td>
+          <td class="paramname"><em>element</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>ticks</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Try to remove an element from the queue with timeout. </p>
+<p>This function removes an element from the queue. If the queue is empty, the function will block until there is an element in the queue or the timeout expires.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">queue</td><td>Pointer to qeueue structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">element</td><td>Pointer pointer to element </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ticks</td><td>Number of hardware ticks to wait</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the element was fetched from queue, false on timeout </dd></dl>
 
 </div>
 </div>
@@ -400,7 +540,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

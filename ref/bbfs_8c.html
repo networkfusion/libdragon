@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -109,11 +110,11 @@ Macros</h2></td></tr>
 <tr class="memdesc:a2b7581a1c478a4262ba230238e0980c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable BBFS log tracing. <br /></td></tr>
 <tr class="separator:a2b7581a1c478a4262ba230238e0980c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed5c02a13805b6bf0e598f4d9dc519e6" id="r_aed5c02a13805b6bf0e598f4d9dc519e6"><td class="memItemLeft" align="right" valign="top"><a id="aed5c02a13805b6bf0e598f4d9dc519e6" name="aed5c02a13805b6bf0e598f4d9dc519e6"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>tracef</b>(lvl,  str, ...)&#160;&#160;&#160;({ if ((lvl) &lt;= <a class="el" href="bbfs_8c.html#a2b7581a1c478a4262ba230238e0980c0">BBFS_TRACE</a>) <a class="el" href="debug_8h.html#aa3e8be416ef1525cfd3230204b56d184">debugf</a>(&quot;[bbfs] &quot; str &quot;\n&quot;, ##__VA_ARGS__); })</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>tracef</b>(lvl,  str, ...)&#160;&#160;&#160;({ if ((lvl) &lt;= <a class="el" href="bbfs_8c.html#a2b7581a1c478a4262ba230238e0980c0">BBFS_TRACE</a>) <a class="el" href="debug_8c.html#a9d7b18857c2b18437251bcc38c866d35">debugf</a>(&quot;[bbfs] &quot; str &quot;\n&quot;, ##__VA_ARGS__); })</td></tr>
 <tr class="memdesc:aed5c02a13805b6bf0e598f4d9dc519e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a debug trace message if the level is less than or equal to BBFS_TRACE. <br /></td></tr>
 <tr class="separator:aed5c02a13805b6bf0e598f4d9dc519e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11bb70ad25cdf1033f4337809ae0704e" id="r_a11bb70ad25cdf1033f4337809ae0704e"><td class="memItemLeft" align="right" valign="top"><a id="a11bb70ad25cdf1033f4337809ae0704e" name="a11bb70ad25cdf1033f4337809ae0704e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>RANDN</b>(n)&#160;&#160;&#160;(((uint64_t)rand() * (n)) &gt;&gt; 31)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RANDN</b>(n)&#160;&#160;&#160;(((uint64_t)<a class="el" href="rand_8c.html#a423d986b0b3a00d5899af3fc75bd03f4">__rand32</a>() * (n)) &gt;&gt; 31)</td></tr>
 <tr class="memdesc:a11bb70ad25cdf1033f4337809ae0704e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate a random number in range [0..n), assuming RAND_MAX = (1&lt;&lt;31)-1. <br /></td></tr>
 <tr class="separator:a11bb70ad25cdf1033f4337809ae0704e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc18fae10d189a267ccb83960d487b45" id="r_abc18fae10d189a267ccb83960d487b45"><td class="memItemLeft" align="right" valign="top"><a id="abc18fae10d189a267ccb83960d487b45" name="abc18fae10d189a267ccb83960d487b45"></a>
@@ -624,7 +625,7 @@ bitmap of used blocks </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

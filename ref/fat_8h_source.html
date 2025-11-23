@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -124,18 +125,18 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="afat_8c_html_a0711b1d03b833e9d73b3be1a6397f461"><div class="ttname"><a href="fat_8c.html#a0711b1d03b833e9d73b3be1a6397f461">disk_read</a></div><div class="ttdeci">DRESULT disk_read(BYTE pdrv, BYTE *buff, LBA_t sector, UINT count)</div><div class="ttdoc">FatFS disk API: implementation by forwarding to a disk-specific function.</div><div class="ttdef"><b>Definition</b> fat.c:39</div></div>
-<div class="ttc" id="afat_8c_html_a09cdaa6f36fa409bdf002727bff98eb1"><div class="ttname"><a href="fat_8c.html#a09cdaa6f36fa409bdf002727bff98eb1">disk_initialize</a></div><div class="ttdeci">DSTATUS disk_initialize(BYTE pdrv)</div><div class="ttdoc">FatFS disk API: implementation by forwarding to a disk-specific function.</div><div class="ttdef"><b>Definition</b> fat.c:23</div></div>
-<div class="ttc" id="afat_8c_html_a8348ac5ee6d709420c02e45c111f4793"><div class="ttname"><a href="fat_8c.html#a8348ac5ee6d709420c02e45c111f4793">disk_status</a></div><div class="ttdeci">DSTATUS disk_status(BYTE pdrv)</div><div class="ttdoc">FatFS disk API: implementation by forwarding to a disk-specific function.</div><div class="ttdef"><b>Definition</b> fat.c:31</div></div>
-<div class="ttc" id="afat_8c_html_ab00fa450a811dbdabe3c655c1a36fab4"><div class="ttname"><a href="fat_8c.html#ab00fa450a811dbdabe3c655c1a36fab4">disk_ioctl</a></div><div class="ttdeci">DRESULT disk_ioctl(BYTE pdrv, BYTE cmd, void *buff)</div><div class="ttdoc">FatFS disk API: implementation by forwarding to a disk-specific function.</div><div class="ttdef"><b>Definition</b> fat.c:55</div></div>
-<div class="ttc" id="afat_8c_html_ac24448955ef914f54a499df1fb45689d"><div class="ttname"><a href="fat_8c.html#ac24448955ef914f54a499df1fb45689d">disk_write</a></div><div class="ttdeci">DRESULT disk_write(BYTE pdrv, const BYTE *buff, LBA_t sector, UINT count)</div><div class="ttdoc">FatFS disk API: implementation by forwarding to a disk-specific function.</div><div class="ttdef"><b>Definition</b> fat.c:47</div></div>
-<div class="ttc" id="afat_8h_html_a349b36ab90324e73b1e5667df9d702f6"><div class="ttname"><a href="fat_8h.html#a349b36ab90324e73b1e5667df9d702f6">fat_mount</a></div><div class="ttdeci">int fat_mount(const char *prefix, const fat_disk_t *disk, int flags)</div><div class="ttdoc">Mount a new FAT volume through the FatFs library.</div><div class="ttdef"><b>Definition</b> fat.c:410</div></div>
+<div class="ttc" id="afat_8c_html_a0711b1d03b833e9d73b3be1a6397f461"><div class="ttname"><a href="fat_8c.html#a0711b1d03b833e9d73b3be1a6397f461">disk_read</a></div><div class="ttdeci">DRESULT disk_read(BYTE pdrv, BYTE *buff, LBA_t sector, UINT count)</div><div class="ttdoc">FatFS disk API: implementation by forwarding to a disk-specific function.</div><div class="ttdef"><b>Definition</b> fat.c:40</div></div>
+<div class="ttc" id="afat_8c_html_a09cdaa6f36fa409bdf002727bff98eb1"><div class="ttname"><a href="fat_8c.html#a09cdaa6f36fa409bdf002727bff98eb1">disk_initialize</a></div><div class="ttdeci">DSTATUS disk_initialize(BYTE pdrv)</div><div class="ttdoc">FatFS disk API: implementation by forwarding to a disk-specific function.</div><div class="ttdef"><b>Definition</b> fat.c:24</div></div>
+<div class="ttc" id="afat_8c_html_a8348ac5ee6d709420c02e45c111f4793"><div class="ttname"><a href="fat_8c.html#a8348ac5ee6d709420c02e45c111f4793">disk_status</a></div><div class="ttdeci">DSTATUS disk_status(BYTE pdrv)</div><div class="ttdoc">FatFS disk API: implementation by forwarding to a disk-specific function.</div><div class="ttdef"><b>Definition</b> fat.c:32</div></div>
+<div class="ttc" id="afat_8c_html_ab00fa450a811dbdabe3c655c1a36fab4"><div class="ttname"><a href="fat_8c.html#ab00fa450a811dbdabe3c655c1a36fab4">disk_ioctl</a></div><div class="ttdeci">DRESULT disk_ioctl(BYTE pdrv, BYTE cmd, void *buff)</div><div class="ttdoc">FatFS disk API: implementation by forwarding to a disk-specific function.</div><div class="ttdef"><b>Definition</b> fat.c:56</div></div>
+<div class="ttc" id="afat_8c_html_ac24448955ef914f54a499df1fb45689d"><div class="ttname"><a href="fat_8c.html#ac24448955ef914f54a499df1fb45689d">disk_write</a></div><div class="ttdeci">DRESULT disk_write(BYTE pdrv, const BYTE *buff, LBA_t sector, UINT count)</div><div class="ttdoc">FatFS disk API: implementation by forwarding to a disk-specific function.</div><div class="ttdef"><b>Definition</b> fat.c:48</div></div>
+<div class="ttc" id="afat_8h_html_a349b36ab90324e73b1e5667df9d702f6"><div class="ttname"><a href="fat_8h.html#a349b36ab90324e73b1e5667df9d702f6">fat_mount</a></div><div class="ttdeci">int fat_mount(const char *prefix, const fat_disk_t *disk, int flags)</div><div class="ttdoc">Mount a new FAT volume through the FatFs library.</div><div class="ttdef"><b>Definition</b> fat.c:446</div></div>
 <div class="ttc" id="aioctl_8h_html"><div class="ttname"><a href="ioctl_8h.html">ioctl.h</a></div><div class="ttdoc">ioctl Implementation</div></div>
 <div class="ttc" id="astructfat__disk__t_html"><div class="ttname"><a href="structfat__disk__t.html">fat_disk_t</a></div><div class="ttdoc">Interface for disk operations required to implement a volume.</div><div class="ttdef"><b>Definition</b> fat.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

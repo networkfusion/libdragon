@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -99,6 +100,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a348387649115d17786563a65387ff2af" id="r_a348387649115d17786563a65387ff2af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ksemaphore_8c.html#a348387649115d17786563a65387ff2af">ksemaphore_post</a> (<a class="el" href="ksemaphore_8h.html#structksemaphore__t">ksemaphore_t</a> *sem)</td></tr>
 <tr class="memdesc:a348387649115d17786563a65387ff2af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post to a semaphore.  <br /></td></tr>
 <tr class="separator:a348387649115d17786563a65387ff2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0bc10ebecc4414a595491f229bff548" id="r_aa0bc10ebecc4414a595491f229bff548"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ksemaphore_8c.html#aa0bc10ebecc4414a595491f229bff548">ksemaphore_post_isr</a> (<a class="el" href="ksemaphore_8h.html#structksemaphore__t">ksemaphore_t</a> *sem)</td></tr>
+<tr class="memdesc:aa0bc10ebecc4414a595491f229bff548"><td class="mdescLeft">&#160;</td><td class="mdescRight">Post to a semaphore from an interrupt context.  <br /></td></tr>
+<tr class="separator:aa0bc10ebecc4414a595491f229bff548"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Kernel Semaphore prmitive. </p>
@@ -265,10 +269,37 @@ false If the semaphore was not successfully waited on </dd></dl>
 
 </div>
 </div>
+<a id="aa0bc10ebecc4414a595491f229bff548" name="aa0bc10ebecc4414a595491f229bff548"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0bc10ebecc4414a595491f229bff548">&#9670;&#160;</a></span>ksemaphore_post_isr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ksemaphore_post_isr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ksemaphore_8h.html#structksemaphore__t">ksemaphore_t</a> *&#160;</td>
+          <td class="paramname"><em>sem</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Post to a semaphore from an interrupt context. </p>
+<p>This function increments the value of the semaphore and signals a thread waiting on the semaphore.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sem</td><td>Pointer to the semaphore structure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

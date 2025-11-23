@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -135,16 +136,21 @@ Enumerations</h2></td></tr>
 <tr class="memitem:ga0245d3cd70ee2e64c85a9b07ed35d392" id="r_ga0245d3cd70ee2e64c85a9b07ed35d392"><td class="memItemLeft" align="right" valign="top"><a id="ga0245d3cd70ee2e64c85a9b07ed35d392" name="ga0245d3cd70ee2e64c85a9b07ed35d392"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga0245d3cd70ee2e64c85a9b07ed35d392">joypad_accessory_state_t</a> { <br />
 &#160;&#160;<b>JOYPAD_ACCESSORY_STATE_IDLE</b> = 0
 , <b>JOYPAD_ACCESSORY_STATE_DETECT_INIT</b>
-, <b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_BANK_WRITE</b>
+, <b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_BANK_WRITE0</b>
 , <b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_LABEL_BACKUP</b>
 , <br />
-&#160;&#160;<b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_LABEL_WRITE</b>
-, <b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_LABEL_READ</b>
+&#160;&#160;<b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_LABEL_WRITE0</b>
+, <b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_LABEL_READ0</b>
+, <b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_BANK_WRITE1</b>
+, <b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_LABEL_READ1</b>
+, <br />
+&#160;&#160;<b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_BANK_WRITE0_AGAIN</b>
 , <b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_LABEL_RESTORE</b>
 , <b>JOYPAD_ACCESSORY_STATE_DETECT_RUMBLE_PROBE_WRITE</b>
+, <b>JOYPAD_ACCESSORY_STATE_DETECT_RUMBLE_PROBE_READ</b>
 , <br />
-&#160;&#160;<b>JOYPAD_ACCESSORY_STATE_DETECT_RUMBLE_PROBE_READ</b>
-, <b>JOYPAD_ACCESSORY_STATE_DETECT_TRANSFER_PROBE_ON</b>
+&#160;&#160;<b>JOYPAD_ACCESSORY_STATE_DETECT_TRANSFER_PROBE_ON</b>
+, <b>JOYPAD_ACCESSORY_STATE_DETECT_TRANSFER_PROBE_WAIT</b>
 , <b>JOYPAD_ACCESSORY_STATE_DETECT_TRANSFER_PROBE_READ</b>
 , <b>JOYPAD_ACCESSORY_STATE_DETECT_TRANSFER_PROBE_OFF</b>
 , <br />
@@ -177,7 +183,8 @@ Enumerations</h2></td></tr>
 , <a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70ac910bfd5dfac4d16ab87df921411a983">JOYPAD_ACCESSORY_ERROR_ABSENT</a>
 , <a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70a06aa6899c02dccbf67a342dc7ce69175">JOYPAD_ACCESSORY_ERROR_CHECKSUM</a>
 , <br />
-&#160;&#160;<a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70a60b92217d9a04be9911a693a11289755">JOYPAD_ACCESSORY_ERROR_TRANSFER_PAK_STATUS_CHANGE</a>
+&#160;&#160;<a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70a1bf810555134d013e21c413a7c8b8030">JOYPAD_ACCESSORY_ERROR_CONTROLLER_PAK_BANK_SWITCH</a>
+, <a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70a60b92217d9a04be9911a693a11289755">JOYPAD_ACCESSORY_ERROR_TRANSFER_PAK_STATUS_CHANGE</a>
 , <a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70aa656cc143b361b6b0c27be4e13b19cee">JOYPAD_ACCESSORY_ERROR_UNKNOWN</a>
 <br />
  }</td></tr>
@@ -203,6 +210,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5ddc74f3d3bb47c0754c7bd282946e9d" id="r_ga5ddc74f3d3bb47c0754c7bd282946e9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__joypad.html#ga0b64bfb89fc2195628b65eb3ece31c70">joypad_accessory_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga5ddc74f3d3bb47c0754c7bd282946e9d">joypad_accessory_xfer</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port, <a class="el" href="group__joypad.html#ga01fa3481cede49666c59b74003274524">joypad_accessory_xfer_t</a> xfer, uint16_t start_addr, void *dst, size_t len)</td></tr>
 <tr class="memdesc:ga5ddc74f3d3bb47c0754c7bd282946e9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read or write data from a joypad accessory.  <br /></td></tr>
 <tr class="separator:ga5ddc74f3d3bb47c0754c7bd282946e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5043f6297d8c29c078f4dbd61d7b7c83" id="r_ga5043f6297d8c29c078f4dbd61d7b7c83"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga5043f6297d8c29c078f4dbd61d7b7c83">joypad_controller_pak_supports_bankswitching</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port)</td></tr>
+<tr class="memdesc:ga5043f6297d8c29c078f4dbd61d7b7c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the Controller Pak supports bankswitching.  <br /></td></tr>
+<tr class="separator:ga5043f6297d8c29c078f4dbd61d7b7c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga16f4d256acc2406142196811dab0cd04" id="r_ga16f4d256acc2406142196811dab0cd04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__joypad.html#ga0b64bfb89fc2195628b65eb3ece31c70">joypad_accessory_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga16f4d256acc2406142196811dab0cd04">joypad_controller_pak_set_bank</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port, uint8_t bank)</td></tr>
 <tr class="memdesc:ga16f4d256acc2406142196811dab0cd04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select the active bank for a Controller Pak.  <br /></td></tr>
 <tr class="separator:ga16f4d256acc2406142196811dab0cd04"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -230,7 +240,7 @@ Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,9 +103,6 @@ Macros</h2></td></tr>
 <tr class="memitem:a8b257312ca0097619406c49d505d557e" id="r_a8b257312ca0097619406c49d505d557e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8h.html#a8b257312ca0097619406c49d505d557e">DEBUG_FEATURE_ALL</a>&#160;&#160;&#160;0xFF</td></tr>
 <tr class="memdesc:a8b257312ca0097619406c49d505d557e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to activate all supported debugging features.  <br /></td></tr>
 <tr class="separator:a8b257312ca0097619406c49d505d557e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3e8be416ef1525cfd3230204b56d184" id="r_aa3e8be416ef1525cfd3230204b56d184"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8h.html#aa3e8be416ef1525cfd3230204b56d184">debugf</a>(msg, ...)&#160;&#160;&#160;fprintf(stderr, msg, ##__VA_ARGS__)</td></tr>
-<tr class="memdesc:aa3e8be416ef1525cfd3230204b56d184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a message to the debugging channel.  <br /></td></tr>
-<tr class="separator:aa3e8be416ef1525cfd3230204b56d184"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66673aad3e392c6b58054aebe66fe28e" id="r_a66673aad3e392c6b58054aebe66fe28e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8h.html#a66673aad3e392c6b58054aebe66fe28e">assertf</a>(expr,  msg, ...)</td></tr>
 <tr class="memdesc:a66673aad3e392c6b58054aebe66fe28e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="debug_8h.html#a66673aad3e392c6b58054aebe66fe28e" title="assertf() is like assert() with an attached printf().">assertf()</a> is like assert() with an attached printf().  <br /></td></tr>
 <tr class="separator:a66673aad3e392c6b58054aebe66fe28e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,11 +129,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>debug_init_sdfs</b> (
 void&#160;</td><td class="memItemRight" valign="bottom"><b>debug_close_sdfs</b> (void)</td></tr>
 <tr class="memdesc:ae313def8713f061570a2f771abe088a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdown SD filesystem. <br /></td></tr>
 <tr class="separator:ae313def8713f061570a2f771abe088a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d7b18857c2b18437251bcc38c866d35" id="r_a9d7b18857c2b18437251bcc38c866d35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8h.html#a9d7b18857c2b18437251bcc38c866d35">debugf</a> (const char *msg,...)</td></tr>
+<tr class="memdesc:a9d7b18857c2b18437251bcc38c866d35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a message to the debugging channel.  <br /></td></tr>
+<tr class="separator:a9d7b18857c2b18437251bcc38c866d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad61db050c61f16ebea19f3610ef57219" id="r_ad61db050c61f16ebea19f3610ef57219"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8h.html#ad61db050c61f16ebea19f3610ef57219">debug_hexdump</a> (const void *buffer, int size)</td></tr>
-<tr class="memdesc:ad61db050c61f16ebea19f3610ef57219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do a hexdump of the specified buffer via <a class="el" href="debug_8h.html#aa3e8be416ef1525cfd3230204b56d184" title="Write a message to the debugging channel.">debugf</a>.  <br /></td></tr>
+<tr class="memdesc:ad61db050c61f16ebea19f3610ef57219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do a hexdump of the specified buffer via <a class="el" href="debug_8h.html#a9d7b18857c2b18437251bcc38c866d35" title="Write a message to the debugging channel.">debugf</a>.  <br /></td></tr>
 <tr class="separator:ad61db050c61f16ebea19f3610ef57219"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48a47644097877a8b22a70951445524d" id="r_a48a47644097877a8b22a70951445524d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="debug_8h.html#a48a47644097877a8b22a70951445524d">debug_backtrace</a> (void)</td></tr>
-<tr class="memdesc:a48a47644097877a8b22a70951445524d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump a backtrace (call stack) via <a class="el" href="debug_8h.html#aa3e8be416ef1525cfd3230204b56d184" title="Write a message to the debugging channel.">debugf</a>.  <br /></td></tr>
+<tr class="memdesc:a48a47644097877a8b22a70951445524d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump a backtrace (call stack) via <a class="el" href="debug_8h.html#a9d7b18857c2b18437251bcc38c866d35" title="Write a message to the debugging channel.">debugf</a>.  <br /></td></tr>
 <tr class="separator:a48a47644097877a8b22a70951445524d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b30820e0172cfb41a7c3bedc0da987e" id="r_a8b30820e0172cfb41a7c3bedc0da987e"><td class="memItemLeft" align="right" valign="top"><a id="a8b30820e0172cfb41a7c3bedc0da987e" name="a8b30820e0172cfb41a7c3bedc0da987e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>debug_assert_func_f</b> (const char *file, int line, const char *func, const char *failedexpr, const char *msg,...)</td></tr>
@@ -160,7 +161,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>debug_assert_func_f</
 
 <p>Flag to activate the USB logging channel. </p>
 <p>The USB logging channel is supported on several different development cartridges, using a compatible tool to acquire data on the PC side.</p>
-<p>Logging can be done by writing to stderr. You can use the <a class="el" href="debug_8h.html#aa3e8be416ef1525cfd3230204b56d184" title="Write a message to the debugging channel.">debugf()</a> macro as a simple wrapper over fprintf(stderr) that can be disabled when building the final ROM through the NDEBUG macro.</p>
+<p>Logging can be done by writing to stderr. You can use the <a class="el" href="debug_8h.html#a9d7b18857c2b18437251bcc38c866d35" title="Write a message to the debugging channel.">debugf()</a> macro as a simple wrapper over fprintf(stderr) that can be disabled when building the final ROM through the NDEBUG macro.</p>
 <p>Supported development cartridges:</p>
 <ul>
 <li>64drive (rev 1 or 2)</li>
@@ -190,7 +191,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>debug_assert_func_f</
 
 <p>Flag to activate the ISViewer logging channel. </p>
 <p>ISViewer was a real development cartridge that was used in the 90s to debug N64 development. It is emulated by a few emulators to ease the work of homebrew developers.</p>
-<p>Logging can be done by writing to stderr. You can use the <a class="el" href="debug_8h.html#aa3e8be416ef1525cfd3230204b56d184" title="Write a message to the debugging channel.">debugf()</a> macro as a simple wrapper over fprintf(stderr) that can be disabled when building the final ROM through the NDEBUG macro.</p>
+<p>Logging can be done by writing to stderr. You can use the <a class="el" href="debug_8h.html#a9d7b18857c2b18437251bcc38c866d35" title="Write a message to the debugging channel.">debugf()</a> macro as a simple wrapper over fprintf(stderr) that can be disabled when building the final ROM through the NDEBUG macro.</p>
 <p>Supported emulators:</p>
 <ul>
 <li>cen64 (<a href="https://github.com/n64dev/cen64">https://github.com/n64dev/cen64</a>) - run with -is-viewer command line flag</li>
@@ -216,7 +217,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>debug_assert_func_f</
 <p>Flag to activate the logging on CompactFlash/SD card. </p>
 <p>When this feature is activated, and assuming a SD card is inserted into the cartridge slot and its read-only physical switch is disabled, libdragon will write the logging stream to a file called "libdragon.log" on the root of the card. If the file already exists, logging will be appended to it.</p>
 <p>The SD card must be formatted in either FAT16, FAT32 or ExFat.</p>
-<p>Logging can be done by writing to stderr. You can use the <a class="el" href="debug_8h.html#aa3e8be416ef1525cfd3230204b56d184" title="Write a message to the debugging channel.">debugf()</a> macro as a simple wrapper over fprintf(stderr) that can be disabled when building the final ROM through the NDEBUG macro.</p>
+<p>Logging can be done by writing to stderr. You can use the <a class="el" href="debug_8h.html#a9d7b18857c2b18437251bcc38c866d35" title="Write a message to the debugging channel.">debugf()</a> macro as a simple wrapper over fprintf(stderr) that can be disabled when building the final ROM through the NDEBUG macro.</p>
 <p>Supported development cartridges:</p>
 <ul>
 <li>64Drive HW1 and HW2</li>
@@ -273,38 +274,6 @@ Because of a 64drive firmware bug, the 64drive USB stack will crash if a SD comm
 
 </div>
 </div>
-<a id="aa3e8be416ef1525cfd3230204b56d184" name="aa3e8be416ef1525cfd3230204b56d184"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3e8be416ef1525cfd3230204b56d184">&#9670;&#160;</a></span>debugf</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define debugf</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">msg, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;fprintf(stderr, msg, ##__VA_ARGS__)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Write a message to the debugging channel. </p>
-<p>This macro is a simple wrapper over fprintf(stderr), to write a debugging message through all the activated debugging channels.</p>
-<p>Writing directly to stderr is perfectly supported; this macro only simplifies disabling all debugging features, because it is disabled when compiling with NDEBUG. </p>
-
-</div>
-</div>
 <a id="a66673aad3e392c6b58054aebe66fe28e" name="a66673aad3e392c6b58054aebe66fe28e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a66673aad3e392c6b58054aebe66fe28e">&#9670;&#160;</a></span>assertf</h2>
 
@@ -339,7 +308,7 @@ Because of a 64drive firmware bug, the 64drive USB stack will crash if a SD comm
 <b>Value:</b><div class="fragment"><div class="line">        ({ \</div>
 <div class="line">        if (!(expr)) <a class="code hl_function" href="debug_8h.html#a8b30820e0172cfb41a7c3bedc0da987e">debug_assert_func_f</a>(__FILE__, __LINE__, __func__, #expr, msg, ##__VA_ARGS__); \</div>
 <div class="line">    })</div>
-<div class="ttc" id="adebug_8h_html_a8b30820e0172cfb41a7c3bedc0da987e"><div class="ttname"><a href="debug_8h.html#a8b30820e0172cfb41a7c3bedc0da987e">debug_assert_func_f</a></div><div class="ttdeci">void debug_assert_func_f(const char *file, int line, const char *func, const char *failedexpr, const char *msg,...)</div><div class="ttdoc">Underlying implementation function for assert() and assertf.</div><div class="ttdef"><b>Definition</b> debug.c:342</div></div>
+<div class="ttc" id="adebug_8h_html_a8b30820e0172cfb41a7c3bedc0da987e"><div class="ttname"><a href="debug_8h.html#a8b30820e0172cfb41a7c3bedc0da987e">debug_assert_func_f</a></div><div class="ttdeci">void debug_assert_func_f(const char *file, int line, const char *func, const char *failedexpr, const char *msg,...)</div><div class="ttdoc">Underlying implementation function for assert() and assertf.</div><div class="ttdef"><b>Definition</b> debug.c:371</div></div>
 </div><!-- fragment -->
 <p><a class="el" href="debug_8h.html#a66673aad3e392c6b58054aebe66fe28e" title="assertf() is like assert() with an attached printf().">assertf()</a> is like assert() with an attached printf(). </p>
 <p><a class="el" href="debug_8h.html#a66673aad3e392c6b58054aebe66fe28e" title="assertf() is like assert() with an attached printf().">assertf()</a> behaves exactly like assert(), but allows for a better debugging experience because it is possible to attach a formatted string that will be displayed in case the assert triggers.</p>
@@ -348,6 +317,39 @@ Because of a 64drive firmware bug, the 64drive USB stack will crash if a SD comm
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a9d7b18857c2b18437251bcc38c866d35" name="a9d7b18857c2b18437251bcc38c866d35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d7b18857c2b18437251bcc38c866d35">&#9670;&#160;</a></span>debugf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void debugf </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write a message to the debugging channel. </p>
+<p>This function is a simple wrapper over fprintf(stderr), to write a debugging message through all the activated debugging channels.</p>
+<p>Writing directly to stderr is perfectly supported; this function only simplifies disabling all debugging features, because it is disabled when compiling with NDEBUG.</p>
+<p>Moreover, this function also has a special codepath to allow writing debug messages during interrupts or exceptions, when standard I/O functions cannot be used safely. </p>
+
+</div>
+</div>
 <a id="ad61db050c61f16ebea19f3610ef57219" name="ad61db050c61f16ebea19f3610ef57219"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad61db050c61f16ebea19f3610ef57219">&#9670;&#160;</a></span>debug_hexdump()</h2>
 
@@ -374,7 +376,7 @@ Because of a 64drive firmware bug, the 64drive USB stack will crash if a SD comm
       </table>
 </div><div class="memdoc">
 
-<p>Do a hexdump of the specified buffer via <a class="el" href="debug_8h.html#aa3e8be416ef1525cfd3230204b56d184" title="Write a message to the debugging channel.">debugf</a>. </p>
+<p>Do a hexdump of the specified buffer via <a class="el" href="debug_8h.html#a9d7b18857c2b18437251bcc38c866d35" title="Write a message to the debugging channel.">debugf</a>. </p>
 <p>This is useful to dump a binary buffer for debugging purposes. The hexdump shown contains both the hexadecimal and ASCII values, similar to what hex editors do.</p>
 <p>Sample output:</p>
 <pre>
@@ -409,7 +411,7 @@ Because of a 64drive firmware bug, the 64drive USB stack will crash if a SD comm
       </table>
 </div><div class="memdoc">
 
-<p>Dump a backtrace (call stack) via <a class="el" href="debug_8h.html#aa3e8be416ef1525cfd3230204b56d184" title="Write a message to the debugging channel.">debugf</a>. </p>
+<p>Dump a backtrace (call stack) via <a class="el" href="debug_8h.html#a9d7b18857c2b18437251bcc38c866d35" title="Write a message to the debugging channel.">debugf</a>. </p>
 <p>This function will dump the current call stack to the debugging channel. It is useful to understand where the program is currently executing, and to understand the context of an error.</p>
 <p>The implementation of this function relies on the lower level <a class="el" href="group__backtrace.html#ga3747bea884034d32d4d558872223969e" title="Walk the stack and return the current call stack.">backtrace</a> and <a class="el" href="group__backtrace.html#gaca2b35f3378753df6b8d2a2d48b8b9d9" title="Translate the buffer returned by backtrace into a list of strings.">backtrace_symbols</a> functions, which are implemented in libdragon itself via a symbol table embedded in the ROM. See <a class="el" href="group__backtrace.html#gaca2b35f3378753df6b8d2a2d48b8b9d9" title="Translate the buffer returned by backtrace into a list of strings.">backtrace_symbols</a> for more information.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__backtrace.html#ga3747bea884034d32d4d558872223969e" title="Walk the stack and return the current call stack.">backtrace</a> </dd>
@@ -421,7 +423,7 @@ Because of a 64drive firmware bug, the 64drive USB stack will crash if a SD comm
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

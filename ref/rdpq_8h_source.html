@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -517,7 +518,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span>    <span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="rdpq_8c.html#ab7dd6167dd4d487a32b32e445aff319f">__rdpq_set_color_image</a>(uint32_t, uint32_t, uint32_t, uint32_t);</div>
 <div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>    <a class="code hl_function" href="rdpq_8c.html#ab7dd6167dd4d487a32b32e445aff319f">__rdpq_set_color_image</a>(</div>
 <div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>        _carg(format, 0x1F, 19) | _carg(<a class="code hl_define" href="surface_8h.html#a3d266c460ce7974103858f37f8921c67">TEX_FORMAT_BYTES2PIX</a>(format, stride)-1, 0x3FF, 0) | _carg(height-1, 0x1FF, 10),</div>
-<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>        _carg(index, 0xF, 28) | (offset &amp; 0xFFFFFF) | _carg((height-1)&gt;&gt;9, 0x1, 31),</div>
+<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>        _carg(index, 0xF, 26) | (offset &amp; 0x1FFFFFF) | _carg((height-1)&gt;&gt;9, 0x1, 31),</div>
 <div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span>        _carg(0, 0xFFF, 12) | _carg(0, 0xFFF, 0),                 <span class="comment">// for set_scissor</span></div>
 <div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span>        _carg(width*4, 0xFFF, 12) | _carg(height*4, 0xFFF, 0));   <span class="comment">// for set_scissor</span></div>
 <div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>}</div>
@@ -530,7 +531,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01232" name="l01232"></a><span class="lineno"> 1232</span>    <span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="rdpq_8c.html#ab944f035051c22f15ae263482d74883e">__rdpq_fixup_write8_syncchange</a>(uint32_t, uint32_t, uint32_t, uint32_t);</div>
 <div class="line"><a id="l01233" name="l01233"></a><span class="lineno"> 1233</span>    <a class="code hl_function" href="rdpq_8c.html#ab944f035051c22f15ae263482d74883e">__rdpq_fixup_write8_syncchange</a>(RDPQ_CMD_SET_Z_IMAGE,</div>
 <div class="line"><a id="l01234" name="l01234"></a><span class="lineno"> 1234</span>        0, </div>
-<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>        _carg(index, 0xF, 28) | (offset &amp; 0xFFFFFF),</div>
+<div class="line"><a id="l01235" name="l01235"></a><span class="lineno"> 1235</span>        _carg(index, 0xF, 26) | (offset &amp; 0x1FFFFFF),</div>
 <div class="line"><a id="l01236" name="l01236"></a><span class="lineno"> 1236</span>        AUTOSYNC_PIPE);</div>
 <div class="line"><a id="l01237" name="l01237"></a><span class="lineno"> 1237</span>}</div>
 </div>
@@ -546,7 +547,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01268" name="l01268"></a><span class="lineno"> 1268</span>    <span class="comment">// to help the validator to a better job. The RDP hardware ignores those bits.</span></div>
 <div class="line"><a id="l01269" name="l01269"></a><span class="lineno"> 1269</span>    <a class="code hl_function" href="rdpq_8c.html#ab944f035051c22f15ae263482d74883e">__rdpq_fixup_write8_syncchange</a>(RDPQ_CMD_SET_TEXTURE_IMAGE,</div>
 <div class="line"><a id="l01270" name="l01270"></a><span class="lineno"> 1270</span>        _carg(format, 0x1F, 19) | _carg(width-1, 0x3FF, 0) | _carg(height-1, 0x1FF, 10),</div>
-<div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span>        _carg(index, 0xF, 28) | (offset &amp; 0xFFFFFF) | _carg((height-1)&gt;&gt;9, 0x1, 31),</div>
+<div class="line"><a id="l01271" name="l01271"></a><span class="lineno"> 1271</span>        _carg(index, 0xF, 26) | (offset &amp; 0x1FFFFFF) | _carg((height-1)&gt;&gt;9, 0x1, 31),</div>
 <div class="line"><a id="l01272" name="l01272"></a><span class="lineno"> 1272</span>        AUTOSYNC_PIPE);</div>
 <div class="line"><a id="l01273" name="l01273"></a><span class="lineno"> 1273</span>}</div>
 </div>
@@ -649,7 +650,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l01666" name="l01666"></a><span class="lineno"> 1666</span> </div>
 <div class="line"><a id="l01667" name="l01667"></a><span class="lineno"> 1667</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="adebug_8h_html"><div class="ttname"><a href="debug_8h.html">debug.h</a></div><div class="ttdoc">Debugging Support.</div></div>
-<div class="ttc" id="adebug_8h_html_a66673aad3e392c6b58054aebe66fe28e"><div class="ttname"><a href="debug_8h.html#a66673aad3e392c6b58054aebe66fe28e">assertf</a></div><div class="ttdeci">#define assertf(expr, msg,...)</div><div class="ttdoc">assertf() is like assert() with an attached printf().</div><div class="ttdef"><b>Definition</b> debug.h:196</div></div>
+<div class="ttc" id="adebug_8h_html_a66673aad3e392c6b58054aebe66fe28e"><div class="ttname"><a href="debug_8h.html#a66673aad3e392c6b58054aebe66fe28e">assertf</a></div><div class="ttdeci">#define assertf(expr, msg,...)</div><div class="ttdoc">assertf() is like assert() with an attached printf().</div><div class="ttdef"><b>Definition</b> debug.h:200</div></div>
 <div class="ttc" id="agraphics_8h_html"><div class="ttname"><a href="graphics_8h.html">graphics.h</a></div><div class="ttdoc">2D Graphics</div></div>
 <div class="ttc" id="agroup__graphics_html_a56f318d39568f62bc8c09e3cddb76216"><div class="ttname"><a href="group__graphics.html#a56f318d39568f62bc8c09e3cddb76216">color_t::a</a></div><div class="ttdeci">uint8_t a</div><div class="ttdoc">Alpha component.</div><div class="ttdef"><b>Definition</b> graphics.h:62</div></div>
 <div class="ttc" id="agroup__graphics_html_a7d1a9e3552401fc5f8882f6e0c2c82aa"><div class="ttname"><a href="group__graphics.html#a7d1a9e3552401fc5f8882f6e0c2c82aa">color_t::g</a></div><div class="ttdeci">uint8_t g</div><div class="ttdoc">Green component.</div><div class="ttdef"><b>Definition</b> graphics.h:58</div></div>
@@ -657,7 +658,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="agroup__graphics_html_a9138f903c9036862cfeab970b156b62d"><div class="ttname"><a href="group__graphics.html#a9138f903c9036862cfeab970b156b62d">color_t::r</a></div><div class="ttdeci">uint8_t r</div><div class="ttdoc">Red component.</div><div class="ttdef"><b>Definition</b> graphics.h:56</div></div>
 <div class="ttc" id="agroup__graphics_html_ga5b835d8128c69eb9cfcf2327e662271d"><div class="ttname"><a href="group__graphics.html#ga5b835d8128c69eb9cfcf2327e662271d">color_to_packed32</a></div><div class="ttdeci">uint32_t color_to_packed32(color_t c)</div><div class="ttdoc">Convert a color_t to the 32-bit packed format used by a FMT_RGBA32 surface (RGBA 8888)</div><div class="ttdef"><b>Definition</b> graphics.h:144</div></div>
 <div class="ttc" id="agroup__graphics_html_structcolor__t"><div class="ttname"><a href="group__graphics.html#structcolor__t">color_t</a></div><div class="ttdoc">Generic color structure.</div><div class="ttdef"><b>Definition</b> graphics.h:54</div></div>
-<div class="ttc" id="agroup__n64sys_html_ga54fca3c0f8e1be138f320b3dcce4366f"><div class="ttname"><a href="group__n64sys.html#ga54fca3c0f8e1be138f320b3dcce4366f">PhysicalAddr</a></div><div class="ttdeci">#define PhysicalAddr(_addr)</div><div class="ttdoc">Return the physical memory address for a given virtual address (pointer)</div><div class="ttdef"><b>Definition</b> n64sys.h:84</div></div>
+<div class="ttc" id="agroup__n64sys_html_ga54fca3c0f8e1be138f320b3dcce4366f"><div class="ttname"><a href="group__n64sys.html#ga54fca3c0f8e1be138f320b3dcce4366f">PhysicalAddr</a></div><div class="ttdeci">#define PhysicalAddr(_addr)</div><div class="ttdoc">Return the physical memory address for a given virtual address (pointer)</div><div class="ttdef"><b>Definition</b> n64sys.h:67</div></div>
 <div class="ttc" id="an64sys_8h_html"><div class="ttname"><a href="n64sys_8h.html">n64sys.h</a></div><div class="ttdoc">N64 System Interface.</div></div>
 <div class="ttc" id="ardpq_8c_html_a25829986a163ef2d44f49143f31dd0ff"><div class="ttname"><a href="rdpq_8c.html#a25829986a163ef2d44f49143f31dd0ff">__rdpq_set_scissor</a></div><div class="ttdeci">void __rdpq_set_scissor(uint32_t w0, uint32_t w1)</div><div class="ttdoc">Out-of-line implementation of rdpq_set_scissor.</div><div class="ttdef"><b>Definition</b> rdpq.c:984</div></div>
 <div class="ttc" id="ardpq_8c_html_a687180ca506edd932b38307b9f73071b"><div class="ttname"><a href="rdpq_8c.html#a687180ca506edd932b38307b9f73071b">__rdpq_set_fill_color</a></div><div class="ttdeci">void __rdpq_set_fill_color(uint32_t w1)</div><div class="ttdoc">Out-of-line implementation of rdpq_set_fill_color.</div><div class="ttdef"><b>Definition</b> rdpq.c:995</div></div>
@@ -742,7 +743,7 @@ $(document).ready(function() { init_codefold(0); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

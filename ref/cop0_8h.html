@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -170,6 +171,70 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_ERL</b>&#160;&#160;&#160;0x00000004</td></tr>
 <tr class="memdesc:ga81700617afd959418764c1fcb643b033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: within error. <br /></td></tr>
 <tr class="separator:ga81700617afd959418764c1fcb643b033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadaabc4c0d4945bfcdd0abff413baa2b9" id="r_gadaabc4c0d4945bfcdd0abff413baa2b9"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_KSU</b>&#160;&#160;&#160;0x00000018</td></tr>
+<tr class="memdesc:gadaabc4c0d4945bfcdd0abff413baa2b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: kernel/user mode. <br /></td></tr>
+<tr class="separator:gadaabc4c0d4945bfcdd0abff413baa2b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga772427665efef02cef7ff7c8aa190855" id="r_ga772427665efef02cef7ff7c8aa190855"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_UX</b>&#160;&#160;&#160;0x00000020</td></tr>
+<tr class="memdesc:ga772427665efef02cef7ff7c8aa190855"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: 64-bit addressing in user mode. <br /></td></tr>
+<tr class="separator:ga772427665efef02cef7ff7c8aa190855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga48bb0ddda7ed89c5964aefe32d919a33" id="r_ga48bb0ddda7ed89c5964aefe32d919a33"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_SX</b>&#160;&#160;&#160;0x00000040</td></tr>
+<tr class="memdesc:ga48bb0ddda7ed89c5964aefe32d919a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: 64-bit addressing in supervisor mode. <br /></td></tr>
+<tr class="separator:ga48bb0ddda7ed89c5964aefe32d919a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa6a56e41147ee7d451e4050b9be44a4f" id="r_gaa6a56e41147ee7d451e4050b9be44a4f"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_KX</b>&#160;&#160;&#160;0x00000080</td></tr>
+<tr class="memdesc:gaa6a56e41147ee7d451e4050b9be44a4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: 64-bit addressing in kernel mode. <br /></td></tr>
+<tr class="separator:gaa6a56e41147ee7d451e4050b9be44a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8955f2413f6a9b8a7ff27d30250ba166" id="r_ga8955f2413f6a9b8a7ff27d30250ba166"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_IM</b>&#160;&#160;&#160;0x0000FF00</td></tr>
+<tr class="memdesc:ga8955f2413f6a9b8a7ff27d30250ba166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: interrupt mask bits. <br /></td></tr>
+<tr class="separator:ga8955f2413f6a9b8a7ff27d30250ba166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga85b095789b50d2a1a4c2e34898a68fc2" id="r_ga85b095789b50d2a1a4c2e34898a68fc2"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_IM_SHIFT</b>&#160;&#160;&#160;8</td></tr>
+<tr class="memdesc:ga85b095789b50d2a1a4c2e34898a68fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: interrupt mask bits shift. <br /></td></tr>
+<tr class="separator:ga85b095789b50d2a1a4c2e34898a68fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad044955ae3d9ed6ae93f890f2125526d" id="r_gad044955ae3d9ed6ae93f890f2125526d"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_SR</b>&#160;&#160;&#160;0x00010000</td></tr>
+<tr class="memdesc:gad044955ae3d9ed6ae93f890f2125526d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: soft reset. <br /></td></tr>
+<tr class="separator:gad044955ae3d9ed6ae93f890f2125526d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29208c05edc5f0fa6784ee1a242b4253" id="r_ga29208c05edc5f0fa6784ee1a242b4253"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_TS</b>&#160;&#160;&#160;0x00020000</td></tr>
+<tr class="memdesc:ga29208c05edc5f0fa6784ee1a242b4253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: TLB shutdown. <br /></td></tr>
+<tr class="separator:ga29208c05edc5f0fa6784ee1a242b4253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd04d1cb9317b657cf4d1dfeee1cf78d" id="r_gabd04d1cb9317b657cf4d1dfeee1cf78d"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_BEV</b>&#160;&#160;&#160;0x00400000</td></tr>
+<tr class="memdesc:gabd04d1cb9317b657cf4d1dfeee1cf78d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: use boot exception vectors. <br /></td></tr>
+<tr class="separator:gabd04d1cb9317b657cf4d1dfeee1cf78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b06bd95227a4733745d761d6318e6d5" id="r_ga3b06bd95227a4733745d761d6318e6d5"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_RE</b>&#160;&#160;&#160;0x02000000</td></tr>
+<tr class="memdesc:ga3b06bd95227a4733745d761d6318e6d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: reverse endian. <br /></td></tr>
+<tr class="separator:ga3b06bd95227a4733745d761d6318e6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae81e10c4e35873bae542bffb502e67da" id="r_gae81e10c4e35873bae542bffb502e67da"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_FR</b>&#160;&#160;&#160;0x04000000</td></tr>
+<tr class="memdesc:gae81e10c4e35873bae542bffb502e67da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: FPU register mode. <br /></td></tr>
+<tr class="separator:gae81e10c4e35873bae542bffb502e67da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf80741cdeb7c1059133b0c30251b5fb2" id="r_gaf80741cdeb7c1059133b0c30251b5fb2"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_RP</b>&#160;&#160;&#160;0x08000000</td></tr>
+<tr class="memdesc:gaf80741cdeb7c1059133b0c30251b5fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: reduced power. <br /></td></tr>
+<tr class="separator:gaf80741cdeb7c1059133b0c30251b5fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadb5130dac9897ae5dd243d8f227f7a6b" id="r_gadb5130dac9897ae5dd243d8f227f7a6b"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_CU0</b>&#160;&#160;&#160;0x10000000</td></tr>
+<tr class="memdesc:gadb5130dac9897ae5dd243d8f227f7a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: coprocessor 0 usable. <br /></td></tr>
+<tr class="separator:gadb5130dac9897ae5dd243d8f227f7a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga72cca4235cbe27dd9e13a16899d8f4bf" id="r_ga72cca4235cbe27dd9e13a16899d8f4bf"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_CU1</b>&#160;&#160;&#160;0x20000000</td></tr>
+<tr class="memdesc:ga72cca4235cbe27dd9e13a16899d8f4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: coprocessor 1 usable. <br /></td></tr>
+<tr class="separator:ga72cca4235cbe27dd9e13a16899d8f4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa6016ffccedd175070fbe34d28f92b9a" id="r_gaa6016ffccedd175070fbe34d28f92b9a"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_CU2</b>&#160;&#160;&#160;0x40000000</td></tr>
+<tr class="memdesc:gaa6016ffccedd175070fbe34d28f92b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: coprocessor 2 usable. <br /></td></tr>
+<tr class="separator:gaa6016ffccedd175070fbe34d28f92b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa0cc32cd1226110f7bfc317984941ed9" id="r_gaa0cc32cd1226110f7bfc317984941ed9"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_CU3</b>&#160;&#160;&#160;0x80000000</td></tr>
+<tr class="memdesc:gaa0cc32cd1226110f7bfc317984941ed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: coprocessor 3 usable. <br /></td></tr>
+<tr class="separator:gaa0cc32cd1226110f7bfc317984941ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae5b5beedec5d8fb382744877c760c343" id="r_gae5b5beedec5d8fb382744877c760c343"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_CAUSE_BD</b>&#160;&#160;&#160;0x80000000</td></tr>
 <tr class="memdesc:gae5b5beedec5d8fb382744877c760c343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cause: exception triggered in delay slot. <br /></td></tr>
@@ -272,7 +337,7 @@ Macros</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

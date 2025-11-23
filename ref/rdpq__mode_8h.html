@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -141,6 +142,12 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a59160968c70168c743a484d8f7c93bcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Types of antialiasing supported by RDP.  <a href="rdpq__mode_8h.html#a59160968c70168c743a484d8f7c93bcb">More...</a><br /></td></tr>
 <tr class="separator:a59160968c70168c743a484d8f7c93bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b841b6ae6ab9bacf713dc657132aafd" id="r_a1b841b6ae6ab9bacf713dc657132aafd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq__mode_8h.html#a1b841b6ae6ab9bacf713dc657132aafd">rdpq_zmode_t</a> { <a class="el" href="rdpq__mode_8h.html#a1b841b6ae6ab9bacf713dc657132aafda6a3c81952ed4947f5a8f02d3eb86f90a">ZMODE_STANDARD</a> = 0
+, <a class="el" href="rdpq__mode_8h.html#a1b841b6ae6ab9bacf713dc657132aafdaf95baa272758198737b0dad5ebf17a87">ZMODE_INTERPENETRATING</a> = 1
+, <a class="el" href="rdpq__mode_8h.html#a1b841b6ae6ab9bacf713dc657132aafdaf00cd506e374ea0422001ad1eea55a85">ZMODE_DECAL</a> = 3
+ }</td></tr>
+<tr class="memdesc:a1b841b6ae6ab9bacf713dc657132aafd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Types of Z-buffering modes supported by RDP.  <a href="rdpq__mode_8h.html#a1b841b6ae6ab9bacf713dc657132aafd">More...</a><br /></td></tr>
+<tr class="separator:a1b841b6ae6ab9bacf713dc657132aafd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -212,6 +219,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac19dea948e3d7d283a116195a9b61502" id="r_ac19dea948e3d7d283a116195a9b61502"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq__mode_8h.html#ac19dea948e3d7d283a116195a9b61502">rdpq_mode_zoverride</a> (bool enable, float z, int16_t deltaz)</td></tr>
 <tr class="memdesc:ac19dea948e3d7d283a116195a9b61502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a fixed override of Z value.  <br /></td></tr>
 <tr class="separator:ac19dea948e3d7d283a116195a9b61502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d8c47ce985c30a6ef4b4af1ea6d60b0" id="r_a9d8c47ce985c30a6ef4b4af1ea6d60b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq__mode_8h.html#a9d8c47ce985c30a6ef4b4af1ea6d60b0">rdpq_mode_zmode</a> (<a class="el" href="rdpq__mode_8h.html#a1b841b6ae6ab9bacf713dc657132aafd">rdpq_zmode_t</a> mode)</td></tr>
+<tr class="memdesc:a9d8c47ce985c30a6ef4b4af1ea6d60b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the Z buffering mode.  <br /></td></tr>
+<tr class="separator:a9d8c47ce985c30a6ef4b4af1ea6d60b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb5d5cab3092397225bfc40fffd1ab7d" id="r_aeb5d5cab3092397225bfc40fffd1ab7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rdpq__mode_8h.html#aeb5d5cab3092397225bfc40fffd1ab7d">rdpq_mode_tlut</a> (<a class="el" href="rdpq__mode_8h.html#af94fffeeb6056f4af25fc52405e7d38c">rdpq_tlut_t</a> tlut)</td></tr>
 <tr class="memdesc:aeb5d5cab3092397225bfc40fffd1ab7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate palette lookup during drawing.  <br /></td></tr>
 <tr class="separator:aeb5d5cab3092397225bfc40fffd1ab7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -257,7 +267,7 @@ Dennis Heinze <a href="#" onclick="location.href='mai'+'lto:'+'den'+'ni'+'sjp'+'
 <li>Filtering (<a class="el" href="rdpq__mode_8h.html#ab39285d295b7296dc6a48baf0043bea0" title="Activate texture filtering.">rdpq_mode_filter</a>): activate bilinear filtering.</li>
 </ul>
 <dl class="section note"><dt>Note</dt><dd>From a hardware perspective, rdpq handles automatically the "RDP cycle type". That is, it transparently switches from "1-cycle mode" to "2-cycle mode" whenever it is necessary. If you come from a RDP low-level programming background, it might be confusing at first because everything "just works" without needing to adjust settings any time you need to change a render state.</dd></dl>
-<h2><a class="anchor" id="autotoc_md44"></a>
+<h2><a class="anchor" id="autotoc_md61"></a>
 Mode setting stack</h2>
 <p>The mode API also keeps a small (4 entry) stack of mode configurations. This allows client code to temporarily switch render mode and then get back to the previous mode, which helps modularizing the code.</p>
 <p>To save the current render mode onto the stack, use <a class="el" href="rdpq__mode_8h.html#a0e81490ca8248e9b6611d972d85c2af2" title="Push the current render mode into the stack.">rdpq_mode_push</a>. To restore the previous render mode from the stack, use <a class="el" href="rdpq__mode_8h.html#ad7b6181f5298625ab630914102938eb0" title="Pop the current render mode from the stack.">rdpq_mode_pop</a>.</p>
@@ -301,8 +311,8 @@ Mode setting stack</h2>
 <div class="line"><a class="code hl_function" href="rdpq__mode_8c.html#a64a153623e5985ce5c434bf52ba6efa6">rdpq_mode_blender</a>(<a class="code hl_define" href="rdpq__mode_8h.html#a1965fafb9aa3cd4ab13a5edfd0142f1a">RDPQ_BLENDER_MULTIPLY_CONST</a>);</div>
 <div class="ttc" id="agroup__graphics_html_gae16bab5741f411ec4ef51b0295f6e705"><div class="ttname"><a href="group__graphics.html#gae16bab5741f411ec4ef51b0295f6e705">RGBA32</a></div><div class="ttdeci">#define RGBA32(rx, gx, bx, ax)</div><div class="ttdoc">Create a color_t from the R,G,B,A components in the RGBA32 range (0-255).</div><div class="ttdef"><b>Definition</b> graphics.h:96</div></div>
 <div class="ttc" id="ardpq_8c_html_a7ffd0e373836f8500094bdcbe85ce530"><div class="ttname"><a href="rdpq_8c.html#a7ffd0e373836f8500094bdcbe85ce530">rdpq_set_fog_color</a></div><div class="ttdeci">void rdpq_set_fog_color(color_t color)</div><div class="ttdoc">Set the RDP FOG blender register.</div><div class="ttdef"><b>Definition</b> rdpq.h:924</div></div>
-<div class="ttc" id="ardpq__mode_8c_html_a64a153623e5985ce5c434bf52ba6efa6"><div class="ttname"><a href="rdpq__mode_8c.html#a64a153623e5985ce5c434bf52ba6efa6">rdpq_mode_blender</a></div><div class="ttdeci">void rdpq_mode_blender(rdpq_blender_t blend)</div><div class="ttdoc">Configure the formula to use for blending.</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:604</div></div>
-<div class="ttc" id="ardpq__mode_8h_html_a1965fafb9aa3cd4ab13a5edfd0142f1a"><div class="ttname"><a href="rdpq__mode_8h.html#a1965fafb9aa3cd4ab13a5edfd0142f1a">RDPQ_BLENDER_MULTIPLY_CONST</a></div><div class="ttdeci">#define RDPQ_BLENDER_MULTIPLY_CONST</div><div class="ttdoc">Blending mode: multiplicative alpha with a constant value.</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:526</div></div>
+<div class="ttc" id="ardpq__mode_8c_html_a64a153623e5985ce5c434bf52ba6efa6"><div class="ttname"><a href="rdpq__mode_8c.html#a64a153623e5985ce5c434bf52ba6efa6">rdpq_mode_blender</a></div><div class="ttdeci">void rdpq_mode_blender(rdpq_blender_t blend)</div><div class="ttdoc">Configure the formula to use for blending.</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:615</div></div>
+<div class="ttc" id="ardpq__mode_8h_html_a1965fafb9aa3cd4ab13a5edfd0142f1a"><div class="ttname"><a href="rdpq__mode_8h.html#a1965fafb9aa3cd4ab13a5edfd0142f1a">RDPQ_BLENDER_MULTIPLY_CONST</a></div><div class="ttdeci">#define RDPQ_BLENDER_MULTIPLY_CONST</div><div class="ttdoc">Blending mode: multiplicative alpha with a constant value.</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:537</div></div>
 </div><!-- fragment --><p>Notice that the alpha value coming out of the combiner is ignored for the effect of blending, but it still used for alpha compare. This is very useful because for instance you can have a sprite with a 1-bit alpha channel to perform alpha compare masking, but still have a semi-transparency effect applied to the visible portions of the sprite. </p>
 
 </div>
@@ -486,6 +496,31 @@ Mode setting stack</h2>
 <tr><td class="fieldname"><a id="a59160968c70168c743a484d8f7c93bcba3c6e80231a3dac8f186d1b073716bd42" name="a59160968c70168c743a484d8f7c93bcba3c6e80231a3dac8f186d1b073716bd42"></a>AA_STANDARD&#160;</td><td class="fielddoc"><p>Standard antialiasing. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a59160968c70168c743a484d8f7c93bcba43ba0a2402fee9d21d959898c7feced5" name="a59160968c70168c743a484d8f7c93bcba43ba0a2402fee9d21d959898c7feced5"></a>AA_REDUCED&#160;</td><td class="fielddoc"><p>Reduced antialiasing. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a1b841b6ae6ab9bacf713dc657132aafd" name="a1b841b6ae6ab9bacf713dc657132aafd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b841b6ae6ab9bacf713dc657132aafd">&#9670;&#160;</a></span>rdpq_zmode_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="rdpq__mode_8h.html#a1b841b6ae6ab9bacf713dc657132aafd">rdpq_zmode_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Types of Z-buffering modes supported by RDP. </p>
+<p>See <a class="el" href="rdpq__mode_8h.html#a9d8c47ce985c30a6ef4b4af1ea6d60b0" title="Configure the Z buffering mode.">rdpq_mode_zmode</a> for more information. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1b841b6ae6ab9bacf713dc657132aafda6a3c81952ed4947f5a8f02d3eb86f90a" name="a1b841b6ae6ab9bacf713dc657132aafda6a3c81952ed4947f5a8f02d3eb86f90a"></a>ZMODE_STANDARD&#160;</td><td class="fielddoc"><p>Standard Z-buffer mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b841b6ae6ab9bacf713dc657132aafdaf95baa272758198737b0dad5ebf17a87" name="a1b841b6ae6ab9bacf713dc657132aafdaf95baa272758198737b0dad5ebf17a87"></a>ZMODE_INTERPENETRATING&#160;</td><td class="fielddoc"><p>Z-buffer mode for interpenetrating surfaces. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1b841b6ae6ab9bacf713dc657132aafdaf00cd506e374ea0422001ad1eea55a85" name="a1b841b6ae6ab9bacf713dc657132aafdaf00cd506e374ea0422001ad1eea55a85"></a>ZMODE_DECAL&#160;</td><td class="fielddoc"><p>Z-buffer mode for decal surfaces. </p>
 </td></tr>
 </table>
 
@@ -755,9 +790,9 @@ Mode setting stack</h2>
 <div class="ttc" id="ardpq_8c_html_ad25a8b6c5eb35fb2253f601c3be24867"><div class="ttname"><a href="rdpq_8c.html#ad25a8b6c5eb35fb2253f601c3be24867">rdpq_set_prim_color</a></div><div class="ttdeci">void rdpq_set_prim_color(color_t color)</div><div class="ttdoc">Set the RDP PRIM combiner register (color only) (RDP command: SET_PRIM_COLOR)</div><div class="ttdef"><b>Definition</b> rdpq.h:986</div></div>
 <div class="ttc" id="ardpq_8h_html_a8d34f311d2e71435652a57adb1d6931ea1ef734aa501cdfd04e4c0f02691d1da5"><div class="ttname"><a href="rdpq_8h.html#a8d34f311d2e71435652a57adb1d6931ea1ef734aa501cdfd04e4c0f02691d1da5">TILE4</a></div><div class="ttdeci">@ TILE4</div><div class="ttdoc">Tile #4 (for code readability)</div><div class="ttdef"><b>Definition</b> rdpq.h:257</div></div>
 <div class="ttc" id="ardpq__macros_8h_html_a11868571a75d3b93802567de631c7e38"><div class="ttname"><a href="rdpq__macros_8h.html#a11868571a75d3b93802567de631c7e38">RDPQ_COMBINER_TEX_FLAT</a></div><div class="ttdeci">#define RDPQ_COMBINER_TEX_FLAT</div><div class="ttdoc">Draw with a texture modulated with a flat color. Configure the color via rdpq_set_prim_color.</div><div class="ttdef"><b>Definition</b> rdpq_macros.h:495</div></div>
-<div class="ttc" id="ardpq__mode_8c_html_a7aaec7357eb3343339d9373b1a963a57"><div class="ttname"><a href="rdpq__mode_8c.html#a7aaec7357eb3343339d9373b1a963a57">rdpq_mode_combiner</a></div><div class="ttdeci">void rdpq_mode_combiner(rdpq_combiner_t comb)</div><div class="ttdoc">Configure the color combiner.</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:470</div></div>
-<div class="ttc" id="ardpq__mode_8c_html_ac3c29578703de424bea9548ad86bb4af"><div class="ttname"><a href="rdpq__mode_8c.html#ac3c29578703de424bea9548ad86bb4af">rdpq_set_mode_standard</a></div><div class="ttdeci">void rdpq_set_mode_standard(void)</div><div class="ttdoc">Reset render mode to standard.</div><div class="ttdef"><b>Definition</b> rdpq_mode.c:94</div></div>
-<div class="ttc" id="ardpq__rect_8h_html_a7196362c567172a2012f414c8a412743"><div class="ttname"><a href="rdpq__rect_8h.html#a7196362c567172a2012f414c8a412743">rdpq_texture_rectangle</a></div><div class="ttdeci">#define rdpq_texture_rectangle(tile, x0, y0, x1, y1, s, t)</div><div class="ttdoc">Draw a textured rectangle (RDP command: TEXTURE_RECTANGLE)</div><div class="ttdef"><b>Definition</b> rdpq_rect.h:311</div></div>
+<div class="ttc" id="ardpq__mode_8c_html_a7aaec7357eb3343339d9373b1a963a57"><div class="ttname"><a href="rdpq__mode_8c.html#a7aaec7357eb3343339d9373b1a963a57">rdpq_mode_combiner</a></div><div class="ttdeci">void rdpq_mode_combiner(rdpq_combiner_t comb)</div><div class="ttdoc">Configure the color combiner.</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:481</div></div>
+<div class="ttc" id="ardpq__mode_8c_html_ac3c29578703de424bea9548ad86bb4af"><div class="ttname"><a href="rdpq__mode_8c.html#ac3c29578703de424bea9548ad86bb4af">rdpq_set_mode_standard</a></div><div class="ttdeci">void rdpq_set_mode_standard(void)</div><div class="ttdoc">Reset render mode to standard.</div><div class="ttdef"><b>Definition</b> rdpq_mode.c:98</div></div>
+<div class="ttc" id="ardpq__rect_8h_html_a7196362c567172a2012f414c8a412743"><div class="ttname"><a href="rdpq__rect_8h.html#a7196362c567172a2012f414c8a412743">rdpq_texture_rectangle</a></div><div class="ttdeci">#define rdpq_texture_rectangle(tile, x0, y0, x1, y1, s, t)</div><div class="ttdoc">Draw a textured rectangle (RDP command: TEXTURE_RECTANGLE)</div><div class="ttdef"><b>Definition</b> rdpq_rect.h:327</div></div>
 <div class="ttc" id="ardpq__tex_8c_html_aaa36de4024b0a12f37ddfc5544bcbfa4"><div class="ttname"><a href="rdpq__tex_8c.html#aaa36de4024b0a12f37ddfc5544bcbfa4">rdpq_tex_upload</a></div><div class="ttdeci">int rdpq_tex_upload(rdpq_tile_t tile, const surface_t *tex, const rdpq_texparms_t *parms)</div><div class="ttdoc">Load a texture into TMEM.</div><div class="ttdef"><b>Definition</b> rdpq_tex.c:408</div></div>
 </div><!-- fragment --><p>Alternatively, you can use your own combiner formulas, created with either <a class="el" href="rdpq__macros_8h.html#ae6316102ee9f09199c7d0c9c452915dc" title="Build a 1-pass combiner formula.">RDPQ_COMBINER1</a> (one pass) or <a class="el" href="rdpq__macros_8h.html#a6647a2b7243160974d2d2f1f0eef86bf" title="Build a 2-pass combiner formula.">RDPQ_COMBINER2</a> (two passes). See the respective documentation for all the details on how to create a custom formula.</p>
 <p>When using a custom formula, you must take into account that some render states also rely on the combiner to work. Specifically:</p>
@@ -1079,6 +1114,46 @@ Mode setting stack</h2>
 
 </div>
 </div>
+<a id="a9d8c47ce985c30a6ef4b4af1ea6d60b0" name="a9d8c47ce985c30a6ef4b4af1ea6d60b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d8c47ce985c30a6ef4b4af1ea6d60b0">&#9670;&#160;</a></span>rdpq_mode_zmode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rdpq_mode_zmode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rdpq__mode_8h.html#a1b841b6ae6ab9bacf713dc657132aafd">rdpq_zmode_t</a>&#160;</td>
+          <td class="paramname"><em>mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Configure the Z buffering mode. </p>
+<p>This function allows to tune the internal Z buffer formula to obtain several different effects. In addition to the standard operating mode (<a class="el" href="rdpq__mode_8h.html#a1b841b6ae6ab9bacf713dc657132aafda6a3c81952ed4947f5a8f02d3eb86f90a" title="Standard Z-buffer mode.">ZMODE_STANDARD</a>), there are two special modes that can be activated:</p>
+<ul>
+<li><a class="el" href="rdpq__mode_8h.html#a1b841b6ae6ab9bacf713dc657132aafdaf00cd506e374ea0422001ad1eea55a85" title="Z-buffer mode for decal surfaces.">ZMODE_DECAL</a>: this mode can be used to draw polygons that are coplanar with already drawn polygons, normally called "decals". NOTE: this will never be bulletproof. If you still get some Z-fighting flickering in this mode, try to subdivide the background polygons so that they share vertices exactly with the decal.</li>
+<li><a class="el" href="rdpq__mode_8h.html#a1b841b6ae6ab9bacf713dc657132aafdaf95baa272758198737b0dad5ebf17a87" title="Z-buffer mode for interpenetrating surfaces.">ZMODE_INTERPENETRATING</a>: this mode can be used to reduce z-fighting when two objects intersect each other, and anti-aliasing is enabled. A common case can be objects like trees positioned slightly under the terrain.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>Z-buffering mode to use</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="rdpq__mode_8h.html#a1b841b6ae6ab9bacf713dc657132aafd" title="Types of Z-buffering modes supported by RDP.">rdpq_zmode_t</a> </dd></dl>
+
+</div>
+</div>
 <a id="aeb5d5cab3092397225bfc40fffd1ab7d" name="aeb5d5cab3092397225bfc40fffd1ab7d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aeb5d5cab3092397225bfc40fffd1ab7d">&#9670;&#160;</a></span>rdpq_mode_tlut()</h2>
 
@@ -1267,10 +1342,10 @@ Mode setting stack</h2>
 <div class="line">    <a class="code hl_function" href="rdpq__mode_8c.html#a9635e378432a4422d25953bf5e0425c4">rdpq_mode_dithering</a>(<a class="code hl_enumvalue" href="rdpq__mode_8h.html#ab0ab3a62df1bd846c213c25a1d155095a515382c5bc42487a5dfffd2f1ffeb2f2">DITHER_SQUARE_SQUARE</a>);</div>
 <div class="line">    <a class="code hl_function" href="rdpq__mode_8c.html#a64a153623e5985ce5c434bf52ba6efa6">rdpq_mode_blender</a>(RDPQ_BLENDING_MULTIPLY);</div>
 <div class="line"><a class="code hl_function" href="rdpq__mode_8c.html#ad609d6c48eb715b18044e7cfc1bb6c30">rdpq_mode_end</a>();</div>
-<div class="ttc" id="ardpq__mode_8c_html_a3501e4de775e105112bf4efcc7717926"><div class="ttname"><a href="rdpq__mode_8c.html#a3501e4de775e105112bf4efcc7717926">rdpq_mode_mipmap</a></div><div class="ttdeci">void rdpq_mode_mipmap(rdpq_mipmap_t mode, int num_levels)</div><div class="ttdoc">Activate mip-mapping.</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:819</div></div>
-<div class="ttc" id="ardpq__mode_8c_html_a9635e378432a4422d25953bf5e0425c4"><div class="ttname"><a href="rdpq__mode_8c.html#a9635e378432a4422d25953bf5e0425c4">rdpq_mode_dithering</a></div><div class="ttdeci">void rdpq_mode_dithering(rdpq_dither_t dither)</div><div class="ttdoc">Change dithering mode.</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:673</div></div>
-<div class="ttc" id="ardpq__mode_8c_html_abc8403608ccbb00ecda19fcacb5b59a3"><div class="ttname"><a href="rdpq__mode_8c.html#abc8403608ccbb00ecda19fcacb5b59a3">rdpq_mode_begin</a></div><div class="ttdeci">void rdpq_mode_begin(void)</div><div class="ttdoc">Start a batch of RDP mode changes.</div><div class="ttdef"><b>Definition</b> rdpq_mode.c:135</div></div>
-<div class="ttc" id="ardpq__mode_8c_html_ad609d6c48eb715b18044e7cfc1bb6c30"><div class="ttname"><a href="rdpq__mode_8c.html#ad609d6c48eb715b18044e7cfc1bb6c30">rdpq_mode_end</a></div><div class="ttdeci">void rdpq_mode_end(void)</div><div class="ttdoc">Finish a batch of RDP mode changes.</div><div class="ttdef"><b>Definition</b> rdpq_mode.c:145</div></div>
+<div class="ttc" id="ardpq__mode_8c_html_a3501e4de775e105112bf4efcc7717926"><div class="ttname"><a href="rdpq__mode_8c.html#a3501e4de775e105112bf4efcc7717926">rdpq_mode_mipmap</a></div><div class="ttdeci">void rdpq_mode_mipmap(rdpq_mipmap_t mode, int num_levels)</div><div class="ttdoc">Activate mip-mapping.</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:853</div></div>
+<div class="ttc" id="ardpq__mode_8c_html_a9635e378432a4422d25953bf5e0425c4"><div class="ttname"><a href="rdpq__mode_8c.html#a9635e378432a4422d25953bf5e0425c4">rdpq_mode_dithering</a></div><div class="ttdeci">void rdpq_mode_dithering(rdpq_dither_t dither)</div><div class="ttdoc">Change dithering mode.</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:684</div></div>
+<div class="ttc" id="ardpq__mode_8c_html_abc8403608ccbb00ecda19fcacb5b59a3"><div class="ttname"><a href="rdpq__mode_8c.html#abc8403608ccbb00ecda19fcacb5b59a3">rdpq_mode_begin</a></div><div class="ttdeci">void rdpq_mode_begin(void)</div><div class="ttdoc">Start a batch of RDP mode changes.</div><div class="ttdef"><b>Definition</b> rdpq_mode.c:139</div></div>
+<div class="ttc" id="ardpq__mode_8c_html_ad609d6c48eb715b18044e7cfc1bb6c30"><div class="ttname"><a href="rdpq__mode_8c.html#ad609d6c48eb715b18044e7cfc1bb6c30">rdpq_mode_end</a></div><div class="ttdeci">void rdpq_mode_end(void)</div><div class="ttdoc">Finish a batch of RDP mode changes.</div><div class="ttdef"><b>Definition</b> rdpq_mode.c:149</div></div>
 <div class="ttc" id="ardpq__mode_8h_html_ab0ab3a62df1bd846c213c25a1d155095a515382c5bc42487a5dfffd2f1ffeb2f2"><div class="ttname"><a href="rdpq__mode_8h.html#ab0ab3a62df1bd846c213c25a1d155095a515382c5bc42487a5dfffd2f1ffeb2f2">DITHER_SQUARE_SQUARE</a></div><div class="ttdeci">@ DITHER_SQUARE_SQUARE</div><div class="ttdoc">Dithering: RGB=Square, Alpha=Square.</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:203</div></div>
 <div class="ttc" id="ardpq__mode_8h_html_af881bfd1d140d97a1707c30e476787bda4c0e0308384c16155ba70b6478a19a1d"><div class="ttname"><a href="rdpq__mode_8h.html#af881bfd1d140d97a1707c30e476787bda4c0e0308384c16155ba70b6478a19a1d">MIPMAP_INTERPOLATE</a></div><div class="ttdeci">@ MIPMAP_INTERPOLATE</div><div class="ttdoc">Interpolate between the two nearest mipmap levels (also known as &quot;trilinear&quot;)</div><div class="ttdef"><b>Definition</b> rdpq_mode.h:252</div></div>
 </div><!-- fragment --><p>The only effect of using <a class="el" href="rdpq__mode_8h.html#abc8403608ccbb00ecda19fcacb5b59a3" title="Start a batch of RDP mode changes.">rdpq_mode_begin</a> is more efficient RSP and RDP usage, there is no semantic change in the way RDP is programmed when <a class="el" href="rdpq__mode_8h.html#ad609d6c48eb715b18044e7cfc1bb6c30" title="Finish a batch of RDP mode changes.">rdpq_mode_end</a> is called.</p>
@@ -1303,7 +1378,7 @@ Mode setting stack</h2>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

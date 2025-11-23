@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -131,9 +132,6 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga11298664525eef44964cb4879945e219" id="r_ga11298664525eef44964cb4879945e219"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga11298664525eef44964cb4879945e219">JOYPAD_IDENTIFY_INTERVAL_TICKS</a>&#160;&#160;&#160;<a class="el" href="group__n64sys.html#ga3dd7b7d41c220904632461a2d95d61cf">TICKS_PER_SECOND</a></td></tr>
-<tr class="memdesc:ga11298664525eef44964cb4879945e219"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of ticks between Joybus identify commands.  <br /></td></tr>
-<tr class="separator:ga11298664525eef44964cb4879945e219"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga32d8f6f37335af8c3abeb56700a77b8b" id="r_ga32d8f6f37335af8c3abeb56700a77b8b"><td class="memItemLeft" align="right" valign="top"><a id="ga32d8f6f37335af8c3abeb56700a77b8b" name="ga32d8f6f37335af8c3abeb56700a77b8b"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ASSERT_JOYPAD_INITIALIZED</b>()&#160;&#160;&#160;    <a class="el" href="debug_8h.html#a66673aad3e392c6b58054aebe66fe28e">assertf</a>(joypad_init_refcount &gt; 0, &quot;joypad_init() was not called&quot;)</td></tr>
 <tr class="memdesc:ga32d8f6f37335af8c3abeb56700a77b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience macro to ensure Joypad subsystem is initialized. <br /></td></tr>
@@ -197,16 +195,21 @@ Enumerations</h2></td></tr>
 <tr class="memitem:ga0245d3cd70ee2e64c85a9b07ed35d392" id="r_ga0245d3cd70ee2e64c85a9b07ed35d392"><td class="memItemLeft" align="right" valign="top"><a id="ga0245d3cd70ee2e64c85a9b07ed35d392" name="ga0245d3cd70ee2e64c85a9b07ed35d392"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga0245d3cd70ee2e64c85a9b07ed35d392">joypad_accessory_state_t</a> { <br />
 &#160;&#160;<b>JOYPAD_ACCESSORY_STATE_IDLE</b> = 0
 , <b>JOYPAD_ACCESSORY_STATE_DETECT_INIT</b>
-, <b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_BANK_WRITE</b>
+, <b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_BANK_WRITE0</b>
 , <b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_LABEL_BACKUP</b>
 , <br />
-&#160;&#160;<b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_LABEL_WRITE</b>
-, <b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_LABEL_READ</b>
+&#160;&#160;<b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_LABEL_WRITE0</b>
+, <b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_LABEL_READ0</b>
+, <b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_BANK_WRITE1</b>
+, <b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_LABEL_READ1</b>
+, <br />
+&#160;&#160;<b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_BANK_WRITE0_AGAIN</b>
 , <b>JOYPAD_ACCESSORY_STATE_DETECT_CPAK_LABEL_RESTORE</b>
 , <b>JOYPAD_ACCESSORY_STATE_DETECT_RUMBLE_PROBE_WRITE</b>
+, <b>JOYPAD_ACCESSORY_STATE_DETECT_RUMBLE_PROBE_READ</b>
 , <br />
-&#160;&#160;<b>JOYPAD_ACCESSORY_STATE_DETECT_RUMBLE_PROBE_READ</b>
-, <b>JOYPAD_ACCESSORY_STATE_DETECT_TRANSFER_PROBE_ON</b>
+&#160;&#160;<b>JOYPAD_ACCESSORY_STATE_DETECT_TRANSFER_PROBE_ON</b>
+, <b>JOYPAD_ACCESSORY_STATE_DETECT_TRANSFER_PROBE_WAIT</b>
 , <b>JOYPAD_ACCESSORY_STATE_DETECT_TRANSFER_PROBE_READ</b>
 , <b>JOYPAD_ACCESSORY_STATE_DETECT_TRANSFER_PROBE_OFF</b>
 , <br />
@@ -239,7 +242,8 @@ Enumerations</h2></td></tr>
 , <a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70ac910bfd5dfac4d16ab87df921411a983">JOYPAD_ACCESSORY_ERROR_ABSENT</a>
 , <a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70a06aa6899c02dccbf67a342dc7ce69175">JOYPAD_ACCESSORY_ERROR_CHECKSUM</a>
 , <br />
-&#160;&#160;<a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70a60b92217d9a04be9911a693a11289755">JOYPAD_ACCESSORY_ERROR_TRANSFER_PAK_STATUS_CHANGE</a>
+&#160;&#160;<a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70a1bf810555134d013e21c413a7c8b8030">JOYPAD_ACCESSORY_ERROR_CONTROLLER_PAK_BANK_SWITCH</a>
+, <a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70a60b92217d9a04be9911a693a11289755">JOYPAD_ACCESSORY_ERROR_TRANSFER_PAK_STATUS_CHANGE</a>
 , <a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70aa656cc143b361b6b0c27be4e13b19cee">JOYPAD_ACCESSORY_ERROR_UNKNOWN</a>
 <br />
  }</td></tr>
@@ -341,21 +345,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga8ca4e5897f1463f83beec7c2d42af598" id="r_ga8ca4e5897f1463f83beec7c2d42af598"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga8ca4e5897f1463f83beec7c2d42af598">joypad_is_connected</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port)</td></tr>
 <tr class="memdesc:ga8ca4e5897f1463f83beec7c2d42af598"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether a Joybus device is plugged in to a Joypad port.  <br /></td></tr>
 <tr class="separator:ga8ca4e5897f1463f83beec7c2d42af598"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafd402303ac2d8f5df4740ea105aad498" id="r_gafd402303ac2d8f5df4740ea105aad498"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__joybus.html#gad91e902f4c8cb12fb4f5aa288d423b44">joybus_identifier_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#gafd402303ac2d8f5df4740ea105aad498">joypad_get_identifier</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port)</td></tr>
-<tr class="memdesc:gafd402303ac2d8f5df4740ea105aad498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Joybus device identifier for a Joypad port.  <br /></td></tr>
-<tr class="separator:gafd402303ac2d8f5df4740ea105aad498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9234ca39c2da65bf5af5d50f344c30fb" id="r_ga9234ca39c2da65bf5af5d50f344c30fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__joypad.html#gaf3c3835017a51c287ed32933832ef144">joypad_style_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga9234ca39c2da65bf5af5d50f344c30fb">joypad_get_style</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port)</td></tr>
 <tr class="memdesc:ga9234ca39c2da65bf5af5d50f344c30fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Joypad style for a Joypad port.  <br /></td></tr>
 <tr class="separator:ga9234ca39c2da65bf5af5d50f344c30fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab9f9440ae434b228dbd49f1c70009417" id="r_gab9f9440ae434b228dbd49f1c70009417"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__joypad.html#ga9c09e519d92917bcc942a634ec6f5fda">joypad_accessory_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#gab9f9440ae434b228dbd49f1c70009417">joypad_get_accessory_type</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port)</td></tr>
 <tr class="memdesc:gab9f9440ae434b228dbd49f1c70009417"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Joypad accessory type for a Joypad port.  <br /></td></tr>
 <tr class="separator:gab9f9440ae434b228dbd49f1c70009417"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga237c57a3d8b90bb26cecc622f1e26f0e" id="r_ga237c57a3d8b90bb26cecc622f1e26f0e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga237c57a3d8b90bb26cecc622f1e26f0e">joypad_get_accessory_state</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port)</td></tr>
-<tr class="memdesc:ga237c57a3d8b90bb26cecc622f1e26f0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Joypad accessory state for a Joypad port.  <br /></td></tr>
-<tr class="separator:ga237c57a3d8b90bb26cecc622f1e26f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga35d783639e31863ea8fdc627ecb86fab" id="r_ga35d783639e31863ea8fdc627ecb86fab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga35d783639e31863ea8fdc627ecb86fab">joypad_get_accessory_error</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port)</td></tr>
-<tr class="memdesc:ga35d783639e31863ea8fdc627ecb86fab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Joypad accessory error for a Joypad port.  <br /></td></tr>
-<tr class="separator:ga35d783639e31863ea8fdc627ecb86fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga89835697c34680779fba11548b1446e9" id="r_ga89835697c34680779fba11548b1446e9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga89835697c34680779fba11548b1446e9">joypad_get_transfer_pak_status</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port)</td></tr>
 <tr class="memdesc:ga89835697c34680779fba11548b1446e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Transfer Pak status byte for a Joypad port.  <br /></td></tr>
 <tr class="separator:ga89835697c34680779fba11548b1446e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -413,6 +408,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5ddc74f3d3bb47c0754c7bd282946e9d" id="r_ga5ddc74f3d3bb47c0754c7bd282946e9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__joypad.html#ga0b64bfb89fc2195628b65eb3ece31c70">joypad_accessory_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga5ddc74f3d3bb47c0754c7bd282946e9d">joypad_accessory_xfer</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port, <a class="el" href="group__joypad.html#ga01fa3481cede49666c59b74003274524">joypad_accessory_xfer_t</a> xfer, uint16_t start_addr, void *dst, size_t len)</td></tr>
 <tr class="memdesc:ga5ddc74f3d3bb47c0754c7bd282946e9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read or write data from a joypad accessory.  <br /></td></tr>
 <tr class="separator:ga5ddc74f3d3bb47c0754c7bd282946e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5043f6297d8c29c078f4dbd61d7b7c83" id="r_ga5043f6297d8c29c078f4dbd61d7b7c83"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga5043f6297d8c29c078f4dbd61d7b7c83">joypad_controller_pak_supports_bankswitching</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port)</td></tr>
+<tr class="memdesc:ga5043f6297d8c29c078f4dbd61d7b7c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the Controller Pak supports bankswitching.  <br /></td></tr>
+<tr class="separator:ga5043f6297d8c29c078f4dbd61d7b7c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga16f4d256acc2406142196811dab0cd04" id="r_ga16f4d256acc2406142196811dab0cd04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__joypad.html#ga0b64bfb89fc2195628b65eb3ece31c70">joypad_accessory_error_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__joypad.html#ga16f4d256acc2406142196811dab0cd04">joypad_controller_pak_set_bank</a> (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a> port, uint8_t bank)</td></tr>
 <tr class="memdesc:ga16f4d256acc2406142196811dab0cd04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select the active bank for a Controller Pak.  <br /></td></tr>
 <tr class="separator:ga16f4d256acc2406142196811dab0cd04"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -428,10 +426,6 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:gada0d6aefbadc5e4b8323d7baa5da0385" id="r_gada0d6aefbadc5e4b8323d7baa5da0385"><td class="memItemLeft" align="right" valign="top"><a id="gada0d6aefbadc5e4b8323d7baa5da0385" name="gada0d6aefbadc5e4b8323d7baa5da0385"></a>
-volatile <a class="el" href="group__joybus.html#gad91e902f4c8cb12fb4f5aa288d423b44">joybus_identifier_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>joypad_identifiers_hot</b> [<a class="el" href="group__joypad.html#ga428d5dddfcb30475811097952c3d4fca">JOYPAD_PORT_COUNT</a>]</td></tr>
-<tr class="memdesc:gada0d6aefbadc5e4b8323d7baa5da0385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joypad identifiers for each port. <br /></td></tr>
-<tr class="separator:gada0d6aefbadc5e4b8323d7baa5da0385"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga45c01219fbabcd61f6bb71b9bc9686a8" id="r_ga45c01219fbabcd61f6bb71b9bc9686a8"><td class="memItemLeft" align="right" valign="top"><a id="ga45c01219fbabcd61f6bb71b9bc9686a8" name="ga45c01219fbabcd61f6bb71b9bc9686a8"></a>
 volatile <a class="el" href="group__joypad.html#structjoypad__device__hot__t">joypad_device_hot_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>joypad_devices_hot</b> [<a class="el" href="group__joypad.html#ga428d5dddfcb30475811097952c3d4fca">JOYPAD_PORT_COUNT</a>]</td></tr>
 <tr class="memdesc:ga45c01219fbabcd61f6bb71b9bc9686a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joypad "hot" devices for each port. <br /></td></tr>
@@ -448,10 +442,6 @@ volatile <a class="el" href="group__joypad.html#structjoypad__accessory__t">joyp
 <tr class="heading"><td colspan="2"><h2 class="groupheader">"Hot" (interrupt-driven) global state</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p><a class="anchor" id="joypad_hot_state"></a></p>
 </td></tr>
-<tr class="memitem:gada0d6aefbadc5e4b8323d7baa5da0385" id="r_gada0d6aefbadc5e4b8323d7baa5da0385"><td class="memItemLeft" align="right" valign="top"><a id="gada0d6aefbadc5e4b8323d7baa5da0385" name="gada0d6aefbadc5e4b8323d7baa5da0385"></a>
-volatile <a class="el" href="group__joybus.html#gad91e902f4c8cb12fb4f5aa288d423b44">joybus_identifier_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>joypad_identifiers_hot</b> [<a class="el" href="group__joypad.html#ga428d5dddfcb30475811097952c3d4fca">JOYPAD_PORT_COUNT</a>] = {0}</td></tr>
-<tr class="memdesc:gada0d6aefbadc5e4b8323d7baa5da0385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joypad identifiers for each port. <br /></td></tr>
-<tr class="separator:gada0d6aefbadc5e4b8323d7baa5da0385"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga45c01219fbabcd61f6bb71b9bc9686a8" id="r_ga45c01219fbabcd61f6bb71b9bc9686a8"><td class="memItemLeft" align="right" valign="top"><a id="ga45c01219fbabcd61f6bb71b9bc9686a8" name="ga45c01219fbabcd61f6bb71b9bc9686a8"></a>
 volatile <a class="el" href="group__joypad.html#structjoypad__device__hot__t">joypad_device_hot_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>joypad_devices_hot</b> [<a class="el" href="group__joypad.html#ga428d5dddfcb30475811097952c3d4fca">JOYPAD_PORT_COUNT</a>] = {0}</td></tr>
 <tr class="memdesc:ga45c01219fbabcd61f6bb71b9bc9686a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joypad "hot" devices for each port. <br /></td></tr>
@@ -518,7 +508,6 @@ volatile <a class="el" href="group__joypad.html#structjoypad__accessory__t">joyp
 <p>To read the controllers, first call <a class="el" href="group__joypad.html#gad9815329c5e3b6fc5e7765b7d9e04fed" title="Fetch the current Joypad input state.">joypad_poll</a> once per frame to process the input data. <a class="el" href="group__joypad.html#ga9234ca39c2da65bf5af5d50f344c30fb" title="Get the Joypad style for a Joypad port.">joypad_get_style</a> will return which "style" of device is connected to a port (<a class="el" href="group__joypad.html#gaf3c3835017a51c287ed32933832ef144" title="Joypad Styles enumeration.">joypad_style_t</a>). <a class="el" href="group__joypad.html#gaaa7e3a3b41052aebb6ee16882a62e194" title="Get the current Joypad inputs state for a Joypad port.">joypad_get_inputs</a> will return the buttons and analog input state for a given controller port.</p>
 <p>Developers can determine whether the input device is capable of rumble by calling <a class="el" href="group__joypad.html#gab89e532e9cd064d23859755f7b042d6f" title="Is rumble supported for a Joypad port?">joypad_get_rumble_supported</a> and then starting/stopping the rumble motor by calling <a class="el" href="group__joypad.html#ga0840c968de41f13e99c28515015b5d42" title="Activate or deactivate rumble on a Joypad port.">joypad_set_rumble_active</a>.</p>
 <p>The Joypad subsystem will automatically detect which accessory is connected to Nintendo 64 controllers. Call <a class="el" href="group__joypad.html#gab9f9440ae434b228dbd49f1c70009417" title="Get the Joypad accessory type for a Joypad port.">joypad_get_accessory_type</a> to determine which accessory was detected.</p>
-<p>For advanced use-cases, a developer can determine exactly which type of input device is connected by calling <a class="el" href="group__joypad.html#gafd402303ac2d8f5df4740ea105aad498" title="Get the Joybus device identifier for a Joypad port.">joypad_get_identifier</a>, which will return the 16-bit device identifier value from the Joybus "Info" response.</p>
 <p>To read digital button state for a Joypad device:</p><ul>
 <li><a class="el" href="group__joypad.html#ga9171de224ddd44a81b77257167ecd2fe" title="Get the current Joypad buttons state for a Joypad port.">joypad_get_buttons</a></li>
 <li><a class="el" href="group__joypad.html#gaf37446b3cfc6480bd82f5ab102f378cd" title="Get the Joypad buttons that were pressed since the last time Joypads were read for a Joypad port.">joypad_get_buttons_pressed</a></li>
@@ -693,6 +682,24 @@ cpak_label_backup[<a class="el" href="group__joybus.html#ga8c0ca9fee7249e4d6e08d
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
+<a id="aaa1c7d3d6ac4768471e810a959dabfa0" name="aaa1c7d3d6ac4768471e810a959dabfa0"></a>uint8_t</td>
+<td class="fieldname">
+cpak_probe_label[<a class="el" href="group__joybus.html#ga8c0ca9fee7249e4d6e08d5bf4196ff24">JOYBUS_ACCESSORY_DATA_SIZE</a>]</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a9651d67d476f137f965210448bf57d7e" name="a9651d67d476f137f965210448bf57d7e"></a>bool</td>
+<td class="fieldname">
+cpak_bankswitching</td>
+<td class="fielddoc">
+Does Controller Pak support bankswitching? </td></tr>
+<tr><td class="fieldtype">
+<a id="a7e2b9c0f3949068889387d7047cd8d4f" name="a7e2b9c0f3949068889387d7047cd8d4f"></a>int</td>
+<td class="fieldname">
+cpak_curbank</td>
+<td class="fielddoc">
+Current Controller Pak bank. </td></tr>
+<tr><td class="fieldtype">
 <a id="a9fc5713daa0a845885df30786faca733" name="a9fc5713daa0a845885df30786faca733"></a><a class="el" href="group__joypad.html#structjoypad__accessory__io__t">joypad_accessory_io_t</a></td>
 <td class="fieldname">
 io</td>
@@ -788,12 +795,6 @@ Analog R-trigger. </td></tr>
 <div class="textblock"><p>"Cold" (non-volatile) Joypad device structure. </p>
 </div><table class="fieldtable">
 <tr><th colspan="3">Data Fields</th></tr>
-<tr><td class="fieldtype">
-<a id="a7192a0fd588b546dce4b1af496417a70" name="a7192a0fd588b546dce4b1af496417a70"></a><a class="el" href="group__joybus.html#gad91e902f4c8cb12fb4f5aa288d423b44">joybus_identifier_t</a></td>
-<td class="fieldname">
-identifier</td>
-<td class="fielddoc">
-Joybus device type identifier. </td></tr>
 <tr><td class="fieldtype">
 <a id="a22ff6cbe7ee7f4c790c536036eacada5" name="a22ff6cbe7ee7f4c790c536036eacada5"></a><a class="el" href="group__joypad.html#gaf3c3835017a51c287ed32933832ef144">joypad_style_t</a></td>
 <td class="fieldname">
@@ -1061,23 +1062,6 @@ Position of the analog R trigger. (0, 255) <p>This value will be close to zero w
 </div>
 </div>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ga11298664525eef44964cb4879945e219" name="ga11298664525eef44964cb4879945e219"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga11298664525eef44964cb4879945e219">&#9670;&#160;</a></span>JOYPAD_IDENTIFY_INTERVAL_TICKS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define JOYPAD_IDENTIFY_INTERVAL_TICKS&#160;&#160;&#160;<a class="el" href="group__n64sys.html#ga3dd7b7d41c220904632461a2d95d61cf">TICKS_PER_SECOND</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Number of ticks between Joybus identify commands. </p>
-<p>During VI interrupt, the Joypad subsystem will periodically re-identify the connected devices to check if the identifier has changed or if any accessories have been connected/disconnected. </p>
-
-</div>
-</div>
 <a id="ga58a12fd7fb5e828bd6d4051e52516286" name="ga58a12fd7fb5e828bd6d4051e52516286"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga58a12fd7fb5e828bd6d4051e52516286">&#9670;&#160;</a></span>BB_HACK_FLAGS_SWAP_PORT1</h2>
 
@@ -1204,9 +1188,9 @@ Position of the analog R trigger. (0, 255) <p>This value will be close to zero w
 <div class="line">        iterator_token &lt; <a class="code hl_define" href="group__joypad.html#ga428d5dddfcb30475811097952c3d4fca">JOYPAD_PORT_COUNT</a>; \</div>
 <div class="line">        iterator_token += 1 \</div>
 <div class="line">    )</div>
-<div class="ttc" id="agroup__joypad_html_ga428d5dddfcb30475811097952c3d4fca"><div class="ttname"><a href="group__joypad.html#ga428d5dddfcb30475811097952c3d4fca">JOYPAD_PORT_COUNT</a></div><div class="ttdeci">#define JOYPAD_PORT_COUNT</div><div class="ttdoc">Count of Joypad ports.</div><div class="ttdef"><b>Definition</b> joypad.h:86</div></div>
-<div class="ttc" id="agroup__joypad_html_gaf1f491d1f9849be157cb4a50705c8dcb"><div class="ttname"><a href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a></div><div class="ttdeci">joypad_port_t</div><div class="ttdoc">Joypad Port Numbers.</div><div class="ttdef"><b>Definition</b> joypad.h:74</div></div>
-<div class="ttc" id="agroup__joypad_html_ggaf1f491d1f9849be157cb4a50705c8dcba57a21034d1303ee700edf660663697d8"><div class="ttname"><a href="group__joypad.html#ggaf1f491d1f9849be157cb4a50705c8dcba57a21034d1303ee700edf660663697d8">JOYPAD_PORT_1</a></div><div class="ttdeci">@ JOYPAD_PORT_1</div><div class="ttdoc">Joypad Port 1.</div><div class="ttdef"><b>Definition</b> joypad.h:76</div></div>
+<div class="ttc" id="agroup__joypad_html_ga428d5dddfcb30475811097952c3d4fca"><div class="ttname"><a href="group__joypad.html#ga428d5dddfcb30475811097952c3d4fca">JOYPAD_PORT_COUNT</a></div><div class="ttdeci">#define JOYPAD_PORT_COUNT</div><div class="ttdoc">Count of Joypad ports.</div><div class="ttdef"><b>Definition</b> joypad.h:82</div></div>
+<div class="ttc" id="agroup__joypad_html_gaf1f491d1f9849be157cb4a50705c8dcb"><div class="ttname"><a href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a></div><div class="ttdeci">joypad_port_t</div><div class="ttdoc">Joypad Port Numbers.</div><div class="ttdef"><b>Definition</b> joypad.h:70</div></div>
+<div class="ttc" id="agroup__joypad_html_ggaf1f491d1f9849be157cb4a50705c8dcba57a21034d1303ee700edf660663697d8"><div class="ttname"><a href="group__joypad.html#ggaf1f491d1f9849be157cb4a50705c8dcba57a21034d1303ee700edf660663697d8">JOYPAD_PORT_1</a></div><div class="ttdeci">@ JOYPAD_PORT_1</div><div class="ttdoc">Joypad Port 1.</div><div class="ttdef"><b>Definition</b> joypad.h:72</div></div>
 </div><!-- fragment -->
 <p>Convenience macro to iterate through all Joypad ports. </p>
 
@@ -1235,6 +1219,8 @@ Position of the analog R trigger. (0, 255) <p>This value will be close to zero w
 <tr><td class="fieldname"><a id="gga0b64bfb89fc2195628b65eb3ece31c70ac910bfd5dfac4d16ab87df921411a983" name="gga0b64bfb89fc2195628b65eb3ece31c70ac910bfd5dfac4d16ab87df921411a983"></a>JOYPAD_ACCESSORY_ERROR_ABSENT&#160;</td><td class="fielddoc"><p>Accessory is absent. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga0b64bfb89fc2195628b65eb3ece31c70a06aa6899c02dccbf67a342dc7ce69175" name="gga0b64bfb89fc2195628b65eb3ece31c70a06aa6899c02dccbf67a342dc7ce69175"></a>JOYPAD_ACCESSORY_ERROR_CHECKSUM&#160;</td><td class="fielddoc"><p>Checksum error. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga0b64bfb89fc2195628b65eb3ece31c70a1bf810555134d013e21c413a7c8b8030" name="gga0b64bfb89fc2195628b65eb3ece31c70a1bf810555134d013e21c413a7c8b8030"></a>JOYPAD_ACCESSORY_ERROR_CONTROLLER_PAK_BANK_SWITCH&#160;</td><td class="fielddoc"><p>Controller Pak does not support bank switching. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga0b64bfb89fc2195628b65eb3ece31c70a60b92217d9a04be9911a693a11289755" name="gga0b64bfb89fc2195628b65eb3ece31c70a60b92217d9a04be9911a693a11289755"></a>JOYPAD_ACCESSORY_ERROR_TRANSFER_PAK_STATUS_CHANGE&#160;</td><td class="fielddoc"><p>Transfer Pak status changed. </p>
 </td></tr>
@@ -1620,33 +1606,6 @@ Position of the analog R trigger. (0, 255) <p>This value will be close to zero w
 
 </div>
 </div>
-<a id="gafd402303ac2d8f5df4740ea105aad498" name="gafd402303ac2d8f5df4740ea105aad498"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafd402303ac2d8f5df4740ea105aad498">&#9670;&#160;</a></span>joypad_get_identifier()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group__joybus.html#gad91e902f4c8cb12fb4f5aa288d423b44">joybus_identifier_t</a> joypad_get_identifier </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a>&#160;</td>
-          <td class="paramname"><em>port</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the Joybus device identifier for a Joypad port. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">port</td><td>Joypad port number (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb" title="Joypad Port Numbers.">joypad_port_t</a>)</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Joybus device identifier (<a class="el" href="group__joybus.html#gad91e902f4c8cb12fb4f5aa288d423b44" title="Joypad Identifier type.">joybus_identifier_t</a>) </dd></dl>
-
-</div>
-</div>
 <a id="ga9234ca39c2da65bf5af5d50f344c30fb" name="ga9234ca39c2da65bf5af5d50f344c30fb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga9234ca39c2da65bf5af5d50f344c30fb">&#9670;&#160;</a></span>joypad_get_style()</h2>
 
@@ -1698,60 +1657,6 @@ Position of the analog R trigger. (0, 255) <p>This value will be close to zero w
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Joypad accessory type enumeration value (<a class="el" href="group__joypad.html#ga9c09e519d92917bcc942a634ec6f5fda" title="Joypad Accessories enumeration.">joypad_accessory_type_t</a>) </dd></dl>
-
-</div>
-</div>
-<a id="ga237c57a3d8b90bb26cecc622f1e26f0e" name="ga237c57a3d8b90bb26cecc622f1e26f0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga237c57a3d8b90bb26cecc622f1e26f0e">&#9670;&#160;</a></span>joypad_get_accessory_state()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int joypad_get_accessory_state </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a>&#160;</td>
-          <td class="paramname"><em>port</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the Joypad accessory state for a Joypad port. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">port</td><td>Joypad port number (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb" title="Joypad Port Numbers.">joypad_port_t</a>)</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Joypad accessory state enumeration value </dd></dl>
-
-</div>
-</div>
-<a id="ga35d783639e31863ea8fdc627ecb86fab" name="ga35d783639e31863ea8fdc627ecb86fab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga35d783639e31863ea8fdc627ecb86fab">&#9670;&#160;</a></span>joypad_get_accessory_error()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int joypad_get_accessory_error </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a>&#160;</td>
-          <td class="paramname"><em>port</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the Joypad accessory error for a Joypad port. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">port</td><td>Joypad port number (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb" title="Joypad Port Numbers.">joypad_port_t</a>) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Joypad accessory error enumeration value </dd></dl>
 
 </div>
 </div>
@@ -2255,13 +2160,17 @@ Position of the analog R trigger. (0, 255) <p>This value will be close to zero w
 <li>Step 2A: Set Controller Pak "linear paging bank" to 0</li>
 <li>Step 2B: Backup the Controller Pak "label" area</li>
 <li>Step 2C: Overwrite the Controller Pak "label" area</li>
-<li>Step 2D: Read back the "label" area to detect Controller Pak</li>
-<li>Step 2E: Restore the Controller Pak "label" area</li>
+<li>Step 2D: Read back the "label" area to detect Controller Pak If matches, it is a Controller Pak. Continue to Step 2E, to check for multi-bank Controller Paks. If not matches, it is not a Controller Pak. Continue to Step 3A.</li>
+<li>Step 2E: Set Controller Pak "linear paging bank" to 1</li>
+<li>Step 2F: Read back the "label" area</li>
+<li>Step 2G: If the label area was corrupted by bankswitch, the Controller Pak does not support bankswitching. Otherwise switch back to "linear paging bank" 0.</li>
+<li>Step 2H: Restore the original label area. Done: Controller Pak detected.</li>
 <li>Step 3A: Write probe value to detect Rumble Pak</li>
 <li>Step 3B: Read probe value to detect Rumble Pak</li>
 <li>Step 4A: Write probe value to detect Transfer Pak</li>
-<li>Step 4B: Read probe value to detect Transfer Pak</li>
-<li>Step 4C: Write probe value to turn off Transfer Pak</li>
+<li>Step 4B: Wait for Transfer Pak to power on</li>
+<li>Step 4C: Read probe value to detect Transfer Pak</li>
+<li>Step 4D: Write probe value to turn off Transfer Pak</li>
 <li>Step 5A: Write probe value to detect Snap Station</li>
 <li>Step 5B: Read probe value to detect Snap Station</li>
 </ul>
@@ -2449,6 +2358,38 @@ Position of the analog R trigger. (0, 255) <p>This value will be close to zero w
 
 </div>
 </div>
+<a id="ga5043f6297d8c29c078f4dbd61d7b7c83" name="ga5043f6297d8c29c078f4dbd61d7b7c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5043f6297d8c29c078f4dbd61d7b7c83">&#9670;&#160;</a></span>joypad_controller_pak_supports_bankswitching()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool joypad_controller_pak_supports_bankswitching </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb">joypad_port_t</a>&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return true if the Controller Pak supports bankswitching. </p>
+<p>Most controller paks (including all first-party ones) support a bankswitching protocol, even if they only have only one 32 KiB bank installed. However, some third-party controller paks did not bother implement the bankswitching protocol, and in fact trying to change bank can cause data corruption.</p>
+<p>During the initial accessory detection, the Controller Pak is probed to verify if it supports bankswitching or not. This function returns the result of that probe.</p>
+<p>Notice that the joypad accessory detection routine does not perform any write tests to determine the number of banks in a Controller Pak. It can only determine if the Controller Pak supports bankswitching or not, but not how many banks it has.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">port</td><td>Joypad port number (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb" title="Joypad Port Numbers.">joypad_port_t</a>) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true The Controller Pak supports bankswitching </dd>
+<dd>
+false The Controller Pak does not support bankswitching </dd></dl>
+
+</div>
+</div>
 <a id="ga16f4d256acc2406142196811dab0cd04" name="ga16f4d256acc2406142196811dab0cd04"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga16f4d256acc2406142196811dab0cd04">&#9670;&#160;</a></span>joypad_controller_pak_set_bank()</h2>
 
@@ -2476,9 +2417,9 @@ Position of the analog R trigger. (0, 255) <p>This value will be close to zero w
 </div><div class="memdoc">
 
 <p>Select the active bank for a Controller Pak. </p>
-<p>Most controller paks (including all first-party ones) have a single bank of 32 KiB of storage. However, some third-party controller paks have multiple banks, and require an explicit bank switch operation to access data beyond the first 32 KiB.</p>
 <p>Generic transfer functions for accessories like <a class="el" href="group__joypad.html#ga66c3c56133810a75783b594b85bee28b" title="Read or write data from a Joypad accessory asynchronously.">joypad_accessory_xfer_async</a> will only access the active bank.</p>
-<p>There is no way to probe the number of banks in a Controller Pak at the hardware level. In situation where probing is necessary (eg: formatting functions), write tests can be performed to determine the number of banks.</p>
+<p>This function will return <a class="el" href="group__joypad.html#gga0b64bfb89fc2195628b65eb3ece31c70a1bf810555134d013e21c413a7c8b8030" title="Controller Pak does not support bank switching.">JOYPAD_ACCESSORY_ERROR_CONTROLLER_PAK_BANK_SWITCH</a> if the Controller Pak is not multi-bank, as issuing a bank switch command to a single-bank Controller Pak would result in data corruption.</p>
+<p>Notice that since the actual number of banks in a Controller Pak is not known, this function cannot check if the bank number is valid. Setting an invalid bank number will result in undefined behavior.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">port</td><td>Joypad port number (<a class="el" href="group__joypad.html#gaf1f491d1f9849be157cb4a50705c8dcb" title="Joypad Port Numbers.">joypad_port_t</a>) </td></tr>
@@ -2632,7 +2573,7 @@ Position of the analog R trigger. (0, 255) <p>This value will be close to zero w
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

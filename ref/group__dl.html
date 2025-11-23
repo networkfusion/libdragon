@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -136,6 +137,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>__cxa_finalize</b> (v
 <tr class="memitem:ga2bbbe680edd6e3918311f5dbf33b3996" id="r_ga2bbbe680edd6e3918311f5dbf33b3996"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dl.html#ga2bbbe680edd6e3918311f5dbf33b3996">dlerror</a> (void)</td></tr>
 <tr class="memdesc:ga2bbbe680edd6e3918311f5dbf33b3996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return last error that occurred in dynamic linker.  <br /></td></tr>
 <tr class="separator:ga2bbbe680edd6e3918311f5dbf33b3996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6a63c7eff0f164f7ec47c494c10ad9ea" id="r_ga6a63c7eff0f164f7ec47c494c10ad9ea"><td class="memItemLeft" align="right" valign="top"><a id="ga6a63c7eff0f164f7ec47c494c10ad9ea" name="ga6a63c7eff0f164f7ec47c494c10ad9ea"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>__dl_register_inspector</b> (void)</td></tr>
+<tr class="memdesc:ga6a63c7eff0f164f7ec47c494c10ad9ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register the inspector page for loaded modules. <br /></td></tr>
+<tr class="separator:ga6a63c7eff0f164f7ec47c494c10ad9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -143,9 +148,6 @@ Variables</h2></td></tr>
 <a class="el" href="dlfcn__internal_8h.html#ae9345b0464ff267587c8894ec9a2611e">demangle_func</a>&#160;</td><td class="memItemRight" valign="bottom"><b>__dl_demangle_func</b></td></tr>
 <tr class="memdesc:ga452a3bca50606a9b7d383f78c32fda66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Demangler function. <br /></td></tr>
 <tr class="separator:ga452a3bca50606a9b7d383f78c32fda66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga37b8707ed548a3304c09b60375cb8cc5" id="r_ga37b8707ed548a3304c09b60375cb8cc5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dlfcn__internal_8h.html#a4dddc3aad26b92486faad586a5397448">module_lookup_func</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dl.html#ga37b8707ed548a3304c09b60375cb8cc5">__dl_lookup_module</a></td></tr>
-<tr class="memdesc:ga37b8707ed548a3304c09b60375cb8cc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Module resolver.  <br /></td></tr>
-<tr class="separator:ga37b8707ed548a3304c09b60375cb8cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0ff5b9ea5e1793650e5fc6af9e431b14" id="r_ga0ff5b9ea5e1793650e5fc6af9e431b14"><td class="memItemLeft" align="right" valign="top"><a id="ga0ff5b9ea5e1793650e5fc6af9e431b14" name="ga0ff5b9ea5e1793650e5fc6af9e431b14"></a>
 <a class="el" href="dlfcn__internal_8h.html#ae6c987b4353a81bf3f28a6bf9546cfeb">dl_module_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>__dl_list_head</b></td></tr>
 <tr class="memdesc:ga0ff5b9ea5e1793650e5fc6af9e431b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Module list head. <br /></td></tr>
@@ -380,28 +382,10 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>__dl_num_loaded_mod
 
 </div>
 </div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="ga37b8707ed548a3304c09b60375cb8cc5" name="ga37b8707ed548a3304c09b60375cb8cc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga37b8707ed548a3304c09b60375cb8cc5">&#9670;&#160;</a></span>__dl_lookup_module</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="dlfcn__internal_8h.html#a4dddc3aad26b92486faad586a5397448">module_lookup_func</a> __dl_lookup_module</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Module resolver. </p>
-<p>Module lookup function. </p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -102,9 +103,15 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga9744ee30655da8fdabd60f178b8c82ed" id="r_ga9744ee30655da8fdabd60f178b8c82ed"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__rompak.html#ga9744ee30655da8fdabd60f178b8c82ed">rompak_search_ext</a> (const char *ext)</td></tr>
-<tr class="memdesc:ga9744ee30655da8fdabd60f178b8c82ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search a file in the rompak by extension.  <br /></td></tr>
-<tr class="separator:ga9744ee30655da8fdabd60f178b8c82ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1d1c8caa78427009373b771615e6e405" id="r_ga1d1c8caa78427009373b771615e6e405"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__rompak.html#ga1d1c8caa78427009373b771615e6e405">rompak_walk</a> (<a class="el" href="group__rompak.html#ga0ba9d0e12cf446523c76429d011c8009">rompak_walk_callback_t</a> callback, void *ctx)</td></tr>
+<tr class="memdesc:ga1d1c8caa78427009373b771615e6e405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Walk the rompak and call the callback for each file found.  <br /></td></tr>
+<tr class="separator:ga1d1c8caa78427009373b771615e6e405"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c032976d2fee568ff82a1a2bfdb58eb" id="r_ga3c032976d2fee568ff82a1a2bfdb58eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="n64types_8h.html#abbde255c6ff18b478f46cb7fdf1357e6">pi_addr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__rompak.html#ga3c032976d2fee568ff82a1a2bfdb58eb">rompak_search_ext</a> (const char *ext, size_t *size)</td></tr>
+<tr class="memdesc:ga3c032976d2fee568ff82a1a2bfdb58eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search a file in the rompak by extension.  <br /></td></tr>
+<tr class="separator:ga3c032976d2fee568ff82a1a2bfdb58eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga22a6f1c437199398a176ccf1e673e537" id="r_ga22a6f1c437199398a176ccf1e673e537"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__rompak.html#ga22a6f1c437199398a176ccf1e673e537">rompak_version_parse</a> (<a class="el" href="n64types_8h.html#abbde255c6ff18b478f46cb7fdf1357e6">pi_addr_t</a> file_addr, size_t size, <a class="el" href="group__rompak.html#ga13776a1b5687c0ac198286d66d0c1d91">rompak_version_callback_t</a> callback, void *ctx)</td></tr>
+<tr class="memdesc:ga22a6f1c437199398a176ccf1e673e537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a version file and call the callback for each key-value pair.  <br /></td></tr>
+<tr class="separator:ga22a6f1c437199398a176ccf1e673e537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>ROM bundle support. </p>
@@ -173,6 +180,12 @@ offset</td>
 <td class="fielddoc">
 Offset of the file in the ROM. </td></tr>
 <tr><td class="fieldtype">
+<a id="ac511f1f631597e4c64e42bc9302e1bec" name="ac511f1f631597e4c64e42bc9302e1bec"></a>uint32_t</td>
+<td class="fieldname">
+size</td>
+<td class="fielddoc">
+Size of the file in bytes. </td></tr>
+<tr><td class="fieldtype">
 <a id="a0fd8de7aa9655d5316c773c1578034e6" name="a0fd8de7aa9655d5316c773c1578034e6"></a>char</td>
 <td class="fieldname">
 name[]</td>
@@ -185,7 +198,7 @@ Name of the file. </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

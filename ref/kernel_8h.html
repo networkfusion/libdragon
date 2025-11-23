@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -106,6 +107,13 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>KMUTEX_RECURSIVE</b>&#160;&#160;&#160;(1&lt;&lt;0)</td></tr>
 <tr class="memdesc:gac1681a348411b961528c467d15eaa31d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursive mutex. <br /></td></tr>
 <tr class="separator:gac1681a348411b961528c467d15eaa31d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga501a18a4a25867dbd68de0b79b38d126" id="r_ga501a18a4a25867dbd68de0b79b38d126"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#ga501a18a4a25867dbd68de0b79b38d126">kthread_lock</a>()&#160;&#160;&#160;<a class="el" href="interrupt_8c.html#a52651bf1923b2c97e8b4da0ac6b99fdb">disable_interrupts</a>()</td></tr>
+<tr class="memdesc:ga501a18a4a25867dbd68de0b79b38d126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock the current thread (disable preemption)  <br /></td></tr>
+<tr class="separator:ga501a18a4a25867dbd68de0b79b38d126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae3f2c0f1853a9ca83a52fa9ea50db618" id="r_gae3f2c0f1853a9ca83a52fa9ea50db618"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>kthread_unlock</b>()&#160;&#160;&#160;<a class="el" href="interrupt_8c.html#a154b837080a092ecbab0735a0254c4b4">enable_interrupts</a>()</td></tr>
+<tr class="memdesc:gae3f2c0f1853a9ca83a52fa9ea50db618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlock the current thread (reenable preemption) <br /></td></tr>
+<tr class="separator:gae3f2c0f1853a9ca83a52fa9ea50db618"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -139,9 +147,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga0c66c11d399bd9403592ec63dda70be4" id="r_ga0c66c11d399bd9403592ec63dda70be4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#ga0c66c11d399bd9403592ec63dda70be4">kthread_backtrace</a> (<a class="el" href="structkthread__t.html">kthread_t</a> *th, void *buffer, int size)</td></tr>
 <tr class="memdesc:ga0c66c11d399bd9403592ec63dda70be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the backtrace of the specified thread.  <br /></td></tr>
 <tr class="separator:ga0c66c11d399bd9403592ec63dda70be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6658800652843561851344a8c23292fe" id="r_ga6658800652843561851344a8c23292fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#ga6658800652843561851344a8c23292fe">kthread_sleep</a> (uint32_t ticks)</td></tr>
-<tr class="memdesc:ga6658800652843561851344a8c23292fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for the specified interval, allowing execution of other threads.  <br /></td></tr>
-<tr class="separator:ga6658800652843561851344a8c23292fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6eb05d622198df37c6ad4f8911c87d0" id="r_gab6eb05d622198df37c6ad4f8911c87d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#gab6eb05d622198df37c6ad4f8911c87d0">kthread_sleep</a> (int64_t ticks)</td></tr>
+<tr class="memdesc:gab6eb05d622198df37c6ad4f8911c87d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sleep for the specified interval, allowing execution of other threads.  <br /></td></tr>
+<tr class="separator:gab6eb05d622198df37c6ad4f8911c87d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab60c7527a712441eb099bf5eee4012da" id="r_gab60c7527a712441eb099bf5eee4012da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__kernel.html#gab60c7527a712441eb099bf5eee4012da">kthread_set_pri</a> (<a class="el" href="structkthread__t.html">kthread_t</a> *th, int8_t pri)</td></tr>
 <tr class="memdesc:gab60c7527a712441eb099bf5eee4012da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change priority of a thread.  <br /></td></tr>
 <tr class="separator:gab60c7527a712441eb099bf5eee4012da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,7 +211,7 @@ Functions</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

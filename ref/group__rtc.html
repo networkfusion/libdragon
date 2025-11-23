@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -469,6 +470,7 @@ Maximum timestamp. </td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>Use time(NULL) instead. </dd></dl>
 
 </div>
 </div>
@@ -487,6 +489,7 @@ Maximum timestamp. </td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>Use settimeofday instead. </dd></dl>
 
 </div>
 </div>
@@ -561,6 +564,7 @@ Maximum timestamp. </td></tr>
 </div><div class="memdoc">
 
 <p>Convert rtc_time_t into struct tm. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>use <code>struct tm</code> from &lt;time.h&gt; instead of rtc_time_t</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">rtc_time</td><td>rtc_time_t to convert</td></tr>
@@ -588,6 +592,7 @@ Maximum timestamp. </td></tr>
 </div><div class="memdoc">
 
 <p>Convert a struct tm into rtc_time_t. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>use <code>struct tm</code> from &lt;time.h&gt; instead of rtc_time_t</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">time</td><td>struct tm to convert</td></tr>
@@ -617,6 +622,7 @@ Maximum timestamp. </td></tr>
 <p>Calculate sane values for arbitrary time inputs. </p>
 <p>If your time inputs are already sane, nothing should change. This function will clamp date/time values within the expected ranges, including the correct day-of-month based on year/month. It will also recalculate the day-of-week based on the clamped year/month/day.</p>
 <p>This is useful to call while the player is adjusting the time after each input to ensure that the date being set always makes sense before they actually confirm and commit the updated date/time. The rtctest example demonstrates a user-interface for setting the time with live validation.</p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>use <code>struct tm</code> from &lt;time.h&gt; instead of rtc_time_t</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">rtc_time</td><td>Pointer to the RTC time data structure </td></tr>
@@ -629,7 +635,7 @@ Maximum timestamp. </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:32 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="libdragon.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -86,15 +87,39 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define __LIBDRAGON_ROM_INTERNAL_H</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>uint32_t <a class="code hl_function" href="group__rompak.html#ga9744ee30655da8fdabd60f178b8c82ed">rompak_search_ext</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *ext);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="agroup__rompak_html_ga9744ee30655da8fdabd60f178b8c82ed"><div class="ttname"><a href="group__rompak.html#ga9744ee30655da8fdabd60f178b8c82ed">rompak_search_ext</a></div><div class="ttdeci">uint32_t rompak_search_ext(const char *ext)</div><div class="ttdoc">Search a file in the rompak by extension.</div><div class="ttdef"><b>Definition</b> rompak.c:41</div></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="n64types_8h.html">n64types.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;<a class="code" href="n64types_8h.html">n64types.h</a>&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="group__rompak.html#ga0ba9d0e12cf446523c76429d011c8009">   47</a></span><span class="keyword">typedef</span> bool (*<a class="code hl_typedef" href="group__rompak.html#ga0ba9d0e12cf446523c76429d011c8009">rompak_walk_callback_t</a>)(<span class="keywordtype">void</span> *ctx, <span class="keyword">const</span> <span class="keywordtype">char</span> *name, <a class="code hl_typedef" href="n64types_8h.html#abbde255c6ff18b478f46cb7fdf1357e6">pi_addr_t</a> address, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> <span class="keywordtype">void</span> <a class="code hl_function" href="group__rompak.html#ga1d1c8caa78427009373b771615e6e405">rompak_walk</a>(<a class="code hl_typedef" href="group__rompak.html#ga0ba9d0e12cf446523c76429d011c8009">rompak_walk_callback_t</a> callback, <span class="keywordtype">void</span> *ctx);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><a class="code hl_typedef" href="n64types_8h.html#abbde255c6ff18b478f46cb7fdf1357e6">pi_addr_t</a> <a class="code hl_function" href="group__rompak.html#ga3c032976d2fee568ff82a1a2bfdb58eb">rompak_search_ext</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *ext, <span class="keywordtype">size_t</span> *size);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="group__rompak.html#ga13776a1b5687c0ac198286d66d0c1d91">   83</a></span><span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="group__rompak.html#ga13776a1b5687c0ac198286d66d0c1d91">rompak_version_callback_t</a>)(<span class="keywordtype">void</span> *ctx, <span class="keywordtype">char</span> *key, <span class="keywordtype">char</span> *value);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__rompak.html#ga22a6f1c437199398a176ccf1e673e537">rompak_version_parse</a>(<a class="code hl_typedef" href="n64types_8h.html#abbde255c6ff18b478f46cb7fdf1357e6">pi_addr_t</a> file_addr, <span class="keywordtype">size_t</span> size, </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_typedef" href="group__rompak.html#ga13776a1b5687c0ac198286d66d0c1d91">rompak_version_callback_t</a> callback, <span class="keywordtype">void</span> *ctx);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__rompak_html_ga0ba9d0e12cf446523c76429d011c8009"><div class="ttname"><a href="group__rompak.html#ga0ba9d0e12cf446523c76429d011c8009">rompak_walk_callback_t</a></div><div class="ttdeci">bool(* rompak_walk_callback_t)(void *ctx, const char *name, pi_addr_t address, size_t size)</div><div class="ttdoc">Callback function for rompak walking.</div><div class="ttdef"><b>Definition</b> rompak_internal.h:47</div></div>
+<div class="ttc" id="agroup__rompak_html_ga13776a1b5687c0ac198286d66d0c1d91"><div class="ttname"><a href="group__rompak.html#ga13776a1b5687c0ac198286d66d0c1d91">rompak_version_callback_t</a></div><div class="ttdeci">void(* rompak_version_callback_t)(void *ctx, char *key, char *value)</div><div class="ttdoc">Callback function for version file parsing.</div><div class="ttdef"><b>Definition</b> rompak_internal.h:83</div></div>
+<div class="ttc" id="agroup__rompak_html_ga1d1c8caa78427009373b771615e6e405"><div class="ttname"><a href="group__rompak.html#ga1d1c8caa78427009373b771615e6e405">rompak_walk</a></div><div class="ttdeci">void rompak_walk(rompak_walk_callback_t callback, void *ctx)</div><div class="ttdoc">Walk the rompak and call the callback for each file found.</div><div class="ttdef"><b>Definition</b> rompak.c:90</div></div>
+<div class="ttc" id="agroup__rompak_html_ga22a6f1c437199398a176ccf1e673e537"><div class="ttname"><a href="group__rompak.html#ga22a6f1c437199398a176ccf1e673e537">rompak_version_parse</a></div><div class="ttdeci">void rompak_version_parse(pi_addr_t file_addr, size_t size, rompak_version_callback_t callback, void *ctx)</div><div class="ttdoc">Parse a version file and call the callback for each key-value pair.</div><div class="ttdef"><b>Definition</b> rompak.c:126</div></div>
+<div class="ttc" id="agroup__rompak_html_ga3c032976d2fee568ff82a1a2bfdb58eb"><div class="ttname"><a href="group__rompak.html#ga3c032976d2fee568ff82a1a2bfdb58eb">rompak_search_ext</a></div><div class="ttdeci">pi_addr_t rompak_search_ext(const char *ext, size_t *size)</div><div class="ttdoc">Search a file in the rompak by extension.</div><div class="ttdef"><b>Definition</b> rompak.c:107</div></div>
+<div class="ttc" id="an64types_8h_html"><div class="ttname"><a href="n64types_8h.html">n64types.h</a></div><div class="ttdoc">Custom types used by libdragon.</div></div>
+<div class="ttc" id="an64types_8h_html_abbde255c6ff18b478f46cb7fdf1357e6"><div class="ttname"><a href="n64types_8h.html#abbde255c6ff18b478f46cb7fdf1357e6">pi_addr_t</a></div><div class="ttdeci">uint32_t pi_addr_t</div><div class="ttdoc">A PI address (on the peripheral bus)</div><div class="ttdef"><b>Definition</b> n64types.h:77</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 15 2025 20:45:31 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -1,13 +1,18 @@
 var searchData=
 [
-  ['kernel_2ec_0',['kernel.c',['../kernel_8c.html',1,'']]],
-  ['kernel_2eh_1',['kernel.h',['../kernel_8h.html',1,'']]],
-  ['kernel_5finternal_2eh_2',['kernel_internal.h',['../kernel__internal_8h.html',1,'']]],
-  ['kirq_2ec_3',['kirq.c',['../kirq_8c.html',1,'']]],
-  ['kirq_2eh_4',['kirq.h',['../kirq_8h.html',1,'']]],
-  ['kqueue_2ec_5',['kqueue.c',['../kqueue_8c.html',1,'']]],
-  ['kqueue_2eh_6',['kqueue.h',['../kqueue_8h.html',1,'']]],
-  ['ksemaphore_2ec_7',['ksemaphore.c',['../ksemaphore_8c.html',1,'']]],
-  ['ksemaphore_2eh_8',['ksemaphore.h',['../ksemaphore_8h.html',1,'']]],
-  ['ktls_2eh_9',['ktls.h',['../ktls_8h.html',1,'']]]
+  ['joybus_2ec_0',['joybus.c',['../joybus_8c.html',1,'']]],
+  ['joybus_2eh_1',['joybus.h',['../joybus_8h.html',1,'']]],
+  ['joybus_5faccessory_2ec_2',['joybus_accessory.c',['../joybus__accessory_8c.html',1,'']]],
+  ['joybus_5faccessory_2eh_3',['joybus_accessory.h',['../joybus__accessory_8h.html',1,'']]],
+  ['joybus_5faccessory_5finternal_2eh_4',['joybus_accessory_internal.h',['../joybus__accessory__internal_8h.html',1,'']]],
+  ['joybus_5fcommands_2eh_5',['joybus_commands.h',['../joybus__commands_8h.html',1,'']]],
+  ['joybus_5frtc_2ec_6',['joybus_rtc.c',['../joybus__rtc_8c.html',1,'']]],
+  ['joybus_5frtc_2eh_7',['joybus_rtc.h',['../joybus__rtc_8h.html',1,'']]],
+  ['joyframe_2ec_8',['joyframe.c',['../joyframe_8c.html',1,'']]],
+  ['joyframe_2eh_9',['joyframe.h',['../joyframe_8h.html',1,'']]],
+  ['joypad_2ec_10',['joypad.c',['../joypad_8c.html',1,'']]],
+  ['joypad_2eh_11',['joypad.h',['../joypad_8h.html',1,'']]],
+  ['joypad_5faccessory_2ec_12',['joypad_accessory.c',['../joypad__accessory_8c.html',1,'']]],
+  ['joypad_5faccessory_2eh_13',['joypad_accessory.h',['../joypad__accessory_8h.html',1,'']]],
+  ['joypad_5finternal_2eh_14',['joypad_internal.h',['../joypad__internal_8h.html',1,'']]]
 ];

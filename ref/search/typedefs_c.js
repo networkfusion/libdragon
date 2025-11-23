@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sample_5fptr_5ft_0',['sample_ptr_t',['../samplebuffer_8h.html#aef020c0b192c534ea79e1f94c8c7228f',1,'samplebuffer.h']]],
-  ['syscall_5fhandler_5ft_1',['syscall_handler_t',['../exception_8h.html#aceadbbfdaee48a1075dac31bddc20d1c',1,'exception.h']]]
+  ['phys_5faddr_5ft_0',['phys_addr_t',['../n64types_8h.html#aaf5dda50732dd08c2496ce37ad95b0cd',1,'n64types.h']]],
+  ['pi_5faddr_5ft_1',['pi_addr_t',['../n64types_8h.html#abbde255c6ff18b478f46cb7fdf1357e6',1,'n64types.h']]]
 ];
