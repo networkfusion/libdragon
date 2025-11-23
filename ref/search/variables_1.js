@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['a_0',['a',['../group__graphics.html#a56f318d39568f62bc8c09e3cddb76216',1,'color_t::a'],['../group__controller.html#a7fc56270e7a70fa81a5935b72eacbe29',1,'_SI_condat.__unnamed51__.__unnamed55__::A'],['../group__joybus__commands.html#a0cc175b9c0f1b6a831c399e269772661',1,'joybus_cmd_gcn_controller_read_long_port_t.recv::a'],['../group__joybus__commands.html#a0cc175b9c0f1b6a831c399e269772661',1,'joybus_cmd_gcn_controller_read_port_t.recv::a'],['../group__joypad.html#ae168357aa93d88df71010526c94c2d7b',1,'joypad_buttons_t::a'],['../group__joybus__commands.html#a0cc175b9c0f1b6a831c399e269772661',1,'joybus_cmd_n64_controller_read_port_t.recv::a']]],
+  ['a_0',['a',['../group__joypad.html#ae168357aa93d88df71010526c94c2d7b',1,'joypad_buttons_t::a'],['../group__graphics.html#a56f318d39568f62bc8c09e3cddb76216',1,'color_t::a'],['../group__controller.html#a7fc56270e7a70fa81a5935b72eacbe29',1,'_SI_condat.__unnamed51__.__unnamed55__::A'],['../group__joybus__commands.html#a0cc175b9c0f1b6a831c399e269772661',1,'joybus_cmd_gcn_controller_read_long_port_t.recv::a'],['../group__joybus__commands.html#a0cc175b9c0f1b6a831c399e269772661',1,'joybus_cmd_n64_controller_read_port_t.recv::a'],['../group__joybus__commands.html#a0cc175b9c0f1b6a831c399e269772661',1,'joybus_cmd_gcn_controller_read_port_t.recv::a']]],
   ['access_1',['access',['../group__joybus.html#af2bd5bc394849d47abc49e6d4a4c575e',1,'joybus_transfer_pak_status_t']]],
   ['active_5fanims_2',['active_anims',['../model64__internal_8h.html#ac5d98e7fbcd52530f94aecc19db789d7',1,'model64_t']]],
   ['addr_3',['addr',['../structAY8910.html#a32675765868b0795c2c497f9bdedd11f',1,'AY8910::addr'],['../group__backtrace.html#acb07c1948de8cb88001b17c67ad8175e',1,'backtrace_frame_t::addr']]],
@@ -27,12 +27,13 @@ var searchData=
   ['ascent_24',['ascent',['../rdpq__font__internal_8h.html#aad9f4da90011162a912859a8941f42cb',1,'rdpq_font_t']]],
   ['aspect_5fratio_25',['aspect_ratio',['../group__display.html#a7b707689c649e033a28453f34b6bf1b3',1,'resolution_t']]],
   ['assert_5fhandler_26',['assert_handler',['../structrsp__ucode__t.html#a4e6b8b919f54b9af109d67cd6f851ebe',1,'rsp_ucode_t']]],
-  ['atlas_5fid_27',['atlas_id',['../rdpq__paragraph_8h.html#a6db6aa4b28ce9a43386ec80452d5d613',1,'rdpq_paragraph_char_t.__unnamed83__.__unnamed85__']]],
-  ['atlases_28',['atlases',['../rdpq__font__internal_8h.html#a59d5fe9436f8dd7f1ee94c553998c218',1,'rdpq_font_t']]],
-  ['attack_29',['attack',['../ay8910_8h.html#ad32733abe56129ddcf068f8ee5d1e1b1',1,'AYEnvelope']]],
-  ['attr_5ffactor_30',['attr_factor',['../rdpq__tri_8c.html#a3e060c897ad2cb3eefabb55cc994542d',1,'rdpq_tri_edge_data_t']]],
-  ['attrs_31',['attrs',['../ym64_8c.html#a0903c9d1a7c649656236eca442908c8f',1,'ym5header']]],
-  ['author_32',['author',['../ym64_8h.html#a294e33c591e9385f2dd616b2de3412bc',1,'ym64player_songinfo_t']]],
-  ['autosync_33',['autosync',['../rdpq__internal_8h.html#a8d2ac563cf98083991bcf5b730539121',1,'rdpq_tracking_t']]],
-  ['ay_34',['ay',['../ym64_8h.html#ac2f49185869569f91066b6f53627a941',1,'ym64player_t']]]
+  ['atexit_27',['atexit',['../rspq__internal_8h.html#afad228001f99cad36277498279bc6876',1,'rspq_block_t']]],
+  ['atlas_5fid_28',['atlas_id',['../rdpq__paragraph_8h.html#a6db6aa4b28ce9a43386ec80452d5d613',1,'rdpq_paragraph_char_t.__unnamed83__.__unnamed85__']]],
+  ['atlases_29',['atlases',['../rdpq__font__internal_8h.html#a59d5fe9436f8dd7f1ee94c553998c218',1,'rdpq_font_t']]],
+  ['attack_30',['attack',['../ay8910_8h.html#ad32733abe56129ddcf068f8ee5d1e1b1',1,'AYEnvelope']]],
+  ['attr_5ffactor_31',['attr_factor',['../rdpq__tri_8c.html#a3e060c897ad2cb3eefabb55cc994542d',1,'rdpq_tri_edge_data_t']]],
+  ['attrs_32',['attrs',['../ym64_8c.html#a0903c9d1a7c649656236eca442908c8f',1,'ym5header']]],
+  ['author_33',['author',['../ym64_8h.html#a294e33c591e9385f2dd616b2de3412bc',1,'ym64player_songinfo_t']]],
+  ['autosync_34',['autosync',['../rdpq__internal_8h.html#a8d2ac563cf98083991bcf5b730539121',1,'rdpq_tracking_t']]],
+  ['ay_35',['ay',['../ym64_8h.html#ac2f49185869569f91066b6f53627a941',1,'ym64player_t']]]
 ];

@@ -91,6 +91,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrspq__block__cb__t.html">rspq_block_cb_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Linked list of callbacks for storage inside a rspq block.  <a href="structrspq__block__cb__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:structrspq__block__t" id="r_structrspq__block__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rspq__internal_8h.html#structrspq__block__t">rspq_block_t</a></td></tr>
 <tr class="memdesc:structrspq__block__t"><td class="mdescLeft">&#160;</td><td class="mdescRight">A rspq block: pre-recorded array of commands.  <a href="rspq__internal_8h.html#structrspq__block__t">More...</a><br /></td></tr>
 <tr class="separator:structrspq__block__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -212,6 +215,12 @@ Nesting level of the block. </td></tr>
 rdp_block</td>
 <td class="fielddoc">
 Option RDP static buffer (with RDP commands) </td></tr>
+<tr><td class="fieldtype">
+<a id="afad228001f99cad36277498279bc6876" name="afad228001f99cad36277498279bc6876"></a><a class="el" href="structrspq__block__cb__t.html">rspq_block_cb_t</a> *</td>
+<td class="fieldname">
+atexit</td>
+<td class="fielddoc">
+List of callbacks to call upon freeing the block. </td></tr>
 <tr><td class="fieldtype">
 <a id="a7e11bb79e816a11c5bd8ccb685d56bf0" name="a7e11bb79e816a11c5bd8ccb685d56bf0"></a>uint32_t</td>
 <td class="fieldname">
@@ -632,7 +641,7 @@ false if there are no more callbacks to be processed </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 16:57:56 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Nov 23 2025 20:57:59 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
