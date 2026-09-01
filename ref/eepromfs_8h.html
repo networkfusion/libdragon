@@ -109,7 +109,7 @@ Macros</h2></td></tr>
 <tr class="separator:a13af32c7614c4d58657b7d45daf7aea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa6deb922916e94dc53b877da2084d5b" id="r_aaa6deb922916e94dc53b877da2084d5b"><td class="memItemLeft" align="right" valign="top"><a id="aaa6deb922916e94dc53b877da2084d5b" name="aaa6deb922916e94dc53b877da2084d5b"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>EEPFS_EBADFS</b>&#160;&#160;&#160;-3</td></tr>
-<tr class="memdesc:aaa6deb922916e94dc53b877da2084d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bad filesystem. <br /></td></tr>
+<tr class="memdesc:aaa6deb922916e94dc53b877da2084d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filesystem is too big for the EEPROM. <br /></td></tr>
 <tr class="separator:aaa6deb922916e94dc53b877da2084d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ef2b0ae7bb793fab3654345b3391fb1" id="r_a5ef2b0ae7bb793fab3654345b3391fb1"><td class="memItemLeft" align="right" valign="top"><a id="a5ef2b0ae7bb793fab3654345b3391fb1" name="a5ef2b0ae7bb793fab3654345b3391fb1"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>EEPFS_ENOMEM</b>&#160;&#160;&#160;-4</td></tr>
@@ -123,6 +123,10 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>EEPFS_ECONFLICT</b>&#160;&#160;&#160;-6</td></tr>
 <tr class="memdesc:a2103f842292166abcdca2f9fa051c295"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filesystem already initialized. <br /></td></tr>
 <tr class="separator:a2103f842292166abcdca2f9fa051c295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad075d78ac7017da9b22440c93f743c55" id="r_ad075d78ac7017da9b22440c93f743c55"><td class="memItemLeft" align="right" valign="top"><a id="ad075d78ac7017da9b22440c93f743c55" name="ad075d78ac7017da9b22440c93f743c55"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>EEPFS_CORRUPTED</b>&#160;&#160;&#160;-7</td></tr>
+<tr class="memdesc:ad075d78ac7017da9b22440c93f743c55"><td class="mdescLeft">&#160;</td><td class="mdescRight">File is corrupted (checksum mismatch) <br /></td></tr>
+<tr class="separator:ad075d78ac7017da9b22440c93f743c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -177,7 +181,7 @@ path</td>
 File path. <p>This cannot be NULL and must be a <code>\0</code>-terminated string.</p>
 <p>There are no enforced limitations on directory structure or file naming conventions except that all paths within the filesystem must be unique and at least one character.</p>
 <p>A leading '/' is optional and will be ignored if set.</p>
-<p>The filesytem does not support entries for directories, nor does it support listing files in a given directory. </p>
+<p>The filesystem does not support entries for directories, nor does it support listing files in a given directory. </p>
 </td></tr>
 <tr><td class="fieldtype">
 <a id="a87704f98ab950ec19e41369dec177b09" name="a87704f98ab950ec19e41369dec177b09"></a>size_t</td>
@@ -190,6 +194,24 @@ File size in bytes. <p>In order to make the most use of limited EEPROM space, fi
 <li>4k EEPROM: 512 - 8 = 504 bytes (63 blocks) free.</li>
 <li>16k EEPROM: 2048 - 8 = 2040 bytes (255 blocks) free. </li>
 </ul>
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a13c96e834adcaddfddc201fe24241ab9" name="a13c96e834adcaddfddc201fe24241ab9"></a>bool</td>
+<td class="fieldname">
+checksum</td>
+<td class="fielddoc">
+Automatically store and verify a checksum of the file. <dl class="preview"><dt><b><a class="el" href="preview.html#_preview000068">Preview API:</a></b></dt><dd>This API is part of the libdragon preview: it may change without notice. Set <code>LIBDRAGON_PREVIEW=1</code> (warnings) or <code>2</code> (silent) in your Makefile to use it.</dd></dl>
+<p>When this flag is set, eepfs will calculate a 16-bit checksum of the file and append it to the file itself. The checksum will also be automatically verified when the file is read. </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a247f1a0ad97080e222eec46324bcc421" name="a247f1a0ad97080e222eec46324bcc421"></a>bool</td>
+<td class="fieldname">
+backup</td>
+<td class="fielddoc">
+Keep a backup copy of the file in the EEPROM. <dl class="preview"><dt><b><a class="el" href="preview.html#_preview000069">Preview API:</a></b></dt><dd>This API is part of the libdragon preview: it may change without notice. Set <code>LIBDRAGON_PREVIEW=1</code> (warnings) or <code>2</code> (silent) in your Makefile to use it.</dd></dl>
+<p>When this flag is set, eepfs will automatically keep a backup copy of the file in the EEPROM. The backup copy is automatically retrieved if the main copy is corrupted (use of checksum is strongly recommended if backup is enabled).</p>
+<p>This is useful to prevent data loss in case of corruption or power failure.</p>
+<p>In addition to the backup copy, the filesystem will also need to store 2 extra bytes (1 per copy) to keep a reference to the newest copy of the file. </p>
 </td></tr>
 </table>
 
@@ -343,7 +365,7 @@ File size in bytes. <p>In order to make the most use of limited EEPROM space, fi
 </div><div class="memdoc">
 
 <p>Writes an entire file to the EEPROM filesystem. </p>
-<p>Each EEPROM block write takes approximately 15 milliseconds; this operation may block for a while!</p>
+<dl class="section note"><dt>Note</dt><dd>Writes are eventually consistent, so they will be performed in background and may take a while to complete. Use <a class="el" href="eeprom_8c.html#a9e25827bb79832fbff270917e3faea43" title="Return whether EEPROM flush is currently running.">eeprom_is_busy</a> or <a class="el" href="eeprom_8c.html#a58d055d3faeb99413bab358a782fd079" title="Wait until the EEPROM is completely idle.">eeprom_wait_idle</a> to check the status of the write.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path of file in EEPROM filesystem to write to </td></tr>
@@ -374,8 +396,8 @@ File size in bytes. <p>In order to make the most use of limited EEPROM space, fi
 
 <p>Erases a file in the EEPROM filesystem. </p>
 <p>Note that "erasing" a file just means writing it full of zeroes. All files in the filesystem must always exist at the size specified during <a class="el" href="eepromfs_8h.html#a85e57900d8cccd4cce21a50273fe0662" title="Initializes the EEPROM filesystem.">eepfs_init</a></p>
-<p>Each EEPROM block write takes approximately 15 milliseconds; this operation may block for a while!</p>
 <p>Be advised: this is a destructive operation that cannot be undone!</p>
+<dl class="section note"><dt>Note</dt><dd>Writes are eventually consistent, so they will be performed in background and may take a while to complete. Use <a class="el" href="eeprom_8c.html#a9e25827bb79832fbff270917e3faea43" title="Return whether EEPROM flush is currently running.">eeprom_is_busy</a> or <a class="el" href="eeprom_8c.html#a58d055d3faeb99413bab358a782fd079" title="Wait until the EEPROM is completely idle.">eeprom_wait_idle</a> to check the status of the write.</dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">EEPFS_ESUCCESS</td><td>if successful </td></tr>
@@ -407,9 +429,7 @@ File size in bytes. <p>In order to make the most use of limited EEPROM space, fi
 <p>There are no guarantees that the data in EEPROM actually matches the expected layout of the filesystem. There are many reasons why a mismatch can occur: EEPROM re-used from another game; a brand new EEPROM that has never been initialized and contains garbage data; the filesystem has changed between builds or version of software currently in development; EEPROM failing due to age or write limits.</p>
 <p>To mitigate these scenarios, it is a good idea to validate that at least the first block of EEPROM matches some known good value.</p>
 <p>If the signature matches, the data in EEPROM is probably what the filesystem expects. If not, the best move is to erase everything and start from zero.</p>
-<dl class="section see"><dt>See also</dt><dd>eepfs_generate_signature </dd>
-<dd>
-<a class="el" href="eepromfs_8h.html#ae542838b659a911edd87d2f53d581517" title="Erases all blocks in EEPROM and sets a new signature.">eepfs_wipe</a></dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="eepromfs_8h.html#ae542838b659a911edd87d2f53d581517" title="Erases all blocks in EEPROM and sets a new signature.">eepfs_wipe</a></dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">true</td><td>if the signature in EEPROM matches the filesystem signature </td></tr>
@@ -438,13 +458,13 @@ File size in bytes. <p>In order to make the most use of limited EEPROM space, fi
 
 <p>Erases all blocks in EEPROM and sets a new signature. </p>
 <p>This is useful when you want to erase all files in the filesystem.</p>
-<p>Each EEPROM block write takes approximately 15 milliseconds; this operation may block for a while:</p>
 <ul>
 <li>4k EEPROM: 64 blocks * 15ms = 960ms!</li>
 <li>16k EEPROM: 256 blocks * 15ms = 3840ms!</li>
 </ul>
 <p>You may want to pause audio in advance of calling this.</p>
 <p>Be advised: this is a destructive operation that cannot be undone!</p>
+<dl class="section note"><dt>Note</dt><dd>Writes are eventually consistent, so they will be performed in background and may take a while to complete. Use <a class="el" href="eeprom_8c.html#a9e25827bb79832fbff270917e3faea43" title="Return whether EEPROM flush is currently running.">eeprom_is_busy</a> or <a class="el" href="eeprom_8c.html#a58d055d3faeb99413bab358a782fd079" title="Wait until the EEPROM is completely idle.">eeprom_wait_idle</a> to check the status of the write.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="eepromfs_8h.html#a352c89ef6e0adc23eba08938c39e7155" title="Validates the first block of EEPROM.">eepfs_verify_signature</a> </dd></dl>
 
 </div>
@@ -452,7 +472,7 @@ File size in bytes. <p>In order to make the most use of limited EEPROM space, fi
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:58 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:13 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

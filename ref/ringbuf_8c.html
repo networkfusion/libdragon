@@ -91,6 +91,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a086ff63bee7a4d4958b46652f7c2d268" id="r_a086ff63bee7a4d4958b46652f7c2d268"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ringbuf_8c.html#a086ff63bee7a4d4958b46652f7c2d268">__ringbuf_copy</a> (<a class="el" href="ringbuf__internal_8h.html#structdecompress__ringbuf__t">decompress_ringbuf_t</a> *ringbuf, int copy_offset, uint8_t *dst, int count)</td></tr>
 <tr class="memdesc:a086ff63bee7a4d4958b46652f7c2d268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract data from the ring buffer, updating it at the same time.  <br /></td></tr>
 <tr class="separator:a086ff63bee7a4d4958b46652f7c2d268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9dfc2d6e3c42678fc4e1f1f26e6551b" id="r_ae9dfc2d6e3c42678fc4e1f1f26e6551b"><td class="memItemLeft" align="right" valign="top"><a id="ae9dfc2d6e3c42678fc4e1f1f26e6551b" name="ae9dfc2d6e3c42678fc4e1f1f26e6551b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>__lookahead_buf_refill</b> (<a class="el" href="ringbuf__internal_8h.html#struct____lookahead__buf__t">__lookahead_buf_t</a> *lb)</td></tr>
+<tr class="memdesc:ae9dfc2d6e3c42678fc4e1f1f26e6551b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refill lookahead buffer when needed. <br /></td></tr>
+<tr class="separator:ae9dfc2d6e3c42678fc4e1f1f26e6551b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dd3533629573284dee264d85383526b" id="r_a2dd3533629573284dee264d85383526b"><td class="memItemLeft" align="right" valign="top"><a id="a2dd3533629573284dee264d85383526b" name="a2dd3533629573284dee264d85383526b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>__lookahead_buf_init</b> (<a class="el" href="ringbuf__internal_8h.html#struct____lookahead__buf__t">__lookahead_buf_t</a> *lb, int fd)</td></tr>
+<tr class="memdesc:a2dd3533629573284dee264d85383526b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a lookahead buffer. <br /></td></tr>
+<tr class="separator:a2dd3533629573284dee264d85383526b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae96c424ede9b86db7e7ea9e269e283ce" id="r_ae96c424ede9b86db7e7ea9e269e283ce"><td class="memItemLeft" align="right" valign="top"><a id="ae96c424ede9b86db7e7ea9e269e283ce" name="ae96c424ede9b86db7e7ea9e269e283ce"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>__lookahead_buf_reset</b> (<a class="el" href="ringbuf__internal_8h.html#struct____lookahead__buf__t">__lookahead_buf_t</a> *lb)</td></tr>
+<tr class="memdesc:ae96c424ede9b86db7e7ea9e269e283ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset lookahead buffer (after caller rewound underlying fd/ROM pointer) <br /></td></tr>
+<tr class="separator:ae96c424ede9b86db7e7ea9e269e283ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
@@ -239,7 +251,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:58 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:14 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

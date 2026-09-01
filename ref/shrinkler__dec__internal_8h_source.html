@@ -86,27 +86,32 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef LIBDRAGON_COMPRESS_SHRINKLER_DEC_INTERNAL_H</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define LIBDRAGON_COMPRESS_SHRINKLER_DEC_INTERNAL_H</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifdef N64</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define DECOMPRESS_SHRINKLER_FULL_USE_ASM             1</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="shrinkler__dec__internal_8h.html#ae4fb37a5957f9dc294e1ccd71a1642ee">   12</a></span><span class="preprocessor">#define DECOMPRESS_SHRINKLER_FULL_USE_ASM             0</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="shrinkler__dec__internal_8h.html#a0d4b979d1807f075e21ad75819feb4be">   18</a></span><span class="preprocessor">#define DECOMPRESS_SHRINKLER_STATE_SIZE       512</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#if DECOMPRESS_SHRINKLER_FULL_USE_ASM</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">int</span> decompress_shrinkler_full_inplace(<span class="keyword">const</span> uint8_t* in, <span class="keywordtype">size_t</span> cmp_size, uint8_t *out, <span class="keywordtype">size_t</span> size);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">bool</span> <a class="code hl_function" href="shrinkler__dec__internal_8h.html#a80a690c09da0d827424181091a39e13e">decompress_shrinkler_full</a>(<span class="keywordtype">int</span> fd, <span class="keywordtype">size_t</span> cmp_size, <span class="keywordtype">size_t</span> size, <span class="keywordtype">void</span> *buf, <span class="keywordtype">int</span> *buf_size);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="ttc" id="ashrinkler__dec__internal_8h_html_a80a690c09da0d827424181091a39e13e"><div class="ttname"><a href="shrinkler__dec__internal_8h.html#a80a690c09da0d827424181091a39e13e">decompress_shrinkler_full</a></div><div class="ttdeci">bool decompress_shrinkler_full(int fd, size_t cmp_size, size_t size, void *buf, int *buf_size)</div><div class="ttdoc">Decompress a full Shrinkler-compressed file into a buffer.</div><div class="ttdef"><b>Definition</b> shrinkler_dec.c:198</div></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// Keep this header self-contained (used both by libdragon and host tools)</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;sys/types.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="shrinkler__dec__internal_8h.html#a0d4b979d1807f075e21ad75819feb4be">   17</a></span><span class="preprocessor">#define DECOMPRESS_SHRINKLER_STATE_SIZE       2304</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">void</span> <a class="code hl_function" href="shrinkler__dec__internal_8h.html#a0995d2c27112faac56753ebfb1585682">decompress_shrinkler_init</a>(<span class="keywordtype">void</span> *state, <span class="keywordtype">int</span> fd, <span class="keywordtype">int</span> winsize);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>ssize_t <a class="code hl_function" href="shrinkler__dec__internal_8h.html#a933671f30c318863dd87d7036d365cd9">decompress_shrinkler_read</a>(<span class="keywordtype">void</span> *state, <span class="keywordtype">void</span> *buf, <span class="keywordtype">size_t</span> len);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> <a class="code hl_function" href="shrinkler__dec__internal_8h.html#aa58f4779be53ed1a58a42e2c35ed806a">decompress_shrinkler_reset</a>(<span class="keywordtype">void</span> *state);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#ifdef N64</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">int</span> <a class="code hl_function" href="shrinkler__dec__internal_8h.html#ac07e86bc5f537ec6b6c428a04c19048f">decompress_shrinkler_full_inplace</a>(<span class="keyword">const</span> uint8_t* in, <span class="keywordtype">size_t</span> cmp_size, uint8_t *out, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif </span><span class="comment">/* N64 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="ttc" id="ashrinkler__dec__internal_8h_html_a0995d2c27112faac56753ebfb1585682"><div class="ttname"><a href="shrinkler__dec__internal_8h.html#a0995d2c27112faac56753ebfb1585682">decompress_shrinkler_init</a></div><div class="ttdeci">void decompress_shrinkler_init(void *state, int fd, int winsize)</div><div class="ttdoc">Initialize Shrinkler streaming decompressor.</div><div class="ttdef"><b>Definition</b> shrinkler_dec.c:197</div></div>
+<div class="ttc" id="ashrinkler__dec__internal_8h_html_a933671f30c318863dd87d7036d365cd9"><div class="ttname"><a href="shrinkler__dec__internal_8h.html#a933671f30c318863dd87d7036d365cd9">decompress_shrinkler_read</a></div><div class="ttdeci">ssize_t decompress_shrinkler_read(void *state, void *buf, size_t len)</div><div class="ttdoc">Read decompressed data from Shrinkler streaming decompressor.</div><div class="ttdef"><b>Definition</b> shrinkler_dec.c:223</div></div>
+<div class="ttc" id="ashrinkler__dec__internal_8h_html_aa58f4779be53ed1a58a42e2c35ed806a"><div class="ttname"><a href="shrinkler__dec__internal_8h.html#aa58f4779be53ed1a58a42e2c35ed806a">decompress_shrinkler_reset</a></div><div class="ttdeci">void decompress_shrinkler_reset(void *state)</div><div class="ttdoc">Reset Shrinkler streaming decompressor state.</div><div class="ttdef"><b>Definition</b> shrinkler_dec.c:206</div></div>
+<div class="ttc" id="ashrinkler__dec__internal_8h_html_ac07e86bc5f537ec6b6c428a04c19048f"><div class="ttname"><a href="shrinkler__dec__internal_8h.html#ac07e86bc5f537ec6b6c428a04c19048f">decompress_shrinkler_full_inplace</a></div><div class="ttdeci">int decompress_shrinkler_full_inplace(const uint8_t *in, size_t cmp_size, uint8_t *out, size_t size)</div><div class="ttdoc">Full decompression of a Shrinkler stream into a buffer.</div><div class="ttdef"><b>Definition</b> shrinkler_dec.c:50</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:58 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:13 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

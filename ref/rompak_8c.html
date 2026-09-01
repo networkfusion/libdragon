@@ -112,6 +112,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ga22a6f1c437199398a176ccf1e673e537" id="r_ga22a6f1c437199398a176ccf1e673e537"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__rompak.html#ga22a6f1c437199398a176ccf1e673e537">rompak_version_parse</a> (<a class="el" href="n64types_8h.html#abbde255c6ff18b478f46cb7fdf1357e6">pi_addr_t</a> file_addr, size_t size, <a class="el" href="group__rompak.html#ga13776a1b5687c0ac198286d66d0c1d91">rompak_version_callback_t</a> callback, void *ctx)</td></tr>
 <tr class="memdesc:ga22a6f1c437199398a176ccf1e673e537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a version file and call the callback for each key-value pair.  <br /></td></tr>
 <tr class="separator:ga22a6f1c437199398a176ccf1e673e537"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac30b2d1513cf8c43a223aee3c252bf0e" id="r_ac30b2d1513cf8c43a223aee3c252bf0e"><td class="memItemLeft" align="right" valign="top"><a id="ac30b2d1513cf8c43a223aee3c252bf0e" name="ac30b2d1513cf8c43a223aee3c252bf0e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>__rompak_init</b> (void)</td></tr>
+<tr class="memdesc:ac30b2d1513cf8c43a223aee3c252bf0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize rompak module. <br /></td></tr>
+<tr class="separator:ac30b2d1513cf8c43a223aee3c252bf0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>ROM bundle support. </p>
@@ -138,19 +142,25 @@ magic</td>
 <td class="fielddoc">
 Magic (<a class="el" href="rompak_8c.html#ab76abe318fe0f307ed0c9cddf44be93b" title="Magic ID &quot;TOC0&quot;.">TOC_MAGIC</a>) </td></tr>
 <tr><td class="fieldtype">
+<a id="a89ca6ca0f28e12fd89f13a49b6d39eb4" name="a89ca6ca0f28e12fd89f13a49b6d39eb4"></a>uint32_t</td>
+<td class="fieldname">
+cookie</td>
+<td class="fielddoc">
+Cookie to uniquely identify this ROM. </td></tr>
+<tr><td class="fieldtype">
 <a id="a278754e0214dbac46315cddecebc9e66" name="a278754e0214dbac46315cddecebc9e66"></a>uint32_t</td>
 <td class="fieldname">
 toc_size</td>
 <td class="fielddoc">
 Size of the TOC in bytes. </td></tr>
 <tr><td class="fieldtype">
-<a id="a564175ef8d47609445276c3b375a5446" name="a564175ef8d47609445276c3b375a5446"></a>uint32_t</td>
+<a id="a21da3cb5f29dbf2710dbd2c016b2be77" name="a21da3cb5f29dbf2710dbd2c016b2be77"></a>uint16_t</td>
 <td class="fieldname">
 entry_size</td>
 <td class="fielddoc">
 Size of an entry of the TOC (in bytes) </td></tr>
 <tr><td class="fieldtype">
-<a id="af99381d7230b77b7f7be4568572590c9" name="af99381d7230b77b7f7be4568572590c9"></a>uint32_t</td>
+<a id="a19225f50e66c438a8b4075b0218d432a" name="a19225f50e66c438a8b4075b0218d432a"></a>uint16_t</td>
 <td class="fieldname">
 num_entries</td>
 <td class="fielddoc">
@@ -198,7 +208,7 @@ Name of the file. </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:59 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:15 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

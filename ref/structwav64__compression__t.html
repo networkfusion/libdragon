@@ -95,16 +95,37 @@ void(*&#160;</td><td class="memItemRight" valign="bottom"><b>close</b> )(<a clas
 int(*&#160;</td><td class="memItemRight" valign="bottom"><b>get_bitrate</b> )(<a class="el" href="wav64_8h.html#structwav64__t">wav64_t</a> *wav)</td></tr>
 <tr class="memdesc:a6d5d0c2d8909c58f1008d166a6c3637c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the compressed bitrate, mainly used for statistics. <br /></td></tr>
 <tr class="separator:a6d5d0c2d8909c58f1008d166a6c3637c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71909ccb659a4bb1af9d0db1f83c4569" id="r_a71909ccb659a4bb1af9d0db1f83c4569"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwav64__compression__t.html#a71909ccb659a4bb1af9d0db1f83c4569">adjust_seek</a> )(<a class="el" href="wav64_8h.html#structwav64__t">wav64_t</a> *wav, int wpos)</td></tr>
+<tr class="memdesc:a71909ccb659a4bb1af9d0db1f83c4569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adjust a requested seek position (in samples) to a valid codec-specific seek point.  <br /></td></tr>
+<tr class="separator:a71909ccb659a4bb1af9d0db1f83c4569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>WAV64 pluggable compression algorithm. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Field Documentation</h2>
+<a id="a71909ccb659a4bb1af9d0db1f83c4569" name="a71909ccb659a4bb1af9d0db1f83c4569"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71909ccb659a4bb1af9d0db1f83c4569">&#9670;&#160;</a></span>adjust_seek</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* wav64_compression_t::adjust_seek) (<a class="el" href="wav64_8h.html#structwav64__t">wav64_t</a> *wav, int wpos)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adjust a requested seek position (in samples) to a valid codec-specific seek point. </p>
+<p>If NULL, the codec supports sample-accurate seeking and no adjustment is performed. If non-NULL, the function must return a valid seek point (in samples) for this codec. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="wav64__internal_8h_source.html">wav64_internal.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:59 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:15 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

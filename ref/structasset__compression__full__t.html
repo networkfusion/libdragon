@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libdragon: rspq_deferred_call_t.__unnamed45__ Union Reference</title>
+<title>libdragon: asset_compression_full_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,25 +72,49 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
-  <div class="headertitle"><div class="title">rspq_deferred_call_t.__unnamed45__ Union Reference</div></div>
+  <div class="headertitle"><div class="title">asset_compression_full_t Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A decompression algorithm used by the asset library.  
+ <a href="structasset__compression__full__t.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="asset__internal_8h_source.html">asset_internal.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a382167485efe026135ff5a2d6498a98b" id="r_a382167485efe026135ff5a2d6498a98b"><td class="memItemLeft" align="right" valign="top"><a id="a382167485efe026135ff5a2d6498a98b" name="a382167485efe026135ff5a2d6498a98b"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>func</b> )(void *arg)</td></tr>
-<tr class="memdesc:a382167485efe026135ff5a2d6498a98b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to call. <br /></td></tr>
-<tr class="separator:a382167485efe026135ff5a2d6498a98b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e5868d676cb634aa75b125a0f741abf" id="r_a4e5868d676cb634aa75b125a0f741abf"><td class="memItemLeft" align="right" valign="top"><a id="a4e5868d676cb634aa75b125a0f741abf" name="a4e5868d676cb634aa75b125a0f741abf"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>flags</b></td></tr>
-<tr class="memdesc:a4e5868d676cb634aa75b125a0f741abf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags (see RSPQ_DCF_*) &ndash; used last 2 bits. <br /></td></tr>
-<tr class="separator:a4e5868d676cb634aa75b125a0f741abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e171ba461b767e76aa8293639ef6ab" id="r_ad7e171ba461b767e76aa8293639ef6ab"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structasset__compression__full__t.html#ad7e171ba461b767e76aa8293639ef6ab">decompress_full</a> )(const uint8_t *in, size_t cmp_size, uint8_t *out, size_t len)</td></tr>
+<tr class="memdesc:ad7e171ba461b767e76aa8293639ef6ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decompress a full file already available in memory (possibly racing with DMA on N64)  <br /></td></tr>
+<tr class="separator:ad7e171ba461b767e76aa8293639ef6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this union was generated from the following files:</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A decompression algorithm used by the asset library. </p>
+</div><h2 class="groupheader">Field Documentation</h2>
+<a id="ad7e171ba461b767e76aa8293639ef6ab" name="ad7e171ba461b767e76aa8293639ef6ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7e171ba461b767e76aa8293639ef6ab">&#9670;&#160;</a></span>decompress_full</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* asset_compression_full_t::decompress_full) (const uint8_t *in, size_t cmp_size, uint8_t *out, size_t len)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decompress a full file already available in memory (possibly racing with DMA on N64) </p>
+<p>Optional fast-path, typically implemented in assembly on N64. When unavailable, callers can always fall back to the streaming API (decompress_init/decompress_read) to load the full file.</p>
+<dl class="section return"><dt>Returns</dt><dd>number of bytes written, or &lt;0 on error </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="asset__internal_8h_source.html">asset_internal.h</a></li>
+</ul>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:59 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:15 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

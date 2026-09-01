@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>libdragon: dfsinternal.h File Reference</title>
+<title>libdragon: dfs_internal.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,21 +70,21 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a>  </div>
-  <div class="headertitle"><div class="title">dfsinternal.h File Reference<div class="ingroups"><a class="el" href="group__libdragon.html">libdragon</a> &raquo; <a class="el" href="group__asset.html">Asset Subsystem</a> &raquo; <a class="el" href="group__dfs.html">DragonFS</a></div></div></div>
+  <div class="headertitle"><div class="title">dfs_internal.h File Reference<div class="ingroups"><a class="el" href="group__libdragon.html">libdragon</a> &raquo; <a class="el" href="group__asset.html">Asset Subsystem</a> &raquo; <a class="el" href="group__dfs.html">DragonFS</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
 <p>Internal DFS Definitions.  
 <a href="#details">More...</a></p>
 
-<p><a href="dfsinternal_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="dfs__internal_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -112,31 +112,33 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga5edd0bfe529d35c9c2b9405f170a861f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The special ID value in <a class="el" href="group__dfs.html#a72bcf7e7400afd36488dbe14e50d2cde" title="Offset to next directory entry.">directory_entry::next_entry</a> defining the root sector. <br /></td></tr>
 <tr class="separator:ga5edd0bfe529d35c9c2b9405f170a861f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad001da02ced4ad61e2f7e152fd33a5b8" id="r_gad001da02ced4ad61e2f7e152fd33a5b8"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ROOT_PATH</b>&#160;&#160;&#160;&quot;DragonFS 2.0&quot;</td></tr>
-<tr class="memdesc:gad001da02ced4ad61e2f7e152fd33a5b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Special path value in <a class="el" href="group__dfs.html#ada5908f5c2a33e7ab5ff1d10a0e088d6" title="The file or directory name.">directory_entry::path</a> defining the root sector. <br /></td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ROOT_PATH</b>&#160;&#160;&#160;&quot;DragonFS 2.1&quot;</td></tr>
+<tr class="memdesc:gad001da02ced4ad61e2f7e152fd33a5b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Special path value in <a class="el" href="group__dfs.html#ad3b87f16a1065de88e6157e855e5e3af" title="The file or directory name.">directory_entry::path</a> defining the root sector. <br /></td></tr>
 <tr class="separator:gad001da02ced4ad61e2f7e152fd33a5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa35bad1e92008da628f27b2f6bb270aa" id="r_gaa35bad1e92008da628f27b2f6bb270aa"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SECTOR_SIZE</b>&#160;&#160;&#160;256</td></tr>
-<tr class="memdesc:gaa35bad1e92008da628f27b2f6bb270aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of a sector. <br /></td></tr>
-<tr class="separator:gaa35bad1e92008da628f27b2f6bb270aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa5b4142139985c33ebf12f4dacf6f61f" id="r_gaa5b4142139985c33ebf12f4dacf6f61f"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SECTOR_PAYLOAD</b>&#160;&#160;&#160;252</td></tr>
-<tr class="memdesc:gaa5b4142139985c33ebf12f4dacf6f61f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of a sector payload. <br /></td></tr>
-<tr class="separator:gaa5b4142139985c33ebf12f4dacf6f61f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad88e4b0a04e38ba0b1e704dbe834cbbf" id="r_gad88e4b0a04e38ba0b1e704dbe834cbbf"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAX_DIRENT_SIZE</b>&#160;&#160;&#160;256</td></tr>
+<tr class="memdesc:gad88e4b0a04e38ba0b1e704dbe834cbbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size of a sector. <br /></td></tr>
+<tr class="separator:gad88e4b0a04e38ba0b1e704dbe834cbbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7f3def9a44c7c9d570782cd867ff56a4" id="r_ga7f3def9a44c7c9d570782cd867ff56a4"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>DFS_LOOKUP_PRIME</b>&#160;&#160;&#160;31</td></tr>
 <tr class="memdesc:ga7f3def9a44c7c9d570782cd867ff56a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prime number used for hash lookups. <br /></td></tr>
 <tr class="separator:ga7f3def9a44c7c9d570782cd867ff56a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad6f9d405b3e4619c07d35bb49b7b4815" id="r_gad6f9d405b3e4619c07d35bb49b7b4815"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ID_DIRENT_SIZE</b>&#160;&#160;&#160;(((sizeof(directory_entry_t) + strlen(<a class="el" href="group__dfs.html#gad001da02ced4ad61e2f7e152fd33a5b8">ROOT_PATH</a>) + 1) + 1) / 2 * 2)</td></tr>
+<tr class="memdesc:gad6f9d405b3e4619c07d35bb49b7b4815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the ID dirent entry (beginning of the filesystem) <br /></td></tr>
+<tr class="separator:gad6f9d405b3e4619c07d35bb49b7b4815"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Internal DFS Definitions. </p>
 <dl class="section author"><dt>Author</dt><dd>Jennifer Taylor <a href="#" onclick="location.href='mai'+'lto:'+'dra'+'go'+'nmi'+'nd'+'ed@'+'dr'+'ago'+'nm'+'ind'+'ed'+'.co'+'m'; return false;">drago<span class="obfuscator">.nosp@m.</span>nmin<span class="obfuscator">.nosp@m.</span>ded@d<span class="obfuscator">.nosp@m.</span>rago<span class="obfuscator">.nosp@m.</span>nmind<span class="obfuscator">.nosp@m.</span>ed.c<span class="obfuscator">.nosp@m.</span>om</a> </dd>
 <dd>
+Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd>
+<dd>
 Liam Coleman <a href="#" onclick="location.href='mai'+'lto:'+'gam'+'em'+'ast'+'er'+'plc'+'@g'+'mai'+'l.'+'com'; return false;">gamem<span class="obfuscator">.nosp@m.</span>aste<span class="obfuscator">.nosp@m.</span>rplc@<span class="obfuscator">.nosp@m.</span>gmai<span class="obfuscator">.nosp@m.</span>l.com</a> </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:58 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:14 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

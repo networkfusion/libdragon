@@ -6,7 +6,7 @@ var searchData=
   ['debug_2eh_3',['debug.h',['../debug_8h.html',1,'']]],
   ['debugcpp_2ecpp_4',['debugcpp.cpp',['../debugcpp_8cpp.html',1,'']]],
   ['debugcpp_2eh_5',['debugcpp.h',['../debugcpp_8h.html',1,'']]],
-  ['dfsinternal_2eh_6',['dfsinternal.h',['../dfsinternal_8h.html',1,'']]],
+  ['dfs_5finternal_2eh_6',['dfs_internal.h',['../dfs__internal_8h.html',1,'']]],
   ['dir_2ec_7',['dir.c',['../dir_8c.html',1,'']]],
   ['dir_2eh_8',['dir.h',['../dir_8h.html',1,'']]],
   ['display_2ec_9',['display.c',['../display_8c.html',1,'']]],

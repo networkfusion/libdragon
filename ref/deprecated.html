@@ -80,16 +80,20 @@ $(function() {
 <dd><a class="anchor" id="_deprecated000016"></a>The <a class="el" href="group__joypad.html">Joypad Subsystem</a> now automatically normalizes Nintendo 64 and GameCube controller inputs. This structure is no longer needed. Use <a class="el" href="group__joypad.html#structjoypad__inputs__t" title="Joypad Inputs Unified State Structure.">joypad_inputs_t</a> instead.  </dd>
 <dt>Module <a class="el" href="group__controller.html">controller</a>  </dt>
 <dd><a class="anchor" id="_deprecated000001"></a>This module is now deprecated. Please use the <a class="el" href="group__joypad.html">Joypad Subsystem</a> instead. </dd>
+<dt>Global <a class="el" href="debug_8h.html#a015bdf2f649a79706e55e00c5072b43b">DEBUG_FEATURE_LOG_ISVIEWER</a>  </dt>
+<dd><a class="anchor" id="_deprecated000020"></a>Use <a class="el" href="debug_8h.html#a34535845e54cb04f539f4e570837060a" title="Flag to activate the logging channel in emulators.">DEBUG_FEATURE_LOG_EMU</a> instead.  </dd>
+<dt>Global <a class="el" href="debug_8h.html#accb034915e1b7e0d6db823c6f5151d12">debug_init_isviewer</a>  </dt>
+<dd><a class="anchor" id="_deprecated000021"></a>Use <a class="el" href="debug_8c.html#ae2607b76449be28d5fd448b3e2b2d767" title="Initialize ISViewer logging.">debug_init_emulog</a> instead.  </dd>
 <dt>Global <a class="el" href="group__graphics.html#gac04f4a740380f66e841d98c14f88d999">graphics_convert_color</a>  (<a class="el" href="group__graphics.html#structcolor__t" title="Generic color structure.">color_t</a> color)</dt>
-<dd><a class="anchor" id="_deprecated000021"></a>By switching to the rdpq API, this function should not be required anymore. Please avoid using it in new code if possible. </dd>
+<dd><a class="anchor" id="_deprecated000023"></a>By switching to the rdpq API, this function should not be required anymore. Please avoid using it in new code if possible. </dd>
 <dt>Global <a class="el" href="group__graphics.html#gab903f17f56c2cac7198ab9a7b0438b68">graphics_make_color</a>  (int r, int g, int b, int a)</dt>
-<dd><a class="anchor" id="_deprecated000020"></a>By switching to the rdpq API, this function should not be required anymore. Use <a class="el" href="group__graphics.html#gae16bab5741f411ec4ef51b0295f6e705" title="Create a color_t from the R,G,B,A components in the RGBA32 range (0-255).">RGBA32</a> or <a class="el" href="group__graphics.html#ga9a2133dc22dbfbf01faaf9dd19ee7b67" title="Create a color_t from the R,G,B,A components in the RGBA16 range (that is: RGB in 0-31,...">RGBA16</a> instead. Please avoid using it in new code if possible. </dd>
+<dd><a class="anchor" id="_deprecated000022"></a>By switching to the rdpq API, this function should not be required anymore. Use <a class="el" href="group__graphics.html#gae16bab5741f411ec4ef51b0295f6e705" title="Create a color_t from the R,G,B,A components in the RGBA32 range (0-255).">RGBA32</a> or <a class="el" href="group__graphics.html#ga9a2133dc22dbfbf01faaf9dd19ee7b67" title="Create a color_t from the R,G,B,A components in the RGBA16 range (that is: RGB in 0-31,...">RGBA16</a> instead. Please avoid using it in new code if possible. </dd>
 <dt>Global <a class="el" href="system_8c.html#a52ba40f92821927553a30e3c6e8c5214">hook_time_call</a>  (time_t(*time_fn)(void))</dt>
 <dd><a class="anchor" id="_deprecated000010"></a>Use <a class="el" href="system_8c.html#a8aabcb4cf45ef74452438c78c1446a9c">hook_time_calls</a> instead.  </dd>
 <dt>Global <a class="el" href="system_8c.html#a8aabcb4cf45ef74452438c78c1446a9c">hook_time_calls</a>  (time_hooks_t *hooks)</dt>
 <dd><a class="anchor" id="_deprecated000008"></a>Use <a class="el" href="group__system.html#ga813fb069dfcfa2662146a48d22078134" title="Hook into POSIX time callbacks.">hook_rtc_calls</a> instead.  </dd>
 <dt>File <a class="el" href="mempak_8h.html">mempak.h</a>  </dt>
-<dd><a class="anchor" id="_deprecated000022"></a>This module is deprecated. Please use the APIs <a class="el" href="cpak_8h.html" title="Controller Pak raw access.">cpak.h</a> instead. </dd>
+<dd><a class="anchor" id="_deprecated000024"></a>This module is deprecated. Please use the APIs <a class="el" href="cpak_8h.html" title="Controller Pak raw access.">cpak.h</a> instead. </dd>
 <dt>Module <a class="el" href="group__rdp.html">rdp</a>  </dt>
 <dd><a class="anchor" id="_deprecated000002"></a>This module is now deprecated. Please use the new RDPQ API instead. </dd>
 <dt>Global <a class="el" href="group__rtc.html#gaf9cee899189bcaef3244ed0643ee181a">rtc_get</a>  (rtc_time_t *rtc_time)</dt>
@@ -117,7 +121,7 @@ $(function() {
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:59 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:15 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

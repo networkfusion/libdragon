@@ -223,7 +223,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>joyframe_write_N64_CO
 <div class="line"><span class="comment">// Execute the frame (synchronously). Output will be written into</span></div>
 <div class="line"><span class="comment">// the same frame buffer.</span></div>
 <div class="line"><a class="code hl_function" href="group__joybus.html#ga6d62432ce8ecd83cd1588716fd28fdb7">joybus_exec</a>(pkt, pkt);</div>
-<div class="ttc" id="agroup__joybus_html_ga6d62432ce8ecd83cd1588716fd28fdb7"><div class="ttname"><a href="group__joybus.html#ga6d62432ce8ecd83cd1588716fd28fdb7">joybus_exec</a></div><div class="ttdeci">void joybus_exec(const void *input, void *output)</div><div class="ttdoc">Write a 64-byte block of data to the PIF and read the 64-byte result.</div><div class="ttdef"><b>Definition</b> joybus.c:252</div></div>
+<div class="ttc" id="agroup__joybus_html_ga6d62432ce8ecd83cd1588716fd28fdb7"><div class="ttname"><a href="group__joybus.html#ga6d62432ce8ecd83cd1588716fd28fdb7">joybus_exec</a></div><div class="ttdeci">void joybus_exec(const void *input, void *output)</div><div class="ttdoc">Write a 64-byte block of data to the PIF and read the 64-byte result.</div><div class="ttdef"><b>Definition</b> joybus.c:253</div></div>
 <div class="ttc" id="ajoyframe_8h_html_a1caecc29f1b3144593abfcd7b10dc92b"><div class="ttname"><a href="joyframe_8h.html#a1caecc29f1b3144593abfcd7b10dc92b">joyframe_write</a></div><div class="ttdeci">#define joyframe_write(pkt, send_len, recv_len, cmd)</div><div class="ttdoc">Write a Joybus frame.</div><div class="ttdef"><b>Definition</b> joyframe.h:165</div></div>
 <div class="ttc" id="ajoyframe_8h_html_a258c1a7fe346cedc891817c2909eac36"><div class="ttname"><a href="joyframe_8h.html#a258c1a7fe346cedc891817c2909eac36">joyframe_write_skip</a></div><div class="ttdeci">#define joyframe_write_skip(pkt, n)</div><div class="ttdoc">Write a &quot;Skip&quot; command to the Joybus frame.</div><div class="ttdef"><b>Definition</b> joyframe.h:202</div></div>
 <div class="ttc" id="ajoyframe_8h_html_aa5ab52be5f0701dd8b9ba7eabc77ad16"><div class="ttname"><a href="joyframe_8h.html#aa5ab52be5f0701dd8b9ba7eabc77ad16">joyframe_t</a></div><div class="ttdeci">uint8_t joyframe_t[64]</div><div class="ttdoc">A joybus frame.</div><div class="ttdef"><b>Definition</b> joyframe.h:119</div></div>
@@ -250,12 +250,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>joyframe_write_N64_CO
 <div class="line"><span class="comment">// Process the data received. The length of the data is known from</span></div>
 <div class="line"><span class="comment">// the command that was sent.</span></div>
 <div class="line"><a class="code hl_function" href="debug_8c.html#a9d7b18857c2b18437251bcc38c866d35">debugf</a>(<span class="stringliteral">&quot;Received %02X %02X %02X %02X\n&quot;</span>, data[0], data[1], data[2], data[3]);</div>
-<div class="ttc" id="adebug_8c_html_a9d7b18857c2b18437251bcc38c866d35"><div class="ttname"><a href="debug_8c.html#a9d7b18857c2b18437251bcc38c866d35">debugf</a></div><div class="ttdeci">void debugf(const char *msg,...)</div><div class="ttdoc">Write a message to the debugging channel.</div><div class="ttdef"><b>Definition</b> debug.c:364</div></div>
+<div class="ttc" id="adebug_8c_html_a9d7b18857c2b18437251bcc38c866d35"><div class="ttname"><a href="debug_8c.html#a9d7b18857c2b18437251bcc38c866d35">debugf</a></div><div class="ttdeci">void debugf(const char *msg,...)</div><div class="ttdoc">Write a message to the debugging channel.</div><div class="ttdef"><b>Definition</b> debug.c:384</div></div>
 <div class="ttc" id="ajoyframe_8c_html_ae29b80518b6412eeefa11cb3820ee909"><div class="ttname"><a href="joyframe_8c.html#ae29b80518b6412eeefa11cb3820ee909">joyframe_read</a></div><div class="ttdeci">joyframe_err_t joyframe_read(joyframe_t pkt, uint8_t *cmd, uint8_t **data, int *data_len)</div><div class="ttdoc">Read the next command from the frame.</div><div class="ttdef"><b>Definition</b> joyframe.c:11</div></div>
 <div class="ttc" id="ajoyframe_8h_html_a98b8d26fd537f1473038b740136eb203"><div class="ttname"><a href="joyframe_8h.html#a98b8d26fd537f1473038b740136eb203">joyframe_read_begin</a></div><div class="ttdeci">#define joyframe_read_begin(pkt)</div><div class="ttdoc">Initialize reading a Joybus frame.</div><div class="ttdef"><b>Definition</b> joyframe.h:259</div></div>
 <div class="ttc" id="ajoyframe_8h_html_a9c0de6850fcdee3b02f5702f692f66fa"><div class="ttname"><a href="joyframe_8h.html#a9c0de6850fcdee3b02f5702f692f66fa">joyframe_read_skip</a></div><div class="ttdeci">#define joyframe_read_skip(pkt, n)</div><div class="ttdoc">Skip a number of ports in the Joybus frame.</div><div class="ttdef"><b>Definition</b> joyframe.h:269</div></div>
 </div><!-- fragment --><p>It is important to handle error conditions as they can always happen, given that joybus devices are hot-pluggable. For instance, a device might have been disconnected by the player, so the command might return an error.</p>
-<h2><a class="anchor" id="autotoc_md50"></a>
+<h2><a class="anchor" id="autotoc_md83"></a>
 Helpers for known commands</h2>
 <p>For known joybus commands (as publicly documented), there are helper macros that allow to write and read them more easily, as they take care of packing and unpacking the input and output data.</p>
 <p>For instance, the following code shows an example to perform a handshake to identify a device on the first port. This is normally not required as the joybus module, after <a class="el" href="group__joybus.html#ga8f4ce40c87b3a5eff4eb74a134d96849" title="Initialize the Joybus subsystem, and background detection support.">joybus_init</a>, automatically performs background handshakes to identify connected devices, but it is shown here as an example.</p>
@@ -383,7 +383,7 @@ Helpers for known commands</h2>
 <div class="line">    uint8_t *send_ptr = &amp;pkt[idx]; \</div>
 <div class="line">    pkt[63] = idx + send_len + recv_len - 1; \</div>
 <div class="line">    assertf(pkt[63] &lt; 64, <span class="stringliteral">&quot;joybus frame overflow&quot;</span>); \</div>
-<div class="line">    (send_len || recv_len) ? send_ptr : NULL; \</div>
+<div class="line">    (send_len | recv_len) ? send_ptr : NULL; \</div>
 <div class="line">})</div>
 </div><!-- fragment -->
 <p>Write a Joybus frame. </p>
@@ -600,7 +600,7 @@ Helpers for known commands</h2>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>joyframe_err_t Negative values for errors, 0 or positive values for success </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Negative values for errors, 0 or positive values for success </dd></dl>
 
 </div>
 </div>
@@ -910,7 +910,7 @@ Helpers for known commands</h2>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:58 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:14 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

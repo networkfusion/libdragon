@@ -108,6 +108,10 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SPRITE_FLAGS_OWNEDBUFFER</b>&#160;&#160;&#160;0x20</td></tr>
 <tr class="memdesc:a33ef3442b2f9f95efbe25ccf07da49c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag specifying that the sprite buffer must be freed by sprite_free. <br /></td></tr>
 <tr class="separator:a33ef3442b2f9f95efbe25ccf07da49c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade1a3c3b70ba0bdf44eb35c87e2c02ca" id="r_ade1a3c3b70ba0bdf44eb35c87e2c02ca"><td class="memItemLeft" align="right" valign="top"><a id="ade1a3c3b70ba0bdf44eb35c87e2c02ca" name="ade1a3c3b70ba0bdf44eb35c87e2c02ca"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SPRITE_FLAGS_NODATA</b>&#160;&#160;&#160;0x40</td></tr>
+<tr class="memdesc:ade1a3c3b70ba0bdf44eb35c87e2c02ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprite does not contain data in the base section; all data is in the extended section. <br /></td></tr>
+<tr class="separator:ade1a3c3b70ba0bdf44eb35c87e2c02ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9563f809bb96ffd9f64a3619142daa74" id="r_a9563f809bb96ffd9f64a3619142daa74"><td class="memItemLeft" align="right" valign="top"><a id="a9563f809bb96ffd9f64a3619142daa74" name="a9563f809bb96ffd9f64a3619142daa74"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>SPRITE_FLAGS_EXT</b>&#160;&#160;&#160;0x80</td></tr>
 <tr class="memdesc:a9563f809bb96ffd9f64a3619142daa74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprite contains extended information (new format) <br /></td></tr>
@@ -143,6 +147,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>sprite_free</b> (<a c
 <tr class="memitem:adfc7bf5e68991099a3ec86ae05d4aca9" id="r_adfc7bf5e68991099a3ec86ae05d4aca9"><td class="memItemLeft" align="right" valign="top">uint16_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8h.html#adfc7bf5e68991099a3ec86ae05d4aca9">sprite_get_palette</a> (<a class="el" href="sprite_8h.html#structsprite__t">sprite_t</a> *sprite)</td></tr>
 <tr class="memdesc:adfc7bf5e68991099a3ec86ae05d4aca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the sprite palette (if any)  <br /></td></tr>
 <tr class="separator:adfc7bf5e68991099a3ec86ae05d4aca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab2f3dbb1cb3178e323ab943c97eae10" id="r_aab2f3dbb1cb3178e323ab943c97eae10"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8h.html#aab2f3dbb1cb3178e323ab943c97eae10">sprite_get_palette_used_colors</a> (<a class="el" href="sprite_8h.html#structsprite__t">sprite_t</a> *sprite)</td></tr>
+<tr class="memdesc:aab2f3dbb1cb3178e323ab943c97eae10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of colors actually used in palette.  <br /></td></tr>
+<tr class="separator:aab2f3dbb1cb3178e323ab943c97eae10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeafae923dfd53e64c533e40b68dfb012" id="r_aeafae923dfd53e64c533e40b68dfb012"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8h.html#aeafae923dfd53e64c533e40b68dfb012">sprite_get_texparms</a> (<a class="el" href="sprite_8h.html#structsprite__t">sprite_t</a> *sprite, <a class="el" href="rdpq__tex_8h.html#structrdpq__texparms__t">rdpq_texparms_t</a> *parms)</td></tr>
 <tr class="memdesc:aeafae923dfd53e64c533e40b68dfb012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a copy of the RDP texparms, optionally stored within the sprite.  <br /></td></tr>
 <tr class="separator:aeafae923dfd53e64c533e40b68dfb012"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -316,7 +323,7 @@ Various flags, including texture format. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>sprite_t* The loaded sprite </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The loaded sprite </dd></dl>
 
 </div>
 </div>
@@ -356,7 +363,7 @@ Various flags, including texture format. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>sprite_t* The loaded sprite </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The loaded sprite </dd></dl>
 
 </div>
 </div>
@@ -461,7 +468,7 @@ Various flags, including texture format. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="surface_8h.html#structsurface__t" title="A surface buffer for graphics.">surface_t</a> The surface containing the data. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The surface containing the data. </dd></dl>
 
 </div>
 </div>
@@ -510,7 +517,7 @@ Various flags, including texture format. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="surface_8h.html#structsurface__t" title="A surface buffer for graphics.">surface_t</a> The surface containing the data. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The surface containing the data. </dd></dl>
 
 </div>
 </div>
@@ -587,6 +594,34 @@ Various flags, including texture format. </td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the palette data, or NULL if the sprite does not have a palette </dd></dl>
+
+</div>
+</div>
+<a id="aab2f3dbb1cb3178e323ab943c97eae10" name="aab2f3dbb1cb3178e323ab943c97eae10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab2f3dbb1cb3178e323ab943c97eae10">&#9670;&#160;</a></span>sprite_get_palette_used_colors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sprite_get_palette_used_colors </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sprite_8h.html#structsprite__t">sprite_t</a> *&#160;</td>
+          <td class="paramname"><em>sprite</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get number of colors actually used in palette. </p>
+<dl class="preview"><dt><b><a class="el" href="preview.html#_preview000463">Preview API:</a></b></dt><dd>This API is part of the libdragon preview: it may change without notice. Set <code>LIBDRAGON_PREVIEW=1</code> (warnings) or <code>2</code> (silent) in your Makefile to use it.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sprite</td><td>The sprite to access </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of used palette colors </dd></dl>
 
 </div>
 </div>
@@ -704,6 +739,7 @@ Various flags, including texture format. </td></tr>
 </div><div class="memdoc">
 
 <p>Return true if the sprite is in SHQ format. </p>
+<dl class="preview"><dt><b><a class="el" href="preview.html#_preview000464">Preview API:</a></b></dt><dd>This API is part of the libdragon preview: it may change without notice. Set <code>LIBDRAGON_PREVIEW=1</code> (warnings) or <code>2</code> (silent) in your Makefile to use it.</dd></dl>
 <p>This is a special sprite made of two mipmaps (one I4 and one RGBA16) that must be displayed using subtractive blending.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -718,7 +754,7 @@ Various flags, including texture format. </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:58 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:14 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

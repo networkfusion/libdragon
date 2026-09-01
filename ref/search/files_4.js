@@ -10,10 +10,11 @@ var searchData=
   ['eepromfs_2eh_7',['eepromfs.h',['../eepromfs_8h.html',1,'']]],
   ['eia608_2ec_8',['eia608.c',['../eia608_8c.html',1,'']]],
   ['eia608_2eh_9',['eia608.h',['../eia608_8h.html',1,'']]],
-  ['entropy_2ec_10',['entropy.c',['../entropy_8c.html',1,'']]],
-  ['entropy_2eh_11',['entropy.h',['../entropy_8h.html',1,'']]],
-  ['entropy_5finternal_2eh_12',['entropy_internal.h',['../entropy__internal_8h.html',1,'']]],
-  ['exception_2ec_13',['exception.c',['../exception_8c.html',1,'']]],
-  ['exception_2eh_14',['exception.h',['../exception_8h.html',1,'']]],
-  ['exception_5finternal_2eh_15',['exception_internal.h',['../exception__internal_8h.html',1,'']]]
+  ['emux_2eh_10',['emux.h',['../emux_8h.html',1,'']]],
+  ['entropy_2ec_11',['entropy.c',['../entropy_8c.html',1,'']]],
+  ['entropy_2eh_12',['entropy.h',['../entropy_8h.html',1,'']]],
+  ['entropy_5finternal_2eh_13',['entropy_internal.h',['../entropy__internal_8h.html',1,'']]],
+  ['exception_2ec_14',['exception.c',['../exception_8c.html',1,'']]],
+  ['exception_2eh_15',['exception.h',['../exception_8h.html',1,'']]],
+  ['exception_5finternal_2eh_16',['exception_internal.h',['../exception__internal_8h.html',1,'']]]
 ];

@@ -75,11 +75,21 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">asset.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:structcookie__none__t" id="r_structcookie__none__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asset_8c.html#structcookie__none__t">cookie_none_t</a></td></tr>
+<tr class="memdesc:structcookie__none__t"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uncompressed file cookie for funopen()  <a href="asset_8c.html#structcookie__none__t">More...</a><br /></td></tr>
+<tr class="separator:structcookie__none__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcookie__cmp__t.html">cookie_cmp_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compression cookie for funopen()  <a href="structcookie__cmp__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a3e0ede56befb743a20e6f49f947dfb96" id="r_a3e0ede56befb743a20e6f49f947dfb96"><td class="memItemLeft" align="right" valign="top"><a id="a3e0ede56befb743a20e6f49f947dfb96" name="a3e0ede56befb743a20e6f49f947dfb96"></a>
@@ -115,12 +125,48 @@ void *&#160;</td><td class="memItemRight" valign="bottom"><b>asset_loadfd</b> (i
 <tr class="memitem:abfc5939446d9920b884df034e89428a9" id="r_abfc5939446d9920b884df034e89428a9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asset_8c.html#abfc5939446d9920b884df034e89428a9">asset_load</a> (const char *fn, int *sz)</td></tr>
 <tr class="memdesc:abfc5939446d9920b884df034e89428a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an asset file (possibly uncompressing it)  <br /></td></tr>
 <tr class="separator:abfc5939446d9920b884df034e89428a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac731b2beb346c99f36fa8f355fb84509" id="r_ac731b2beb346c99f36fa8f355fb84509"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="asset_8c.html#ac731b2beb346c99f36fa8f355fb84509">asset_fopen</a> (const char *fn, int *sz)</td></tr>
+<tr class="memdesc:ac731b2beb346c99f36fa8f355fb84509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open an asset file for reading (with transparent decompression)  <br /></td></tr>
+<tr class="separator:ac731b2beb346c99f36fa8f355fb84509"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed14ab74315c365a727e549372fea71" id="r_abed14ab74315c365a727e549372fea71"><td class="memItemLeft" align="right" valign="top"><a id="abed14ab74315c365a727e549372fea71" name="abed14ab74315c365a727e549372fea71"></a>
+FILE *&#160;</td><td class="memItemRight" valign="bottom"><b>asset_fdopen</b> (int fd, int *sz)</td></tr>
+<tr class="memdesc:abed14ab74315c365a727e549372fea71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a file descriptor as a FILE* with asset support. <br /></td></tr>
+<tr class="separator:abed14ab74315c365a727e549372fea71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd>
-<dd>
-Liam Coleman <a href="#" onclick="location.href='mai'+'lto:'+'gam'+'em'+'ast'+'er'+'plc'+'@g'+'mai'+'l.'+'com'; return false;">gamem<span class="obfuscator">.nosp@m.</span>aste<span class="obfuscator">.nosp@m.</span>rplc@<span class="obfuscator">.nosp@m.</span>gmai<span class="obfuscator">.nosp@m.</span>l.com</a> </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
+<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
+</div><hr/><h2 class="groupheader">Data Structure Documentation</h2>
+<a name="structcookie__none__t" id="structcookie__none__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structcookie__none__t">&#9670;&#160;</a></span>cookie_none_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct cookie_none_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>Uncompressed file cookie for funopen() </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">Data Fields</th></tr>
+<tr><td class="fieldtype">
+<a id="a9217011089a8293bc7256c558a5cae1d" name="a9217011089a8293bc7256c558a5cae1d"></a>int</td>
+<td class="fieldname">
+fd</td>
+<td class="fielddoc">
+Open file descriptor. </td></tr>
+<tr><td class="fieldtype">
+<a id="ad5b410115414b117373219981daee771" name="ad5b410115414b117373219981daee771"></a>bool</td>
+<td class="fieldname">
+seeked</td>
+<td class="fielddoc">
+True if the file has been seeked once. </td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a6cb89fccd164718c2551190edf1f6507" name="a6cb89fccd164718c2551190edf1f6507"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6cb89fccd164718c2551190edf1f6507">&#9670;&#160;</a></span>asset_loadf_into()</h2>
 
@@ -160,6 +206,7 @@ Liam Coleman <a href="#" onclick="location.href='mai'+'lto:'+'gam'+'em'+'ast'+'e
 </div><div class="memdoc">
 
 <p>Load an asset file (possibly uncompressing it) </p>
+<dl class="preview"><dt><b><a class="el" href="preview.html#_preview000015">Preview API:</a></b></dt><dd>This API is part of the libdragon preview: it may change without notice. Set <code>LIBDRAGON_PREVIEW=1</code> (warnings) or <code>2</code> (silent) in your Makefile to use it.</dd></dl>
 <p>This is the lowest-level asset loading function, that is needed only for advanced use cases. In general, prefer using any of other variants if possible, as the other APIs are harder to misuse.</p>
 <p>This function loads an asset potentially embedded within a larger, opened file. It requires an open file pointer, seeked to the beginning of the asset, and the size of the asset itself. If the asset is compressed, it is transparently decompressed.</p>
 <p>After this function returns, for technical reasons, the position of the provided file pointer becomes undefined. If you need to use it again, make sure to seek it.</p>
@@ -206,6 +253,7 @@ false The function has failed because the provided buffer was too small. In this
 </div><div class="memdoc">
 
 <p>Load an asset file (possibly uncompressing it) </p>
+<dl class="preview"><dt><b><a class="el" href="preview.html#_preview000014">Preview API:</a></b></dt><dd>This API is part of the libdragon preview: it may change without notice. Set <code>LIBDRAGON_PREVIEW=1</code> (warnings) or <code>2</code> (silent) in your Makefile to use it.</dd></dl>
 <p>This function loads an asset embedded within a larger file. It requires in input an open file pointer, seeked to the beginning of the asset, and the size of the asset itself. If the asset is compressed, it is transparently decompressed.</p>
 <p>After this function returns, for technical reasons, the position of the provided file pointer becomes undefined. If you need to use it again, make sure to seek it.</p>
 <p>A memory buffer to hold the uncompressed asset is automatically allocated and returned. It must be freed using free() when the buffer is not required anymore. The memory is guaranteed to be aligned by at least <a class="el" href="asset_8h.html#a34d5d636492bebbe03bae6ab8ee28e2a" title="Minimum required alignment for assets.">ASSET_ALIGNMENT_MIN</a>.</p>
@@ -216,7 +264,7 @@ false The function has failed because the provided buffer was too small. In this
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>void* Allocated buffer filled with the uncompressed asset content </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Allocated buffer filled with the uncompressed asset content </dd></dl>
 
 </div>
 </div>
@@ -255,14 +303,55 @@ false The function has failed because the provided buffer was too small. In this
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>void* Pointer to the loaded file (must be freed with free() when done) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the loaded file (must be freed with free() when done) </dd></dl>
+
+</div>
+</div>
+<a id="ac731b2beb346c99f36fa8f355fb84509" name="ac731b2beb346c99f36fa8f355fb84509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac731b2beb346c99f36fa8f355fb84509">&#9670;&#160;</a></span>asset_fopen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE * asset_fopen </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>sz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open an asset file for reading (with transparent decompression) </p>
+<p>This function opens a file from a file system (eg: from ROM or SD). If the file was compressed using the mkasset tool, it will be automatically uncompressed as it is being read.</p>
+<p>Note that since the file might be compressed, the returned FILE* cannot be arbitrarily seeked backward, as that would be impossible to do efficiently on a compressed file. Seeking forward is supported and is simulated by reading (decompressing) and discarding data. You can rewind the file to the start though, (by using either fseek or rewind).</p>
+<p>This behavior of the returned file is enforced also for non compressed assets, so that the code is ready to switch to compressed assets if required. If you need random access to an uncompressed file, simply use the standard fopen() function.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fn</td><td>Filename to load (including filesystem prefix, eg: "rom:/foo.dat") </td></tr>
+    <tr><td class="paramname">sz</td><td>If not NULL, this will be filed with the uncompressed size of the loaded file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FILE pointer to use with standard C functions (fread, fclose) </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:58 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:14 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

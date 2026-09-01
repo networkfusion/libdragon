@@ -105,9 +105,6 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>MATCH_RUN_LEN</b>&#160;&#160;&#160;15</td></tr>
 <tr class="memdesc:aed7b61a89c5027ca69877e001028451c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum run length for matches in LZ4. <br /></td></tr>
 <tr class="separator:aed7b61a89c5027ca69877e001028451c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0fe94c60d66b128dac6b339cbeb5ea1" id="r_ae0fe94c60d66b128dac6b339cbeb5ea1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lz4__dec_8c.html#ae0fe94c60d66b128dac6b339cbeb5ea1">LZ4ULTRA_DECOMPRESSOR_BUILD_LEN</a>(__len)</td></tr>
-<tr class="memdesc:ae0fe94c60d66b128dac6b339cbeb5ea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decode multi-byte length.  <br /></td></tr>
-<tr class="separator:ae0fe94c60d66b128dac6b339cbeb5ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -232,36 +229,6 @@ ringbuf</td>
 <td class="fielddoc">
 Ring buffer. </td></tr>
 </table>
-
-</div>
-</div>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="ae0fe94c60d66b128dac6b339cbeb5ea1" name="ae0fe94c60d66b128dac6b339cbeb5ea1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0fe94c60d66b128dac6b339cbeb5ea1">&#9670;&#160;</a></span>LZ4ULTRA_DECOMPRESSOR_BUILD_LEN</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LZ4ULTRA_DECOMPRESSOR_BUILD_LEN</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">__len</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">   { \</div>
-<div class="line">   <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> byte; \</div>
-<div class="line">   <span class="keywordflow">do</span> { \</div>
-<div class="line">      if (unlikely(pInBlock &gt;= pInBlockEnd)) <span class="keywordflow">return</span> -1; \</div>
-<div class="line">      if (dma_race) wait_dma(pInBlock+1); \</div>
-<div class="line">      <span class="keywordtype">byte</span> = (<span class="keywordtype">unsigned</span> int)*pInBlock++; \</div>
-<div class="line">      __len += byte; \</div>
-<div class="line">   } <span class="keywordflow">while</span> (unlikely(<span class="keywordtype">byte</span> == 255)); \</div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p>Decode multi-byte length. </p>
 
 </div>
 </div>
@@ -435,7 +402,7 @@ Ring buffer. </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:58 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:14 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

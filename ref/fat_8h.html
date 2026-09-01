@@ -104,6 +104,32 @@ Macros</h2></td></tr>
 <tr class="memitem:a59e49b5ce6d7d8e3d5480ec2fb89a5c3" id="r_a59e49b5ce6d7d8e3d5480ec2fb89a5c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fat_8h.html#a59e49b5ce6d7d8e3d5480ec2fb89a5c3">IOFAT_GET_CLUSTER_SIZE</a>&#160;&#160;&#160;<a class="el" href="ioctl_8h.html#a840d10d2fed07b8a85f260031f2fa47b">_IO</a>('F', 3)</td></tr>
 <tr class="memdesc:a59e49b5ce6d7d8e3d5480ec2fb89a5c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of a cluster, as number of sectors (not bytes)  <br /></td></tr>
 <tr class="separator:a59e49b5ce6d7d8e3d5480ec2fb89a5c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14c6818a4e0f76ab6333541044406a67" id="r_a14c6818a4e0f76ab6333541044406a67"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fat_8h.html#a14c6818a4e0f76ab6333541044406a67">S_FAT_ATTR_RDO</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="memdesc:a14c6818a4e0f76ab6333541044406a67"><td class="mdescLeft">&#160;</td><td class="mdescRight">FAT file attribute bits (matching FatFS AM_* constants)  <br /></td></tr>
+<tr class="separator:a14c6818a4e0f76ab6333541044406a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16d5bf028d03e4785f1bfde38d90e19d" id="r_a16d5bf028d03e4785f1bfde38d90e19d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fat_8h.html#a16d5bf028d03e4785f1bfde38d90e19d">S_FAT_ATTR_HID</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:a16d5bf028d03e4785f1bfde38d90e19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a916822c5122d5f9f805f6971f2df23ba" id="r_a916822c5122d5f9f805f6971f2df23ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fat_8h.html#a916822c5122d5f9f805f6971f2df23ba">S_FAT_ATTR_SYS</a>&#160;&#160;&#160;0x04</td></tr>
+<tr class="separator:a916822c5122d5f9f805f6971f2df23ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a324ee6e0bbb7b51fae6aaa6645c395a0" id="r_a324ee6e0bbb7b51fae6aaa6645c395a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fat_8h.html#a324ee6e0bbb7b51fae6aaa6645c395a0">S_FAT_ATTR_DIR</a>&#160;&#160;&#160;0x10</td></tr>
+<tr class="separator:a324ee6e0bbb7b51fae6aaa6645c395a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0af97312565e3d0e98d51c0d684c4a63" id="r_a0af97312565e3d0e98d51c0d684c4a63"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fat_8h.html#a0af97312565e3d0e98d51c0d684c4a63">S_FAT_ATTR_ARC</a>&#160;&#160;&#160;0x20</td></tr>
+<tr class="separator:a0af97312565e3d0e98d51c0d684c4a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5726f9f144db5e206e186d211e6040d" id="r_af5726f9f144db5e206e186d211e6040d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fat_8h.html#af5726f9f144db5e206e186d211e6040d">FAT_ATTR</a>(st)&#160;&#160;&#160;((unsigned int)((st)-&gt;st_rdev))</td></tr>
+<tr class="memdesc:af5726f9f144db5e206e186d211e6040d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract FAT attributes from a struct stat.  <br /></td></tr>
+<tr class="separator:af5726f9f144db5e206e186d211e6040d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e8595397b423dc0d3a6f22b9d27d37" id="r_a50e8595397b423dc0d3a6f22b9d27d37"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fat_8h.html#a50e8595397b423dc0d3a6f22b9d27d37">FAT_ATTR_IS_RDO</a>(st)&#160;&#160;&#160;(<a class="el" href="fat_8h.html#af5726f9f144db5e206e186d211e6040d">FAT_ATTR</a>(st) &amp; <a class="el" href="fat_8h.html#a14c6818a4e0f76ab6333541044406a67">S_FAT_ATTR_RDO</a>)</td></tr>
+<tr class="memdesc:a50e8595397b423dc0d3a6f22b9d27d37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if file has FAT read-only attribute.  <br /></td></tr>
+<tr class="separator:a50e8595397b423dc0d3a6f22b9d27d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bcb7f01ad288e10caea225589b05d5d" id="r_a6bcb7f01ad288e10caea225589b05d5d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fat_8h.html#a6bcb7f01ad288e10caea225589b05d5d">FAT_ATTR_IS_HID</a>(st)&#160;&#160;&#160;(<a class="el" href="fat_8h.html#af5726f9f144db5e206e186d211e6040d">FAT_ATTR</a>(st) &amp; <a class="el" href="fat_8h.html#a16d5bf028d03e4785f1bfde38d90e19d">S_FAT_ATTR_HID</a>)</td></tr>
+<tr class="memdesc:a6bcb7f01ad288e10caea225589b05d5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if file has FAT hidden attribute.  <br /></td></tr>
+<tr class="separator:a6bcb7f01ad288e10caea225589b05d5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a675aeb8a4677c77e7aad29249ea59f77" id="r_a675aeb8a4677c77e7aad29249ea59f77"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fat_8h.html#a675aeb8a4677c77e7aad29249ea59f77">FAT_ATTR_IS_SYS</a>(st)&#160;&#160;&#160;(<a class="el" href="fat_8h.html#af5726f9f144db5e206e186d211e6040d">FAT_ATTR</a>(st) &amp; <a class="el" href="fat_8h.html#a916822c5122d5f9f805f6971f2df23ba">S_FAT_ATTR_SYS</a>)</td></tr>
+<tr class="memdesc:a675aeb8a4677c77e7aad29249ea59f77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if file has FAT system attribute.  <br /></td></tr>
+<tr class="separator:a675aeb8a4677c77e7aad29249ea59f77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9f68b3b67b494db5a7f77fa40616849" id="r_ab9f68b3b67b494db5a7f77fa40616849"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fat_8h.html#ab9f68b3b67b494db5a7f77fa40616849">FAT_ATTR_IS_ARC</a>(st)&#160;&#160;&#160;(<a class="el" href="fat_8h.html#af5726f9f144db5e206e186d211e6040d">FAT_ATTR</a>(st) &amp; <a class="el" href="fat_8h.html#a0af97312565e3d0e98d51c0d684c4a63">S_FAT_ATTR_ARC</a>)</td></tr>
+<tr class="memdesc:ab9f68b3b67b494db5a7f77fa40616849"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if file has FAT archive attribute.  <br /></td></tr>
+<tr class="separator:ab9f68b3b67b494db5a7f77fa40616849"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac006aba66740fe72f5b4e970913366d4" id="r_ac006aba66740fe72f5b4e970913366d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fat_8h.html#ac006aba66740fe72f5b4e970913366d4">FAT_MOUNT_DEFERRED</a>&#160;&#160;&#160;0x0001</td></tr>
 <tr class="memdesc:ac006aba66740fe72f5b4e970913366d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount the volume only when it is accessed for the first time.  <br /></td></tr>
 <tr class="separator:ac006aba66740fe72f5b4e970913366d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,6 +139,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a349b36ab90324e73b1e5667df9d702f6" id="r_a349b36ab90324e73b1e5667df9d702f6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fat_8h.html#a349b36ab90324e73b1e5667df9d702f6">fat_mount</a> (const char *prefix, const <a class="el" href="structfat__disk__t.html">fat_disk_t</a> *disk, int flags)</td></tr>
 <tr class="memdesc:a349b36ab90324e73b1e5667df9d702f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount a new FAT volume through the FatFs library.  <br /></td></tr>
 <tr class="separator:a349b36ab90324e73b1e5667df9d702f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acddb3782821086798da0ff1f5385adab" id="r_acddb3782821086798da0ff1f5385adab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fat_8h.html#acddb3782821086798da0ff1f5385adab">fat_unmount</a> (int vol_id)</td></tr>
+<tr class="memdesc:acddb3782821086798da0ff1f5385adab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unmount a FAT volume previously mounted with <a class="el" href="fat_8h.html#a349b36ab90324e73b1e5667df9d702f6" title="Mount a new FAT volume through the FatFs library.">fat_mount</a>.  <br /></td></tr>
+<tr class="separator:acddb3782821086798da0ff1f5385adab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>FAT filesystem interface. </p>
@@ -139,8 +168,8 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line">FILE *f = fopen(<span class="stringliteral">&quot;sd:/myfile.dat&quot;</span>, <span class="stringliteral">&quot;rb&quot;</span>);</div>
 <div class="line">int32_t cluster = 0;</div>
 <div class="line"><a class="code hl_function" href="system_8c.html#a342c2eae35d44df768ec0634c76bf68b">ioctl</a>(fileno(f), <a class="code hl_define" href="fat_8h.html#a5815cc1cea2e141da717fd0300c0abee">IOFAT_GET_CLUSTER</a>, &amp;cluster);</div>
-<div class="ttc" id="afat_8h_html_a5815cc1cea2e141da717fd0300c0abee"><div class="ttname"><a href="fat_8h.html#a5815cc1cea2e141da717fd0300c0abee">IOFAT_GET_CLUSTER</a></div><div class="ttdeci">#define IOFAT_GET_CLUSTER</div><div class="ttdoc">Return the current cluster number.</div><div class="ttdef"><b>Definition</b> fat.h:113</div></div>
-<div class="ttc" id="asystem_8c_html_a342c2eae35d44df768ec0634c76bf68b"><div class="ttname"><a href="system_8c.html#a342c2eae35d44df768ec0634c76bf68b">ioctl</a></div><div class="ttdeci">int ioctl(int fd, unsigned long cmd, void *argp)</div><div class="ttdoc">Perform IO Control Request.</div><div class="ttdef"><b>Definition</b> system.c:1293</div></div>
+<div class="ttc" id="afat_8h_html_a5815cc1cea2e141da717fd0300c0abee"><div class="ttname"><a href="fat_8h.html#a5815cc1cea2e141da717fd0300c0abee">IOFAT_GET_CLUSTER</a></div><div class="ttdeci">#define IOFAT_GET_CLUSTER</div><div class="ttdoc">Return the current cluster number.</div><div class="ttdef"><b>Definition</b> fat.h:114</div></div>
+<div class="ttc" id="asystem_8c_html_a342c2eae35d44df768ec0634c76bf68b"><div class="ttname"><a href="system_8c.html#a342c2eae35d44df768ec0634c76bf68b">ioctl</a></div><div class="ttdeci">int ioctl(int fd, unsigned long cmd, void *argp)</div><div class="ttdoc">Perform IO Control Request.</div><div class="ttdef"><b>Definition</b> system.c:1349</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -161,7 +190,7 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line">FILE *f = fopen(<span class="stringliteral">&quot;sd:/myfile.dat&quot;</span>, <span class="stringliteral">&quot;rb&quot;</span>);</div>
 <div class="line">int64_t sector = 0;</div>
 <div class="line"><a class="code hl_function" href="system_8c.html#a342c2eae35d44df768ec0634c76bf68b">ioctl</a>(fileno(f), <a class="code hl_define" href="fat_8h.html#a50868338c37e7f71609c8d213d213236">IOFAT_GET_SECTOR</a>, &amp;sector);</div>
-<div class="ttc" id="afat_8h_html_a50868338c37e7f71609c8d213d213236"><div class="ttname"><a href="fat_8h.html#a50868338c37e7f71609c8d213d213236">IOFAT_GET_SECTOR</a></div><div class="ttdeci">#define IOFAT_GET_SECTOR</div><div class="ttdoc">Return the current sector number.</div><div class="ttdef"><b>Definition</b> fat.h:126</div></div>
+<div class="ttc" id="afat_8h_html_a50868338c37e7f71609c8d213d213236"><div class="ttname"><a href="fat_8h.html#a50868338c37e7f71609c8d213d213236">IOFAT_GET_SECTOR</a></div><div class="ttdeci">#define IOFAT_GET_SECTOR</div><div class="ttdoc">Return the current sector number.</div><div class="ttdef"><b>Definition</b> fat.h:127</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -182,8 +211,216 @@ Functions</h2></td></tr>
 <div class="fragment"><div class="line">FILE *f = fopen(<span class="stringliteral">&quot;sd:/myfile.dat&quot;</span>, <span class="stringliteral">&quot;rb&quot;</span>);</div>
 <div class="line">int32_t cluster_size = 0;</div>
 <div class="line"><a class="code hl_function" href="system_8c.html#a342c2eae35d44df768ec0634c76bf68b">ioctl</a>(fileno(f), <a class="code hl_define" href="fat_8h.html#a59e49b5ce6d7d8e3d5480ec2fb89a5c3">IOFAT_GET_CLUSTER_SIZE</a>, &amp;cluster_size);</div>
-<div class="ttc" id="afat_8h_html_a59e49b5ce6d7d8e3d5480ec2fb89a5c3"><div class="ttname"><a href="fat_8h.html#a59e49b5ce6d7d8e3d5480ec2fb89a5c3">IOFAT_GET_CLUSTER_SIZE</a></div><div class="ttdeci">#define IOFAT_GET_CLUSTER_SIZE</div><div class="ttdoc">Return the size of a cluster, as number of sectors (not bytes)</div><div class="ttdef"><b>Definition</b> fat.h:141</div></div>
+<div class="ttc" id="afat_8h_html_a59e49b5ce6d7d8e3d5480ec2fb89a5c3"><div class="ttname"><a href="fat_8h.html#a59e49b5ce6d7d8e3d5480ec2fb89a5c3">IOFAT_GET_CLUSTER_SIZE</a></div><div class="ttdeci">#define IOFAT_GET_CLUSTER_SIZE</div><div class="ttdoc">Return the size of a cluster, as number of sectors (not bytes)</div><div class="ttdef"><b>Definition</b> fat.h:142</div></div>
 </div><!-- fragment --> 
+</div>
+</div>
+<a id="a14c6818a4e0f76ab6333541044406a67" name="a14c6818a4e0f76ab6333541044406a67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14c6818a4e0f76ab6333541044406a67">&#9670;&#160;</a></span>S_FAT_ATTR_RDO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define S_FAT_ATTR_RDO&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>FAT file attribute bits (matching FatFS AM_* constants) </p>
+<p>When <a class="el" href="system_8c.html#a6267ee98ea4ca67296665534d549132a" title="Return file stats based on a file name.">stat()</a> or <a class="el" href="system_8c.html#a6104ed890cf8de16ee29498f40265c9f" title="Return stats on an open file handle.">fstat()</a> is called on a file from a FAT-mounted volume (e.g. "sd:/path/file"), the st_rdev field contains the raw FAT attribute byte. Use these masks with <a class="el" href="fat_8h.html#af5726f9f144db5e206e186d211e6040d" title="Extract FAT attributes from a struct stat.">FAT_ATTR()</a> to extract individual attributes. Read only </p>
+
+</div>
+</div>
+<a id="a16d5bf028d03e4785f1bfde38d90e19d" name="a16d5bf028d03e4785f1bfde38d90e19d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16d5bf028d03e4785f1bfde38d90e19d">&#9670;&#160;</a></span>S_FAT_ATTR_HID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define S_FAT_ATTR_HID&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Hidden </p>
+
+</div>
+</div>
+<a id="a916822c5122d5f9f805f6971f2df23ba" name="a916822c5122d5f9f805f6971f2df23ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a916822c5122d5f9f805f6971f2df23ba">&#9670;&#160;</a></span>S_FAT_ATTR_SYS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define S_FAT_ATTR_SYS&#160;&#160;&#160;0x04</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>System </p>
+
+</div>
+</div>
+<a id="a324ee6e0bbb7b51fae6aaa6645c395a0" name="a324ee6e0bbb7b51fae6aaa6645c395a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a324ee6e0bbb7b51fae6aaa6645c395a0">&#9670;&#160;</a></span>S_FAT_ATTR_DIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define S_FAT_ATTR_DIR&#160;&#160;&#160;0x10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Directory </p>
+
+</div>
+</div>
+<a id="a0af97312565e3d0e98d51c0d684c4a63" name="a0af97312565e3d0e98d51c0d684c4a63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0af97312565e3d0e98d51c0d684c4a63">&#9670;&#160;</a></span>S_FAT_ATTR_ARC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define S_FAT_ATTR_ARC&#160;&#160;&#160;0x20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Archive </p>
+
+</div>
+</div>
+<a id="af5726f9f144db5e206e186d211e6040d" name="af5726f9f144db5e206e186d211e6040d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5726f9f144db5e206e186d211e6040d">&#9670;&#160;</a></span>FAT_ATTR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FAT_ATTR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">st</td><td>)</td>
+          <td>&#160;&#160;&#160;((unsigned int)((st)-&gt;st_rdev))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extract FAT attributes from a struct stat. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">st</td><td>Pointer to struct stat from <a class="el" href="system_8c.html#a6267ee98ea4ca67296665534d549132a" title="Return file stats based on a file name.">stat()</a> or <a class="el" href="system_8c.html#a6104ed890cf8de16ee29498f40265c9f" title="Return stats on an open file handle.">fstat()</a> on a FAT file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Raw FAT attribute byte (0x01-0x3F); only meaningful for FAT-mounted files </dd></dl>
+
+</div>
+</div>
+<a id="a50e8595397b423dc0d3a6f22b9d27d37" name="a50e8595397b423dc0d3a6f22b9d27d37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50e8595397b423dc0d3a6f22b9d27d37">&#9670;&#160;</a></span>FAT_ATTR_IS_RDO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FAT_ATTR_IS_RDO</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">st</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="fat_8h.html#af5726f9f144db5e206e186d211e6040d">FAT_ATTR</a>(st) &amp; <a class="el" href="fat_8h.html#a14c6818a4e0f76ab6333541044406a67">S_FAT_ATTR_RDO</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test if file has FAT read-only attribute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">st</td><td>Pointer to struct stat from <a class="el" href="system_8c.html#a6267ee98ea4ca67296665534d549132a" title="Return file stats based on a file name.">stat()</a> or <a class="el" href="system_8c.html#a6104ed890cf8de16ee29498f40265c9f" title="Return stats on an open file handle.">fstat()</a> on a FAT file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6bcb7f01ad288e10caea225589b05d5d" name="a6bcb7f01ad288e10caea225589b05d5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bcb7f01ad288e10caea225589b05d5d">&#9670;&#160;</a></span>FAT_ATTR_IS_HID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FAT_ATTR_IS_HID</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">st</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="fat_8h.html#af5726f9f144db5e206e186d211e6040d">FAT_ATTR</a>(st) &amp; <a class="el" href="fat_8h.html#a16d5bf028d03e4785f1bfde38d90e19d">S_FAT_ATTR_HID</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test if file has FAT hidden attribute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">st</td><td>Pointer to struct stat from <a class="el" href="system_8c.html#a6267ee98ea4ca67296665534d549132a" title="Return file stats based on a file name.">stat()</a> or <a class="el" href="system_8c.html#a6104ed890cf8de16ee29498f40265c9f" title="Return stats on an open file handle.">fstat()</a> on a FAT file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a675aeb8a4677c77e7aad29249ea59f77" name="a675aeb8a4677c77e7aad29249ea59f77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a675aeb8a4677c77e7aad29249ea59f77">&#9670;&#160;</a></span>FAT_ATTR_IS_SYS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FAT_ATTR_IS_SYS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">st</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="fat_8h.html#af5726f9f144db5e206e186d211e6040d">FAT_ATTR</a>(st) &amp; <a class="el" href="fat_8h.html#a916822c5122d5f9f805f6971f2df23ba">S_FAT_ATTR_SYS</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test if file has FAT system attribute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">st</td><td>Pointer to struct stat from <a class="el" href="system_8c.html#a6267ee98ea4ca67296665534d549132a" title="Return file stats based on a file name.">stat()</a> or <a class="el" href="system_8c.html#a6104ed890cf8de16ee29498f40265c9f" title="Return stats on an open file handle.">fstat()</a> on a FAT file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab9f68b3b67b494db5a7f77fa40616849" name="ab9f68b3b67b494db5a7f77fa40616849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9f68b3b67b494db5a7f77fa40616849">&#9670;&#160;</a></span>FAT_ATTR_IS_ARC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FAT_ATTR_IS_ARC</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">st</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="fat_8h.html#af5726f9f144db5e206e186d211e6040d">FAT_ATTR</a>(st) &amp; <a class="el" href="fat_8h.html#a0af97312565e3d0e98d51c0d684c4a63">S_FAT_ATTR_ARC</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test if file has FAT archive attribute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">st</td><td>Pointer to struct stat from <a class="el" href="system_8c.html#a6267ee98ea4ca67296665534d549132a" title="Return file stats based on a file name.">stat()</a> or <a class="el" href="system_8c.html#a6104ed890cf8de16ee29498f40265c9f" title="Return stats on an open file handle.">fstat()</a> on a FAT file </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ac006aba66740fe72f5b4e970913366d4" name="ac006aba66740fe72f5b4e970913366d4"></a>
@@ -238,6 +475,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Mount a new FAT volume through the FatFs library. </p>
+<dl class="preview"><dt><b><a class="el" href="preview.html#_preview000096">Preview API:</a></b></dt><dd>This API is part of the libdragon preview: it may change without notice. Set <code>LIBDRAGON_PREVIEW=1</code> (warnings) or <code>2</code> (silent) in your Makefile to use it.</dd></dl>
 <p>This function allows to mount a new FAT volume through the FatFs library. Access to the actual disk is done through the provided disk operations, so that the volume can be backed by any kind of storage.</p>
 <p>After calling this function, you will be able to access the files on the volume using two different APIs:</p>
 <ul>
@@ -258,10 +496,41 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="acddb3782821086798da0ff1f5385adab" name="acddb3782821086798da0ff1f5385adab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acddb3782821086798da0ff1f5385adab">&#9670;&#160;</a></span>fat_unmount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fat_unmount </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vol_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unmount a FAT volume previously mounted with <a class="el" href="fat_8h.html#a349b36ab90324e73b1e5667df9d702f6" title="Mount a new FAT volume through the FatFs library.">fat_mount</a>. </p>
+<dl class="preview"><dt><b><a class="el" href="preview.html#_preview000097">Preview API:</a></b></dt><dd>This API is part of the libdragon preview: it may change without notice. Set <code>LIBDRAGON_PREVIEW=1</code> (warnings) or <code>2</code> (silent) in your Makefile to use it.</dd></dl>
+<p>This function releases a FAT volume identified by the volume ID returned by <a class="el" href="fat_8h.html#a349b36ab90324e73b1e5667df9d702f6" title="Mount a new FAT volume through the FatFs library.">fat_mount</a>. If the volume was mounted with a stdio prefix, the filesystem prefix is detached as well.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vol_id</td><td>Volume ID returned by <a class="el" href="fat_8h.html#a349b36ab90324e73b1e5667df9d702f6" title="Mount a new FAT volume through the FatFs library.">fat_mount</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
+<dd>
+-1 on failure (errno will be set) </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:58 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:14 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -159,6 +159,18 @@ Macros</h2></td></tr>
 <tr class="memitem:gace54d6bc9240a2ca470d2312fd3bd5f3" id="r_gace54d6bc9240a2ca470d2312fd3bd5f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#gace54d6bc9240a2ca470d2312fd3bd5f3">C0_WRITE_WIRED</a>(x)&#160;&#160;&#160;asm volatile(&quot;mtc0 %0,$6; nop; nop&quot;::&quot;r&quot;(x))</td></tr>
 <tr class="memdesc:gace54d6bc9240a2ca470d2312fd3bd5f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the COP0 WIRED register.  <br /></td></tr>
 <tr class="separator:gace54d6bc9240a2ca470d2312fd3bd5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67c411c49431f6652d463c65aedb7929" id="r_ga67c411c49431f6652d463c65aedb7929"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga67c411c49431f6652d463c65aedb7929">C0_PARITYERR</a>()</td></tr>
+<tr class="memdesc:ga67c411c49431f6652d463c65aedb7929"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the COP0 PARITYERR register.  <br /></td></tr>
+<tr class="separator:ga67c411c49431f6652d463c65aedb7929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6fd39dd4978ec2693627ee3698fb1efb" id="r_ga6fd39dd4978ec2693627ee3698fb1efb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga6fd39dd4978ec2693627ee3698fb1efb">C0_CACHEERR</a>()</td></tr>
+<tr class="memdesc:ga6fd39dd4978ec2693627ee3698fb1efb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the COP0 CACHEERR register.  <br /></td></tr>
+<tr class="separator:ga6fd39dd4978ec2693627ee3698fb1efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga138ae171dfdde867d0eb11b1aced4cba" id="r_ga138ae171dfdde867d0eb11b1aced4cba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#ga138ae171dfdde867d0eb11b1aced4cba">C0_WRITE_PARITYERR</a>(x)&#160;&#160;&#160;asm volatile(&quot;mtc0 %0,$26&quot;::&quot;r&quot;(x))</td></tr>
+<tr class="memdesc:ga138ae171dfdde867d0eb11b1aced4cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the COP0 PARITYERR register.  <br /></td></tr>
+<tr class="separator:ga138ae171dfdde867d0eb11b1aced4cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf57ad8bbb30895d017b888ca3127f229" id="r_gaf57ad8bbb30895d017b888ca3127f229"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#gaf57ad8bbb30895d017b888ca3127f229">C0_WRITE_CACHEERR</a>(x)&#160;&#160;&#160;asm volatile(&quot;mtc0 %0,$27&quot;::&quot;r&quot;(x))</td></tr>
+<tr class="memdesc:gaf57ad8bbb30895d017b888ca3127f229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the COP0 CACHEERR register.  <br /></td></tr>
+<tr class="separator:gaf57ad8bbb30895d017b888ca3127f229"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga29d2ddc289dea210310297840b3a3f3f" id="r_ga29d2ddc289dea210310297840b3a3f3f"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_STATUS_IE</b>&#160;&#160;&#160;0x00000001</td></tr>
 <tr class="memdesc:ga29d2ddc289dea210310297840b3a3f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status: interrupt enable. <br /></td></tr>
@@ -296,12 +308,12 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga65deb85bae05eae40c9b908d8d0a14b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status/Cause: HW interrupt 7 (Timer) <br /></td></tr>
 <tr class="separator:ga65deb85bae05eae40c9b908d8d0a14b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab0ee128daa09f4992787f3d9a02130da" id="r_gab0ee128daa09f4992787f3d9a02130da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__n64sys.html#gab0ee128daa09f4992787f3d9a02130da">C0_GET_CAUSE_CE</a>(cr)&#160;&#160;&#160;(((cr) &amp; <a class="el" href="group__n64sys.html#ga312cb5b3b8a176e307f05f7462b0b195">C0_CAUSE_CE</a>) &gt;&gt; 28)</td></tr>
-<tr class="memdesc:gab0ee128daa09f4992787f3d9a02130da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the CE value from the COP0 status register.  <br /></td></tr>
+<tr class="memdesc:gab0ee128daa09f4992787f3d9a02130da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the CE value from the COP0 cause register.  <br /></td></tr>
 <tr class="separator:gab0ee128daa09f4992787f3d9a02130da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2d7694469905182150475bac6179be6d" id="r_ga2d7694469905182150475bac6179be6d"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_GET_CAUSE_EXC_CODE</b>(sr)&#160;&#160;&#160;(((sr) &amp; <a class="el" href="group__n64sys.html#ga2becb1f066e5658e7324db3d7704ff54">C0_CAUSE_EXC_CODE</a>) &gt;&gt; 2)</td></tr>
-<tr class="memdesc:ga2d7694469905182150475bac6179be6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the exception code value from the COP0 status register value. <br /></td></tr>
-<tr class="separator:ga2d7694469905182150475bac6179be6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga068cca913ed8c8849e7227a758aef1f4" id="r_ga068cca913ed8c8849e7227a758aef1f4"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_GET_CAUSE_EXC_CODE</b>(cr)&#160;&#160;&#160;(((cr) &amp; <a class="el" href="group__n64sys.html#ga2becb1f066e5658e7324db3d7704ff54">C0_CAUSE_EXC_CODE</a>) &gt;&gt; 2)</td></tr>
+<tr class="memdesc:ga068cca913ed8c8849e7227a758aef1f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the exception code value from the COP0 cause register value. <br /></td></tr>
+<tr class="separator:ga068cca913ed8c8849e7227a758aef1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa623a51d6be58180e69da3991241c94e" id="r_gaa623a51d6be58180e69da3991241c94e"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>C0_ENTRYLO_GLOBAL</b>&#160;&#160;&#160;(1&lt;&lt;0)</td></tr>
 <tr class="memdesc:gaa623a51d6be58180e69da3991241c94e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ENTRYLO: mapping is global (all ASIDs) <br /></td></tr>
@@ -337,7 +349,7 @@ Macros</h2></td></tr>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:58 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:13 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

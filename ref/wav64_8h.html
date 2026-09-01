@@ -126,6 +126,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>wav64_set_loop</b> (<
 <tr class="memitem:af0355ddf406260d86dd082bfd4f1ed0b" id="r_af0355ddf406260d86dd082bfd4f1ed0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wav64_8h.html#af0355ddf406260d86dd082bfd4f1ed0b">wav64_play</a> (<a class="el" href="wav64_8h.html#structwav64__t">wav64_t</a> *wav, int ch)</td></tr>
 <tr class="memdesc:af0355ddf406260d86dd082bfd4f1ed0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start playing a WAV64 file.  <br /></td></tr>
 <tr class="separator:af0355ddf406260d86dd082bfd4f1ed0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45de630a15326c4f181774178d1e4884" id="r_a45de630a15326c4f181774178d1e4884"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wav64_8h.html#a45de630a15326c4f181774178d1e4884">wav64_seek</a> (<a class="el" href="wav64_8h.html#structwav64__t">wav64_t</a> *wav, int ch, double time_sec)</td></tr>
+<tr class="memdesc:a45de630a15326c4f181774178d1e4884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seek a playing WAV64 to a given time position (in seconds).  <br /></td></tr>
+<tr class="separator:a45de630a15326c4f181774178d1e4884"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef5241ddfcc85ded464dc3c57e1e75be" id="r_aef5241ddfcc85ded464dc3c57e1e75be"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wav64_8h.html#aef5241ddfcc85ded464dc3c57e1e75be">wav64_get_bitrate</a> (<a class="el" href="wav64_8h.html#structwav64__t">wav64_t</a> *wav)</td></tr>
 <tr class="memdesc:aef5241ddfcc85ded464dc3c57e1e75be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the (possibly compressed) bitrate of the WAV64 file.  <br /></td></tr>
 <tr class="separator:aef5241ddfcc85ded464dc3c57e1e75be"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,12 +211,12 @@ Streaming mode for the wav64. <p>See <a class="el" href="wav64_8h.html#a6a04294d
 
 <p>Enable a non-default compression level. </p>
 <p>This function must be called if any wav64 that will be loaded use a non-default compression level. The default compression level is 1 (VADPCM) for which no initialization is required. Level 0 (uncompressed) also requires no initialization.</p>
-<p>Currently, only level 3 requires initialization (level 2 does not exist yet). If you have any wav64 compressed with level 3, you must call this function before opening them.</p>
+<p>Levels 2 and 3 require initialization. If you have any wav64 compressed with either level, you must call this function before opening them.</p>
 <div class="fragment"><div class="line"><a class="code hl_define" href="wav64_8h.html#a41067fd01f39b23852945f418e0f3d90">wav64_init_compression</a>(3); </div>
 <div class="line"> </div>
 <div class="line"><a class="code hl_function" href="wav64_8c.html#a62b743c8c56bd67b3f2231f770c99e78">wav64_open</a>(&amp;jingle, <span class="stringliteral">&quot;rom:/jingle.wav64&quot;</span>);</div>
-<div class="ttc" id="awav64_8c_html_a62b743c8c56bd67b3f2231f770c99e78"><div class="ttname"><a href="wav64_8c.html#a62b743c8c56bd67b3f2231f770c99e78">wav64_open</a></div><div class="ttdeci">void wav64_open(wav64_t *wav, const char *file_name)</div><div class="ttdoc">Open a WAV64 file for playback.</div><div class="ttdef"><b>Definition</b> wav64.c:229</div></div>
-<div class="ttc" id="awav64_8h_html_a41067fd01f39b23852945f418e0f3d90"><div class="ttname"><a href="wav64_8h.html#a41067fd01f39b23852945f418e0f3d90">wav64_init_compression</a></div><div class="ttdeci">#define wav64_init_compression(level)</div><div class="ttdoc">Enable a non-default compression level.</div><div class="ttdef"><b>Definition</b> wav64.h:69</div></div>
+<div class="ttc" id="awav64_8c_html_a62b743c8c56bd67b3f2231f770c99e78"><div class="ttname"><a href="wav64_8c.html#a62b743c8c56bd67b3f2231f770c99e78">wav64_open</a></div><div class="ttdeci">void wav64_open(wav64_t *wav, const char *file_name)</div><div class="ttdoc">Open a WAV64 file for playback.</div><div class="ttdef"><b>Definition</b> wav64.c:294</div></div>
+<div class="ttc" id="awav64_8h_html_a41067fd01f39b23852945f418e0f3d90"><div class="ttname"><a href="wav64_8h.html#a41067fd01f39b23852945f418e0f3d90">wav64_init_compression</a></div><div class="ttdeci">#define wav64_init_compression(level)</div><div class="ttdoc">Enable a non-default compression level.</div><div class="ttdef"><b>Definition</b> wav64.h:71</div></div>
 </div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">level</td><td>Compression level to initialize</td></tr>
@@ -316,6 +319,7 @@ Streaming mode for the wav64. <p>See <a class="el" href="wav64_8h.html#a6a04294d
 </div><div class="memdoc">
 
 <p>Load a WAV64 file for playback. </p>
+<dl class="preview"><dt><b><a class="el" href="preview.html#_preview000539">Preview API:</a></b></dt><dd>This API is part of the libdragon preview: it may change without notice. Set <code>LIBDRAGON_PREVIEW=1</code> (warnings) or <code>2</code> (silent) in your Makefile to use it.</dd></dl>
 <p>This function opens the file, parses the header, and initializes for playing back through the audio mixer.</p>
 <p>You can use the <a class="el" href="wav64_8h.html#structwav64__loadparms__t" title="WAV64 loading parameters (to be passed to wav64_load)">wav64_loadparms_t</a> structure to specify additional parameters for the loading process, like the maximum number of simultaneous playbacks or the streaming mode.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -367,6 +371,53 @@ Streaming mode for the wav64. <p>See <a class="el" href="wav64_8h.html#a6a04294d
 
 </div>
 </div>
+<a id="a45de630a15326c4f181774178d1e4884" name="a45de630a15326c4f181774178d1e4884"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45de630a15326c4f181774178d1e4884">&#9670;&#160;</a></span>wav64_seek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double wav64_seek </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="wav64_8h.html#structwav64__t">wav64_t</a> *&#160;</td>
+          <td class="paramname"><em>wav</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time_sec</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Seek a playing WAV64 to a given time position (in seconds). </p>
+<dl class="preview"><dt><b><a class="el" href="preview.html#_preview000540">Preview API:</a></b></dt><dd>This API is part of the libdragon preview: it may change without notice. Set <code>LIBDRAGON_PREVIEW=1</code> (warnings) or <code>2</code> (silent) in your Makefile to use it.</dd></dl>
+<p>This is a convenience wrapper around <a class="el" href="mixer_8c.html#a3f02614d2efadf41b657c0d8050d7dcf" title="Change the current playback position within a waveform.">mixer_ch_set_pos</a> that calculates the nearest seekable position for the given time position, depending on how the file was compressed. In general, compressed audio files can only seek to specific precomputed skip points.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wav</td><td>Pointer to <a class="el" href="wav64_8h.html#structwav64__t" title="WAV64 structure.">wav64_t</a> structure </td></tr>
+    <tr><td class="paramname">ch</td><td>Channel of the mixer to seek (same channel passed to <a class="el" href="wav64_8h.html#af0355ddf406260d86dd082bfd4f1ed0b" title="Start playing a WAV64 file.">wav64_play</a>) </td></tr>
+    <tr><td class="paramname">time_sec</td><td>Desired time position (in seconds) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The adjusted time in seconds that was actually used for seeking </dd></dl>
+
+</div>
+</div>
 <a id="aef5241ddfcc85ded464dc3c57e1e75be" name="aef5241ddfcc85ded464dc3c57e1e75be"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef5241ddfcc85ded464dc3c57e1e75be">&#9670;&#160;</a></span>wav64_get_bitrate()</h2>
 
@@ -390,7 +441,7 @@ Streaming mode for the wav64. <p>See <a class="el" href="wav64_8h.html#a6a04294d
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int Bitrate in bits per second </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Bitrate in bits per second </dd></dl>
 
 </div>
 </div>
@@ -424,7 +475,7 @@ Streaming mode for the wav64. <p>See <a class="el" href="wav64_8h.html#a6a04294d
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:58 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:14 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

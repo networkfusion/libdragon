@@ -123,6 +123,9 @@ DWORD&#160;</td><td class="memItemRight" valign="bottom"><b>get_fattime</b> (voi
 <tr class="memitem:a349b36ab90324e73b1e5667df9d702f6" id="r_a349b36ab90324e73b1e5667df9d702f6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fat_8c.html#a349b36ab90324e73b1e5667df9d702f6">fat_mount</a> (const char *prefix, const <a class="el" href="structfat__disk__t.html">fat_disk_t</a> *disk, int flags)</td></tr>
 <tr class="memdesc:a349b36ab90324e73b1e5667df9d702f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount a new FAT volume through the FatFs library.  <br /></td></tr>
 <tr class="separator:a349b36ab90324e73b1e5667df9d702f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acddb3782821086798da0ff1f5385adab" id="r_acddb3782821086798da0ff1f5385adab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fat_8c.html#acddb3782821086798da0ff1f5385adab">fat_unmount</a> (int vol_id)</td></tr>
+<tr class="memdesc:acddb3782821086798da0ff1f5385adab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unmount a FAT volume previously mounted with <a class="el" href="fat_8h.html#a349b36ab90324e73b1e5667df9d702f6" title="Mount a new FAT volume through the FatFs library.">fat_mount</a>.  <br /></td></tr>
+<tr class="separator:acddb3782821086798da0ff1f5385adab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>FAT filesystem interface and newlib wrappers. </p>
@@ -206,6 +209,7 @@ DWORD&#160;</td><td class="memItemRight" valign="bottom"><b>get_fattime</b> (voi
 </div><div class="memdoc">
 
 <p>Mount a new FAT volume through the FatFs library. </p>
+<dl class="preview"><dt><b><a class="el" href="preview.html#_preview000096">Preview API:</a></b></dt><dd>This API is part of the libdragon preview: it may change without notice. Set <code>LIBDRAGON_PREVIEW=1</code> (warnings) or <code>2</code> (silent) in your Makefile to use it.</dd></dl>
 <p>This function allows to mount a new FAT volume through the FatFs library. Access to the actual disk is done through the provided disk operations, so that the volume can be backed by any kind of storage.</p>
 <p>After calling this function, you will be able to access the files on the volume using two different APIs:</p>
 <ul>
@@ -226,10 +230,41 @@ DWORD&#160;</td><td class="memItemRight" valign="bottom"><b>get_fattime</b> (voi
 
 </div>
 </div>
+<a id="acddb3782821086798da0ff1f5385adab" name="acddb3782821086798da0ff1f5385adab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acddb3782821086798da0ff1f5385adab">&#9670;&#160;</a></span>fat_unmount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fat_unmount </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vol_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unmount a FAT volume previously mounted with <a class="el" href="fat_8h.html#a349b36ab90324e73b1e5667df9d702f6" title="Mount a new FAT volume through the FatFs library.">fat_mount</a>. </p>
+<dl class="preview"><dt><b><a class="el" href="preview.html#_preview000097">Preview API:</a></b></dt><dd>This API is part of the libdragon preview: it may change without notice. Set <code>LIBDRAGON_PREVIEW=1</code> (warnings) or <code>2</code> (silent) in your Makefile to use it.</dd></dl>
+<p>This function releases a FAT volume identified by the volume ID returned by <a class="el" href="fat_8h.html#a349b36ab90324e73b1e5667df9d702f6" title="Mount a new FAT volume through the FatFs library.">fat_mount</a>. If the volume was mounted with a stdio prefix, the filesystem prefix is detached as well.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vol_id</td><td>Volume ID returned by <a class="el" href="fat_8h.html#a349b36ab90324e73b1e5667df9d702f6" title="Mount a new FAT volume through the FatFs library.">fat_mount</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success </dd>
+<dd>
+-1 on failure (errno will be set) </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:58 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:14 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

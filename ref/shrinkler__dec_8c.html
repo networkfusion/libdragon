@@ -84,12 +84,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:structshrinkler__asm__state__t" id="r_structshrinkler__asm__state__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shrinkler__dec_8c.html#structshrinkler__asm__state__t">shrinkler_asm_state_t</a></td></tr>
-<tr class="memdesc:structshrinkler__asm__state__t"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decompressor state (for assembly)  <a href="shrinkler__dec_8c.html#structshrinkler__asm__state__t">More...</a><br /></td></tr>
-<tr class="separator:structshrinkler__asm__state__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:structshrinkler__ctx__t" id="r_structshrinkler__ctx__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shrinkler__dec_8c.html#structshrinkler__ctx__t">shrinkler_ctx_t</a></td></tr>
-<tr class="memdesc:structshrinkler__ctx__t"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decompressor state (for C)  <a href="shrinkler__dec_8c.html#structshrinkler__ctx__t">More...</a><br /></td></tr>
-<tr class="separator:structshrinkler__ctx__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:structshrinkler__dec__state__t" id="r_structshrinkler__dec__state__t"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shrinkler__dec_8c.html#structshrinkler__dec__state__t">shrinkler_dec_state_t</a></td></tr>
+<tr class="memdesc:structshrinkler__dec__state__t"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shrinkler streaming decompressor state.  <a href="shrinkler__dec_8c.html#structshrinkler__dec__state__t">More...</a><br /></td></tr>
+<tr class="separator:structshrinkler__dec__state__t"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -137,149 +134,150 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a80a690c09da0d827424181091a39e13e" id="r_a80a690c09da0d827424181091a39e13e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shrinkler__dec_8c.html#a80a690c09da0d827424181091a39e13e">decompress_shrinkler_full</a> (int fd, size_t cmp_size, size_t size, void *buf, int *buf_size)</td></tr>
-<tr class="memdesc:a80a690c09da0d827424181091a39e13e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decompress a full Shrinkler-compressed file into a buffer.  <br /></td></tr>
-<tr class="separator:a80a690c09da0d827424181091a39e13e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07e86bc5f537ec6b6c428a04c19048f" id="r_ac07e86bc5f537ec6b6c428a04c19048f"><td class="memItemLeft" align="right" valign="top"><a id="ac07e86bc5f537ec6b6c428a04c19048f" name="ac07e86bc5f537ec6b6c428a04c19048f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>decompress_shrinkler_full_inplace</b> (const uint8_t *in, size_t cmp_size, uint8_t *out, size_t size)</td></tr>
+<tr class="memdesc:ac07e86bc5f537ec6b6c428a04c19048f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Full decompression of a Shrinkler stream into a buffer. <br /></td></tr>
+<tr class="separator:ac07e86bc5f537ec6b6c428a04c19048f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0995d2c27112faac56753ebfb1585682" id="r_a0995d2c27112faac56753ebfb1585682"><td class="memItemLeft" align="right" valign="top"><a id="a0995d2c27112faac56753ebfb1585682" name="a0995d2c27112faac56753ebfb1585682"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>decompress_shrinkler_init</b> (void *state, int fd, int winsize)</td></tr>
+<tr class="memdesc:a0995d2c27112faac56753ebfb1585682"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Shrinkler streaming decompressor. <br /></td></tr>
+<tr class="separator:a0995d2c27112faac56753ebfb1585682"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa58f4779be53ed1a58a42e2c35ed806a" id="r_aa58f4779be53ed1a58a42e2c35ed806a"><td class="memItemLeft" align="right" valign="top"><a id="aa58f4779be53ed1a58a42e2c35ed806a" name="aa58f4779be53ed1a58a42e2c35ed806a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>decompress_shrinkler_reset</b> (void *state)</td></tr>
+<tr class="memdesc:aa58f4779be53ed1a58a42e2c35ed806a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset Shrinkler streaming decompressor state. <br /></td></tr>
+<tr class="separator:aa58f4779be53ed1a58a42e2c35ed806a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a933671f30c318863dd87d7036d365cd9" id="r_a933671f30c318863dd87d7036d365cd9"><td class="memItemLeft" align="right" valign="top"><a id="a933671f30c318863dd87d7036d365cd9" name="a933671f30c318863dd87d7036d365cd9"></a>
+ssize_t&#160;</td><td class="memItemRight" valign="bottom"><b>decompress_shrinkler_read</b> (void *state, void *buf, size_t len)</td></tr>
+<tr class="memdesc:a933671f30c318863dd87d7036d365cd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read decompressed data from Shrinkler streaming decompressor. <br /></td></tr>
+<tr class="separator:a933671f30c318863dd87d7036d365cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
 </div><hr/><h2 class="groupheader">Data Structure Documentation</h2>
-<a name="structshrinkler__asm__state__t" id="structshrinkler__asm__state__t"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#structshrinkler__asm__state__t">&#9670;&#160;</a></span>shrinkler_asm_state_t</h2>
+<a name="structshrinkler__dec__state__t" id="structshrinkler__dec__state__t"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#structshrinkler__dec__state__t">&#9670;&#160;</a></span>shrinkler_dec_state_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct shrinkler_asm_state_t</td>
+          <td class="memname">struct shrinkler_dec_state_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="textblock"><p>Decompressor state (for assembly) </p>
+<div class="textblock"><p>Shrinkler streaming decompressor state. </p>
 </div><table class="fieldtable">
 <tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
-<a id="ae4878825622f2f4d6b40c11e952e151a" name="ae4878825622f2f4d6b40c11e952e151a"></a>uint16_t</td>
+<a id="a7b7f519cb0af4c2d2ea77d2025ade35b" name="a7b7f519cb0af4c2d2ea77d2025ade35b"></a>uint8_t</td>
+<td class="fieldname">
+buf[128]</td>
+<td class="fielddoc">
+File buffer. </td></tr>
+<tr><td class="fieldtype">
+<a id="a1f0307c25bdd4c9f832a485b31aef4a9" name="a1f0307c25bdd4c9f832a485b31aef4a9"></a>int</td>
+<td class="fieldname">
+fd</td>
+<td class="fielddoc">
+File descriptor to read from. </td></tr>
+<tr><td class="fieldtype">
+<a id="a19b3f31fcd855a3b656da7a3d83f3a47" name="a19b3f31fcd855a3b656da7a3d83f3a47"></a>int</td>
+<td class="fieldname">
+buf_idx</td>
+<td class="fielddoc">
+Current index in the file buffer. </td></tr>
+<tr><td class="fieldtype">
+<a id="a186d400f794fbf4cdb1a90b0b1b35a58" name="a186d400f794fbf4cdb1a90b0b1b35a58"></a>int</td>
+<td class="fieldname">
+buf_size</td>
+<td class="fielddoc">
+Size of the file buffer. </td></tr>
+<tr><td class="fieldtype">
+<a id="ae9c06cb798735a01e1a921c9b8387e62" name="ae9c06cb798735a01e1a921c9b8387e62"></a>bool</td>
+<td class="fieldname">
+file_eof</td>
+<td class="fielddoc">
+True if we reached EOF on the compressed stream. </td></tr>
+<tr><td class="fieldtype">
+<a id="ac8f134ff9434828f5de952f84110baf5" name="ac8f134ff9434828f5de952f84110baf5"></a>uint16_t</td>
 <td class="fieldname">
 contexts[<a class="el" href="shrinkler__dec_8c.html#a08ea098825fe271d57e415edec385b19">NUM_CONTEXTS</a>]</td>
 <td class="fielddoc">
 Probability contexts. </td></tr>
-</table>
-
-</div>
-</div>
-<a name="structshrinkler__ctx__t" id="structshrinkler__ctx__t"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#structshrinkler__ctx__t">&#9670;&#160;</a></span>shrinkler_ctx_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct shrinkler_ctx_t</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="textblock"><p>Decompressor state (for C) </p>
-</div><table class="fieldtable">
-<tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
-<a id="ade249eba67aa154473e00d0f3dfbd58f" name="ade249eba67aa154473e00d0f3dfbd58f"></a>uint16_t</td>
-<td class="fieldname">
-contexts[<a class="el" href="shrinkler__dec_8c.html#a08ea098825fe271d57e415edec385b19">NUM_CONTEXTS</a>]</td>
-<td class="fielddoc">
-Probability contexts. </td></tr>
-<tr><td class="fieldtype">
-<a id="ac57202389909228f19e52397739dc09f" name="ac57202389909228f19e52397739dc09f"></a>unsigned</td>
+<a id="a7861d19d394d4b1990a8035bb892299e" name="a7861d19d394d4b1990a8035bb892299e"></a>uint32_t</td>
 <td class="fieldname">
 intervalsize</td>
 <td class="fielddoc">
 Current interval size. </td></tr>
 <tr><td class="fieldtype">
-<a id="aafab04a0212e0be1ed970e921439e60c" name="aafab04a0212e0be1ed970e921439e60c"></a>uint64_t</td>
+<a id="aa03263cac40fef8a2c93de8c7299cfd5" name="aa03263cac40fef8a2c93de8c7299cfd5"></a>uint64_t</td>
 <td class="fieldname">
 intervalvalue</td>
 <td class="fielddoc">
 Current interval value. </td></tr>
 <tr><td class="fieldtype">
-<a id="a0d29dd0f6cae6f9f39b227114f35b44d" name="a0d29dd0f6cae6f9f39b227114f35b44d"></a>uint8_t *</td>
-<td class="fieldname">
-src</td>
-<td class="fielddoc">
-Pointer to the input data. </td></tr>
-<tr><td class="fieldtype">
-<a id="a08afc75ab67cc54e7e43c5b0b12b4084" name="a08afc75ab67cc54e7e43c5b0b12b4084"></a>int</td>
+<a id="aeaeef3a466ae45000b38dc3045c414b5" name="aeaeef3a466ae45000b38dc3045c414b5"></a>int</td>
 <td class="fieldname">
 bits_left</td>
 <td class="fielddoc">
-Number of bits left in the interval. </td></tr>
+Bits left until next 32-bit refill. </td></tr>
+<tr><td class="fieldtype">
+<a id="a32657001e61085a67ee2bc15d38ed2ff" name="a32657001e61085a67ee2bc15d38ed2ff"></a>bool</td>
+<td class="fieldname">
+decoder_inited</td>
+<td class="fielddoc">
+True after reading the initial 32 bits. </td></tr>
+<tr><td class="fieldtype">
+<a id="aed92be531b36cfb3fd028d8bca91e81a" name="aed92be531b36cfb3fd028d8bca91e81a"></a>bool</td>
+<td class="fieldname">
+stream_eof</td>
+<td class="fielddoc">
+True if end-of-stream token has been decoded. </td></tr>
+<tr><td class="fieldtype">
+<a id="a8d19b6b7216301e9c592dd1d7c2110b5" name="a8d19b6b7216301e9c592dd1d7c2110b5"></a>bool</td>
+<td class="fieldname">
+ref</td>
+<td class="fielddoc">
+Next symbol is a match if true, literal if false. </td></tr>
+<tr><td class="fieldtype">
+<a id="a4f72f9da7bc77f00b80e8b4cf0fbd49d" name="a4f72f9da7bc77f00b80e8b4cf0fbd49d"></a>bool</td>
+<td class="fieldname">
+prev_was_ref</td>
+<td class="fielddoc">
+Previous symbol was a match. </td></tr>
+<tr><td class="fieldtype">
+<a id="a0d2fa118b188b259a533117911f41489" name="a0d2fa118b188b259a533117911f41489"></a>int</td>
+<td class="fieldname">
+match_off</td>
+<td class="fielddoc">
+Current match offset (for repeated matches) </td></tr>
+<tr><td class="fieldtype">
+<a id="ac25b810fe397393e47d47d7b924ff5da" name="ac25b810fe397393e47d47d7b924ff5da"></a>int</td>
+<td class="fieldname">
+match_len</td>
+<td class="fielddoc">
+Remaining match length to copy. </td></tr>
+<tr><td class="fieldtype">
+<a id="abe718a8d70040fa0eb0e1f16d0f9cafb" name="abe718a8d70040fa0eb0e1f16d0f9cafb"></a>uint32_t</td>
+<td class="fieldname">
+out_pos</td>
+<td class="fielddoc">
+Bytes produced so far (for parity) </td></tr>
+<tr><td class="fieldtype">
+<a id="a9725bbf0f9a3f6572e7394e967005798" name="a9725bbf0f9a3f6572e7394e967005798"></a><a class="el" href="ringbuf__internal_8h.html#structdecompress__ringbuf__t">decompress_ringbuf_t</a></td>
+<td class="fieldname">
+ringbuf</td>
+<td class="fielddoc">
+Ring buffer (window) </td></tr>
 </table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a80a690c09da0d827424181091a39e13e" name="a80a690c09da0d827424181091a39e13e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80a690c09da0d827424181091a39e13e">&#9670;&#160;</a></span>decompress_shrinkler_full()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool decompress_shrinkler_full </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>fd</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>cmp_size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>buf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>buf_size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Decompress a full Shrinkler-compressed file into a buffer. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fd</td><td>File descriptor to read compressed data from. </td></tr>
-    <tr><td class="paramname">cmp_size</td><td>Size of the compressed data. </td></tr>
-    <tr><td class="paramname">size</td><td>Size of the decompressed data. </td></tr>
-    <tr><td class="paramname">buf</td><td>Buffer to store decompressed data. </td></tr>
-    <tr><td class="paramname">buf_size</td><td>Pointer to the size of the buffer; updated with required size. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true on success, false on failure. </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:58 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:14 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

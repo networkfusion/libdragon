@@ -157,6 +157,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga87492c7a75157f1aa852aedaf78e4d59" id="r_ga87492c7a75157f1aa852aedaf78e4d59"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga87492c7a75157f1aa852aedaf78e4d59">detach_filesystem</a> (const char *const prefix)</td></tr>
 <tr class="memdesc:ga87492c7a75157f1aa852aedaf78e4d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister a filesystem from newlib.  <br /></td></tr>
 <tr class="separator:ga87492c7a75157f1aa852aedaf78e4d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga45b37c2a7532e537094db41d4d5745e9" id="r_ga45b37c2a7532e537094db41d4d5745e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga45b37c2a7532e537094db41d4d5745e9">detach_filesystem_by_pointer</a> (<a class="el" href="structfilesystem__t.html">filesystem_t</a> *filesystem)</td></tr>
+<tr class="memdesc:ga45b37c2a7532e537094db41d4d5745e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister a filesystem from newlib by pointer.  <br /></td></tr>
+<tr class="separator:ga45b37c2a7532e537094db41d4d5745e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b89c77687f2ddc931aff3982814c39f" id="r_a1b89c77687f2ddc931aff3982814c39f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a1b89c77687f2ddc931aff3982814c39f">chown</a> (const char *path, uid_t owner, gid_t group)</td></tr>
 <tr class="memdesc:a1b89c77687f2ddc931aff3982814c39f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change ownership on a file or directory.  <br /></td></tr>
 <tr class="separator:a1b89c77687f2ddc931aff3982814c39f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -278,6 +281,8 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a9baf607a8b1d35caa01cba78a59cfa05" id="r_a9baf607a8b1d35caa01cba78a59cfa05"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a9baf607a8b1d35caa01cba78a59cfa05">__heap_total_size</a> = 0</td></tr>
 <tr class="separator:a9baf607a8b1d35caa01cba78a59cfa05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23b471ace638b0d722e6d225255ab3db" id="r_a23b471ace638b0d722e6d225255ab3db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#a23b471ace638b0d722e6d225255ab3db">__heap_top_allocated_size</a> = 0</td></tr>
+<tr class="separator:a23b471ace638b0d722e6d225255ab3db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb6cd5e9d5c0eaaf05ab4dd31ae3185a" id="r_acb6cd5e9d5c0eaaf05ab4dd31ae3185a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#acb6cd5e9d5c0eaaf05ab4dd31ae3185a">__heap_end</a> = 0</td></tr>
 <tr class="separator:acb6cd5e9d5c0eaaf05ab4dd31ae3185a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad11809ad0d3a9c1fc6798cfafb1ba120" id="r_ad11809ad0d3a9c1fc6798cfafb1ba120"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="system_8c.html#ad11809ad0d3a9c1fc6798cfafb1ba120">__heap_top</a> = 0</td></tr>
@@ -1363,7 +1368,7 @@ True if a lock is needed for this filesystem. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int 0 on success, -1 on failure (errno will be set) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure (errno will be set) </dd></dl>
 
 </div>
 </div>
@@ -1402,7 +1407,7 @@ True if a lock is needed for this filesystem. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int 0 on success, -1 on failure (errno will be set) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure (errno will be set) </dd></dl>
 
 </div>
 </div>
@@ -1519,7 +1524,7 @@ True if a lock is needed for this filesystem. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int 0 on success, -1 on failure (errno will be set) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure (errno will be set) </dd></dl>
 
 </div>
 </div>
@@ -1557,7 +1562,7 @@ True if a lock is needed for this filesystem. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int 0 on success, -1 on failure (errno will be set) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure (errno will be set) </dd></dl>
 
 </div>
 </div>
@@ -1595,7 +1600,7 @@ True if a lock is needed for this filesystem. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int 0 on success, -1 on failure (errno will be set) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure (errno will be set) </dd></dl>
 
 </div>
 </div>
@@ -1765,6 +1770,21 @@ True if a lock is needed for this filesystem. </td></tr>
 
 </div>
 </div>
+<a id="a23b471ace638b0d722e6d225255ab3db" name="a23b471ace638b0d722e6d225255ab3db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23b471ace638b0d722e6d225255ab3db">&#9670;&#160;</a></span>__heap_top_allocated_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int __heap_top_allocated_size = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Memory allocated via sbrk_top </p>
+
+</div>
+</div>
 <a id="acb6cd5e9d5c0eaaf05ab4dd31ae3185a" name="acb6cd5e9d5c0eaaf05ab4dd31ae3185a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acb6cd5e9d5c0eaaf05ab4dd31ae3185a">&#9670;&#160;</a></span>__heap_end</h2>
 
@@ -1798,7 +1818,7 @@ True if a lock is needed for this filesystem. </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:59 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:15 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -81,16 +81,28 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
 Files</h2></td></tr>
+<tr class="memitem:subtitles_8h" id="r_subtitles_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="subtitles_8h.html">subtitles.h</a></td></tr>
+<tr class="memdesc:subtitles_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtitles API via the SUB64 format. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:video__sync_8h" id="r_video__sync_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="video__sync_8h.html">video_sync.h</a></td></tr>
+<tr class="memdesc:video__sync_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Video sync helper (frameskipping/seek decisions driven by a master clock) <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:yuv_8h" id="r_yuv_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="yuv_8h.html">yuv.h</a></td></tr>
 <tr class="memdesc:yuv_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hardware accelerated YUV conversion. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Compressed video playback libraries (for FMVs, etc.) </p>
+<p>This group contains modules to play compressed video files, such as full-motion videos (FMVs):</p>
+<ul>
+<li><a class="el" href="yuv_8h.html" title="Hardware accelerated YUV conversion.">yuv.h</a>: Hardware-accelerated YUV to RGB conversion using RDP and RSP. It provides functions to blit YUV frames to RGB surfaces.</li>
+<li><a class="el" href="video_8h.html" title="Video player subsystem.">video.h</a>: Video player API to open and playback video files. It allows to retrieve video information, decode video frames, and seek. This can be used for building custom video players, including using videos in more complex scenes (eg: as textures in 3d scenes).</li>
+<li><a class="el" href="fmv_8h.html" title="Full-motion video playback (high-level API)">fmv.h</a>: Very High-level single-function API to playback full-motion videos, synchronized with audio. It provides a one-function-does-it-all API to play a video file with minimal code. </li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:59 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:15 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -160,6 +160,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>__wrap___do_global_ct
 <tr class="memitem:ga87492c7a75157f1aa852aedaf78e4d59" id="r_ga87492c7a75157f1aa852aedaf78e4d59"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga87492c7a75157f1aa852aedaf78e4d59">detach_filesystem</a> (const char *const prefix)</td></tr>
 <tr class="memdesc:ga87492c7a75157f1aa852aedaf78e4d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister a filesystem from newlib.  <br /></td></tr>
 <tr class="separator:ga87492c7a75157f1aa852aedaf78e4d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga45b37c2a7532e537094db41d4d5745e9" id="r_ga45b37c2a7532e537094db41d4d5745e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga45b37c2a7532e537094db41d4d5745e9">detach_filesystem_by_pointer</a> (<a class="el" href="structfilesystem__t.html">filesystem_t</a> *filesystem)</td></tr>
+<tr class="memdesc:ga45b37c2a7532e537094db41d4d5745e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister a filesystem from newlib by pointer.  <br /></td></tr>
+<tr class="separator:ga45b37c2a7532e537094db41d4d5745e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5a2591289aeb5ec5d9f73419533edc39" id="r_ga5a2591289aeb5ec5d9f73419533edc39"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__system.html#ga5a2591289aeb5ec5d9f73419533edc39">hook_stdio_calls</a> (<a class="el" href="structstdio__t.html">stdio_t</a> *stdio_calls)</td></tr>
 <tr class="memdesc:ga5a2591289aeb5ec5d9f73419533edc39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook into stdio for STDIN, STDOUT and STDERR callbacks.  <br /></td></tr>
 <tr class="separator:ga5a2591289aeb5ec5d9f73419533edc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -352,6 +355,41 @@ Opaque cookie used to continue walking. </td></tr>
 
 </div>
 </div>
+<a id="ga45b37c2a7532e537094db41d4d5745e9" name="ga45b37c2a7532e537094db41d4d5745e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga45b37c2a7532e537094db41d4d5745e9">&#9670;&#160;</a></span>detach_filesystem_by_pointer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int detach_filesystem_by_pointer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfilesystem__t.html">filesystem_t</a> *&#160;</td>
+          <td class="paramname"><em>filesystem</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unregister a filesystem from newlib by pointer. </p>
+<dl class="section note"><dt>Note</dt><dd>This function will make sure all files are closed before unregistering the filesystem.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filesystem</td><td>The filesystem pointer that was passed to <a class="el" href="group__system.html#gacca6d970a0153055aa8c962067cdfdf1" title="Register a filesystem with newlib.">attach_filesystem</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-1</td><td>if the parameters were invalid </td></tr>
+    <tr><td class="paramname">-2</td><td>if the filesystem couldn't be found </td></tr>
+    <tr><td class="paramname">0</td><td>if the filesystem was successfully unregistered </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ga5a2591289aeb5ec5d9f73419533edc39" name="ga5a2591289aeb5ec5d9f73419533edc39"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga5a2591289aeb5ec5d9f73419533edc39">&#9670;&#160;</a></span>hook_stdio_calls()</h2>
 
@@ -463,7 +501,7 @@ Opaque cookie used to continue walking. </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:59 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:15 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

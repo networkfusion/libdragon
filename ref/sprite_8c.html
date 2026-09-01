@@ -82,14 +82,21 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae5807da177fc7a64c331b22bb59b80f1" id="r_ae5807da177fc7a64c331b22bb59b80f1"><td class="memItemLeft" align="right" valign="top"><a id="ae5807da177fc7a64c331b22bb59b80f1" name="ae5807da177fc7a64c331b22bb59b80f1"></a>
-<a class="el" href="sprite__internal_8h.html#structsprite__ext__t">sprite_ext_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>__sprite_ext</b> (<a class="el" href="sprite_8h.html#structsprite__t">sprite_t</a> *sprite)</td></tr>
-<tr class="memdesc:ae5807da177fc7a64c331b22bb59b80f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the sprite extended structure, or NULL if the structure does not exist. <br /></td></tr>
+<tr class="memitem:ae5807da177fc7a64c331b22bb59b80f1" id="r_ae5807da177fc7a64c331b22bb59b80f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sprite__internal_8h.html#structsprite__ext__t">sprite_ext_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8c.html#ae5807da177fc7a64c331b22bb59b80f1">__sprite_ext</a> (<a class="el" href="sprite_8h.html#structsprite__t">sprite_t</a> *sprite)</td></tr>
+<tr class="memdesc:ae5807da177fc7a64c331b22bb59b80f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the sprite extended structure, or NULL if the structure does not exist.  <br /></td></tr>
 <tr class="separator:ae5807da177fc7a64c331b22bb59b80f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88ac3b2a2fe3e7a6a26c87b0c98b0c7a" id="r_a88ac3b2a2fe3e7a6a26c87b0c98b0c7a"><td class="memItemLeft" align="right" valign="top"><a id="a88ac3b2a2fe3e7a6a26c87b0c98b0c7a" name="a88ac3b2a2fe3e7a6a26c87b0c98b0c7a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>__sprite_upgrade</b> (<a class="el" href="sprite_8h.html#structsprite__t">sprite_t</a> *sprite)</td></tr>
 <tr class="memdesc:a88ac3b2a2fe3e7a6a26c87b0c98b0c7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a sprite from the old format with implicit texture format. <br /></td></tr>
 <tr class="separator:a88ac3b2a2fe3e7a6a26c87b0c98b0c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b2f399173d68bd043c9e6964ab50653" id="r_a8b2f399173d68bd043c9e6964ab50653"><td class="memItemLeft" align="right" valign="top"><a id="a8b2f399173d68bd043c9e6964ab50653" name="a8b2f399173d68bd043c9e6964ab50653"></a>
+<a class="el" href="sprite__internal_8h.html#structsprite__decoder__t">sprite_decoder_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>sprite_decoder_register</b> (<a class="el" href="sprite__internal_8h.html#a1b88083350e959bffb6a64696268b04f">sprite_decodable_fn</a> decodable, <a class="el" href="sprite__internal_8h.html#a5475a99feebf99b9ea3460a09e9433a9">sprite_decode_fn</a> decode)</td></tr>
+<tr class="memdesc:a8b2f399173d68bd043c9e6964ab50653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a sprite decoder for a specific magic string. <br /></td></tr>
+<tr class="separator:a8b2f399173d68bd043c9e6964ab50653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed114b3005a7d074fce45d70ad9e4db8" id="r_aed114b3005a7d074fce45d70ad9e4db8"><td class="memItemLeft" align="right" valign="top"><a id="aed114b3005a7d074fce45d70ad9e4db8" name="aed114b3005a7d074fce45d70ad9e4db8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>sprite_decoder_unregister</b> (<a class="el" href="sprite__internal_8h.html#structsprite__decoder__t">sprite_decoder_t</a> *decoder)</td></tr>
+<tr class="memdesc:aed114b3005a7d074fce45d70ad9e4db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister the sprite decoder for a specific magic string. <br /></td></tr>
+<tr class="separator:aed114b3005a7d074fce45d70ad9e4db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73fe062e6e5b91224190aece57a9d5d4" id="r_a73fe062e6e5b91224190aece57a9d5d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sprite_8h.html#structsprite__t">sprite_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8c.html#a73fe062e6e5b91224190aece57a9d5d4">sprite_load_buf</a> (void *buf, int sz)</td></tr>
 <tr class="memdesc:a73fe062e6e5b91224190aece57a9d5d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a sprite from a buffer.  <br /></td></tr>
 <tr class="separator:a73fe062e6e5b91224190aece57a9d5d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,6 +119,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>sprite_free</b> (<a c
 <tr class="memitem:adfc7bf5e68991099a3ec86ae05d4aca9" id="r_adfc7bf5e68991099a3ec86ae05d4aca9"><td class="memItemLeft" align="right" valign="top">uint16_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8c.html#adfc7bf5e68991099a3ec86ae05d4aca9">sprite_get_palette</a> (<a class="el" href="sprite_8h.html#structsprite__t">sprite_t</a> *sprite)</td></tr>
 <tr class="memdesc:adfc7bf5e68991099a3ec86ae05d4aca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Access the sprite palette (if any)  <br /></td></tr>
 <tr class="separator:adfc7bf5e68991099a3ec86ae05d4aca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab2f3dbb1cb3178e323ab943c97eae10" id="r_aab2f3dbb1cb3178e323ab943c97eae10"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8c.html#aab2f3dbb1cb3178e323ab943c97eae10">sprite_get_palette_used_colors</a> (<a class="el" href="sprite_8h.html#structsprite__t">sprite_t</a> *sprite)</td></tr>
+<tr class="memdesc:aab2f3dbb1cb3178e323ab943c97eae10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of colors actually used in palette.  <br /></td></tr>
+<tr class="separator:aab2f3dbb1cb3178e323ab943c97eae10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2569c0dd2df7c58ebe684f4d21de550" id="r_ac2569c0dd2df7c58ebe684f4d21de550"><td class="memItemLeft" align="right" valign="top"><a class="el" href="surface_8h.html#structsurface__t">surface_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sprite_8c.html#ac2569c0dd2df7c58ebe684f4d21de550">sprite_get_tile</a> (<a class="el" href="sprite_8h.html#structsprite__t">sprite_t</a> *sprite, int h, int v)</td></tr>
 <tr class="memdesc:ac2569c0dd2df7c58ebe684f4d21de550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a <a class="el" href="surface_8h.html#structsurface__t" title="A surface buffer for graphics.">surface_t</a> pointing to a specific tile of the spritemap.  <br /></td></tr>
 <tr class="separator:ac2569c0dd2df7c58ebe684f4d21de550"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,6 +144,27 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>sprite_free</b> (<a c
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="ae5807da177fc7a64c331b22bb59b80f1" name="ae5807da177fc7a64c331b22bb59b80f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5807da177fc7a64c331b22bb59b80f1">&#9670;&#160;</a></span>__sprite_ext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sprite__internal_8h.html#structsprite__ext__t">sprite_ext_t</a> * __sprite_ext </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sprite_8h.html#structsprite__t">sprite_t</a> *&#160;</td>
+          <td class="paramname"><em>sprite</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Access the sprite extended structure, or NULL if the structure does not exist. </p>
+<p>Access the sprite extended structure, or NULL if it does not exist. </p>
+
+</div>
+</div>
 <a id="a73fe062e6e5b91224190aece57a9d5d4" name="a73fe062e6e5b91224190aece57a9d5d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a73fe062e6e5b91224190aece57a9d5d4">&#9670;&#160;</a></span>sprite_load_buf()</h2>
 
@@ -170,7 +201,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>sprite_free</b> (<a c
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>sprite_t* The loaded sprite </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The loaded sprite </dd></dl>
 
 </div>
 </div>
@@ -199,7 +230,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>sprite_free</b> (<a c
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>sprite_t* The loaded sprite </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The loaded sprite </dd></dl>
 
 </div>
 </div>
@@ -269,7 +300,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>sprite_free</b> (<a c
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="surface_8h.html#structsurface__t" title="A surface buffer for graphics.">surface_t</a> The surface containing the data. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The surface containing the data. </dd></dl>
 
 </div>
 </div>
@@ -318,7 +349,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>sprite_free</b> (<a c
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="surface_8h.html#structsurface__t" title="A surface buffer for graphics.">surface_t</a> The surface containing the data. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The surface containing the data. </dd></dl>
 
 </div>
 </div>
@@ -348,6 +379,34 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>sprite_free</b> (<a c
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the palette data, or NULL if the sprite does not have a palette </dd></dl>
+
+</div>
+</div>
+<a id="aab2f3dbb1cb3178e323ab943c97eae10" name="aab2f3dbb1cb3178e323ab943c97eae10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab2f3dbb1cb3178e323ab943c97eae10">&#9670;&#160;</a></span>sprite_get_palette_used_colors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sprite_get_palette_used_colors </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sprite_8h.html#structsprite__t">sprite_t</a> *&#160;</td>
+          <td class="paramname"><em>sprite</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get number of colors actually used in palette. </p>
+<dl class="preview"><dt><b><a class="el" href="preview.html#_preview000463">Preview API:</a></b></dt><dd>This API is part of the libdragon preview: it may change without notice. Set <code>LIBDRAGON_PREVIEW=1</code> (warnings) or <code>2</code> (silent) in your Makefile to use it.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sprite</td><td>The sprite to access </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of used palette colors </dd></dl>
 
 </div>
 </div>
@@ -512,6 +571,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>sprite_free</b> (<a c
 </div><div class="memdoc">
 
 <p>Return true if the sprite is in SHQ format. </p>
+<dl class="preview"><dt><b><a class="el" href="preview.html#_preview000464">Preview API:</a></b></dt><dd>This API is part of the libdragon preview: it may change without notice. Set <code>LIBDRAGON_PREVIEW=1</code> (warnings) or <code>2</code> (silent) in your Makefile to use it.</dd></dl>
 <p>This is a special sprite made of two mipmaps (one I4 and one RGBA16) that must be displayed using subtractive blending.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -561,7 +621,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>sprite_free</b> (<a c
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:59 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:15 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

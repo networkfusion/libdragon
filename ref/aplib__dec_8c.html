@@ -115,10 +115,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>decompress_aplib_rese
 ssize_t&#160;</td><td class="memItemRight" valign="bottom"><b>decompress_aplib_read</b> (void *state, void *buf, size_t len)</td></tr>
 <tr class="memdesc:a8c442566f30fac4ef091aca664182845"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read decompressed data from APLIB decompressor. <br /></td></tr>
 <tr class="separator:a8c442566f30fac4ef091aca664182845"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fae67bc3f83578e19b23d5cfb96efd8" id="r_a4fae67bc3f83578e19b23d5cfb96efd8"><td class="memItemLeft" align="right" valign="top"><a id="a4fae67bc3f83578e19b23d5cfb96efd8" name="a4fae67bc3f83578e19b23d5cfb96efd8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>decompress_aplib_full</b> (int fd, size_t cmp_size, size_t size, void *buf, int *buf_size)</td></tr>
-<tr class="memdesc:a4fae67bc3f83578e19b23d5cfb96efd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decompress entire APLIB file. <br /></td></tr>
-<tr class="separator:a4fae67bc3f83578e19b23d5cfb96efd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e3142a9501244aca3ca7185feb2380b" id="r_a3e3142a9501244aca3ca7185feb2380b"><td class="memItemLeft" align="right" valign="top"><a id="a3e3142a9501244aca3ca7185feb2380b" name="a3e3142a9501244aca3ca7185feb2380b"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>decompress_aplib_full_inplace</b> (const uint8_t *in, size_t cmp_size, uint8_t *out, size_t size)</td></tr>
+<tr class="memdesc:a3e3142a9501244aca3ca7185feb2380b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decompress APLIB data in-place using fast assembly implementation. <br /></td></tr>
+<tr class="separator:a3e3142a9501244aca3ca7185feb2380b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Giovanni Bajo <a href="#" onclick="location.href='mai'+'lto:'+'gio'+'va'+'nni'+'ba'+'jo@'+'gm'+'ail'+'.c'+'om'; return false;">giova<span class="obfuscator">.nosp@m.</span>nnib<span class="obfuscator">.nosp@m.</span>ajo@g<span class="obfuscator">.nosp@m.</span>mail<span class="obfuscator">.nosp@m.</span>.com</a> </dd></dl>
@@ -138,29 +138,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>decompress_aplib_full
 </div><table class="fieldtable">
 <tr><th colspan="3">Data Fields</th></tr>
 <tr><td class="fieldtype">
-<a id="a69870c78ca591a097145b07a1f5a83be" name="a69870c78ca591a097145b07a1f5a83be"></a>uint8_t</td>
+<a id="a1373cc8e82f7b6723c0e769e10461193" name="a1373cc8e82f7b6723c0e769e10461193"></a><a class="el" href="ringbuf__internal_8h.html#struct____lookahead__buf__t">__lookahead_buf_t</a></td>
 <td class="fieldname">
-buf[2][128]</td>
+lb</td>
 <td class="fielddoc">
-Buffer of loaded data. </td></tr>
-<tr><td class="fieldtype">
-<a id="a383ec490ef8b756be264f3ad15f260b3" name="a383ec490ef8b756be264f3ad15f260b3"></a>int</td>
-<td class="fieldname">
-cur_buf</td>
-<td class="fielddoc">
-Current buffer being used. </td></tr>
-<tr><td class="fieldtype">
-<a id="a05f1c38944c91281ca352913ba119dd8" name="a05f1c38944c91281ca352913ba119dd8"></a>uint8_t *</td>
-<td class="fieldname">
-buf_ptr</td>
-<td class="fielddoc">
-Pointer to data being processed. </td></tr>
-<tr><td class="fieldtype">
-<a id="aff28c82db32cf15748e51129d905f840" name="aff28c82db32cf15748e51129d905f840"></a>uint8_t *</td>
-<td class="fieldname">
-buf_end</td>
-<td class="fielddoc">
-Pointer to end of current loaded data. </td></tr>
+Lookahead reader state. </td></tr>
 <tr><td class="fieldtype">
 <a id="afd8a18524c84a6707ce42ac83382a8cd" name="afd8a18524c84a6707ce42ac83382a8cd"></a>uint8_t</td>
 <td class="fieldname">
@@ -174,25 +156,7 @@ shift</td>
 <td class="fielddoc">
 Current bit being processed. </td></tr>
 <tr><td class="fieldtype">
-<a id="a7436222a8535bb76dd6764303006cb7f" name="a7436222a8535bb76dd6764303006cb7f"></a>int</td>
-<td class="fieldname">
-fd</td>
-<td class="fielddoc">
-File being read from. </td></tr>
-<tr><td class="fieldtype">
-<a id="a747e3885ed67259104faa7343235b49a" name="a747e3885ed67259104faa7343235b49a"></a>uint32_t</td>
-<td class="fieldname">
-rom_addr</td>
-<td class="fielddoc">
-ROM address being read from (optional) </td></tr>
-<tr><td class="fieldtype">
-<a id="a1b05f6456cffbbb7d401c5d21a451d72" name="a1b05f6456cffbbb7d401c5d21a451d72"></a>bool</td>
-<td class="fieldname">
-eof</td>
-<td class="fielddoc">
-Whether the end of the stream has been reached. </td></tr>
-<tr><td class="fieldtype">
-<a id="ad31a656c315484e9ed601c8436ee2821" name="ad31a656c315484e9ed601c8436ee2821"></a>struct <a class="el" href="aplib__dec_8c.html#structaplib__decompressor__t_8partial">aplib_decompressor_t.partial</a></td>
+<a id="aca47f8cee513e11cb8f3dc830f331388" name="aca47f8cee513e11cb8f3dc830f331388"></a>struct <a class="el" href="aplib__dec_8c.html#structaplib__decompressor__t_8partial">aplib_decompressor_t.partial</a></td>
 <td class="fieldname">
 partial</td>
 <td class="fielddoc">
@@ -251,7 +215,7 @@ Length of the match. </td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:58 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:14 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

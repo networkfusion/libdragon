@@ -106,7 +106,7 @@ Functions</h2></td></tr>
 <li><code>getentropy32</code>: returns a 32-bit non-deterministic random number.</li>
 </ul>
 <p>Notice that this entropy source is not a cryptographic one. If you need a cryptographically secure random number generator, you should fetch some entropy from this module and then use a cryptographic PRNG like ChaCha20 or SipHash to generate the random numbers.</p>
-<p>If you just need some random numbers for your game (standard "game randomness" for eg: random stage selection), you can use this module just to seed the standard C library <code>rand()</code> function and then use <code>rand()</code> in your game engine:</p>
+<dl class="section note"><dt>Note</dt><dd>This is a low-level module for advance use cases. If you just need some random numbers for your game, use this module just to seed the standard C library <code>rand()</code> function and then use <code>rand()</code> in your game engine:</dd></dl>
 <div class="fragment"><div class="line"><span class="comment">// Seed the C library random number generator in an unpredictable way</span></div>
 <div class="line"><span class="comment">// using the entropy source, so that the random numbers generated will</span></div>
 <div class="line"><span class="comment">// be different on each boot.</span></div>
@@ -143,6 +143,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Generate an array of unpredictable random numbers. </p>
+<dl class="preview"><dt><b><a class="el" href="preview.html#_preview000093">Preview API:</a></b></dt><dd>This API is part of the libdragon preview: it may change without notice. Set <code>LIBDRAGON_PREVIEW=1</code> (warnings) or <code>2</code> (silent) in your Makefile to use it.</dd></dl>
 <p>This function can be used to generate an array of random data. The function is guaranteed to return good quality random numbers of basically unlimited length. The function is automatically seeded by entropy collected during the boot process (during IPL3) so it always returns different numbers after each boot on hardware. On each emulator, though, the generate numbers will be consistent.</p>
 <p>The data returned by this function is not cryptographically secure, but there aren't currently many known use cases in which this is a problem. Instead, the numbers are non reproducible and unpredictable, meaning that will vary on different runs.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -152,7 +153,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int 0 on success, -1 on failure. Currently, the function never returns -1. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure. Currently, the function never returns -1. </dd></dl>
 
 </div>
 </div>
@@ -173,8 +174,10 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return 64-bit of entropy. </p>
+<dl class="preview"><dt><b><a class="el" href="preview.html#_preview000094">Preview API:</a></b></dt><dd>This API is part of the libdragon preview: it may change without notice. Set <code>LIBDRAGON_PREVIEW=1</code> (warnings) or <code>2</code> (silent) in your Makefile to use it.</dd></dl>
 <p>This is a simplified API for <a class="el" href="entropy_8h.html#aba327067dfe9924bd9ab3bc20ee91c63" title="Generate an array of unpredictable random numbers.">getentropy()</a> to just return 64-bit of entropy instead of an arbitrary buffer.</p>
-<dl class="section return"><dt>Returns</dt><dd>uint32_t Unpredictable 64-bit random number </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function is much, much slower than calling rand(). If you just need random numbers for your game, use rand() instead.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Unpredictable 64-bit random number </dd></dl>
 
 </div>
 </div>
@@ -195,15 +198,17 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Return 32-bit of entropy. </p>
+<dl class="preview"><dt><b><a class="el" href="preview.html#_preview000095">Preview API:</a></b></dt><dd>This API is part of the libdragon preview: it may change without notice. Set <code>LIBDRAGON_PREVIEW=1</code> (warnings) or <code>2</code> (silent) in your Makefile to use it.</dd></dl>
 <p>This is a simplified API for <a class="el" href="entropy_8h.html#aba327067dfe9924bd9ab3bc20ee91c63" title="Generate an array of unpredictable random numbers.">getentropy()</a> to just return 32-bit of entropy instead of an arbitrary buffer. Useful for instance to seed <code>srand()</code>.</p>
-<dl class="section return"><dt>Returns</dt><dd>uint32_t Unpredictable 32-bit random number </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function is much, much slower than calling rand(). If you just need random numbers for your game, use rand() instead.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Unpredictable 32-bit random number </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 23 2025 20:57:58 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Sep 1 2026 22:03:14 for libdragon by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
