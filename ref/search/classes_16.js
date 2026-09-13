@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['wav64_5fcompression_5ft_0',['wav64_compression_t',['../structwav64__compression__t.html',1,'']]],
+  ['wav64_5fcompression_5ft_0',['wav64_compression_t',['../wav64__internal_8h.html#structwav64__compression__t',1,'']]],
   ['wav64_5fheader_5ft_1',['wav64_header_t',['../wav64__internal_8h.html#structwav64__header__t',1,'']]],
   ['wav64_5fheader_5fulc_5ft_2',['wav64_header_ulc_t',['../wav64__ulc__internal_8h.html#structwav64__header__ulc__t',1,'']]],
   ['wav64_5fheader_5fvadpcm_5ft_3',['wav64_header_vadpcm_t',['../wav64__vadpcm__internal_8h.html#structwav64__header__vadpcm__t',1,'']]],

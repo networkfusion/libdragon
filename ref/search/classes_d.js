@@ -28,7 +28,7 @@ var searchData=
   ['mgfx_5ftexturing_5ft_25',['mgfx_texturing_t',['../mgfx_8h.html#structmgfx__texturing__t',1,'']]],
   ['mid64_5fheader_5ft_26',['mid64_header_t',['../mid64__internal_8h.html#structmid64__header__t',1,'']]],
   ['mid64player_5fs_27',['mid64player_s',['../mid64_8c.html#structmid64player__s',1,'']]],
-  ['midi_5ftarget_5fops_5ft_28',['midi_target_ops_t',['../structmidi__target__ops__t.html',1,'']]],
+  ['midi_5ftarget_5fops_5ft_28',['midi_target_ops_t',['../midi__target_8h.html#structmidi__target__ops__t',1,'']]],
   ['midi_5ftarget_5ft_29',['midi_target_t',['../midi__target_8h.html#structmidi__target__t',1,'']]],
   ['mixer_5fchannel_5ft_30',['mixer_channel_t',['../mixer_8c.html#structmixer__channel__t',1,'']]],
   ['mixer_5fchtbl_5ft_31',['mixer_chtbl_t',['../mixer_8c.html#structmixer__chtbl__t',1,'']]],

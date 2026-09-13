@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['joined_5fresult_0',['joined_result',['../structkthread__t.html#a393d0b92c434a4fd9bb65e633035a9a8',1,'kthread_t']]],
-  ['joiner_1',['joiner',['../structkthread__t.html#a141c1afacacea931d3e2a983e6d3d0b7',1,'kthread_t']]],
+  ['joined_5fresult_0',['joined_result',['../group__kernel.html#a393d0b92c434a4fd9bb65e633035a9a8',1,'kthread_t']]],
+  ['joiner_1',['joiner',['../group__kernel.html#a141c1afacacea931d3e2a983e6d3d0b7',1,'kthread_t']]],
   ['joints_2',['joints',['../model64__internal_8h.html#a65ba2c1e928dc912726652618ba7a0d0',1,'model64_skin_t']]],
   ['joybus_5fidentifiers_5fhot_3',['joybus_identifiers_hot',['../joybus_8c.html#ab38927e1a5244b39c3f5def391d998dc',1,'joybus.c']]],
   ['joybus_5fidentify_5fstatus_5fhot_4',['joybus_identify_status_hot',['../joybus_8c.html#af8bec618e687dc3f932f999c5002afdc',1,'joybus.c']]],

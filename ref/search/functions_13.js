@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['tex_5fformat_5fname_0',['tex_format_name',['../surface_8h.html#ae533cf98566a3ff542e8a9af92e177b3',1,'tex_format_name(tex_format_t fmt):&#160;surface.c'],['../surface_8c.html#ae533cf98566a3ff542e8a9af92e177b3',1,'tex_format_name(tex_format_t fmt):&#160;surface.c']]],
+  ['tex_5fformat_5fname_0',['tex_format_name',['../surface_8c.html#ae533cf98566a3ff542e8a9af92e177b3',1,'tex_format_name(tex_format_t fmt):&#160;surface.c'],['../surface_8h.html#ae533cf98566a3ff542e8a9af92e177b3',1,'tex_format_name(tex_format_t fmt):&#160;surface.c']]],
   ['texture_5ftable_5fadd_1',['texture_table_add',['../model64_8c.html#af3b5cd591708703dc03a2e9e22047eb5',1,'model64.c']]],
   ['texture_5ftable_5fallocate_2',['texture_table_allocate',['../model64_8c.html#a4898d84cb9d85bb13c0eacd729d31507',1,'model64.c']]],
   ['texture_5ftable_5fdec_5fref_5fcount_3',['texture_table_dec_ref_count',['../model64_8c.html#ad217d6cc6c4ab4a5f4015c76dcf93063',1,'model64.c']]],
